@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Cadastro</title>
+</head>
+<body>
+    <div class="login-container">
+        <form action="cadastro.php" method="POST">
+            <h2>Cadastro</h2>
+             <div class="input-group">
+                <label for="e-mal">Nome de Usuário</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="username">E-mail</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Senha</label>
+                <div style="position: relative; width: 100%;">
+                    
+                    <input type="password" id="password" name="password" placeholder="Digite sua senha" 
+                        style="padding-right: 40px; width: 100%; box-sizing: border-box; padding-top: 10px; padding-bottom: 10px;">
+                    
+                    <i class="fa-solid fa-eye" 
+                    onclick="
+                        let input = this.previousElementSibling; 
+                        input.type = (input.type === 'password') ? 'text' : 'password';
+                        this.classList.toggle('fa-eye-slash');
+                    " 
+                    style="position: absolute; right: 12px; top: 50%; transform: translateY(-50%); cursor: pointer; color: #666;">
+                    </i>
+                </div>
+            </div>
+            
+            <button type="submit">Cadastrar</button>
+
+            <div class="register">
+                <h3>Já tenho uma conta  <a href="login.html">ENTRAR</a></h3>
+            </div>
+
+            
+        </form>
+    </div>
+</body>
+</html>
