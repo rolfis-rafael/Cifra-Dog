@@ -1,0 +1,14 @@
+# Backups pessoais de cifras
+cifradog-.json
+
+# Pacotes e saídas geradas
+.zip
+output
+Claude outputs
+node_modules
+
+# Configurações locais
+.env
+config.php
+
+2. Confira o que vai entrar
