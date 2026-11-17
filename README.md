@@ -1,6 +1,6 @@
 # Cifra-Dog
 
-App de cifras e repertórios para quem toca ao vivo. Roda no navegador, funciona sem internet, instala como programa no celular e no computador e guarda tudo no próprio aparelho: não tem servidor nem conta.
+App de cifras e repertórios para quem toca ao vivo. Roda no navegador, funciona sem internet, instala como programa no celular e no computador e guarda tudo no próprio aparelho: não tem servidor nem conta, é extremamente leve, coloquei muitas funções que realmente um músico usaria no app.
 
 Começou como um site em PHP e MySQL. A versão atual, na pasta `v2/`, foi reescrita sem backend, pensando primeiro no celular, porque é nele que a cifra fica aberta no palco.
 
