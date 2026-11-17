@@ -1,0 +1,113 @@
+.sp-barra{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 16px}.sp-barra .chip{font-size:12px}.sp-karaoke{position:fixed;inset:0 0 calc(var(--nav-h) + var(--seguro-baixo));z-index:35;background:#160f0b;display:flex;flex-direction:column;justify-content:center;padding:28px;gap:24px}.sp-karaoke small{color:#cfad7a;font-size:15px}.sp-linhas p{font-size:clamp(23px,4vw,48px);line-height:1.35;margin:14px 0;color:#ffe2a5;overflow-wrap:anywhere}.sp-linhas p+p{color:#bba789}.sp-karaoke>.dupla{margin-top:25px;max-width:600px}.sp-pausa{position:fixed;inset:0;z-index:60;background:#100b08f5;display:grid;place-content:center;text-align:center;padding:28px;gap:22px}.sp-pausa h2{font:italic bold 32px Georgia,serif;color:#f0cc93}@media(min-width:900px){.sp-karaoke{left:var(--lado);padding:50px}}
+
+/* ---- v3.2: pontinhos do tempo, contagem de entrada, karaokê com acordes ---- */
+.compasso-pulso{position:fixed;top:calc(env(safe-area-inset-top,0px) + 10px);left:50%;transform:translateX(-50%);z-index:70;display:flex;align-items:center;gap:8px;padding:8px 14px;border-radius:99px;background:#1b100bdd;border:1px solid #cfad7a55;box-shadow:0 4px 14px #0007;pointer-events:none}
+.compasso-pontos{display:flex;gap:10px}
+.compasso-pulso i{width:12px;height:12px;border-radius:50%;background:#5a4636;transition:transform .08s,background .08s}
+.compasso-pulso i.forte{width:14px;height:14px}
+.compasso-pulso i.on{background:#ffd27a;transform:scale(1.25);box-shadow:0 0 10px #ffd27a99}
+.compasso-pulso i.on.forte{background:#ff9d5c;box-shadow:0 0 12px #ff9d5caa}
+.compasso-pulso.contando{border-color:#ff9d5c}
+.compasso-contagem{position:fixed;inset:0;z-index:69;display:grid;place-content:center;pointer-events:none;font:900 clamp(110px,30vw,220px)/1 Georgia,serif;color:#ffd27a;text-shadow:0 6px 30px #000c}
+.compasso-contagem.bate{animation:compasso-bate .35s ease-out}
+@keyframes compasso-bate{from{transform:scale(1.3);opacity:.4}to{transform:scale(1);opacity:1}}
+@media(min-width:900px){.compasso-pulso{left:calc(50% + var(--lado,0px)/2)}}
+
+.aviso-grande{position:fixed;left:50%;top:42%;transform:translate(-50%,-50%);z-index:80;display:flex;flex-direction:column;align-items:center;gap:6px;padding:26px 34px;border-radius:20px;background:#1b100bf2;border:2px solid #ffd27a;box-shadow:0 18px 50px #000b;text-align:center;animation:aviso-entra .35s cubic-bezier(.2,1.4,.4,1)}
+.aviso-grande b{font:italic 900 clamp(28px,7vw,44px) Georgia,serif;color:#ffd27a}
+.aviso-grande small{color:#cfad7a;font-size:15px}
+.aviso-grande.saindo{opacity:0;transition:opacity .45s}
+@keyframes aviso-entra{from{transform:translate(-50%,-50%) scale(.6);opacity:0}}
+
+/* Gravação: 1ª linha esperando a 1ª marcação */
+#cifra-conteudo .frase-preparada{outline:2px dashed #ffd27a;outline-offset:2px;animation:prep-pisca 1s ease-in-out infinite}
+@keyframes prep-pisca{50%{outline-color:transparent}}
+#gravador .gv-aguarda{color:#ffd27a;font-weight:700}
+#gravador .gv-aguarda::after{content:' · marque quando a 1ª linha começar'}
+
+/* Karaokê: linha atual e próxima com acordes em cima da letra */
+.sp-linhas{display:flex;flex-direction:column;gap:18px}
+.sp-linha{font-family:var(--fonte-mono,ui-monospace,Menlo,Consolas,monospace);font-size:clamp(20px,4.4vw,42px);line-height:1.15;color:#ffe2a5;overflow-wrap:anywhere;min-height:1em}
+.sp-linha.sp-proxima{font-size:clamp(16px,3.2vw,30px);color:#bba789;opacity:.85}
+.sp-linha .l-reflow{word-spacing:.12em}
+.sp-linha .rf-w{display:inline-block;white-space:nowrap;vertical-align:bottom;max-width:100%}
+.sp-linha .rf-a{display:inline-block;vertical-align:bottom}
+.sp-linha .rf-c{display:block;white-space:pre;min-height:1.15em;color:#ff9d5c;font-weight:800}
+.sp-linha.sp-proxima .rf-c{color:#d08a5a}
+.sp-linha .rf-obs{color:#cfad7a;font-weight:500}
+.sp-linha .rf-t{display:block;white-space:pre;min-height:1.15em}
+.sp-linha .rf-w.so-ac .rf-t{display:none}
+.sp-karaoke>.sp-acoes{display:flex;gap:10px;flex-wrap:wrap}
+.sp-karaoke>.sp-acoes .bt{flex:1 1 140px}
+
+/* ---- v3.3: topo da cifra compacto (a música aparece logo) ---- */
+.cifra-l1{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;margin:8px 0 6px}
+.cifra-l1 .cifra-info{margin:0;padding:0;flex:0 1 auto;gap:6px}
+.cifra-l1 .cifra-info .badge{font-size:11.5px;padding:3px 7px}
+.cifra-l1 .faixa-acordes{flex:1 1 96px;min-width:96px;margin:0;padding:2px 14px 2px 0;
+    -webkit-mask-image:linear-gradient(90deg,#000 80%,transparent);mask-image:linear-gradient(90deg,#000 80%,transparent)}
+.cifra-l1 .faixa-acordes button{padding:5px 10px;font-size:13px}
+.cifra-l2{display:flex;align-items:center;gap:8px;margin:0 0 8px}
+.cifra-l2 .ci-bpm{display:flex;flex-wrap:wrap;gap:6px;flex:0 1 auto}
+.cifra-l2 .ci-bpm .badge{font-size:11.5px;padding:3px 7px;background:#382419;color:#e5c79d}
+.ci-icones{display:flex;gap:8px;margin-left:2px}
+.ci-ic{width:38px;height:32px;min-height:0;min-width:0;padding:0;display:grid;place-items:center;border-radius:10px;background:#332218;border:1px solid #8a623b;color:#ffd394;flex-shrink:0}
+.ci-icones .ci-ic{margin:0!important}
+.ci-ic svg{width:19px;height:19px}
+.ci-ic:active{background:#4a3121}
+body.palco .cifra-l1,body.palco .cifra-l2{display:none}
+.sp-barra[hidden]{display:none}
+.sp-barra{margin:0 0 8px}
+
+/* Barra do repertório um pouco menor */
+.faixa-rep.show{padding:4px;gap:4px;margin-top:6px}
+.faixa-rep.show .bt-icone{width:38px;height:40px;border-radius:9px}
+.faixa-rep.show .bt-icone svg{width:21px;height:21px}
+.faixa-rep.show .fr-txt{gap:1px;padding:2px 4px}
+.faixa-rep.show .fr-txt span{font-size:12.5px}
+.faixa-rep.show .fr-txt small{font-size:10.5px}
+.prog-show::after{font-size:8px}
+
+/* ---- Painel de vídeo: pesquisa dentro do app ---- */
+.aula-busca{margin-bottom:6px}
+.aula-chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.aula-chips .chip,.aula-chips .chip.ativo{padding:6px 12px;font-size:12px;clip-path:none;font-family:inherit;font-style:normal;filter:none}
+.aula-chips .chip.ativo{background:var(--verm);color:#fff;border-color:transparent}
+.aula-resultados{display:flex;flex-direction:column;gap:6px;margin-top:10px;max-height:38vh;overflow-y:auto;overscroll-behavior:contain}
+.aula-res{display:flex;gap:10px;align-items:center;text-align:left;width:100%;padding:5px;border-radius:8px;background:#2b1b13;border:1px solid #8a623b55;color:#f7deb5}
+.aula-res.ativo{border-color:#ffd27a;background:#3a2517}
+.aula-res img{width:96px;height:54px;object-fit:cover;border-radius:6px;background:#160f0b;flex-shrink:0}
+.aula-res span{min-width:0;flex:1;display:flex;flex-direction:column;gap:2px}
+.aula-res b{font-size:12.5px;line-height:1.25;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.aula-res small{font-size:11px;color:#cfad7a;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.aula-busca-msg{font-size:12.5px;color:#d9bf94;margin:6px 0}
+.aula-chave{margin-top:8px;font-size:12px}
+.aula-chave summary{cursor:pointer;color:#cfad7a}
+.aula-chave .entrada{margin:6px 0;width:100%}
+
+/* v3.4: sem mini player, a tela não reserva mais espaço para ele */
+:root{--mini-h:0px}
+
+/* v3.5: ícone de contorno nas abas inativas e preenchido na aba aberta (padrão Material/Apple) */
+#nav > a[data-rota] .ic-on{display:none}
+#nav > a[data-rota].ativo .ic-on{display:block}
+#nav > a[data-rota].ativo .ic-off{display:none}
+#nav > a[data-rota].ativo span{font-weight:700}
+
+/* v3.5: alvos de toque de pelo menos 40px e textos legíveis (mínimo 11px) */
+.mini-bt{width:40px;height:40px}
+.doca .bt-icone{width:40px;height:40px}
+.chave{position:relative}
+.chave::after{content:'';position:absolute;inset:-8px -4px}
+.sig button{position:relative}
+.sig button::after{content:'';position:absolute;inset:-9px}
+.aula-acoes-topo .chip{min-height:40px}
+.aula-cabecalho .eyebrow,.aula-panel.recolhido .eyebrow{font-size:11px}
+.quadro-placa{font-size:11px}
+.tom-topo small{font-size:11px}
+.prog-show::after{font-size:11px}
+.doca .tom-atual small,.doca .bt-custom small{font-size:11px}
+.filtros-musica button{font-size:11px}
+/* Modo palco no celular (sem mouse): a doca fica sempre visível */
+@media (hover:none){body.palco .doca{opacity:1}}
+#aula-vazia small,.aula-ou{font-size:11px}

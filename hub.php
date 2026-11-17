@@ -1,217 +1,293 @@
 <?php
-session_start();
-require_once 'conexao.php';
+/*
+ * ============================================================
+ *  hub.php — Página inicial: explorar as cifras
+ * ============================================================
+ *  Endereços aceitos (podem ser combinados):
+ *    hub.php?aba=alta|recentes|melhores|iniciantes|favoritas
+ *    hub.php?busca=texto        hub.php?artista=Nome
+ *    hub.php?dificuldade=facil  hub.php?genero=Rock
+ *    hub.php?pagina=2           hub.php?aleatoria=1  (abre uma cifra sorteada)
+ *
+ *  Partes:
+ *   1. PHP: lê os filtros e monta a consulta (montarConsulta)
+ *   2. PHP: dados da lateral (artistas, contribuidores, estatísticas)
+ *   3. HTML: destaque (hero) com o mascote
+ *   4. HTML: abas + filtros + lista de músicas
+ *   5. HTML: lateral
+ *
+ *  ONDE: para criar uma aba nova, adicione em $abas e trate no switch de ordem.
+ * ============================================================
+ */
+require_once __DIR__ . '/includes/bootstrap.php';
 
+$uid = idUsuario();
 
-error_reporting(E_ALL & ~E_NOTICE & ~E_WARNING);
-ini_set('display_errors', 0);
-
-
-$username = $_SESSION['username'] ?? 'Visitante';
-$search = trim($_GET['search'] ?? '');
-
-$sql_base = "SELECT m.*, u.username AS nome_perfil 
-             FROM musicas m 
-             LEFT JOIN usuarios u ON m.usuario_id = u.id";
-
-if (!empty($search)) {
-    $stmt = $pdo->prepare($sql_base . " WHERE m.titulo LIKE ? OR m.artista LIKE ? ORDER BY m.id DESC");
-    $stmt->execute(["%$search%", "%$search%"]);
-} else {
-    $stmt = $pdo->query($sql_base . " ORDER BY m.id DESC");
-}
-$musicas = $stmt->fetchAll();
-
-//Sistema de estrela
-
-function exibirEstrelas($media) {
-    $html = "";
-    $total_estrelas = 5;
-    $media = round($media);
-
-    for ($i = 1; $i <= $total_estrelas; $i++) {
-        if ($i <= $media) {
-            $html .= '<i class="fa-solid fa-star" style="color: #d9ae30;"></i>';
-        } else {
-            $html .= '<i class="fa-regular fa-star" style="color: #d9ae30;"></i>';
-        }
-    }
-    return $html;
+// Botão "cifra aleatória": sorteia e redireciona.
+if (!empty($_GET['aleatoria'])) {
+    $idSorteado = $pdo->query('SELECT id FROM musicas ORDER BY RAND() LIMIT 1')->fetchColumn();
+    redirecionar($idSorteado ? 'cifra.php?id=' . $idSorteado : 'hub.php');
 }
 
-//Sistema de ordem
+// ---------- 1. Filtros ----------
+// AJUSTAR: nomes e ícones das abas.
+$abas = [
+    'alta'       => ['Em alta', 'fa-fire'],
+    'recentes'   => ['Recentes', 'fa-clock'],
+    'melhores'   => ['Mais bem avaliadas', 'fa-star'],
+    'iniciantes' => ['Para iniciantes', 'fa-seedling'],
+];
+if ($uid) {
+    $abas['favoritas'] = ['Minhas favoritas', 'fa-heart'];
+}
 
-$ordem = $_GET['ordem'] ?? 'recentes';
+$aba         = isset($abas[$_GET['aba'] ?? '']) ? $_GET['aba'] : 'alta';
+$busca       = trim($_GET['busca'] ?? '');
+$artista     = trim($_GET['artista'] ?? '');
+$dificuldade = in_array($_GET['dificuldade'] ?? '', ['facil', 'medio', 'dificil'], true) ? $_GET['dificuldade'] : '';
+$genero      = trim($_GET['genero'] ?? '');
+$pagina      = max(1, (int)($_GET['pagina'] ?? 1));
 
-$sql = "
-    SELECT m.*, u.username AS nome_perfil
-    FROM musicas m
-    LEFT JOIN usuarios u ON m.usuario_id = u.id
-";
+/* Monta o link do hub mantendo os filtros atuais e trocando só o que for passado em $mudar. */
+function linkHub(array $mudar = []): string
+{
+    global $aba, $busca, $artista, $dificuldade, $genero;
+    $params = array_merge(['aba' => $aba, 'busca' => $busca, 'artista' => $artista, 'dificuldade' => $dificuldade, 'genero' => $genero], $mudar);
+    $params = array_filter($params, fn($v) => $v !== '' && $v !== null);
+    return 'hub.php' . ($params ? '?' . http_build_query($params) : '');
+}
 
-$params = [];
 $where = [];
-
-if (!empty($search)) {
-    $where[] = "(m.titulo LIKE ? OR m.artista LIKE ?)";
-    $params[] = "%$search%";
-    $params[] = "%$search%";
+$params = [];
+if ($busca !== '') {
+    $where[] = '(m.titulo LIKE ? OR m.artista LIKE ?)';
+    $params[] = "%$busca%";
+    $params[] = "%$busca%";
 }
-
-if ($ordem == 'facil') {
+if ($artista !== '') {
+    $where[] = 'm.artista = ?';
+    $params[] = $artista;
+}
+if ($dificuldade !== '') {
+    $where[] = 'm.dificuldade = ?';
+    $params[] = $dificuldade;
+}
+if ($genero !== '') {
+    $where[] = 'm.genero = ?';
+    $params[] = $genero;
+}
+if ($aba === 'iniciantes') {
     $where[] = "m.dificuldade = 'facil'";
-} elseif ($ordem == 'media') {
-    $where[] = "m.dificuldade = 'media'";
-} elseif ($ordem == 'dificil') {
-    $where[] = "m.dificuldade = 'dificil'";
+}
+if ($aba === 'favoritas') {
+    $where[] = 'EXISTS (SELECT 1 FROM favoritos f2 WHERE f2.musica_id = m.id AND f2.usuario_id = ' . $uid . ')';
 }
 
-if (!empty($where)) {
-    $sql .= " WHERE " . implode(" AND ", $where);
+// "Em alta" mistura visualizações, favoritos e votos.
+// AJUSTAR: pesos do ranking "Em alta".
+$ordens = [
+    'alta'       => '(m.visualizacoes + favs * 8 + m.total_votos * 4) DESC, m.id DESC',
+    'recentes'   => 'm.id DESC',
+    'melhores'   => 'm.media_avaliacao DESC, m.total_votos DESC, m.id DESC',
+    'iniciantes' => 'm.visualizacoes DESC, m.id DESC',
+    'favoritas'  => 'm.titulo',
+];
+
+$sqlWhere = $where ? ' WHERE ' . implode(' AND ', $where) : '';
+$st = $pdo->prepare('SELECT COUNT(*) FROM musicas m' . $sqlWhere);
+$st->execute($params);
+$totalResultados = (int)$st->fetchColumn();
+
+$limite = ITENS_POR_PAGINA * $pagina; // "Ver mais" carrega mais itens na mesma página
+$sql = 'SELECT m.id, m.titulo, m.artista, m.tom, m.dificuldade, m.media_avaliacao, m.total_votos,
+               m.visualizacoes, m.usuario_id, m.genero, u.username AS autor,
+               (SELECT COUNT(*) FROM favoritos f WHERE f.musica_id = m.id) AS favs,
+               ' . ($uid ? '(SELECT COUNT(*) FROM favoritos f3 WHERE f3.musica_id = m.id AND f3.usuario_id = ' . $uid . ')' : '0') . ' AS minha_fav
+        FROM musicas m LEFT JOIN usuarios u ON u.id = m.usuario_id' . $sqlWhere . '
+        ORDER BY ' . $ordens[$aba] . ' LIMIT ' . (int)$limite;
+$st = $pdo->prepare($sql);
+$st->execute($params);
+$musicas = $st->fetchAll();
+
+// ---------- 2. Lateral e estatísticas ----------
+$stats = $pdo->query('SELECT (SELECT COUNT(*) FROM musicas) AS cifras,
+                             (SELECT COUNT(DISTINCT artista) FROM musicas) AS artistas,
+                             (SELECT COUNT(*) FROM usuarios) AS musicos')->fetch();
+$artistasTop = $pdo->query('SELECT artista, COUNT(*) AS total, SUM(visualizacoes) AS vis FROM musicas
+                            GROUP BY artista ORDER BY vis DESC, total DESC LIMIT 8')->fetchAll();
+$contribuidores = $pdo->query('SELECT u.id, u.username, COUNT(m.id) AS total FROM usuarios u
+                               JOIN musicas m ON m.usuario_id = u.id
+                               GROUP BY u.id ORDER BY total DESC LIMIT 5')->fetchAll();
+$generos = $pdo->query("SELECT genero, COUNT(*) AS total FROM musicas WHERE genero IS NOT NULL AND genero <> ''
+                        GROUP BY genero ORDER BY total DESC LIMIT 12")->fetchAll();
+$meusReps = [];
+if ($uid) {
+    $st = $pdo->prepare('SELECT r.id, r.nome, (SELECT COUNT(*) FROM repertorio_itens i WHERE i.repertorio_id = r.id) AS total
+                         FROM repertorios r WHERE r.usuario_id = ? ORDER BY r.id DESC LIMIT 5');
+    $st->execute([$uid]);
+    $meusReps = $st->fetchAll();
 }
 
-if ($ordem == 'melhores') {
-    $sql .= " ORDER BY m.media_avaliacao DESC";
-} else {
-    $sql .= " ORDER BY m.id DESC";
-}
-
-$stmt = $pdo->prepare($sql);
-$stmt->execute($params);
-$musicas = $stmt->fetchAll();
-
-
+$filtrando = $busca !== '' || $artista !== '' || $dificuldade !== '' || $genero !== '';
+$tituloPagina = ($artista ?: ($busca ? 'Busca: ' . $busca : 'Explorar')) . ' - CifraDog';
+$paginaAtiva = 'hub';
+require __DIR__ . '/includes/cabecalho.php';
 ?>
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/hub.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <title>Hub - CifraDog</title>
-</head>
-<body>
 
-    <header class="navbar">
-        <div class="nav-container">
-            <a href="hub.php">
-                <img src="img/cifardoglogotexto.png" alt="Logo CifraDog" class="nav-logo">
-            </a>
-            
-            <form action="hub.php" method="GET" class="search-bar" id="meuFormulario"> 
-                <input type="text" name="search" id="campo-busca" list="lista-sugestoes" 
-                    oninput="buscarSugestoes(this.value)" 
-                    placeholder="Pesquisar..." 
-                    autocomplete="off">
-                
-                <datalist id="lista-sugestoes"></datalist>
-                
-                <button type="submit">Buscar</button>
-            </form>
-        
+<main class="container">
 
-            <script>
-                function buscarSugestoes(termo) {
-                    if (termo.length < 2) {
-                        document.getElementById('lista-sugestoes').innerHTML = '';
-                        return;
-                    }
-
-                    fetch('buscar_sugestoes.php?q=' + encodeURIComponent(termo))
-                        .then(response => response.text())
-                        .then(html => {
-                            document.getElementById('lista-sugestoes').innerHTML = html;
-                        })
-                        .catch(error => console.error('Erro na busca:', error));
-                }
-            </script>
-
-
-            <nav class="nav-links">
-                <a href="adicionar_musica.php" class="btn-add-music">Adicionar Música</a>
-                
-                <?php if (isset($_SESSION['usuario_id'])): ?>
-                    <div class="user-menu">
-                        <input type="checkbox" id="menu-check" class="menu-toggle">
-                        <label for="menu-check" class="menu-trigger">Perfil ▼</label>
-                        <div class="dropdown-menu">
-                            <a href="perfil.php">Meu Perfil</a>
-                            <a href="logout.php">Sair</a>
-                        </div>
-                    </div>
-                <?php else: ?>
-                    <a href="login.html" class="btn-login">ENTRAR</a>
-                    <a href="cadastro.html" class="btn-cadastro">CADASTRE-SE</a>
-                <?php endif; ?>
-            </nav>
+    <?php if (!$filtrando): ?>
+    <!-- ========== 3. Destaque ========== -->
+    <section class="hero">
+        <div class="hero-texto">
+            <span class="selo"><i class="fa-solid fa-bolt"></i> Cifras da comunidade</span>
+            <h1>
+                <?php if ($uid): ?>E aí, <span class="ouro"><?= e($_SESSION['username']) ?></span>! Bora tocar?
+                <?php else: ?>Toque. Transponha. <span class="ouro">Uive.</span><?php endif; ?>
+            </h1>
+            <p>Transposição inteligente, capotraste que se sugere sozinho, diagramas de acordes, metrônomo e repertórios para o seu show.</p>
+            <div class="hero-botoes">
+                <a href="hub.php?aleatoria=1" class="btn btn-ouro"><i class="fa-solid fa-shuffle"></i> Cifra aleatória</a>
+                <a href="editor.php" class="btn btn-contorno"><i class="fa-solid fa-plus"></i> Enviar uma cifra</a>
+            </div>
+            <div class="hero-stats">
+                <div><b><?= (int)$stats['cifras'] ?></b><span>cifras</span></div>
+                <div><b><?= (int)$stats['artistas'] ?></b><span>artistas</span></div>
+                <div><b><?= (int)$stats['musicos'] ?></b><span>músicos</span></div>
+            </div>
         </div>
-    </header>
+        <div class="hero-arte" aria-hidden="true">
+            <div class="hero-brilho"></div>
+            <img src="img/dog.png" alt="" class="hero-dog">
+            <div class="hero-acorde hero-acorde-1" data-diagrama="Em"></div>
+            <div class="hero-acorde hero-acorde-2" data-diagrama="G"></div>
+            <div class="hero-acorde hero-acorde-3" data-diagrama="D/F#"></div>
+        </div>
+    </section>
+    <?php else: ?>
+    <section class="cabecalho-filtro">
+        <div>
+            <?php if ($artista): ?>
+                <span class="selo"><i class="fa-solid fa-microphone"></i> Artista</span>
+                <h1><?= e($artista) ?></h1>
+            <?php elseif ($busca): ?>
+                <span class="selo"><i class="fa-solid fa-magnifying-glass"></i> Busca</span>
+                <h1>“<?= e($busca) ?>”</h1>
+            <?php else: ?>
+                <h1>Explorar</h1>
+            <?php endif; ?>
+            <p><?= $totalResultados ?> cifra(s) encontrada(s)</p>
+        </div>
+        <a class="btn btn-escuro btn-pequeno" href="hub.php"><i class="fa-solid fa-xmark"></i> Limpar filtros</a>
+    </section>
+    <?php endif; ?>
 
-    <main class="main-container">
-        <section class="hero-banner">
-            <div class="hero-content">
-                <span class="badge">Destaque do Dia</span>
-                <h1>Bem vindo ao CIFRADOG, <?php echo htmlspecialchars($username); ?>!</h1>
-                <p>Pratique as suas músicas favoritas e aumente o seu reportório.</p>
-                <?php if (!empty($musicas)): ?>
-                    <a href="cifra.php?id=<?php echo $musicas[0]['id']; ?>" class="btn-primary">Ver Cifra Aleatória</a>
-                <?php endif; ?>
-            </div>
-        </section>
+    <div class="hub-grade">
+        <!-- ========== 4. Abas + lista ========== -->
+        <section>
+            <nav class="abas abas-links">
+                <?php foreach ($abas as $chave => [$nome, $icone]): ?>
+                    <a href="<?= e(linkHub(['aba' => $chave])) ?>" class="<?= $aba === $chave ? 'ativa' : '' ?>"><i class="fa-solid <?= $icone ?>"></i> <?= e($nome) ?></a>
+                <?php endforeach; ?>
+            </nav>
 
-        <section class="section-container">
-
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
-                <h2 class="section-title">Musicas da comunidade</h2>
-                
-                <form action="hub.php" method="GET" onchange="this.submit()">
-                    <select name="ordem" style="padding: 8px; background: #252525; color: white; border: 1px solid #444; border-radius: 6px;">
-                        <option value="recentes" <?php echo ($_GET['ordem'] ?? '') == 'recentes' ? 'selected' : ''; ?>>Mais recentes</option>
-                        <option value="melhores" <?php echo ($_GET['ordem'] ?? '') == 'melhores' ? 'selected' : ''; ?>>Melhores avaliadas</option>
-                        <option value="facil" <?php echo ($_GET['ordem'] ?? '') == 'facil' ? 'selected' : ''; ?>>Dificuldade: Fácil</option>
-                        <option value="dificil" <?php echo ($_GET['ordem'] ?? '') == 'dificil' ? 'selected' : ''; ?>>Dificuldade: Difícil</option>
-                    </select>
-                    <input type="hidden" name="search" value="<?php echo htmlspecialchars($search); ?>">
-                </form>
-            </div>
-
-            <div class="songs-list">
-                <?php if (empty($musicas)): ?>
-                    <p style="padding: 20px;">Nenhuma música encontrada. Que tal adicionar a primeira?</p>
-                <?php else: ?>
-                    <?php foreach ($musicas as $index => $musica): ?>
-                        <div class="song-item">
-                            <span class="song-rank"><?php echo $index + 1; ?></span>
-                            <div class="song-info">
-                                <span class="song-name" onclick="window.location.href='cifra.php?id=<?php echo $musica['id']; ?>'"><?php echo htmlspecialchars($musica['titulo']); ?></span>
-                                <span class="song-artist"><?php echo htmlspecialchars($musica['artista']); ?></span>
-                            </div>
-
-                            <div class="song-rating" style="margin: 0 15px;">
-                                <?php echo exibirEstrelas($musica['media_avaliacao']); ?>
-                            </div>
-
-                            <div class="song-badges" style="display: flex; align-items: center; gap: 10px;">
-                                <div class="meta-item">
-                                    <span class="meta-value"><?php echo ucfirst(htmlspecialchars($musica['dificuldade'])); ?></span>
-                                </div>
-                                <span style="font-size: 13px; color: #aaa;">
-                                    <a href="perfil2.php?id=<?php echo $musica['usuario_id']; ?>" style="text-decoration: none; color: inherit;">
-                                        por <strong><?php echo htmlspecialchars($musica['nome_perfil'] ?? 'Anônimo'); ?></strong>
-                                    </a>
-                                </span>
-                            </div>
-                        </div>
+            <div class="filtros">
+                <div class="filtro-chips">
+                    <?php foreach (['' => 'Todas', 'facil' => 'Fácil', 'medio' => 'Médio', 'dificil' => 'Difícil'] as $cod => $nome): ?>
+                        <a class="chip-filtro <?= $dificuldade === $cod ? 'ativo' : '' ?> <?= $cod ? 'dif-' . $cod : '' ?>" href="<?= e(linkHub(['dificuldade' => $cod])) ?>"><?= $nome ?></a>
                     <?php endforeach; ?>
+                </div>
+                <?php if ($generos): ?>
+                    <div class="filtro-chips">
+                        <?php foreach ($generos as $g): ?>
+                            <a class="chip-filtro <?= $genero === $g['genero'] ? 'ativo' : '' ?>" href="<?= e(linkHub(['genero' => $genero === $g['genero'] ? '' : $g['genero']])) ?>">#<?= e($g['genero']) ?></a>
+                        <?php endforeach; ?>
+                    </div>
                 <?php endif; ?>
             </div>
+
+            <div class="lista-musicas">
+                <?php if (!$musicas): ?>
+                    <div class="vazio-grande vazio-lista">
+                        <img src="img/dog.png" alt="" class="dog-triste">
+                        <h3><?= $aba === 'favoritas' ? 'Você ainda não favoritou nenhuma cifra' : 'Nenhuma cifra por aqui' ?></h3>
+                        <p><?= $aba === 'favoritas' ? 'Toque no ❤ de uma cifra para guardar ela aqui.' : 'Que tal ser o primeiro a enviar?' ?></p>
+                        <a class="btn btn-ouro" href="editor.php<?= $busca ? '?titulo=' . urlencode($busca) : '' ?>"><i class="fa-solid fa-plus"></i> Enviar cifra</a>
+                    </div>
+                <?php endif; ?>
+
+                <?php foreach ($musicas as $i => $m): ?>
+                    <article class="item-musica">
+                        <span class="item-rank"><?= $i + 1 ?></span>
+                        <a class="item-principal" href="cifra.php?id=<?= (int)$m['id'] ?>">
+                            <span class="item-titulo"><?= e($m['titulo']) ?></span>
+                            <span class="item-artista"><?= e($m['artista']) ?></span>
+                        </a>
+                        <div class="item-meta">
+                            <?php if ($m['tom']): ?><span class="chip chip-tom-pequeno"><?= e($m['tom']) ?></span><?php endif; ?>
+                            <span class="chip dif-<?= e($m['dificuldade']) ?>"><?= e(nomeDificuldade($m['dificuldade'])) ?></span>
+                            <span class="item-estrelas"><?= estrelasHtml($m['media_avaliacao']) ?></span>
+                            <span class="item-vis" title="Visualizações"><i class="fa-regular fa-eye"></i> <?= (int)$m['visualizacoes'] ?></span>
+                        </div>
+                        <div class="item-fim">
+                            <?php if ($m['usuario_id']): ?>
+                                <a class="item-autor" href="perfil.php?id=<?= (int)$m['usuario_id'] ?>" title="Enviada por <?= e($m['autor']) ?>">
+                                    <span class="avatar avatar-mini" style="background: <?= e(corAvatar($m['autor'] ?? '?')) ?>"><?= e(iniciais($m['autor'] ?? '?')) ?></span>
+                                </a>
+                            <?php endif; ?>
+                            <button class="btn-coracao <?= $m['minha_fav'] ? 'favorito' : '' ?>" data-favoritar="<?= (int)$m['id'] ?>" title="Favoritar">
+                                <i class="<?= $m['minha_fav'] ? 'fa-solid' : 'fa-regular' ?> fa-heart"></i> <span class="fav-total"><?= (int)$m['favs'] ?></span>
+                            </button>
+                        </div>
+                    </article>
+                <?php endforeach; ?>
+            </div>
+
+            <?php if ($totalResultados > count($musicas)): ?>
+                <div class="ver-mais">
+                    <a class="btn btn-escuro" href="<?= e(linkHub(['pagina' => $pagina + 1])) ?>"><i class="fa-solid fa-chevron-down"></i> Ver mais (<?= $totalResultados - count($musicas) ?>)</a>
+                </div>
+            <?php endif; ?>
         </section>
-    </main>
 
-    <footer class="footer">
-        <p>&copy; 2026 CifraDog - Todos os direitos reservados.</p>
-    </footer>
+        <!-- ========== 5. Lateral ========== -->
+        <aside class="hub-lateral">
+            <?php if ($uid): ?>
+            <div class="cartao">
+                <h3><i class="fa-solid fa-list-ol"></i> Seus repertórios</h3>
+                <?php foreach ($meusReps as $r): ?>
+                    <a class="lateral-linha" href="repertorio.php?id=<?= (int)$r['id'] ?>"><span><?= e($r['nome']) ?></span><small><?= (int)$r['total'] ?> músicas</small></a>
+                <?php endforeach; ?>
+                <?php if (!$meusReps): ?><p class="vazio">Monte setlists para seus ensaios e shows.</p><?php endif; ?>
+                <a class="link-ouro" href="repertorio.php">Gerenciar repertórios →</a>
+            </div>
+            <?php endif; ?>
 
-</body>
-</html>
+            <div class="cartao">
+                <h3><i class="fa-solid fa-microphone"></i> Artistas</h3>
+                <?php foreach ($artistasTop as $a): ?>
+                    <a class="lateral-linha" href="hub.php?artista=<?= urlencode($a['artista']) ?>">
+                        <span class="avatar avatar-mini" style="background: <?= e(corAvatar($a['artista'])) ?>"><?= e(iniciais($a['artista'])) ?></span>
+                        <span><?= e($a['artista']) ?></span><small><?= (int)$a['total'] ?></small>
+                    </a>
+                <?php endforeach; ?>
+            </div>
+
+            <?php if ($contribuidores): ?>
+            <div class="cartao">
+                <h3><i class="fa-solid fa-trophy"></i> Quem mais contribui</h3>
+                <?php foreach ($contribuidores as $pos => $c): ?>
+                    <a class="lateral-linha" href="perfil.php?id=<?= (int)$c['id'] ?>">
+                        <span class="medalha medalha-<?= $pos + 1 ?>"><?= $pos + 1 ?></span>
+                        <span><?= e($c['username']) ?></span><small><?= (int)$c['total'] ?> cifras</small>
+                    </a>
+                <?php endforeach; ?>
+            </div>
+            <?php endif; ?>
+        </aside>
+    </div>
+</main>
+
+<?php
+$scriptsExtras = ['assets/js/cifra-motor.js', 'assets/js/hub.js'];
+require __DIR__ . '/includes/rodape.php';

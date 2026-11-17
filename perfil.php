@@ -1,250 +1,152 @@
 <?php
-session_start();
-require_once 'conexao.php';
+/*
+ * ============================================================
+ *  perfil.php — Perfil do usuário (substitui perfil.php + perfil2.php)
+ * ============================================================
+ *  Endereços: perfil.php             (o seu perfil)
+ *             perfil.php?id=7        (perfil público de outra pessoa)
+ *             perfil.php?aba=favoritas
+ *
+ *  Abas: Cifras | Favoritas (só no seu) | Repertórios (só no seu) | Configurações (só no seu)
+ *  Partes: 1. PHP carrega dados · 2. PHP salva bio/instrumento · 3. HTML
+ * ============================================================
+ */
+require_once __DIR__ . '/includes/bootstrap.php';
 
-if (!isset($_SESSION['usuario_id'])) {
-    header("Location: login.html");
+$uid = idUsuario();
+$id = (int)($_GET['id'] ?? $uid);
+if (!$id) {
+    exigirLogin();
+}
+$ehMeu = $uid && $id === $uid;
+
+$st = $pdo->prepare('SELECT id, username, email, bio, instrumento, criado_em FROM usuarios WHERE id = ?');
+$st->execute([$id]);
+$dono = $st->fetch();
+if (!$dono) {
+    http_response_code(404);
+    $tituloPagina = 'Perfil não encontrado - CifraDog';
+    require __DIR__ . '/includes/cabecalho.php';
+    echo '<main class="container vazio-grande"><img src="img/dog.png" alt="" class="dog-triste"><h1>Usuário não encontrado</h1><a class="btn btn-ouro" href="hub.php">Voltar</a></main>';
+    require __DIR__ . '/includes/rodape.php';
     exit;
 }
 
-$stmt = $pdo->prepare("
-    SELECT username, email
-    FROM usuarios
-    WHERE id = ?
-");
-$stmt->execute([$_SESSION['usuario_id']]);
-$usuario = $stmt->fetch();
+// ---------- 2. Salvar configurações ----------
+if ($ehMeu && $_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (validarCsrf()) {
+        $pdo->prepare('UPDATE usuarios SET bio = ?, instrumento = ? WHERE id = ?')
+            ->execute([mb_substr(trim($_POST['bio'] ?? ''), 0, 300) ?: null, mb_substr(trim($_POST['instrumento'] ?? ''), 0, 40) ?: null, $uid]);
+        flash('Perfil atualizado!', 'sucesso');
+    }
+    redirecionar('perfil.php#config');
+}
 
-$stmt = $pdo->prepare("
-    SELECT *
-    FROM musicas
-    WHERE usuario_id = ?
-    ORDER BY id DESC
-");
-$stmt->execute([$_SESSION['usuario_id']]);
-$minhas_musicas = $stmt->fetchAll();
+// ---------- 1. Dados ----------
+$st = $pdo->prepare('SELECT m.id, m.titulo, m.artista, m.tom, m.dificuldade, m.media_avaliacao, m.visualizacoes,
+                            (SELECT COUNT(*) FROM favoritos f WHERE f.musica_id = m.id) AS favs
+                     FROM musicas m WHERE m.usuario_id = ? ORDER BY m.id DESC');
+$st->execute([$id]);
+$cifras = $st->fetchAll();
+$totalVis = array_sum(array_column($cifras, 'visualizacoes'));
+$totalFavs = array_sum(array_column($cifras, 'favs'));
+
+$favoritas = [];
+$reps = [];
+if ($ehMeu) {
+    $st = $pdo->prepare('SELECT m.id, m.titulo, m.artista, m.tom, m.dificuldade, m.media_avaliacao
+                         FROM favoritos f JOIN musicas m ON m.id = f.musica_id WHERE f.usuario_id = ? ORDER BY f.criado_em DESC');
+    $st->execute([$id]);
+    $favoritas = $st->fetchAll();
+
+    $st = $pdo->prepare('SELECT r.id, r.nome, COUNT(i.id) AS total FROM repertorios r
+                         LEFT JOIN repertorio_itens i ON i.repertorio_id = r.id WHERE r.usuario_id = ? GROUP BY r.id ORDER BY r.id DESC');
+    $st->execute([$id]);
+    $reps = $st->fetchAll();
+}
+
+/* Desenha uma linha de música (usada nas abas Cifras e Favoritas). */
+function linhaMusica(array $m, bool $editar = false): void
+{
+    echo '<article class="item-musica item-simples"><a class="item-principal" href="cifra.php?id=' . (int)$m['id'] . '">'
+        . '<span class="item-titulo">' . e($m['titulo']) . '</span><span class="item-artista">' . e($m['artista']) . '</span></a>'
+        . '<div class="item-meta">' . ($m['tom'] ? '<span class="chip chip-tom-pequeno">' . e($m['tom']) . '</span>' : '')
+        . '<span class="chip dif-' . e($m['dificuldade']) . '">' . e(nomeDificuldade($m['dificuldade'])) . '</span>'
+        . '<span class="item-estrelas">' . estrelasHtml($m['media_avaliacao']) . '</span></div>'
+        . ($editar ? '<div class="item-fim"><a class="btn btn-escuro btn-pequeno" href="editor.php?id=' . (int)$m['id'] . '"><i class="fa-solid fa-pen"></i> Editar</a></div>' : '')
+        . '</article>';
+}
+
+$tituloPagina = ($ehMeu ? 'Meu perfil' : 'Perfil de ' . $dono['username']) . ' - CifraDog';
+$paginaAtiva = $ehMeu ? 'perfil' : '';
+require __DIR__ . '/includes/cabecalho.php';
 ?>
-
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <title>Meu Perfil - CifraDog</title>
-</head>
-    
-<body>
-
-    <main class="perfil-container">
-
-        <div class="perfil-header" style="text-align: left; margin-bottom: 30px;">
-            <h1>
-                Perfil de <?php echo htmlspecialchars($usuario['username']); ?>
-            </h1>
-
-            <p style="color: #aaa;">
-                Email: <?php echo htmlspecialchars($usuario['email']); ?>
-            </p>
+<main class="container">
+    <header class="perfil-topo">
+        <span class="avatar avatar-grande" style="background: <?= e(corAvatar($dono['username'])) ?>"><?= e(iniciais($dono['username'])) ?></span>
+        <div class="perfil-info">
+            <h1><?= e($dono['username']) ?></h1>
+            <div class="perfil-chips">
+                <?php if ($dono['instrumento']): ?><span class="chip"><i class="fa-solid fa-guitar"></i> <?= e($dono['instrumento']) ?></span><?php endif; ?>
+                <?php if ($dono['criado_em']): ?><span class="chip">Desde <?= e(date('m/Y', strtotime($dono['criado_em']))) ?></span><?php endif; ?>
+            </div>
+            <?php if ($dono['bio']): ?><p class="perfil-bio"><?= e($dono['bio']) ?></p><?php endif; ?>
         </div>
+        <div class="hero-stats perfil-stats">
+            <div><b><?= count($cifras) ?></b><span>cifras</span></div>
+            <div><b><?= (int)$totalVis ?></b><span>visualizações</span></div>
+            <div><b><?= (int)$totalFavs ?></b><span>❤ recebidos</span></div>
+        </div>
+    </header>
 
-        <div class="secao-cifras">
-            <h3>Minhas Cifras</h3>
+    <section data-abas-escopo>
+        <nav class="abas" data-abas role="tablist">
+            <button data-aba="cifras"><i class="fa-solid fa-guitar"></i> Cifras <span class="aba-num"><?= count($cifras) ?></span></button>
+            <?php if ($ehMeu): ?>
+                <button data-aba="favoritas"><i class="fa-solid fa-heart"></i> Favoritas <span class="aba-num"><?= count($favoritas) ?></span></button>
+                <button data-aba="repertorios"><i class="fa-solid fa-list-ol"></i> Repertórios <span class="aba-num"><?= count($reps) ?></span></button>
+                <button data-aba="config"><i class="fa-solid fa-gear"></i> Configurações</button>
+            <?php endif; ?>
+        </nav>
 
-            <?php if (count($minhas_musicas) > 0): ?>
-
-                <table class="tabela-hub">
-                    <thead>
-                        <tr>
-                            <th>Música</th>
-                            <th>Artista</th>
-                            <th style="text-align: right;">Ação</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <?php foreach ($minhas_musicas as $m): ?>
-
-                            <tr>
-                                <td class="col-titulo">
-                                    <a href="cifra.php?id=<?php echo $m['id']; ?>">
-                                        <?php echo htmlspecialchars($m['titulo']); ?>
-                                    </a>
-                                </td>
-
-                                <td class="col-artista">
-                                    <?php echo htmlspecialchars($m['artista']); ?>
-                                </td>
-
-                                <td style="text-align: right;">
-                                    <a href="cifra.php?id=<?php echo $m['id']; ?>" class="btn-acessar">
-                                        Tocar
-                                    </a>
-                                </td>
-                            </tr>
-
-                        <?php endforeach; ?>
-                    </tbody>
-                </table>
-
-            <?php else: ?>
-
-                <div style="
-                    background: #252525;
-                    padding: 20px;
-                    border-radius: 8px;
-                    text-align: center;
-                ">
-                    <p style="color: #aaa;">
-                        Você ainda não cadastrou nenhuma cifra.
-                    </p>
-                </div>
-
+        <div data-painel="cifras" class="painel lista-musicas">
+            <?php foreach ($cifras as $m) linhaMusica($m, $ehMeu); ?>
+            <?php if (!$cifras): ?>
+                <div class="vazio-grande vazio-lista"><img src="img/dog.png" alt="" class="dog-triste">
+                    <h3><?= $ehMeu ? 'Você ainda não enviou nenhuma cifra' : 'Nenhuma cifra enviada ainda' ?></h3>
+                    <?php if ($ehMeu): ?><a class="btn btn-ouro" href="editor.php"><i class="fa-solid fa-plus"></i> Enviar a primeira</a><?php endif; ?></div>
             <?php endif; ?>
         </div>
 
-        <div style="margin-top: 30px;">
-            <a href="hub.php" style="
-                color: var(--primary);
-                text-decoration: none;
-            ">
-                ← Voltar ao Hub
-            </a>
+        <?php if ($ehMeu): ?>
+        <div data-painel="favoritas" class="painel lista-musicas" hidden>
+            <?php foreach ($favoritas as $m) linhaMusica($m); ?>
+            <?php if (!$favoritas): ?><p class="vazio">Toque no ❤ de uma cifra para guardá-la aqui.</p><?php endif; ?>
         </div>
 
-    </main>
+        <div data-painel="repertorios" class="painel" hidden>
+            <div class="grade-cartoes">
+                <?php foreach ($reps as $r): ?>
+                    <a class="cartao cartao-rep" href="repertorio.php?id=<?= (int)$r['id'] ?>"><h3><?= e($r['nome']) ?></h3>
+                        <span class="chip"><i class="fa-solid fa-music"></i> <?= (int)$r['total'] ?> música(s)</span></a>
+                <?php endforeach; ?>
+                <a class="cartao cartao-rep cartao-novo" href="repertorio.php"><i class="fa-solid fa-plus"></i> Novo repertório</a>
+            </div>
+        </div>
 
-    <style>
-
-        body{
-            background: #33312B;
-        }
-                
-        .perfil-container {
-            max-width: 1100px;
-            margin: 40px auto;
-            padding: 30px;
-            color: #fff;
-        }
-
-        
-        .perfil-header {
-            background: linear-gradient(135deg, #1f1f1f, #2e2e2e);
-            padding: 30px;
-            border-radius: 16px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .perfil-header h1 {
-            margin: 0;
-            font-size: 2rem;
-        }
-
-        .perfil-header p {
-            margin-top: 10px;
-            color: #b0b0b0;
-        }
-
-        
-        .secao-cifras {
-            background: #1c1c1c;
-            padding: 25px;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .secao-cifras h3 {
-            margin-bottom: 20px;
-            font-size: 1.5rem;
-            border-left: 4px solid #ff8c00;
-            padding-left: 12px;
-        }
-
-        .tabela-hub {
-            width: 100%;
-            border-collapse: collapse;
-            overflow: hidden;
-            border-radius: 12px;
-        }
-
-        .tabela-hub thead {
-            background: #2c2c2c;
-        }
-
-        .tabela-hub th {
-            padding: 16px;
-            text-align: left;
-            color: #ddd;
-            font-weight: 600;
-            font-size: 14px;
-            text-transform: uppercase;
-        }
-
-        .tabela-hub td {
-            padding: 18px 16px;
-            border-top: 1px solid #333;
-        }
-
-        .tabela-hub tbody tr {
-            transition: 0.2s;
-        }
-
-        .tabela-hub tbody tr:hover {
-            background: #262626;
-        }
-
-        .col-titulo a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 16px;
-        }
-
-        .col-titulo a:hover {
-            color: #ff8c00;
-        }
-
-        .col-artista {
-            color: #b0b0b0;
-        }
-
-
-        .btn-acessar {
-            display: inline-block;
-            background: #ff8c00;
-            color: white;
-            text-decoration: none;
-            padding: 10px 18px;
-            border-radius: 8px;
-            font-weight: bold;
-            transition: 0.2s;
-        }
-
-        .btn-acessar:hover {
-            background: #ff9d26;
-            transform: translateY(-2px);
-        }
-
-        .sem-musicas {
-            background: #252525;
-            padding: 25px;
-            border-radius: 12px;
-            text-align: center;
-            color: #aaa;
-        }
-
-        .voltar-hub {
-            display: inline-block;
-            margin-top: 25px;
-            color: #ff8c00;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.2s;
-        }
-
-        .voltar-hub:hover {
-            color: #ff9d26;
-        }
-    </style>
-
-</body>
-</html>
+        <div data-painel="config" class="painel painel-form" hidden>
+            <form method="POST" class="form-config">
+                <?= csrfCampo() ?>
+                <label class="campo"><span>E-mail (privado)</span><input type="text" value="<?= e($dono['email']) ?>" disabled></label>
+                <label class="campo"><span>Instrumento principal</span>
+                    <select name="instrumento"><option value="">—</option>
+                    <?php foreach (['Violão', 'Guitarra', 'Baixo', 'Teclado', 'Ukulele', 'Bateria', 'Voz'] as $i): ?>
+                        <option <?= $dono['instrumento'] === $i ? 'selected' : '' ?>><?= $i ?></option><?php endforeach; ?></select></label>
+                <label class="campo"><span>Bio (até 300 caracteres)</span><textarea name="bio" maxlength="300" rows="3"><?= e($dono['bio']) ?></textarea></label>
+                <button class="btn btn-ouro">Salvar</button>
+            </form>
+        </div>
+        <?php endif; ?>
+    </section>
+</main>
+<?php require __DIR__ . '/includes/rodape.php';

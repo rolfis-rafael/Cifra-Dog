@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Cifra-Dog</title>
+    <meta name="description" content="Suas cifras e repertórios, no celular e no computador.">
+    <meta name="theme-color" content="#1b100b">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="img/brand/icon-192.png">
+    <link rel="apple-touch-icon" href="img/brand/icon-180.png">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/taverna.css">
+    <link rel="stylesheet" href="css/estudio.css">
+</head>
+<body>
+    <div id="cenario" aria-hidden="true"></div>
+    <div id="app">
+        <!-- Navegação: barra inferior no celular, barra lateral no computador -->
+        <nav id="nav" aria-label="Navegação principal">
+            <a class="nav-logo" href="#/"><img src="img/brand/logo-pub.webp" width="180" height="60" decoding="async" alt="Cifra-Dog"></a>
+            <!-- Celular, da esquerda para a direita: Crie · Discografia · Início (no meio) · Pesquisar · Show -->
+            <a href="#/criar" data-rota="criar"><svg viewBox="0 0 24 24"><path d="M11 4h2v7h7v2h-7v7h-2v-7H4v-2h7z"/></svg><span>Crie</span></a>
+            <a href="#/biblioteca" data-rota="biblioteca"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 7.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM12 4a8 8 0 0 1 8 8h-1.5A6.5 6.5 0 0 0 12 5.5z"/></svg><span>Discografia</span></a>
+            <a href="#/" data-rota="inicio" class="nav-meio"><svg viewBox="0 0 24 24"><path d="M12 3 3 10.5V21h6v-6h6v6h6V10.5z"/></svg><span>Início</span></a>
+            <a href="#/buscar" data-rota="buscar"><svg viewBox="0 0 24 24"><path d="M10.5 3a7.5 7.5 0 0 1 5.96 12.05l4.74 4.74-1.41 1.41-4.74-4.74A7.5 7.5 0 1 1 10.5 3zm0 2a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11z"/></svg><span>Pesquisar</span></a>
+            <a href="#/show" data-rota="show"><svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V5a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11z"/></svg><span>Show</span></a>
+            <div class="nav-reps" id="nav-reps"></div>
+        </nav>
+
+        <main id="tela" tabindex="-1"></main>
+
+        <!-- Mini-player: última cifra aberta -->
+        <div id="mini" hidden></div>
+    </div>
+
+    <!-- Painel que sobe de baixo (menus, diagramas, perguntas) -->
+    <div id="sheet-fundo" hidden><div id="sheet" role="dialog" aria-modal="true"></div></div>
+    <div id="toast" role="status" aria-live="polite"></div>
+
+    <script src="js/cifra-motor.js"></script>
+    <script src="js/db.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/catalogo.js"></script>
+    <script src="js/aprender.js"></script>
+    <script src="js/exemplos.js"></script>
+    <script src="js/lista-video.js"></script>
+    <script src="js/rolagem-bpm.js"></script>
+    <script src="js/programada.js"></script>
+    <script src="js/controle.js"></script>
+    <script src="js/telas.js"></script>
+    <script src="js/sala.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

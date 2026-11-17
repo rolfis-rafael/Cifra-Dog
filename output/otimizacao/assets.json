@@ -1,0 +1,57 @@
+{
+  "originalBytes": 20087918,
+  "optimizedBytes": 2300560,
+  "reductionPercent": 88.55,
+  "assets": [
+    {
+      "file": "taverna/pub-background",
+      "originalBytes": 2483611,
+      "optimizedBytes": 200310,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "taverna/pub-mobile",
+      "originalBytes": 2267815,
+      "optimizedBytes": 156510,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "file": "taverna/covers-atlas",
+      "originalBytes": 3855785,
+      "optimizedBytes": 665602,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "taverna/materials-atlas",
+      "originalBytes": 3362394,
+      "optimizedBytes": 446626,
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "file": "brand/genres-atlas",
+      "originalBytes": 3558091,
+      "optimizedBytes": 679574,
+      "width": 1448,
+      "height": 1086
+    },
+    {
+      "file": "brand/dog-pub",
+      "originalBytes": 2664534,
+      "optimizedBytes": 80966,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "file": "brand/logo-pub",
+      "originalBytes": 1895688,
+      "optimizedBytes": 70972,
+      "width": 720,
+      "height": 240
+    }
+  ],
+  "source": "Artes originais preservadas nos arquivos PNG; WebP usado pelo aplicativo."
+}
