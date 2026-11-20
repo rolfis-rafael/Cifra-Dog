@@ -701,6 +701,8 @@
         /* ---------- Rolagem automática (velocidade 1–10) ---------- */
         function passo(t) {
             if (!st.rolando) return;
+            // Dedo na tela (ou embalo / roda do mouse): a rolagem espera, sem desligar, e volta sozinha ao soltar.
+            if (UI.usuarioRolando()) { st.ultimoT = 0; st.acumulado = 0; st.raf = requestAnimationFrame(passo); return; }
             if (st.ultimoT) {
                 // Proporcional ao tamanho da letra: com a cifra maior (pinça ou A+) a rolagem programada anda mais rápido.
                 const pxPorSeg = (6 + (pr.velocidade - 1) * 9) * ((st.fonteEf || pr.fonte) / 100); // base: fórmula do Cifra-Dog original
@@ -869,10 +871,15 @@
             if (m.rolagemBpm) { iniciarBpm(st.fraseBpm >= 0 ? st.fraseBpm : 0); return; }
             st.rolando = true; st.ultimoT = 0; st.acumulado = 0; st.raf = requestAnimationFrame(passo); desenharDoca(tomAtual(m, st.semitons)); manterTelaLigada(true); }
         function pararRolagem() { pararPulsoProg(); if (tocador) tocador.parar(); if (prog) prog.parar(); st.rolando = false; cancelAnimationFrame(st.raf); desenharDoca(tomAtual(m, st.semitons)); }
-        // Tocar na cifra pausa/retoma a rolagem (útil no palco). Arrastar com o dedo só pausa.
-        let toqueMoveu = false;
-        conteudo.addEventListener('touchstart', () => { toqueMoveu = false; }, { passive: true });
-        conteudo.addEventListener('touchmove', (e) => { toqueMoveu = true; if (e.touches.length < 2 && st.rolando && !m.rolagemBpm && !m.rolagemProg) pararRolagem(); }, { passive: true });
+        // Arrastar a cifra com o dedo NÃO desliga a rolagem: ela só espera o dedo sair (ver passo() e UI.usuarioRolando).
+        // toqueMoveu evita que um arrasto conte como toque num acorde ou numa frase.
+        // Segurar o dedo parado (para a rolagem esperar) também não conta: ao soltar, não abre o diagrama do acorde.
+        // AJUSTAR: a partir de quantos ms o toque deixa de ser "toque" e vira "segurar".
+        const TOQUE_LONGO_MS = 450;
+        let toqueMoveu = false, toqueT0 = 0;
+        conteudo.addEventListener('touchstart', () => { toqueMoveu = false; toqueT0 = performance.now(); }, { passive: true });
+        conteudo.addEventListener('touchmove', () => { toqueMoveu = true; }, { passive: true });
+        conteudo.addEventListener('touchend', () => { if (performance.now() - toqueT0 > TOQUE_LONGO_MS) toqueMoveu = true; }, { passive: true });
 
         /* ---------- Pinça: dois dedos aumentam / diminuem a cifra ---------- */
         let pinca = null; // { d0, fonte0, cy, ancora }
@@ -1037,15 +1044,29 @@
         if (rep) {
             $('bt-ant').onclick = () => irPara(idx - 1);
             $('bt-prox').onclick = () => irPara(idx + 1);
-            // Deslizar para os lados troca de música
-            let x0 = null, y0 = null;
-            conteudo.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; }, { passive: true });
-            conteudo.addEventListener('touchend', e => {
-                if (x0 === null) return;
-                const dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0;
-                if (Math.abs(dx) > 90 && Math.abs(dy) < 50) irPara(dx < 0 ? idx + 1 : idx - 1);
-                x0 = null;
+            // Deslizar para os lados troca de música. Para não trocar por acidente no meio do show, NÃO vale:
+            //  - com dois dedos (pinça): antes, soltar um dedo da pinça podia pular de música;
+            //  - quando a cifra é mais larga que a tela (aí o deslize serve para ler o fim da linha);
+            //  - em gesto lento (mais de 0,6 s), que é leitura/arrasto e não um "peteleco".
+            // AJUSTAR: distância mínima (px) e tempo máximo (ms) do deslize.
+            const SWIPE_MIN_PX = 90, SWIPE_MAX_MS = 600;
+            let sw = null; // { id, x, y, t }
+            conteudo.addEventListener('touchstart', e => {
+                if (e.touches.length !== 1) { sw = null; return; }
+                const larga = !conteudo.classList.contains('quebra') && conteudo.scrollWidth > conteudo.clientWidth + 2;
+                if (larga) { sw = null; return; }
+                const t0 = e.touches[0];
+                sw = { id: t0.identifier, x: t0.clientX, y: t0.clientY, t: performance.now() };
             }, { passive: true });
+            conteudo.addEventListener('touchend', e => {
+                const s = sw; sw = null;
+                if (!s || e.touches.length) return;
+                const t1 = [...e.changedTouches].find(t => t.identifier === s.id); if (!t1) return;
+                const dx = t1.clientX - s.x, dy = t1.clientY - s.y;
+                if (performance.now() - s.t > SWIPE_MAX_MS) return;
+                if (Math.abs(dx) > SWIPE_MIN_PX && Math.abs(dy) < 50) irPara(dx < 0 ? idx + 1 : idx - 1);
+            }, { passive: true });
+            conteudo.addEventListener('touchcancel', () => { sw = null; }, { passive: true });
         }
 
         /* ---------- Eventos ---------- */

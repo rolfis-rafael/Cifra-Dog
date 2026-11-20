@@ -1,5 +1,23 @@
 # Cifra-Dog v2
 
+## v3.8.0 — Ajuda de palco
+
+- **Próxima música** (fim da cifra, dentro de um repertório): cartão com o que muda na troca (capo, afinação, lembrete da música, BPM) e uma faixa "Próxima" que aparece perto do fim. Botões **Lembrete** e **Ir para a próxima**.
+- **Emendar músicas (medley):** no mesmo cartão, 3 caminhos de acordes para ligar uma música na outra (pela dominante, ii–V, acorde em comum). São sugestões por regra de harmonia: confira de ouvido. Toque num acorde para ver o diagrama.
+- **Ordem inteligente** (repertório → ⋯): "Menos trocas" agrupa músicas com o mesmo capo e afinação; "Energia do show" sobe e desce o BPM. Cria uma NOVA ordem e mantém a atual; a 1ª e a última de cada bloco ficam no lugar.
+- **Banda sincronizada** (repertório → ⋯): o líder convida pelo QR/código; quem entra acompanha a música, o tom e a rolagem do líder (a transposição vale só na tela, não altera a cifra salva). Funciona sem servidor (WebRTC), melhor na mesma Wi-Fi.
+- **Modo baterista** (Ajustes da cifra): esconde os acordes, mostra a letra como deixa, quantas frases tem cada parte (e compassos, se ajustado) e o BPM grande com metrônomo visual.
+
+## v3.7.1 — Ferramentas para o músico
+
+- **Pacotes de músicas** (Discografia → **+**, ou banner no Início): instala pacotes de cifras livres do catálogo no GitHub Pages (`cifradog-pacotes`). Confere o arquivo (sha256), não duplica e nunca substitui uma música sua ou uma cifra que você editou. Funciona offline depois de instalado. Crédito da licença aparece no topo da cifra.
+- **Editor:** "Onde achar cifras livres", botão **Arquivo** para abrir `.cho`/`.txt` (ChordPro é convertido) e campo com o link de onde veio a cifra.
+- **Tom para a minha voz** (Ajustes da cifra): grave a sua extensão vocal cantando no microfone (ou escolha na lista; ♪ toca a nota) e o app sugere os 3 melhores tons. Para ficar preciso, grave a extensão da melodia de cada música; sem ela, a sugestão é uma estimativa (o app avisa).
+- **Capotraste mais fácil** (Ajustes da cifra): os 3 capos com menos pestanas para o tom da tela.
+- **Mandar para a banda** (repertório → ⋯): arquivo com as cifras (abre no "Compartilhar" do celular) ou QR com a lista (ordem, blocos e tons). Quem recebe salva o repertório; as músicas que já tem entram transpostas para o tom da banda.
+- **Cardápio de pedidos** (repertório → ⋯): QR para o público ver as músicas do show (`cardapio.html`, sem servidor), com botão **Pedir** pelo WhatsApp. Gere o QR pelo endereço publicado, não pelo localhost.
+- **Rolagem:** arrastar a cifra com o dedo não desliga mais a rolagem automática (ela espera e volta sozinha); a pinça e o deslize lento não trocam de música por acidente; segurar o dedo num acorde não abre o diagrama.
+
 ## v3.5.0 — Ícones da barra e ajustes de experiência
 
 - **Barra de baixo com 4 abas:** Início · Pesquisar · Discografia · Show. O ícone fica só no contorno nas abas fechadas e preenchido na aba aberta.
@@ -125,6 +143,8 @@ App de cifras sem PHP: funciona offline, no celular e no computador. Pode ser in
 | `js/rolagem-bpm.js` | Rolagem por BPM |
 | `js/lista-video.js` | Lista de músicas do vídeo (sem cifra) |
 | `js/controle.js` | Pedal MIDI / teclas: aprender botões, ações, rolagem pelo pedal |
+| `js/show-ajuda.js` | Próxima música, emendar, ordem inteligente, modo baterista |
+| `js/banda.js` | Banda sincronizada (WebRTC por QR/código) |
 | `sw.js` | Modo offline. Ao mudar algum arquivo, aumente a `VERSAO` |
 
 ## Mecânicas

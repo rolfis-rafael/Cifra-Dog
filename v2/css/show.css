@@ -111,3 +111,49 @@ body.palco .cifra-l1,body.palco .cifra-l2{display:none}
 /* Modo palco no celular (sem mouse): a doca fica sempre visível */
 @media (hover:none){body.palco .doca{opacity:1}}
 #aula-vazia small,.aula-ou{font-size:11px}
+
+/* =====================================================================
+   js/show-ajuda.js e js/banda.js — próxima música, emendar, modo baterista, banda
+   ===================================================================== */
+/* Cartão "Próxima" no fim da cifra (fica dentro do #cifra-conteudo, antes do espaço final) */
+#prox-card { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; white-space: normal; margin: 2.2em 0 0; font-size: 15px; }
+.prox-card { background: var(--sup-1); border: 1px solid var(--linha); border-radius: 10px; padding: 12px; }
+.prox-cab small, .prox-emenda > small { display: block; font-size: 11px; letter-spacing: .1em; color: var(--texto-3); font-weight: 700; }
+.prox-cab b { display: block; font-size: 18px; color: var(--texto); margin-top: 2px; }
+.prox-cab span { color: var(--texto-2); font-size: 13px; }
+.prox-avisos { margin: 8px 0 4px; padding-left: 18px; color: var(--texto-2); }
+.prox-avisos li.forte { color: var(--acorde); font-weight: 700; }
+.prox-emenda { margin-top: 10px; }
+.emenda { padding: 7px 0; border-top: 1px solid #ffffff12; display: grid; gap: 2px; }
+.emenda .em-nome { font-size: 12px; color: var(--texto-3); }
+.emenda .em-acordes { font-family: ui-monospace, "Courier New", monospace; font-size: 18px; color: var(--acorde); }
+.emenda .em-acordes .ac { cursor: pointer; }
+.emenda .em-acordes i { color: var(--texto-3); font-style: normal; }
+.emenda small { color: var(--texto-2); font-size: 12px; }
+/* Faixa perto do fim da música */
+#prox-faixa { position: fixed; z-index: 30; left: 50%; transform: translateX(-50%); top: calc(env(safe-area-inset-top, 0px) + 64px);
+  width: min(560px, calc(100vw - 20px)); display: flex; align-items: center; gap: 8px; padding: 6px 6px 6px 12px; border-radius: 10px;
+  background: #2b1b13f2; border: 1px solid var(--acorde); color: var(--texto); font: 14px/1.3 system-ui, sans-serif; box-shadow: 0 8px 28px #0009; }
+#prox-faixa span { flex: 1; min-width: 0; }
+#prox-faixa small { color: var(--texto-3); }
+#prox-faixa em { color: var(--acorde); font-style: normal; font-weight: 700; }
+#prox-faixa .bt-icone { width: 36px; height: 36px; flex-shrink: 0; }
+body.palco #prox-faixa { top: 8px; }
+
+/* Modo baterista: só as partes, a deixa (1ª linha cantada) e quantas frases cada parte tem */
+#cifra-conteudo.baterista .l-acordes, #cifra-conteudo.baterista .l-tab, #cifra-conteudo.baterista .rf-c { display: none; }
+#cifra-conteudo.baterista .l-letra:not(.deixa), #cifra-conteudo.baterista .l-reflow:not(.deixa) { display: none; }
+#cifra-conteudo.baterista .l-secao { margin-top: 1em; font-size: 1.25em; }
+#cifra-conteudo.baterista .deixa { opacity: .85; font-style: italic; }
+#cifra-conteudo.baterista .deixa::before { content: '“'; } #cifra-conteudo.baterista .deixa::after { content: '…”'; }
+#cifra-conteudo .bat-info { font-family: system-ui, sans-serif; font-size: .7em; color: var(--acorde); margin-left: .6em; font-weight: 600; }
+#cifra-conteudo div.bat-info { margin-left: 0; color: var(--texto-2); }
+#bat-barra { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin: 6px 0 8px; padding: 10px 12px;
+  border-radius: 10px; background: var(--sup-1); border: 1px solid var(--linha); }
+#bat-barra b { font-size: 34px; line-height: 1; color: var(--acorde); font-family: system-ui, sans-serif; }
+#bat-barra small { display: block; color: var(--texto-2); }
+
+/* Selo da banda sincronizada */
+#banda-selo { position: fixed; z-index: 35; left: 10px; bottom: calc(var(--nav-h, 70px) + env(safe-area-inset-bottom, 0px) + 10px);
+  border: 1px solid #3fae5a; background: #13261af0; color: #bff3c9; border-radius: 999px; padding: 7px 12px; font: 600 13px system-ui, sans-serif; cursor: pointer; }
+body.tela-cifra #banda-selo { bottom: 84px; }

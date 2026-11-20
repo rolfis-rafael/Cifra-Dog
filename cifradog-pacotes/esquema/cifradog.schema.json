@@ -1,0 +1,251 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Cifra-Dog: formatos de arquivo (versão 1)",
+  "description": "Valida os 3 tipos de arquivo do Cifra-Dog: pacote de músicas, catálogo de pacotes e backup do usuário. O campo 'formato' decide qual é.",
+  "oneOf": [
+    { "$ref": "#/$defs/pacoteArquivo" },
+    { "$ref": "#/$defs/catalogoArquivo" },
+    { "$ref": "#/$defs/backupArquivo" }
+  ],
+
+  "$defs": {
+
+    "id": {
+      "description": "Identificador estável em minúsculas, sem acento, com hífens. Nunca muda depois de publicado.",
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "maxLength": 80
+    },
+
+    "refMusica": {
+      "description": "Referência global a uma música: 'idDoPacote/idDaMusica'. Músicas criadas pelo usuário ficam no pacote reservado 'meu'.",
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*/[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+
+    "tom": {
+      "description": "Tom da música: nota (A-G), sustenido/bemol opcional e 'm' se menor. Ex.: G, Em, F#m, Bb.",
+      "type": "string",
+      "pattern": "^[A-G][#b]?m?$"
+    },
+
+    "licenca": {
+      "description": "Origem e direitos da cifra. 'pessoal' = feita/guardada só pelo usuário e NUNCA entra em pacote público.",
+      "type": "object",
+      "required": ["tipo"],
+      "properties": {
+        "tipo": {
+          "enum": ["dominio-publico", "cc0", "cc-by", "cc-by-sa", "autorizado", "pessoal"]
+        },
+        "fonte": { "type": "string", "description": "Nome da fonte (site, livro, repositório)." },
+        "url": { "type": "string", "format": "uri" },
+        "autor": { "type": "string", "description": "Autor da letra/música ou de quem fez a cifra." },
+        "atribuicao": { "type": "string", "description": "Texto de crédito exibido no app (obrigatório em CC BY e CC BY-SA)." },
+        "verificadoEm": { "type": "string", "format": "date", "description": "Quando a licença foi conferida." }
+      },
+      "allOf": [
+        { "if": { "properties": { "tipo": { "const": "pessoal" } } }, "else": { "required": ["fonte"] } },
+        { "if": { "properties": { "tipo": { "enum": ["cc-by", "cc-by-sa"] } } }, "then": { "required": ["atribuicao"] } }
+      ],
+      "additionalProperties": false
+    },
+
+    "linha": {
+      "description": "Uma linha da cifra. 'texto' usa ChordPro inline: acordes entre colchetes, na posição da sílaba. Ex.: '[G]Ciranda, [D7]cirandinha'.",
+      "type": "object",
+      "required": ["texto"],
+      "properties": {
+        "tipo": {
+          "description": "letra = padrão; acordes = linha só de acordes (instrumental); obs = anotação (ex.: '2x', 'só violão').",
+          "enum": ["letra", "acordes", "obs"],
+          "default": "letra"
+        },
+        "texto": { "type": "string" },
+        "compassos": {
+          "description": "RESERVADO para a rolagem por BPM: quantos compassos esta frase dura. Pode ficar vazio por enquanto.",
+          "type": "integer",
+          "minimum": 1
+        },
+        "extras": { "type": "object", "description": "Espaço livre para recursos futuros." }
+      },
+      "additionalProperties": false
+    },
+
+    "secao": {
+      "type": "object",
+      "required": ["tipo", "linhas"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id", "description": "Opcional. Útil para pular/repetir seção no futuro." },
+        "tipo": {
+          "enum": ["intro", "verso", "pre-refrao", "refrao", "ponte", "solo", "interludio", "final", "outro"]
+        },
+        "nome": { "type": "string", "description": "Rótulo exibido. Ex.: 'Refrão 2'. Se vazio, o app usa o tipo." },
+        "repetir": { "type": "integer", "minimum": 1, "default": 1 },
+        "linhas": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/linha" } },
+        "extras": { "type": "object" }
+      },
+      "additionalProperties": false
+    },
+
+    "musica": {
+      "type": "object",
+      "required": ["id", "titulo", "artista", "tom", "licenca", "secoes"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "titulo": { "type": "string", "minLength": 1 },
+        "artista": { "type": "string", "minLength": 1, "description": "Intérprete ou 'Tradicional'." },
+        "compositor": { "type": "string" },
+        "tom": { "$ref": "#/$defs/tom" },
+        "capo": { "type": "integer", "minimum": 0, "maximum": 12, "default": 0 },
+        "bpm": { "type": "integer", "minimum": 30, "maximum": 300 },
+        "compasso": { "type": "string", "pattern": "^[1-9][0-9]?/[1-9][0-9]?$", "description": "Ex.: 4/4, 3/4, 6/8." },
+        "genero": { "type": "string" },
+        "idioma": { "type": "string", "pattern": "^[a-z]{2}(-[A-Z]{2})?$", "default": "pt-BR" },
+        "tags": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+        "obs": { "type": "string" },
+        "licenca": { "$ref": "#/$defs/licenca" },
+        "secoes": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/secao" } },
+        "origem": {
+          "description": "Preenchido pelo app ao importar: de qual pacote/revisão a música veio (permite atualizar sem duplicar).",
+          "type": "object",
+          "required": ["pacoteId", "revisao"],
+          "properties": {
+            "pacoteId": { "$ref": "#/$defs/id" },
+            "revisao": { "type": "integer", "minimum": 1 }
+          },
+          "additionalProperties": false
+        },
+        "criadoEm": { "type": "string", "format": "date-time" },
+        "atualizadoEm": { "type": "string", "format": "date-time" },
+        "extras": { "type": "object" }
+      },
+      "additionalProperties": false
+    },
+
+    "pacoteArquivo": {
+      "description": "Arquivo de pacote: um grupo de músicas para importar. Ex.: 'cantigas-populares.json'.",
+      "type": "object",
+      "required": ["formato", "versao", "pacote", "musicas"],
+      "properties": {
+        "formato": { "const": "cifradog.pacote" },
+        "versao": { "const": 1, "description": "Versão do formato do arquivo (muda só se o esquema quebrar)." },
+        "pacote": {
+          "type": "object",
+          "required": ["id", "nome", "revisao"],
+          "properties": {
+            "id": { "$ref": "#/$defs/id" },
+            "nome": { "type": "string", "minLength": 1 },
+            "descricao": { "type": "string" },
+            "autor": { "type": "string", "description": "Quem montou o pacote." },
+            "revisao": { "type": "integer", "minimum": 1, "description": "Sobe 1 a cada atualização do conteúdo do pacote." },
+            "atualizadoEm": { "type": "string", "format": "date" },
+            "idioma": { "type": "string", "pattern": "^[a-z]{2}(-[A-Z]{2})?$" },
+            "tags": { "type": "array", "items": { "type": "string" }, "uniqueItems": true }
+          },
+          "additionalProperties": false
+        },
+        "musicas": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/musica" } }
+      },
+      "additionalProperties": false
+    },
+
+    "catalogoArquivo": {
+      "description": "Índice leve com a lista de pacotes disponíveis. É o único arquivo que o app baixa para montar a tela 'Adicionar músicas'; cada pacote só é baixado quando a pessoa clica.",
+      "type": "object",
+      "required": ["formato", "versao", "atualizadoEm", "pacotes"],
+      "properties": {
+        "formato": { "const": "cifradog.catalogo" },
+        "versao": { "const": 1 },
+        "atualizadoEm": { "type": "string", "format": "date-time" },
+        "pacotes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "nome", "revisao", "arquivo", "qtdMusicas", "licenca"],
+            "properties": {
+              "id": { "$ref": "#/$defs/id" },
+              "nome": { "type": "string" },
+              "descricao": { "type": "string" },
+              "revisao": { "type": "integer", "minimum": 1 },
+              "arquivo": { "type": "string", "description": "Caminho do pacote, relativo ao catálogo. Ex.: pacotes/cantigas-populares.json" },
+              "qtdMusicas": { "type": "integer", "minimum": 1 },
+              "tamanhoBytes": { "type": "integer", "minimum": 1 },
+              "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$", "description": "Confere se o download veio íntegro." },
+              "licenca": { "enum": ["dominio-publico", "cc0", "cc-by", "cc-by-sa", "autorizado"] },
+              "tags": { "type": "array", "items": { "type": "string" }, "uniqueItems": true }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "repertorio": {
+      "description": "Lista ordenada de músicas para um show. A numeração é a posição no array 'itens'. Blocos criam a faixa entre grupos.",
+      "type": "object",
+      "required": ["id", "nome", "itens"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "nome": { "type": "string" },
+        "blocos": {
+          "description": "Grupos em ordem (ex.: 'Set 1', 'Set 2'). Opcional.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "nome"],
+            "properties": { "id": { "$ref": "#/$defs/id" }, "nome": { "type": "string" } },
+            "additionalProperties": false
+          }
+        },
+        "itens": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["musica"],
+            "properties": {
+              "musica": { "$ref": "#/$defs/refMusica" },
+              "tom": { "$ref": "#/$defs/tom", "description": "Tom escolhido neste repertório (transposição). Não altera a música original." },
+              "capo": { "type": "integer", "minimum": 0, "maximum": 12 },
+              "bloco": { "$ref": "#/$defs/id", "description": "Id de um bloco de 'blocos'." },
+              "obs": { "type": "string" }
+            },
+            "additionalProperties": false
+          }
+        },
+        "criadoEm": { "type": "string", "format": "date-time" },
+        "atualizadoEm": { "type": "string", "format": "date-time" }
+      },
+      "additionalProperties": false
+    },
+
+    "backupArquivo": {
+      "description": "Backup/transferência entre aparelhos. Leva só o que é do usuário; pacotes instalados voltam a ser baixados pelo catálogo.",
+      "type": "object",
+      "required": ["formato", "versao", "exportadoEm"],
+      "properties": {
+        "formato": { "const": "cifradog.backup" },
+        "versao": { "const": 1 },
+        "exportadoEm": { "type": "string", "format": "date-time" },
+        "pacotesInstalados": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "revisao"],
+            "properties": { "id": { "$ref": "#/$defs/id" }, "revisao": { "type": "integer", "minimum": 1 } },
+            "additionalProperties": false
+          }
+        },
+        "musicasPessoais": {
+          "description": "Músicas que o usuário criou/colou. Vivem no pacote reservado 'meu'.",
+          "type": "array",
+          "items": { "$ref": "#/$defs/musica" }
+        },
+        "repertorios": { "type": "array", "items": { "$ref": "#/$defs/repertorio" } },
+        "curtidas": { "type": "array", "items": { "$ref": "#/$defs/refMusica" }, "uniqueItems": true },
+        "configuracoes": { "type": "object", "description": "Tema, tamanho da fonte, mapeamento do pedal etc. Livre." }
+      },
+      "additionalProperties": false
+    }
+  }
+}

@@ -18,6 +18,9 @@
         [/^\/config$/, 'config', ''],
         [/^\/cifra\/([\w-]+)$/, 'cifra', ''],
         [/^\/repertorio\/([\w-]+)$/, 'repertorio', 'biblioteca'],
+        [/^\/pacotes$/, 'pacotes', 'biblioteca'],   // js/pacotes.js
+        [/^\/receber$/, 'receber', 'biblioteca'],   // js/compartilhar.js (QR da banda)
+        [/^\/banda$/, 'banda', 'show'],             // js/banda.js (entrar na banda sincronizada)
     ];
     let limpar = null;
     let rotaAtual = '';

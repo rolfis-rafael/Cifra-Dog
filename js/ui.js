@@ -178,8 +178,31 @@
         return d === 1 ? 'ontem' : 'há ' + d + ' dias';
     }
 
+    /* ---------- A pessoa está rolando a tela com o dedo / roda do mouse? ----------
+     * Usado pelas rolagens automáticas para NÃO brigar com o dedo: enquanto o dedo está na tela,
+     * durante o "embalo" depois de soltar (inércia) e logo após girar a roda do mouse,
+     * elas esperam em vez de mover a tela. Devolve true nesses momentos. */
+    // AJUSTAR: quanto tempo (ms) sem movimento conta como "o embalo acabou".
+    const ESPERA_SOLTAR_MS = 160;
+    // AJUSTAR: tempo máximo (ms) esperando o embalo, para a rolagem nunca ficar presa.
+    const ESPERA_MAX_MS = 2500;
+    let dedos = 0, esperaAte = 0, soltouEm = 0;
+    const agora = () => performance.now();
+    window.addEventListener('touchstart', (e) => { dedos = e.touches.length; }, { passive: true, capture: true });
+    const fimToque = (e) => { dedos = e.touches.length; if (!dedos) { soltouEm = agora(); esperaAte = soltouEm + ESPERA_SOLTAR_MS; } };
+    window.addEventListener('touchend', fimToque, { passive: true, capture: true });
+    window.addEventListener('touchcancel', fimToque, { passive: true, capture: true });
+    window.addEventListener('wheel', () => { soltouEm = agora(); esperaAte = soltouEm + 220; }, { passive: true, capture: true });
+    // Enquanto o embalo dura, cada movimento da tela adia um pouco a volta da rolagem automática.
+    window.addEventListener('scroll', () => {
+        const t = agora();
+        if (!dedos && t < esperaAte && t - soltouEm < ESPERA_MAX_MS) esperaAte = t + ESPERA_SOLTAR_MS;
+    }, { passive: true, capture: true });
+    function usuarioRolando() { return dedos > 0 || agora() < esperaAte; }
+
     global.UI = {
         icone, esc, normal, estiloCapa, paleta, capaMusica, capaRep, capaCurtidas, tomAtual,
         toast, abrirSheet, fecharSheet, perguntar, confirmar, prefs, salvarPrefs, tempoAtras,
+        usuarioRolando,
     };
 })(window);

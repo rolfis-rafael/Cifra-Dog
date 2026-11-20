@@ -1,0 +1,23 @@
+{
+  "formato": "cifradog.catalogo",
+  "versao": 1,
+  "atualizadoEm": "2026-11-20T01:36:37.647Z",
+  "pacotes": [
+    {
+      "id": "cantigas-populares",
+      "nome": "Cantigas populares",
+      "descricao": "Cantigas de roda tradicionais brasileiras, de domínio público, com harmonia simples para violão.",
+      "revisao": 1,
+      "arquivo": "pacotes/cantigas-populares.json",
+      "qtdMusicas": 4,
+      "tamanhoBytes": 4460,
+      "sha256": "b22cf16a9dd28bdfec830f70cd2be2e739a0a882c04ec8fcaa4c60f7b7ca93e0",
+      "licenca": "dominio-publico",
+      "tags": [
+        "infantil",
+        "tradicional",
+        "roda"
+      ]
+    }
+  ]
+}

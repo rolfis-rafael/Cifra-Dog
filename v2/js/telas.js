@@ -131,6 +131,7 @@
     const MESES = ['jan.', 'fev.', 'mar.', 'abr.', 'mai.', 'jun.', 'jul.', 'ago.', 'set.', 'out.', 'nov.', 'dez.'];
     const DIAS = ['dom.', 'seg.', 'ter.', 'qua.', 'qui.', 'sex.', 'sáb.'];
     const BANNERS = [
+        { tag: 'Novo', icone: 'baixar', titulo: 'Pacotes de músicas', texto: 'Baixe cifras livres prontas e use sem internet.', link: '#/pacotes' },
         { tag: 'Novo', icone: 'ajustes', titulo: 'Pedal e MIDI do seu jeito', texto: 'Parar, travar (segure o botão) e descer lisinho com o Chocolate Plus.', link: '#/config' },
         { tag: 'Novo', icone: 'pinca', titulo: 'Pinça para ajustar a letra', texto: 'Dois dedos mudam o tamanho; a rolagem acompanha e a letra sempre cabe na tela.', link: '#/show' },
         { tag: 'Dica', icone: 'bloco', titulo: 'Blocos e várias ordens', texto: 'Divida o show em blocos e guarde mais de uma ordem para o mesmo repertório.', link: '#/biblioteca?aba=repertorios' },
@@ -393,8 +394,9 @@
         const cm = tela().querySelector('[data-criar-menu]');
         if (cm) cm.onclick = () => abrirSheet('<h3 style="margin:0 0 8px">Criar</h3>' +
             '<a class="op" href="#/criar">' + icone('mais') + 'Nova cifra<span class="op-dir">cole ou escreva</span></a>' +
-            '<button class="op" data-sh-rep>' + icone('lista') + 'Novo repertório<span class="op-dir">monte um show ou ensaio</span></button>',
-            sh => { sh.querySelector('[data-sh-rep]').onclick = () => { fecharSheet(); novoRepertorio(); }; sh.querySelector('a').onclick = () => fecharSheet(); });
+            '<button class="op" data-sh-rep>' + icone('lista') + 'Novo repertório<span class="op-dir">monte um show ou ensaio</span></button>' +
+            '<a class="op" href="#/pacotes">' + icone('baixar') + 'Pacotes de músicas<span class="op-dir">cifras livres prontas</span></a>',
+            sh => { sh.querySelector('[data-sh-rep]').onclick = () => { fecharSheet(); novoRepertorio(); }; sh.querySelectorAll('a').forEach(a => a.onclick = () => fecharSheet()); });
         tela().querySelector('[data-exportar]').onclick = () => App.exportar();
         tela().querySelector('[data-importar]').onclick = () => App.importar();
     }
@@ -415,10 +417,15 @@
             '<div><label for="c-artista">Artista</label><input class="entrada" id="c-artista" placeholder="Quem canta?" value="' + esc(m.artista) + '" maxlength="100"></div></div>' +
             (editando && m.fonte ? '<a class="bt contorno cheio" href="' + esc(m.fonte) + '" target="_blank" rel="noopener">Abrir a cifra no site ↗</a>' : '') +
             '<div class="abas"><button type="button" class="chip ativo" data-aba="escrever">Cifra</button><button type="button" class="chip" data-aba="previa">Prévia</button>' +
-            '<span style="flex:1"></span><button type="button" class="chip contorno" id="c-colar">' + icone('colar', ' style="width:16px;height:16px;vertical-align:-3px"') + ' Colar</button></div>' +
+            '<span style="flex:1"></span><button type="button" class="chip contorno" id="c-colar">' + icone('colar', ' style="width:16px;height:16px;vertical-align:-3px"') + ' Colar</button>' +
+            '<button type="button" class="chip contorno" id="c-abrir">' + icone('subir', ' style="width:16px;height:16px;vertical-align:-3px"') + ' Arquivo</button>' +
+            '<input type="file" id="c-arquivo" accept=".cho,.chopro,.chordpro,.crd,.pro,.txt,text/plain" hidden></div>' +
             '<textarea class="entrada" id="c-cifra" aria-label="Texto da cifra" spellcheck="false" placeholder="Cole a cifra aqui (acordes em cima da letra).\n\n[Intro]\nG  D  Em  C\n\n[Verso]\nG              D\nEscreva a letra aqui embaixo\nEm             C\ne os acordes na linha de cima">' + esc(m.cifra) + '</textarea>' +
             '<div id="c-previa" hidden style="background:var(--sup-1);border-radius:8px;padding:12px;min-height:46vh"><div id="cifra-conteudo" style="padding-bottom:0"></div></div>' +
             '<div class="dica" id="c-detectado"></div>' +
+            (!editando && global.Pacotes ? '<details class="mais"><summary>Onde achar cifras livres</summary><div class="lista">' + Pacotes.htmlFontes() +
+                '<a class="op" href="#/pacotes">' + icone('baixar') + '<span class="op-txt">Pacotes de músicas<br><small>Cifras livres prontas para instalar de uma vez.</small></span></a></div>' +
+                '<p class="dica">Copie a cifra no site, volte aqui e toque em Colar. Arquivos ChordPro (.cho) entram pelo botão Arquivo.</p></details>' : '') +
             '<details class="mais"' + (editando ? ' open' : '') + '><summary>Mais opções (tom, BPM, capo)</summary>' +
             '<div class="tripla"><div><label>Tom</label><input class="entrada" id="c-tom" placeholder="auto" value="' + esc(m.tom) + '" maxlength="8"></div>' +
             '<div><label>BPM</label><input class="entrada" id="c-bpm" type="number" inputmode="numeric" min="0" max="300" placeholder="—" value="' + esc(m.bpm || '') + '"></div>' +
@@ -426,6 +433,7 @@
             '<div style="margin-top:10px"><label>Compasso</label><select class="entrada" id="c-compasso">' +
             ['4/4', '3/4', '2/4', '6/8', '12/8', '7/4'].map(c => '<option' + (c === m.compasso ? ' selected' : '') + '>' + c + '</option>').join('') + '</select></div>' +
             '<div style="margin-top:10px"><label for="c-genero">Gênero musical</label><select class="entrada" id="c-genero"><option value="">Automático pelo artista</option>' + Catalogo.generos.map(g => '<option value="' + g.id + '"' + (m.genero === g.id ? ' selected' : '') + '>' + g.nome + '</option>').join('') + '<option value="outros"' + (m.genero === 'outros' ? ' selected' : '') + '>Outros</option></select></div>' +
+            '<div style="margin-top:10px"><label for="c-fonte">Link de onde veio a cifra (opcional)</label><input class="entrada" id="c-fonte" type="url" inputmode="url" placeholder="https://..." value="' + esc(m.fonte || '') + '" maxlength="300"></div>' +
             '<p class="dica">BPM e compasso definem o ritmo da rolagem automática da cifra.</p></details>' +
             '<div class="barra-salvar"><button class="bt prim cheio" type="submit">' + icone('check') + (editando ? 'Salvar alterações' : 'Salvar cifra') + '</button></div>' +
             '</form>';
@@ -464,6 +472,15 @@
                 ta.value = t; alterado = true; analisar(); toast('Cifra colada');
             } catch (e) { ta.focus(); toast('Toque e segure na caixa para colar'); }
         };
+        // Abrir arquivo ChordPro/texto: o mesmo caminho do Colar (analisar() converte o ChordPro).
+        $('c-abrir').onclick = () => $('c-arquivo').click();
+        $('c-arquivo').onchange = async (ev) => {
+            const f = ev.target.files[0]; ev.target.value = '';
+            if (!f) return;
+            if (f.size > 512 * 1024) { toast('Arquivo grande demais para uma cifra'); return; }
+            if (ta.value.trim() && !(await confirmar('Trocar o texto atual?', 'O que está na caixa será substituído pelo arquivo ' + f.name + '.', 'Trocar'))) return;
+            ta.value = await f.text(); alterado = true; analisar(); toast('Arquivo aberto: ' + f.name);
+        };
         tela().querySelectorAll('[data-aba]').forEach(b => b.onclick = () => {
             tela().querySelectorAll('[data-aba]').forEach(x => x.classList.toggle('ativo', x === b));
             const prev = b.dataset.aba === 'previa';
@@ -488,6 +505,7 @@
                 capo: Math.max(0, Math.min(12, parseInt($('c-capo').value, 10) || 0)),
                 compasso: $('c-compasso').value,
                 genero: $('c-genero').value,
+                fonte: /^https?:\/\/\S+$/i.test($('c-fonte').value.trim()) ? $('c-fonte').value.trim() : '',
             });
             if (editando && editando.tom !== tom) dados.semitons = 0; // tom original mudou: zera a transposição
             const salva = await DB.salvarMusica(dados);
@@ -534,7 +552,8 @@
 
         let pr = prefs();
         const st = {
-            semitons: item ? (item.semitons || 0) : (m.semitons || 0),
+            // ?st=N (banda sincronizada): toca no tom da banda só nesta abertura, sem salvar.
+            semitons: q.st != null && q.st !== '' && !isNaN(+q.st) ? Math.max(-6, Math.min(5, Math.round(+q.st))) : (item ? (item.semitons || 0) : (m.semitons || 0)),
             capo: m.capo || 0,
             rolando: false, acumulado: 0, ultimoT: 0, raf: 0,
             palco: false, fraseBpm: -1, ignoraClique: false,
@@ -623,6 +642,7 @@
             if (definirFonte(ef + (d > 0 ? passo : -passo)) && d > 0) toast('Esse é o maior tamanho que cabe na tela');
         }
 
+        let limparProx = null, limparBat = null;   // cartão da próxima música e barra do baterista (js/show-ajuda.js)
         /* Desenha a cifra com o tom/capo/opções atuais. */
         function desenhar() {
             const r = CifraMotor.renderizarCifra(m.cifra, {
@@ -658,10 +678,24 @@
                 (m.tom ? '<span class="badge">Tom original: ' + esc(m.tom) + '</span>' : '') +
                 (st.semitons ? '<span class="badge verm">Transposto: ' + (st.semitons > 0 ? '+' : '') + st.semitons + ' ½</span>' : '') +
                 (st.capo ? '<span class="badge">Capo ' + st.capo + 'ª · forma de ' + esc(forma) + '</span>' : '') +
+                // Cifra de pacote/licença livre: mostra o crédito (obrigatório em CC BY).
+                (m.licenca && m.licenca.tipo && m.licenca.tipo !== 'pessoal' ? '<span class="badge" style="max-width:100%;white-space:normal;line-height:1.3;height:auto;padding-top:3px;padding-bottom:3px">' + esc(((global.Pacotes && Pacotes.LICENCAS[m.licenca.tipo]) || m.licenca.tipo) + (m.licenca.atribuicao || m.licenca.fonte ? ' · ' + (m.licenca.atribuicao || m.licenca.fonte) : '')) + '</span>' : '') +
                 '';
             $('cifra-bpm').innerHTML =
                 (m.bpm ? '<span class="badge">' + m.bpm + ' BPM · ' + esc(m.compasso || '4/4') + '</span>' : '<span class="badge">' + esc(m.compasso || '4/4') + '</span>') +
                 (m.obsCompasso ? '<span class="badge">' + esc(m.obsCompasso) + '</span>' : '');
+            // js/show-ajuda.js: modo baterista e cartão "Próxima" (emendar + avisos) no fim da cifra
+            if (global.ShowAjuda) {
+                ShowAjuda.aplicarBaterista(conteudo, m, !!pr.baterista && !semCifra);
+                if (pr.baterista && !semCifra && !limparBat) limparBat = ShowAjuda.barraBaterista(conteudo, m);
+                if ((!pr.baterista || semCifra) && limparBat) { limparBat(); limparBat = null; }
+                if (limparProx) { limparProx(); limparProx = null; }
+                if (proxMus && !semCifra) {
+                    const area = document.createElement('div'); area.id = 'prox-card'; conteudo.appendChild(area);
+                    limparProx = ShowAjuda.desenharProxima({ el: area, m, semitons: st.semitons, capo: st.capo,
+                        prox: { m: proxMus, semitons: proxItem.semitons || 0 }, irProxima: () => irPara(idx + 1) });
+                }
+            }
             desenharDoca(tomSoa);
             $('bt-curtir').innerHTML = icone(m.curtida ? 'coracao' : 'coracaoVazio', m.curtida ? ' style="color:var(--verm-claro)"' : '');
         }
@@ -697,6 +731,8 @@
         /* ---------- Rolagem automática (velocidade 1–10) ---------- */
         function passo(t) {
             if (!st.rolando) return;
+            // Dedo na tela (ou embalo / roda do mouse): a rolagem espera, sem desligar, e volta sozinha ao soltar.
+            if (UI.usuarioRolando()) { st.ultimoT = 0; st.acumulado = 0; st.raf = requestAnimationFrame(passo); return; }
             if (st.ultimoT) {
                 // Proporcional ao tamanho da letra: com a cifra maior (pinça ou A+) a rolagem programada anda mais rápido.
                 const pxPorSeg = (6 + (pr.velocidade - 1) * 9) * ((st.fonteEf || pr.fonte) / 100); // base: fórmula do Cifra-Dog original
@@ -865,10 +901,15 @@
             if (m.rolagemBpm) { iniciarBpm(st.fraseBpm >= 0 ? st.fraseBpm : 0); return; }
             st.rolando = true; st.ultimoT = 0; st.acumulado = 0; st.raf = requestAnimationFrame(passo); desenharDoca(tomAtual(m, st.semitons)); manterTelaLigada(true); }
         function pararRolagem() { pararPulsoProg(); if (tocador) tocador.parar(); if (prog) prog.parar(); st.rolando = false; cancelAnimationFrame(st.raf); desenharDoca(tomAtual(m, st.semitons)); }
-        // Tocar na cifra pausa/retoma a rolagem (útil no palco). Arrastar com o dedo só pausa.
-        let toqueMoveu = false;
-        conteudo.addEventListener('touchstart', () => { toqueMoveu = false; }, { passive: true });
-        conteudo.addEventListener('touchmove', (e) => { toqueMoveu = true; if (e.touches.length < 2 && st.rolando && !m.rolagemBpm && !m.rolagemProg) pararRolagem(); }, { passive: true });
+        // Arrastar a cifra com o dedo NÃO desliga a rolagem: ela só espera o dedo sair (ver passo() e UI.usuarioRolando).
+        // toqueMoveu evita que um arrasto conte como toque num acorde ou numa frase.
+        // Segurar o dedo parado (para a rolagem esperar) também não conta: ao soltar, não abre o diagrama do acorde.
+        // AJUSTAR: a partir de quantos ms o toque deixa de ser "toque" e vira "segurar".
+        const TOQUE_LONGO_MS = 450;
+        let toqueMoveu = false, toqueT0 = 0;
+        conteudo.addEventListener('touchstart', () => { toqueMoveu = false; toqueT0 = performance.now(); }, { passive: true });
+        conteudo.addEventListener('touchmove', () => { toqueMoveu = true; }, { passive: true });
+        conteudo.addEventListener('touchend', () => { if (performance.now() - toqueT0 > TOQUE_LONGO_MS) toqueMoveu = true; }, { passive: true });
 
         /* ---------- Pinça: dois dedos aumentam / diminuem a cifra ---------- */
         let pinca = null; // { d0, fonte0, cy, ancora }
@@ -951,6 +992,10 @@
                       (nPassos() ? '<button class="op" data-aj="prog-editar">' + icone('lista') + 'Ver / ajustar os passos<span class="op-dir">' + nPassos() + '</span></button><button class="op perigo" data-aj="prog-limpar">' + icone('lixeira') + 'Limpar a programação</button>' : '') +
                       '<p class="dica" style="margin:0 4px 6px">Você escolhe a linha que sobe em cada passo: pelo tempo da música (BPM) ou ouvindo e pisando o pedal. No avanço manual, o pedal (ou os botões da barra) passa de um passo para o outro.</p>'
                     : '') +
+                linhaAj('Modo baterista', '<button class="chave ' + (pr.baterista ? 'on' : '') + '" data-aj="baterista" aria-label="Modo baterista"></button>') +
+                // js/voz.js: tom para a sua voz (item 7) e capotraste mais fácil (item 8)
+                '<button class="op" data-aj="voz">' + icone('microfone') + 'Tom para a minha voz<span class="op-dir">' + (m.extensao ? 'extensão gravada' : 'sugere o tom') + '</span></button>' +
+                '<button class="op" data-aj="capo-facil">' + icone('violao') + 'Capotraste mais fácil<span class="op-dir">menos pestanas</span></button>' +
                 '<button class="op" data-aj="palco">' + icone('palco') + (st.palco ? 'Sair do modo palco' : 'Modo palco (tela cheia)') + '</button>' +
                 '<button class="op" data-aj="config">' + icone('ajustes') + 'Pedal e MIDI</button>' +
                 '<button class="op" data-aj="original">' + icone('nota') + 'Voltar ao tom original' + (m.tom ? '<span class="op-dir">' + esc(m.tom) + '</span>' : '') + '</button>',
@@ -962,6 +1007,7 @@
                     if (a === 'bemol') pr = salvarPrefs({ bemol: { auto: 'sustenido', sustenido: 'bemol', bemol: 'auto' }[pr.bemol] || 'auto' });
                     if (a === 'simplificar') pr = salvarPrefs({ simplificar: !pr.simplificar });
                     if (a === 'colunas') pr = salvarPrefs({ duasColunas: !pr.duasColunas });
+                    if (a === 'baterista') { pr = salvarPrefs({ baterista: !pr.baterista }); toast(pr.baterista ? 'Modo baterista: só as partes da música' : 'Cifra completa'); }
                     if (a === 'bpm-modo') {
                         m.rolagemBpm = !m.rolagemBpm; DB.atualizarMusica(m.id, { rolagemBpm: m.rolagemBpm });
                         if (m.rolagemBpm && m.rolagemProg) { m.rolagemProg = false; DB.atualizarMusica(m.id, { rolagemProg: false }); if (prog) { prog.destruir(); prog = null; } if (st.rolando) pararRolagem(); }
@@ -1007,6 +1053,23 @@
                     }
                     if (a === 'config') { fecharSheet(); ir('#/config'); return; }
                     if (a === 'palco') { fecharSheet(); alternarPalco(); return; }
+                    if (a === 'voz') {
+                        fecharSheet();
+                        Voz.abrirTom(m, {
+                            semitons: st.semitons,
+                            aplicar: (s) => { st.semitons = s; desenhar(); salvarTom(); },
+                            salvarExtensao: (ext) => DB.atualizarMusica(m.id, { extensao: ext }),
+                        });
+                        return;
+                    }
+                    if (a === 'capo-facil') {
+                        fecharSheet();
+                        Voz.abrirCapo(m, {
+                            semitons: st.semitons, capo: st.capo,
+                            aplicar: (c) => { st.capo = c; m.capo = c; DB.atualizarMusica(m.id, { capo: c }); desenhar(); },
+                        });
+                        return;
+                    }
                     if (a === 'original') { fecharSheet(); transpor(0); return; }
                     desenhar(); abrirAjustes(); // redesenha o painel com os valores novos
                 })
@@ -1033,15 +1096,29 @@
         if (rep) {
             $('bt-ant').onclick = () => irPara(idx - 1);
             $('bt-prox').onclick = () => irPara(idx + 1);
-            // Deslizar para os lados troca de música
-            let x0 = null, y0 = null;
-            conteudo.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; }, { passive: true });
-            conteudo.addEventListener('touchend', e => {
-                if (x0 === null) return;
-                const dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0;
-                if (Math.abs(dx) > 90 && Math.abs(dy) < 50) irPara(dx < 0 ? idx + 1 : idx - 1);
-                x0 = null;
+            // Deslizar para os lados troca de música. Para não trocar por acidente no meio do show, NÃO vale:
+            //  - com dois dedos (pinça): antes, soltar um dedo da pinça podia pular de música;
+            //  - quando a cifra é mais larga que a tela (aí o deslize serve para ler o fim da linha);
+            //  - em gesto lento (mais de 0,6 s), que é leitura/arrasto e não um "peteleco".
+            // AJUSTAR: distância mínima (px) e tempo máximo (ms) do deslize.
+            const SWIPE_MIN_PX = 90, SWIPE_MAX_MS = 600;
+            let sw = null; // { id, x, y, t }
+            conteudo.addEventListener('touchstart', e => {
+                if (e.touches.length !== 1) { sw = null; return; }
+                const larga = !conteudo.classList.contains('quebra') && conteudo.scrollWidth > conteudo.clientWidth + 2;
+                if (larga) { sw = null; return; }
+                const t0 = e.touches[0];
+                sw = { id: t0.identifier, x: t0.clientX, y: t0.clientY, t: performance.now() };
             }, { passive: true });
+            conteudo.addEventListener('touchend', e => {
+                const s = sw; sw = null;
+                if (!s || e.touches.length) return;
+                const t1 = [...e.changedTouches].find(t => t.identifier === s.id); if (!t1) return;
+                const dx = t1.clientX - s.x, dy = t1.clientY - s.y;
+                if (performance.now() - s.t > SWIPE_MAX_MS) return;
+                if (Math.abs(dx) > SWIPE_MIN_PX && Math.abs(dy) < 50) irPara(dx < 0 ? idx + 1 : idx - 1);
+            }, { passive: true });
+            conteudo.addEventListener('touchcancel', () => { sw = null; }, { passive: true });
         }
 
         /* ---------- Eventos ---------- */
@@ -1221,6 +1298,8 @@
 
         // Limpeza ao sair da tela
         return () => {
+            if (limparProx) limparProx();
+            if (limparBat) limparBat();
             limparShow();
             pararRolagem();
             Aprender.fechar();
@@ -1663,11 +1742,21 @@
             '<div class="sh-cab">' + capaRep(r) + '<div><div class="sh-tit">' + esc(r.nome) + '</div><div class="sh-sub">' + nMus + ' músicas</div></div></div>' +
             '<button class="op" data-a="renomear">' + icone('lapis') + 'Renomear</button>' +
             '<button class="op" data-a="descricao">' + icone('nota') + 'Descrição</button>' +
+            // js/compartilhar.js: itens 9 e 10
+            '<button class="op" data-a="banda">' + icone('trocar') + 'Mandar para a banda<span class="op-dir">arquivo ou QR</span></button>' +
+            '<button class="op" data-a="cardapio">' + icone('lista') + 'Cardápio de pedidos (QR)<span class="op-dir">para o público</span></button>' +
+            // js/show-ajuda.js e js/banda.js
+            '<button class="op" data-a="ordem-inteligente">' + icone('trocar') + 'Ordem inteligente<span class="op-dir">menos trocas · energia</span></button>' +
+            '<button class="op" data-a="banda-sync">' + icone('palco') + 'Banda sincronizada<span class="op-dir">' + (window.Banda && Banda.papel() === 'lider' ? Banda.conectados() + ' conectado(s)' : 'celulares acompanham') + '</span></button>' +
             '<button class="op perigo" data-a="excluir">' + icone('lixeira') + 'Excluir repertório</button>',
             sh => sh.querySelectorAll('[data-a]').forEach(b => b.onclick = async () => {
                 const a = b.dataset.a;
                 if (a === 'renomear') { const n = await perguntar('Renomear repertório', r.nome); if (n) { r.nome = n; await salvar(); App.recarregar(); } }
                 if (a === 'descricao') { const d = await perguntar('Descrição (ex.: Show no bar, sábado)', r.descricao); if (d !== null) { r.descricao = d; await salvar(); App.recarregar(); } }
+                if (a === 'banda') { fecharSheet(); setTimeout(() => Compartilhar.abrirBanda(r), 60); }
+                if (a === 'cardapio') { fecharSheet(); setTimeout(() => Compartilhar.abrirCardapio(r), 60); }
+                if (a === 'ordem-inteligente') { fecharSheet(); setTimeout(() => ShowAjuda.abrirOrdem(r), 60); }
+                if (a === 'banda-sync') { fecharSheet(); setTimeout(() => Banda.abrirLider(), 60); }
                 if (a === 'excluir') {
                     if (await confirmar('Excluir "' + r.nome + '"?', 'As cifras continuam salvas, só o repertório é apagado.', 'Excluir')) {
                         await DB.excluirRepertorio(r.id); toast('Repertório excluído'); ir('#/biblioteca');

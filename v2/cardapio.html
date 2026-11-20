@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!--
+  cardapio.html — Cardápio de pedidos do Cifra-Dog (página pública, item 10).
+  ---------------------------------------------------------------------------
+  O público abre pelo QR. A lista do show vem DENTRO do link (#d=...), comprimida
+  pelo app (js/compartilhar.js → empacotar). Não há servidor nem banco: esta página
+  só lê o link e desenha a lista. Se o músico informou um WhatsApp, cada música
+  ganha o botão "Pedir", que abre a conversa com o pedido pronto.
+  Formato dos dados: { v:1, n:'título', w:'5511...', i:[[título, artista] ou ['#', 'bloco']] }
+  Todo texto entra com textContent (nada de HTML vindo do link).
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1b100b">
+<meta name="robots" content="noindex">
+<title>Cardápio de músicas · Cifra-Dog</title>
+<link rel="icon" type="image/png" href="img/brand/icon-192.png">
+<style>
+  /* AJUSTAR: cores no mesmo clima de taverna do app. */
+  :root { --fundo: #1b100b; --madeira: #2a1a12; --papel: #f3e6c8; --texto-2: #cdb994; --verm: #b3261e; --ouro: #e0b25a; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--fundo) url(img/taverna/pub-mobile.webp) center top / cover fixed; color: var(--papel);
+         font: 16px/1.4 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 640px; margin: 0 auto; padding: 18px 16px 60px; background: linear-gradient(#1b100bee, #1b100bf6); min-height: 100vh; }
+  header { text-align: center; margin-bottom: 14px; }
+  header img { width: 150px; height: auto; }
+  h1 { font: italic 700 28px/1.15 Georgia, "Times New Roman", serif; margin: 6px 0 4px; color: var(--ouro); }
+  .sub { color: var(--texto-2); margin: 0; font-size: 14px; }
+  input { width: 100%; font: inherit; font-size: 16px; padding: 12px 14px; border-radius: 10px; border: 1px solid #5a4030; background: #f3e6c8; color: #2b1b12; margin: 12px 0 6px; }
+  .bloco { margin: 18px 0 6px; font: 700 13px/1 system-ui, sans-serif; letter-spacing: .1em; text-transform: uppercase; color: var(--ouro); }
+  ol { list-style: none; margin: 0; padding: 0; }
+  li { display: flex; align-items: center; gap: 10px; padding: 10px 4px; border-bottom: 1px solid #ffffff14; }
+  .n { width: 28px; text-align: right; color: var(--texto-2); font-variant-numeric: tabular-nums; flex-shrink: 0; }
+  .t { flex: 1; min-width: 0; }
+  .t b { display: block; font-weight: 600; }
+  .t small { color: var(--texto-2); }
+  a.pedir { flex-shrink: 0; text-decoration: none; background: var(--verm); color: #fff; padding: 9px 14px; border-radius: 999px; font-weight: 600; font-size: 14px; }
+  .vazio { text-align: center; color: var(--texto-2); padding: 40px 10px; }
+  footer { text-align: center; color: var(--texto-2); font-size: 12px; margin-top: 26px; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <img src="img/brand/logo-pub.webp" alt="Cifra-Dog" width="150" height="50">
+    <h1 id="titulo">Cardápio de músicas</h1>
+    <p class="sub" id="sub"></p>
+  </header>
+  <input id="busca" type="search" placeholder="Procurar música ou artista" autocomplete="off" hidden>
+  <div id="lista"><p class="vazio">Abrindo o cardápio…</p></div>
+  <footer>Feito com o Cifra-Dog</footer>
+</main>
+<script>
+(function () {
+  'use strict';
+  // ONDE: mesma lógica de js/compartilhar.js → desempacotar (esta página não carrega o app).
+  function deB64url(t) {
+    var s = atob(t.replace(/-/g, '+').replace(/_/g, '/') + '==='.slice((t.length + 3) % 4));
+    var b = new Uint8Array(s.length);
+    for (var i = 0; i < s.length; i++) b[i] = s.charCodeAt(i);
+    return b;
+  }
+  async function desempacotar(t) {
+    if (!t || !/^[zj][A-Za-z0-9_-]+$/.test(t)) throw new Error('Este link está incompleto.');
+    var bytes;
+    try { bytes = deB64url(t.slice(1)); } catch (e) { throw new Error('Este link está incompleto.'); }
+    if (t[0] === 'z') {
+      if (!window.DecompressionStream) throw new Error('Atualize o navegador para abrir o cardápio.');
+      try {
+        var r = new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('deflate-raw')));
+        bytes = new Uint8Array(await r.arrayBuffer());
+      } catch (e) { throw new Error('Este link está incompleto.'); }
+    }
+    try { return JSON.parse(new TextDecoder().decode(bytes)); } catch (e) { throw new Error('Este link está incompleto.'); }
+  }
+  function el(tag, cls, txt) { var e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; }
+  var normal = function (s) { return String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase(); };
+
+  var lista = document.getElementById('lista'), busca = document.getElementById('busca');
+  var dados = null;
+
+  function desenhar(filtro) {
+    lista.textContent = '';
+    var f = normal(filtro), n = 0, ol = el('ol'), achou = 0;
+    dados.i.forEach(function (x) {
+      if (!Array.isArray(x)) return;
+      if (x[0] === '#') {
+        if (f) return;                                     // busca: esconde os blocos
+        if (ol.children.length) { lista.appendChild(ol); ol = el('ol'); }
+        lista.appendChild(el('div', 'bloco', String(x[1] || '').slice(0, 60)));
+        return;
+      }
+      n++;
+      var tit = String(x[0] || '').slice(0, 100), art = String(x[1] || '').slice(0, 100);
+      if (f && normal(tit + ' ' + art).indexOf(f) < 0) return;
+      achou++;
+      var li = el('li'), t = el('div', 't');
+      li.appendChild(el('span', 'n', String(n)));
+      t.appendChild(el('b', null, tit));
+      if (art) t.appendChild(el('small', null, art));
+      li.appendChild(t);
+      if (dados.w) {
+        var a = el('a', 'pedir', 'Pedir');
+        a.href = 'https://wa.me/' + dados.w + '?text=' + encodeURIComponent('🎵 Pedido para ' + (dados.n || 'o show') + ': ' + tit + (art ? ' – ' + art : ''));
+        a.target = '_blank'; a.rel = 'noopener noreferrer';
+        li.appendChild(a);
+      }
+      ol.appendChild(li);
+    });
+    if (ol.children.length) lista.appendChild(ol);
+    if (!achou) lista.appendChild(el('p', 'vazio', f ? 'Nenhuma música com esse nome.' : 'O cardápio está vazio.'));
+  }
+
+  (async function () {
+    try {
+      var d = await desempacotar((location.hash.match(/[#&]d=([^&]+)/) || [])[1]);
+      if (!d || d.v !== 1 || !Array.isArray(d.i)) throw new Error('Este link não é um cardápio do Cifra-Dog.');
+      if (d.w && !/^\d{10,15}$/.test(String(d.w))) d.w = '';   // só aceita número
+      dados = d;
+      var nome = String(d.n || 'Cardápio de músicas').slice(0, 60);
+      document.getElementById('titulo').textContent = nome;
+      document.title = nome + ' · Cardápio';
+      var total = d.i.filter(function (x) { return Array.isArray(x) && x[0] !== '#'; }).length;
+      document.getElementById('sub').textContent = total + ' músicas' + (d.w ? ' · toque em "Pedir" para mandar seu pedido' : '');
+      busca.hidden = total < 12;                               // AJUSTAR: a partir de quantas músicas aparece a busca
+      busca.oninput = function () { desenhar(busca.value.trim()); };
+      desenhar('');
+    } catch (e) {
+      lista.textContent = '';
+      lista.appendChild(el('p', 'vazio', e.message || 'Não foi possível abrir o cardápio.'));
+    }
+  })();
+})();
+</script>
+</body>
+</html>

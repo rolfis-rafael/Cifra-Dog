@@ -39,7 +39,9 @@
             container.querySelectorAll('.frase-ativa').forEach(el => el.classList.remove('frase-ativa'));
             const linhas = container.querySelectorAll('[data-frase="' + n + '"]');
             linhas.forEach(el => el.classList.add('frase-ativa'));
-            if (linhas[0]) {
+            // Se a pessoa está arrastando a tela, só marca a frase: puxar a tela contra o dedo atrapalha.
+            // A próxima frase volta a centralizar normalmente depois que ela soltar.
+            if (linhas[0] && !(global.UI && UI.usuarioRolando && UI.usuarioRolando())) {
                 // Mantém a frase um pouco acima do meio da tela, para dar para ler o que vem depois.
                 const y = linhas[0].getBoundingClientRect().top + window.scrollY - window.innerHeight * 0.32;
                 window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });

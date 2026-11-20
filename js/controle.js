@@ -211,8 +211,12 @@
         };
         anim.raf = requestAnimationFrame(passo);
     }
-    // Se a pessoa mexer na tela com o dedo/mouse, a animação sai da frente.
-    ['wheel', 'touchstart', 'pointerdown'].forEach(ev => window.addEventListener(ev, pararAnim, { passive: true }));
+    // Se a pessoa ARRASTAR a tela (dedo ou roda do mouse), a animação sai da frente.
+    // Só encostar o dedo (segurando o celular) ou tocar num botão da barra não corta mais a descida do pedal.
+    ['wheel', 'touchmove'].forEach(ev => window.addEventListener(ev, pararAnim, { passive: true }));
+    window.addEventListener('pointerdown', (e) => {
+        if (e.pointerType === 'mouse' && !(e.target.closest && e.target.closest('button, a, input, select, textarea, [data-d]'))) pararAnim();
+    }, { passive: true });
 
     /* Rola a tela pela quantidade escolhida no "potenciômetro" (Configurações). */
     function rolarTela(sentido) {
