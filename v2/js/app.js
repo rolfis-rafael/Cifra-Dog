@@ -4,7 +4,7 @@
  */
 (function (global) {
     'use strict';
-    const { icone, esc, capaMusica, capaRep, toast, fecharSheet } = UI;
+    const { icone, esc, capaMusica, capaRep, toast, abrirSheet, fecharSheet } = UI;
 
     /* ---------- Rotas ---------- */
     const ROTAS = [
@@ -100,6 +100,25 @@
     });
     window.addEventListener('appinstalled', () => { pedidoInstalar = null; toast('Cifra-Dog instalado!'); });
 
+    /* Vindo do site de download (index.html?instalar=1): abre um painel para instalar o app (PWA).
+       O navegador só deixa instalar depois de um toque, por isso o botão. */
+    const jaInstalado = () => matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
+    function abrirInstalar() {
+        if (jaInstalado()) { toast('O Cifra-Dog já está instalado neste aparelho.'); return; }
+        const apple = /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+        const passos = apple
+            ? 'No iPhone ou iPad, abra esta página no <b>Safari</b>, toque em <b>Compartilhar</b> e escolha <b>Adicionar à Tela de Início</b>.'
+            : 'No menu do navegador (⋮), escolha <b>Instalar app</b> ou <b>Adicionar à tela inicial</b>.';
+        abrirSheet('<h3 style="margin:0 0 6px">Instalar o Cifra-Dog</h3>' +
+            '<p class="dica" style="margin:0 0 12px">Vira um aplicativo no seu aparelho: abre em tela cheia, funciona sem internet e guarda tudo no próprio aparelho. Sem loja e sem cadastro.</p>' +
+            (pedidoInstalar ? '<button class="bt prim cheio" id="inst-agora">Instalar agora</button>' : '<p>' + passos + '</p>'),
+            sh => { const b = sh.querySelector('#inst-agora'); if (b) b.onclick = () => global.App.instalar(); });
+    }
+    if (new URLSearchParams(location.search).get('instalar') === '1') {
+        setTimeout(abrirInstalar, 1200);
+        history.replaceState(null, '', location.pathname + location.hash);   // tira o ?instalar=1 do endereço
+    }
+
     /* ---------- Backup ---------- */
     async function exportar() {
         const dados = await DB.exportar();
@@ -117,10 +136,11 @@
         inp.onchange = async () => {
             const f = inp.files[0]; if (!f) return;
             try {
-                const r = await DB.importar(JSON.parse(await f.text()));
-                fecharSheet(); toast('Backup juntado: ' + r.novas + ' novas, ' + r.atualizadas + ' atualizadas, ' + r.repertorios + ' repertórios');
+                FiltroJson.zerarRelatorio();
+                const r = await DB.importar(await FiltroJson.lerArquivo(f));
+                fecharSheet(); toast('Backup juntado: ' + r.novas + ' novas, ' + r.atualizadas + ' atualizadas, ' + r.repertorios + ' repertórios' + FiltroJson.resumo());
                 navegar(true);
-            } catch (e) { toast('Não consegui ler esse arquivo de backup'); }
+            } catch (e) { toast(e.message || 'Não consegui ler esse arquivo de backup'); }
         };
         inp.click();
     }

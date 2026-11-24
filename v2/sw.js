@@ -3,13 +3,13 @@
  * AJUSTAR: sempre que mudar algum arquivo, aumente a VERSAO para o celular baixar a nova.
  */
 const PREFIXO = 'cifradog:' + self.registration.scope + ':';
-const VERSAO = PREFIXO + '3.8.2';
+const VERSAO = PREFIXO + '3.9.2';
 const ARQUIVOS = [
-    './', './index.html', './baixar.html', './manifest.json', './css/app.css', './css/taverna.css', './css/estudio.css', './css/show.css',
-    './js/cifra-motor.js', './js/db.js', './js/exemplos.js', './js/rolagem-bpm.js', './js/metronomo.js', './js/programada.js', './js/controle.js',
+    './', './index.html', './baixar.html', './manifest.json', './css/app.css', './css/taverna.css', './css/estudio.css', './css/show.css', './css/dicas.css',
+    './js/cifra-motor.js', './js/filtro-json.js', './js/db.js', './js/exemplos.js', './js/rolagem-bpm.js', './js/metronomo.js', './js/programada.js', './js/controle.js',
     './js/ui.js', './js/telas.js', './js/pacotes.js', './js/voz.js', './js/vendor/qrcode.js', './js/compartilhar.js', './js/show-ajuda.js', './js/banda.js', './cardapio.html', './js/app.js',
     './js/sala.js', './js/show-programado.js',
-    './js/drive-backup.js',
+    './js/drive-backup.js', './js/dicas-rolagem.js',
     './img/taverna/pub-background.webp', './img/taverna/covers-atlas.webp', './img/taverna/materials-atlas.webp',
     './img/taverna/pub-mobile.webp',
     './js/catalogo.js', './js/aprender.js', './js/pitch-worklet.js',

@@ -1,0 +1,7332 @@
+{
+ "formato": "cifradog.pacote",
+ "versao": 1,
+ "pacote": {
+  "id": "pack-rock",
+  "nome": "Rock",
+  "descricao": "Rock nacional e internacional para tocar em roda ou no palco. Seleção do repertório do Rolfis.",
+  "autor": "Rafael Carneiro (Rolfis)",
+  "revisao": 1,
+  "atualizadoEm": "2026-11-24",
+  "idioma": "pt-BR",
+  "tags": [
+   "rock"
+  ]
+ },
+ "musicas": [
+  {
+   "id": "what-s-up-4-non-blondes",
+   "titulo": "What's Up",
+   "artista": "4 Non Blondes",
+   "tom": "B",
+   "genero": "rock",
+   "idioma": "pt-BR",
+   "compasso": "4/4",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "4 Non Blondes",
+    "atribuicao": "Letra e música de 4 Non Blondes. Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "intro",
+     "nome": "Intro",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[B] [C#m] [E] [B]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[B] [C#m] [E] [B]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "[B]  25 years of my life and still"
+      },
+      {
+       "texto": "Try[C#m]in' to to get up that"
+      },
+      {
+       "texto": "Great big hill of h[E]ope"
+      },
+      {
+       "texto": "For a destin[B]ation"
+      },
+      {
+       "texto": "I r[B]ealized quickly when I knew I should"
+      },
+      {
+       "texto": "That the w[C#m]orld was made up of this"
+      },
+      {
+       "texto": "Brotherhood of m[E]an"
+      },
+      {
+       "texto": "For whatever that m[B]eans"
+      },
+      {
+       "texto": "And so I cr[B]y sometimes"
+      },
+      {
+       "texto": "When I'm lying in bed"
+      },
+      {
+       "texto": "Just to g[C#m]et it all out"
+      },
+      {
+       "texto": "What's in my head, then I"
+      },
+      {
+       "texto": "[E]  I am feeling, a little pec[B]uliar"
+      },
+      {
+       "texto": "And so I w[B]ake in the morning"
+      },
+      {
+       "texto": "And I step outside"
+      },
+      {
+       "texto": "And I t[C#m]ake a deep breath"
+      },
+      {
+       "texto": "And I get real high and I"
+      },
+      {
+       "texto": "[E]  Scream from the top of my lungs"
+      },
+      {
+       "texto": "What's going [B]on"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "And I say, H[B]ey yeah yeah hey"
+      },
+      {
+       "texto": "H[C#m]ey yeah yeah"
+      },
+      {
+       "texto": "I said, H[E]ey, what's going [B]on"
+      },
+      {
+       "texto": "And I say, H[B]ey yeah yeah hey"
+      },
+      {
+       "texto": "H[C#m]ey yeah yeah"
+      },
+      {
+       "texto": "I said, H[E]ey, what's going [B]on"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[B] [C#m] [E] [B]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[B] [C#m] [E] [B]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "And I tr[B]y, oh my God, do I tr[C#m]y"
+      },
+      {
+       "texto": "I try all the t[E]ime"
+      },
+      {
+       "texto": "In this instit[B]ution"
+      },
+      {
+       "texto": "And I pr[B]ay, oh my God, do I pr[C#m]ay"
+      },
+      {
+       "texto": "I pray every single d[E]ay for a revol[B]ution"
+      },
+      {
+       "texto": "And so I cry sometimes"
+      },
+      {
+       "texto": "When I'm lying in bed"
+      },
+      {
+       "texto": "Just to g[C#m]et it all out"
+      },
+      {
+       "texto": "What's in my head, then I"
+      },
+      {
+       "texto": "[E]  I am feeling, a little pec[B]uliar"
+      },
+      {
+       "texto": "And so I w[B]ake in the morning"
+      },
+      {
+       "texto": "And I step outside"
+      },
+      {
+       "texto": "And I t[C#m]ake a deep breath and"
+      },
+      {
+       "texto": "I get real high, and I"
+      },
+      {
+       "texto": "[E]  Scream from the top of my lungs"
+      },
+      {
+       "texto": "What's going [B]on"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "And I say, H[B]ey yeah yeah hey"
+      },
+      {
+       "texto": "H[C#m]ey yeah yeah"
+      },
+      {
+       "texto": "I said, H[E]ey, what's going [B]on"
+      },
+      {
+       "texto": "And I say, H[B]ey yeah yeah hey"
+      },
+      {
+       "texto": "H[C#m]ey yeah yeah"
+      },
+      {
+       "texto": "And I say, H[B]ey yeah yeah hey"
+      },
+      {
+       "texto": "H[C#m]ey yeah yeah"
+      },
+      {
+       "texto": "I said, H[E]ey, what's going [B]on"
+      },
+      {
+       "texto": "And I say, H[B]ey yeah yeah hey"
+      },
+      {
+       "texto": "H[C#m]ey yeah yeah"
+      },
+      {
+       "texto": "I said, H[E]ey, what's going [B]on [C#m]     [E]"
+      }
+     ]
+    },
+    {
+     "tipo": "final",
+     "nome": "Final",
+     "linhas": [
+      {
+       "texto": "[B]  25 years of my life and still"
+      },
+      {
+       "texto": "Try[C#m]in' to to get up that"
+      },
+      {
+       "texto": "Great big hill of h[E]ope"
+      },
+      {
+       "texto": "For a destin[B]ation"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "crazy-aerosmith",
+   "titulo": "Crazy",
+   "artista": "Aerosmith",
+   "tom": "D",
+   "genero": "rock",
+   "idioma": "pt-BR",
+   "compasso": "6/8",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "Aerosmith",
+    "atribuicao": "Letra e música de Aerosmith. Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "verso",
+     "nome": "Música",
+     "linhas": [
+      {
+       "texto": "Come here, baby"
+      }
+     ]
+    },
+    {
+     "tipo": "intro",
+     "nome": "Intro",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[D] [Bm] [G] [Gm]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[D] [Bm] [G] [Gm]"
+      },
+      {
+       "texto": "You know you drive me up a wall"
+      },
+      {
+       "texto": "The way you make good on"
+      },
+      {
+       "texto": "All the nasty tricks you pull"
+      },
+      {
+       "texto": "Seems like we're makin' up"
+      },
+      {
+       "texto": "More than we're makin' love"
+      },
+      {
+       "texto": "And it always seems"
+      },
+      {
+       "texto": "You got somn' on your mind"
+      },
+      {
+       "texto": "Other than me"
+      },
+      {
+       "texto": "Girl, you got to change"
+      },
+      {
+       "texto": "Your crazy ways"
+      },
+      {
+       "texto": "You hear me"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "[D]  Say you're leavin'"
+      },
+      {
+       "texto": "[G]On a seven thirty train"
+      },
+      {
+       "texto": "And that you're h[Bm]eadin'"
+      },
+      {
+       "texto": "Out to Hollyw[G]ood"
+      }
+     ]
+    },
+    {
+     "tipo": "solo",
+     "nome": "Riff 1",
+     "linhas": [
+      {
+       "texto": "[D]  Girl, you been givin' m[G]e"
+      },
+      {
+       "texto": "That line so many times"
+      },
+      {
+       "texto": "It kinda gets [Bm]    like feelin'"
+      },
+      {
+       "texto": "Bad looks g[G]ood"
+      }
+     ]
+    },
+    {
+     "tipo": "pre-refrao",
+     "nome": "Pré-Refrão",
+     "linhas": [
+      {
+       "texto": "[A]  That kinda l[Bm]ovin'"
+      },
+      {
+       "texto": "Turns a m[C]an to a sl[G]ave [A]"
+      },
+      {
+       "texto": "That kinda l[Bm]ovin'"
+      },
+      {
+       "texto": "Sends a m[C]an right to his gr[G]ave [A]"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "I go cr[D]azy"
+      },
+      {
+       "texto": "Cr[Bm]azy"
+      },
+      {
+       "texto": "B[G]aby"
+      },
+      {
+       "texto": "I go cr[Gm]azy [D]"
+      },
+      {
+       "texto": "You turn it [Bm]on"
+      },
+      {
+       "texto": "Then you're g[G]one"
+      },
+      {
+       "texto": "You dr[A]ive me"
+      },
+      {
+       "texto": "Cr[D]azy"
+      },
+      {
+       "texto": "Cr[Bm]azy"
+      },
+      {
+       "texto": "Cr[G]azy"
+      },
+      {
+       "texto": "For you b[Gm]aby [Em]"
+      },
+      {
+       "texto": "What can I d[A]o, honey [F#m]"
+      },
+      {
+       "texto": "I feel like the c[Bm]o___[A]lor b[G]lue[Gm]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "[D]   You're packin' up y[G]our stuff"
+      },
+      {
+       "texto": "And talkin' like it's tough"
+      },
+      {
+       "texto": "And tr[Bm]yin' to tell me"
+      },
+      {
+       "texto": "That it's time to g[G]o"
+      }
+     ]
+    },
+    {
+     "tipo": "solo",
+     "nome": "Riff 2",
+     "linhas": [
+      {
+       "texto": "[D]  But I know"
+      },
+      {
+       "texto": "You ain't w[G]earin' nothin'"
+      },
+      {
+       "texto": "Underneath that overc[Bm]oat"
+      },
+      {
+       "texto": "And it's all a sh[G]ow"
+      }
+     ]
+    },
+    {
+     "tipo": "pre-refrao",
+     "nome": "Pré-Refrão",
+     "linhas": [
+      {
+       "texto": "[A]  That kind of l[Bm]ovin'"
+      },
+      {
+       "texto": "Makes me wanna p[C]ull"
+      },
+      {
+       "texto": "Down the sh[G]ade [A]"
+      },
+      {
+       "texto": "That kind of l[Bm]ovin'"
+      },
+      {
+       "texto": "Now I'm n[C]ever, never, never, never"
+      },
+      {
+       "texto": "G[G]onna be the same [A]"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "I go cr[D]azy"
+      },
+      {
+       "texto": "Cr[Bm]azy"
+      },
+      {
+       "texto": "B[G]aby"
+      },
+      {
+       "texto": "I go cr[Gm]azy [D]"
+      },
+      {
+       "texto": "You turn it [Bm]on"
+      },
+      {
+       "texto": "Then you're g[G]one"
+      },
+      {
+       "texto": "You dr[A]ive me"
+      },
+      {
+       "texto": "Cr[D]azy"
+      },
+      {
+       "texto": "Cr[Bm]azy"
+      },
+      {
+       "texto": "Cr[G]azy"
+      },
+      {
+       "texto": "For you b[Gm]aby [Em]"
+      },
+      {
+       "texto": "What can I d[A]o, honey [F#m]"
+      },
+      {
+       "texto": "I feel like the c[Bm]o___[A]lor b[G]lue[Gm]    [D]"
+      },
+      {
+       "texto": "I'm losin' my m[Bm]ind, girl"
+      },
+      {
+       "texto": "'Cause [G]I'm goin' cr[A]azy"
+      }
+     ]
+    },
+    {
+     "tipo": "solo",
+     "nome": "Solo",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[D] [Bm] [G] [Gm]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[D] [Bm] [G] [A]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[D] [Bm] [G] [Gm]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[D] [Bm] [G] [A]"
+      }
+     ]
+    },
+    {
+     "tipo": "ponte",
+     "nome": "Ponte",
+     "linhas": [
+      {
+       "texto": "[Bm]    I [A]need your [G]love, honey[Bm]"
+      },
+      {
+       "texto": "I n[A]eed your l[G]ove"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "Cr[D]azy"
+      },
+      {
+       "texto": "Cr[Bm]azy"
+      },
+      {
+       "texto": "Cr[G]azy"
+      },
+      {
+       "texto": "For you b[Gm]aby [D]"
+      },
+      {
+       "texto": "I'm losin' my m[Bm]ind"
+      },
+      {
+       "texto": "Girl cause [G]I'm goin' cr[A]azy"
+      },
+      {
+       "texto": "Cr[D]azy"
+      },
+      {
+       "texto": "Cr[Bm]azy"
+      },
+      {
+       "texto": "Cr[G]azy"
+      },
+      {
+       "texto": "For you b[Gm]aby [D]"
+      },
+      {
+       "texto": "You turn it [Bm]on"
+      },
+      {
+       "texto": "Then you're g[G]one"
+      },
+      {
+       "texto": "You dr[A]ive me"
+      }
+     ]
+    },
+    {
+     "tipo": "final",
+     "nome": "Final",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[D] [Bm] [G] [Gm]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[D] [Bm] [G] [A]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[D] [Bm] [G] [Gm]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[D] [Bm] [G] [A]"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "a-sua-maneira-capital-inicial",
+   "titulo": "À Sua Maneira",
+   "artista": "Capital Inicial",
+   "tom": "Am",
+   "genero": "rock",
+   "idioma": "pt-BR",
+   "compasso": "4/4",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "Capital Inicial",
+    "atribuicao": "Letra e música de Capital Inicial. Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "intro",
+     "nome": "Intro",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[Am] [F] [C] [G]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Am] [F] [C] [G]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Am] [F] [C] [G]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Am] [F] [C] [G]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "[Am]Ela dormiu [F]   [C]"
+      },
+      {
+       "texto": "No cal[G]or dos meus br[Am]aços [F]   [C]   [G]"
+      },
+      {
+       "texto": "E [Am]eu acordei [F]   sem sa[C]ber"
+      },
+      {
+       "texto": "Se [G]era um s[Am]onho [F]   [C]   [G]"
+      },
+      {
+       "texto": "Alg[Am]um tempo atrás [F]   [C]"
+      },
+      {
+       "texto": "Pens[G]ei em te diz[Am]er  [F]   [C]   [G]"
+      },
+      {
+       "texto": "Que eu n[Am]unca caí [F]"
+      },
+      {
+       "texto": "Nas s[C]uas armad[G]ilhas de am[Am]or  [F]   [C]   [G]"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "N[Am]aquele amor [F]   [C]"
+      },
+      {
+       "texto": "À s[G]ua man[Am]eira [F]   [C]   [G]"
+      },
+      {
+       "texto": "Perd[Am]endo o meu tempo [F]   [C]"
+      },
+      {
+       "texto": "A n[G]oite int[Am]eira [F]   [C]   [G]"
+      }
+     ]
+    },
+    {
+     "tipo": "solo",
+     "nome": "Primeiro Solo",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[Am] [F] [C] [G]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Am] [F] [C] [G]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Am] [F] [C] [G]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Am] [F] [C] [G]"
+      }
+     ]
+    },
+    {
+     "tipo": "solo",
+     "nome": "Tab - Solo",
+     "linhas": [
+      {
+       "texto": "Parte 1 de 4"
+      },
+      {
+       "texto": "Parte 2 de 4"
+      },
+      {
+       "texto": "Parte 3 de 4"
+      },
+      {
+       "texto": "Parte 4 de 4"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "N[Am]ão mandarei [F]   [C]"
+      },
+      {
+       "texto": "C[G]inzas de r[Am]osas [F]   [C]   [G]"
+      },
+      {
+       "texto": "Nem p[Am]enso em contar [F]   [C]"
+      },
+      {
+       "texto": "Os n[G]ossos segr[Am]edos [F]   [C]   [G]"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "N[Am]aquele amor [F]   [C]"
+      },
+      {
+       "texto": "À s[G]ua man[Am]eira [F]   [C]   [G]"
+      },
+      {
+       "texto": "Perd[Am]endo o meu tempo [F]   [C]"
+      },
+      {
+       "texto": "A n[G]oite int[Am]eira [F]   [C]   [G]"
+      }
+     ]
+    },
+    {
+     "tipo": "solo",
+     "nome": "Segundo Solo",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[Am] [F] [C] [G]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Am] [F] [C] [G]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Am] [F] [C] [G]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Am] [F] [C] [G]"
+      }
+     ]
+    },
+    {
+     "tipo": "solo",
+     "nome": "Tab - Solo",
+     "linhas": [
+      {
+       "texto": "Parte 1 de 4"
+      },
+      {
+       "texto": "Parte 2 de 4"
+      },
+      {
+       "texto": "Parte 3 de 4"
+      },
+      {
+       "texto": "Parte 4 de 4"
+      },
+      {
+       "texto": "Parte 4 de 4"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "[Am]Ela dormiu"
+      },
+      {
+       "texto": "No calor dos meus braços"
+      },
+      {
+       "texto": "E eu acordei sem saber"
+      },
+      {
+       "texto": "Se era um sonho [F]   [C]   [G]"
+      },
+      {
+       "texto": "Alg[Am]um tempo atrás [F]   [C]"
+      },
+      {
+       "texto": "Pens[G]ei em te diz[Am]er  [F]   [C]   [G]"
+      },
+      {
+       "texto": "Que eu n[Am]unca caí [F]"
+      },
+      {
+       "texto": "Nas s[C]uas armad[G]ilhas de am[Am]or  [F]   [C]   [G]"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "N[Am]aquele amor [F]   [C]"
+      },
+      {
+       "texto": "À s[G]ua man[Am]eira [F]   [C]   [G]"
+      },
+      {
+       "texto": "Perd[Am]endo o meu tempo [F]   [C]"
+      },
+      {
+       "texto": "A n[G]oite int[Am]eira [F]   [C]   [G]"
+      },
+      {
+       "texto": "N[Am]aquele amor [F]   [C]"
+      },
+      {
+       "texto": "À s[G]ua man[Am]eira [F]   [C]   [G]"
+      },
+      {
+       "texto": "Perd[Am]endo o meu tempo [F]   [C]"
+      },
+      {
+       "texto": "A n[G]oite int[Am]eira [F]   [C]"
+      },
+      {
+       "texto": "A n[G]oite int[Am]eira [F]   [C]"
+      },
+      {
+       "texto": "A n[G]oite int[Am]eira [F]   [C]"
+      },
+      {
+       "texto": "A n[G]oite int[Am]eira [F]   [C]"
+      },
+      {
+       "texto": "A n[G]oite int[Am]eira [F]   [C]"
+      }
+     ]
+    },
+    {
+     "tipo": "final",
+     "nome": "Final",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[Am] [F] [C] [G]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Am] [F] [C] [G]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Am] [F] [C] [G]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Am] [F] [C] [G]"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "como-tudo-deve-ser-charlie-brown-jr",
+   "titulo": "Como Tudo Deve Ser",
+   "artista": "Charlie Brown Jr.",
+   "tom": "A",
+   "genero": "rock",
+   "idioma": "pt-BR",
+   "compasso": "4/4",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "Charlie Brown Jr.",
+    "atribuicao": "Letra e música de Charlie Brown Jr.. Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "intro",
+     "nome": "Intro",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[A5(9)] [F#m7(11)] [C#m7] [E5]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[A5(9)] [F#m7(11)] [C#m7] [E5]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "Um belo s[A5(9)]onho veio então"
+      },
+      {
+       "texto": "Despert[F#m7(11)]ar minha vontade"
+      },
+      {
+       "texto": "T[C#m7]udo vale apena pra te reencontrar"
+      },
+      {
+       "texto": "Me l[E5]ivrei de tudo aquilo"
+      },
+      {
+       "texto": "E consegui mudar"
+      },
+      {
+       "texto": "T[A5(9)]udo que foi feito"
+      },
+      {
+       "texto": "Em troca d[F#m7(11)]e uma amizade mas"
+      },
+      {
+       "texto": "F[C#m7]elicidade é poder estar"
+      },
+      {
+       "texto": "Com qu[E5]em você gosta em algum lugar"
+      },
+      {
+       "texto": "É f[A5(9)]oda ser louco, advog[F#m7(11)]ado do mundo mas"
+      },
+      {
+       "texto": "[C#m7]     Como tudo deve s[E5]er?"
+      },
+      {
+       "texto": "É f[A5(9)]oda ser taxado de d[F#m7(11)]oido, vagabundo mas"
+      },
+      {
+       "texto": "[C#m7]     Como tudo deve s[E5]er?"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "Foi quando t[F#m7(11)]e encontrei [A5(9)]"
+      },
+      {
+       "texto": "Ouvindo um s[F#m7(11)]om e olhando o m[A5(9)]ar"
+      },
+      {
+       "texto": "Foi quando t[F#m7(11)]e encontrei [A5(9)]"
+      },
+      {
+       "texto": "Ouvindo o s[F#m7(11)]om do mar rol[A5(9)]ar"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "[A5(9)]      Eu não nasci ontem"
+      },
+      {
+       "texto": "Nem qu[F#m7(11)]ando, como por onde mas"
+      },
+      {
+       "texto": "[C#m7]     Como tudo deve s[E5]er"
+      },
+      {
+       "texto": "Com as balizas do nosso sistema [A5(9)]"
+      },
+      {
+       "texto": "Sigo impr[F#m7(11)]imindo meu sonho na históri[C#m7]a"
+      },
+      {
+       "texto": "Como tudo d[E5]eve ser"
+      },
+      {
+       "texto": "Um belo s[A5(9)]onho veio então"
+      },
+      {
+       "texto": "Despert[F#m7(11)]ar minha vontade"
+      },
+      {
+       "texto": "T[C#m7]udo vale apena pra te reencontrar"
+      },
+      {
+       "texto": "Me l[E5]ivrei de tudo aquilo"
+      },
+      {
+       "texto": "E consegui mudar"
+      },
+      {
+       "texto": "T[A5(9)]udo que foi feito"
+      },
+      {
+       "texto": "Em troca d[F#m7(11)]e uma amizade mas"
+      },
+      {
+       "texto": "( C#m7  E5 )"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "Foi quando t[F#m7(11)]e encontrei [A5(9)]"
+      },
+      {
+       "texto": "Ouvindo um s[F#m7(11)]om e olhando o m[A5(9)]ar"
+      },
+      {
+       "texto": "Foi quando t[F#m7(11)]e encontrei [A5(9)]"
+      },
+      {
+       "texto": "Ouvindo o s[F#m7(11)]om do mar rol[A5(9)]ar"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[A5(9)] [F#m7(11)] [C#m7] [E5]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[A5(9)] [F#m7(11)] [C#m7] [E5]"
+      }
+     ]
+    },
+    {
+     "tipo": "ponte",
+     "nome": "Ponte",
+     "linhas": [
+      {
+       "texto": "Eu não prec[A5(9)]iso de promessas"
+      },
+      {
+       "texto": "E ach[F#m7(11)]o que você também"
+      },
+      {
+       "texto": "Eu não t[C#m7]ento ser perfeito e acho qu[E5]e você"
+      },
+      {
+       "texto": "Também"
+      },
+      {
+       "texto": "[A5(9)]      Dias e noites, pens[F#m7(11)]ando no que fiz"
+      },
+      {
+       "texto": "Eu s[C#m7]ou um vencedor, eu lut[E5]ei pelo o que eu"
+      },
+      {
+       "texto": "quis"
+      },
+      {
+       "texto": "Mas qu[A5(9)]ando não se pode mais mud[F#m7(11)]ar"
+      },
+      {
+       "texto": "Tanta coisa err[C#m7]ada   [E5]"
+      },
+      {
+       "texto": "Vamos viver nossos s[A5(9)]onhos  [F#m7(11)]"
+      },
+      {
+       "texto": "Temos tão pouco t[C#m7]empo  [E5]"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "Foi quando t[F#m7(11)]e encontrei [A5(9)]"
+      },
+      {
+       "texto": "Ouvindo um s[F#m7(11)]om e olhando o m[A5(9)]ar"
+      },
+      {
+       "texto": "Foi quando t[F#m7(11)]e encontrei [A5(9)]"
+      },
+      {
+       "texto": "Ouvindo o s[F#m7(11)]om do mar rol[A5(9)]ar"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[A5(9)] [F#m7(11)] [C#m7] [E5]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[A5(9)] [F#m7(11)] [C#m7] [E5]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[A5(9)] [F#m7(11)] [C#m7] [E5]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[A5(9)] [F#m7(11)] [C#m7] [E5]"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "Foi quando t[F#m7(11)]e encontrei [A5(9)]"
+      },
+      {
+       "texto": "Ouvindo um s[F#m7(11)]om e olhando o m[A5(9)]ar"
+      },
+      {
+       "texto": "Foi quando t[F#m7(11)]e encontrei [A5(9)]"
+      },
+      {
+       "texto": "Ouvindo o s[F#m7(11)]om e olhando o m[A5(9)]ar"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dias-de-luta-dias-de-gloria-charlie-brown-jr",
+   "titulo": "Dias de Luta, Dias de Glória",
+   "artista": "Charlie Brown Jr.",
+   "tom": "C",
+   "genero": "rock",
+   "idioma": "pt-BR",
+   "compasso": "3/4",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "Charlie Brown Jr.",
+    "atribuicao": "Letra e música de Charlie Brown Jr.. Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "verso",
+     "nome": "Música",
+     "linhas": [
+      {
+       "texto": "[C7M]     [Am9]    C[Em]anto a minha vida com orgulho"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "Na minha v[C7M]ida tudo acont[Am9]ece"
+      },
+      {
+       "texto": "Mas quanto mais a gente r[Em]ala"
+      },
+      {
+       "texto": "Mais a gente cresce"
+      },
+      {
+       "texto": "H[C7M]oje estou feliz"
+      },
+      {
+       "texto": "Porque eu sonh[Am9]ei com você"
+      },
+      {
+       "texto": "E amanh[Em]ã posso chorar"
+      },
+      {
+       "texto": "Por não pod[G]er te ver"
+      },
+      {
+       "texto": "Mas [C7M]   o seu sorriso"
+      },
+      {
+       "texto": "Vale m[Am9]ais que um diamante"
+      },
+      {
+       "texto": "Se voc[Em]ê vier comigo aí nós vamos adiante"
+      },
+      {
+       "texto": "Com [C7M]a cabeça erguida"
+      },
+      {
+       "texto": "E mant[Am9]endo a fé em Deus"
+      },
+      {
+       "texto": "O seu d[Em]ia mais feliz"
+      },
+      {
+       "texto": "Vai ser o m[G]esmo que o meu"
+      },
+      {
+       "texto": "A v[C7M]ida me ensinou a nunca d[Am9]esistir"
+      },
+      {
+       "texto": "Nem ganh[Em]ar, nem perder"
+      },
+      {
+       "texto": "Mas procurar evoluir"
+      },
+      {
+       "texto": "P[C7M]odem me tirar tudo o que t[Am9]enho"
+      },
+      {
+       "texto": "Só não p[Em]odem me tirar as coisas b[G]oas"
+      },
+      {
+       "texto": "Que eu já fiz pra quem eu [C7M]amo"
+      },
+      {
+       "texto": "Eu sou feliz e c[Am9]anto"
+      },
+      {
+       "texto": "E o universo é uma canç[Em]ão"
+      },
+      {
+       "texto": "E eu vou que v[G]ou"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "Hist[C7M]órias, nossas hist[Am9]órias"
+      },
+      {
+       "texto": "Dias de l[Em]uta, dias de glória"
+      },
+      {
+       "texto": "Hist[C7M]órias, nossas hist[Am9]órias"
+      },
+      {
+       "texto": "Dias de l[Em]uta, dias de gl[G]ória"
+      },
+      {
+       "texto": "Hist[C7M]órias, nossas hist[Am9]órias"
+      },
+      {
+       "texto": "Dias de l[Em]uta, dias de gl[G]ória"
+      },
+      {
+       "texto": "Hist[C7M]órias, nossas hist[Am9]órias"
+      },
+      {
+       "texto": "Dias de l[Em]uta, dias de gl[G]ória"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "Oh minha g[C7M]ata, morada dos meus s[Am9]onhos"
+      },
+      {
+       "texto": "Todo d[Em]ia, se pudesse eu ia estar com você"
+      },
+      {
+       "texto": "Já te v[C7M]ia muito antes nos meus s[Am9]onhos"
+      },
+      {
+       "texto": "Eu procur[Em]ei a vida inteira"
+      },
+      {
+       "texto": "Por algu[G]ém como você"
+      },
+      {
+       "texto": "Por isso eu c[C7M]anto a minha vida com org[Am9]ulho"
+      },
+      {
+       "texto": "Com melod[Em]ia, alegria e barulho"
+      },
+      {
+       "texto": "Eu s[C7M]ou feliz e rodo pelo m[Am9]undo"
+      },
+      {
+       "texto": "Sou correr[Em]ia mas também sou vagab[G]undo"
+      },
+      {
+       "texto": "Mas h[C7M]oje dou valor de verd[Am9]ade"
+      },
+      {
+       "texto": "pra minha sa[Em]úde, pra minha liberd[G]ade"
+      },
+      {
+       "texto": "Que b[C7M]om te encontrar nessa cid[Am9]ade"
+      },
+      {
+       "texto": "Esse br[Em]ilho intenso me lembra você"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "Hist[C7M]órias, nossas hist[Am9]órias"
+      },
+      {
+       "texto": "Dias de l[Em]uta, dias de gl[G]ória"
+      },
+      {
+       "texto": "Hist[C7M]órias, nossas hist[Am9]órias"
+      },
+      {
+       "texto": "Dias de l[Em]uta, dias de glória"
+      },
+      {
+       "texto": "Hist[C7M]órias, nossas hist[Am9]órias"
+      },
+      {
+       "texto": "Dias de l[Em]uta, dias de gl[G]ória"
+      },
+      {
+       "texto": "Hist[C7M]órias, nossas hist[Am9]órias"
+      },
+      {
+       "texto": "Dias de l[Em]uta, dias de glória"
+      }
+     ]
+    },
+    {
+     "tipo": "final",
+     "nome": "Final",
+     "linhas": [
+      {
+       "texto": "H[C7M]oje estou feliz"
+      },
+      {
+       "texto": "Acord[Am9]ei com o pé direito"
+      },
+      {
+       "texto": "Eu v[Em]ou fazer de novo"
+      },
+      {
+       "texto": "Vou faz[G]er muito bem feito [C7M]"
+      },
+      {
+       "texto": "Sintonia,[Am9]    telepatia"
+      },
+      {
+       "texto": "C[Em]omunicação pelo cortéx"
+      },
+      {
+       "texto": "Bum baibai"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[C7M] [Am9] [Em] [G]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[C7M] [Am9] [Em]"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "so-os-loucos-sabem-charlie-brown-jr",
+   "titulo": "Só os Loucos Sabem",
+   "artista": "Charlie Brown Jr.",
+   "tom": "Gm",
+   "genero": "rock",
+   "idioma": "pt-BR",
+   "compasso": "4/4",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "Charlie Brown Jr.",
+    "atribuicao": "Letra e música de Charlie Brown Jr.. Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "intro",
+     "nome": "Intro",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[C#m7] [A9] [C#m7] [A9]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "Ag[C#m]ora eu sei [A9]"
+      },
+      {
+       "texto": "Ex[E]atamente o que fazer"
+      },
+      {
+       "texto": "B[C#m]om recomeçar, p[E]oder cont[B4]ar com você"
+      },
+      {
+       "texto": "Pois eu me lembro de t[C#m]udo, irmão"
+      },
+      {
+       "texto": "[A9]Eu estava l[E]á também"
+      },
+      {
+       "texto": "O h[F#m]omem quando está em paz"
+      },
+      {
+       "texto": "Não qu[E/G#]er  gu[A9]erra com ninguém"
+      },
+      {
+       "texto": "Eu[C#m]   segurei minhas lágr[A9]imas"
+      },
+      {
+       "texto": "Pois não quer[E]ia demonstrar a emoção"
+      },
+      {
+       "texto": "J[C#m]á que estava ali só pra obs[E]ervar"
+      },
+      {
+       "texto": "E aprend[B4]er um pouco mais"
+      },
+      {
+       "texto": "Sobre a percepção"
+      },
+      {
+       "texto": "Eles d[C#m]izem que é impossível"
+      },
+      {
+       "texto": "Encontrar o [A9]amor"
+      },
+      {
+       "texto": "Sem perd[E]er a razão"
+      },
+      {
+       "texto": "[F#m]    Mas pra quem tem pensamento forte"
+      },
+      {
+       "texto": "[E/G#]O imposs[A9]ível é só questão de opinião"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "E disso os l[C#m]oucos sab[A9]em  [E]"
+      },
+      {
+       "texto": "Só os l[C#m]oucos sab[E]em [B4]"
+      },
+      {
+       "texto": "Disso os l[C#m]oucos sab[A9]em  [E]"
+      },
+      {
+       "texto": "Só os l[F#m]oucos sab[E/G#]em    [A9]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[C#m7] [A9] [C#m7] [A9]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "Toda a p[C#m]ositivid[A9]ade eu des[E]ejo a você"
+      },
+      {
+       "texto": "Pois precis[C#m]amos diss[E]o nos d[B4]ias de luta"
+      },
+      {
+       "texto": "O m[C#m]edo cega os noss[A9]os sonhos"
+      },
+      {
+       "texto": "O m[E]edo cega os nossos sonhos"
+      },
+      {
+       "texto": "M[F#m]enina linda, eu quer[E/G#]o  mor[A9]ar"
+      },
+      {
+       "texto": "Na sua rua"
+      },
+      {
+       "texto": "Você [C#m]    deixou s[A9]au__d[E]ade"
+      },
+      {
+       "texto": "Você [C#m]    deixou s[E]aud[B4]ade"
+      },
+      {
+       "texto": "Quero te v[C#m]er outra vez"
+      },
+      {
+       "texto": "Qu[A9]ero te v[E]er outra vez"
+      },
+      {
+       "texto": "Voc[F#m]ê deixou s[E/G#]au___d[A9]ade"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[E5] [E7M] [E5] [E7M] [E5]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[E5] [E7M] [E5] [E7M] [E5]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[C#m] [C#9] [C#m] [C#9] [C#m]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[C#m] [C#9] [C#m] [C#9] [C#m]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[E5] [E7M] [E5] [E7M] [E5]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[E5] [E7M] [E5] [E7M] [E5]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[C#m] [C#9] [C#m] [C#9] [C#m]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[C#m] [C#9] [C#m] [C#9] [C#m]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "Ag[C#m]ora eu sei [A9]"
+      },
+      {
+       "texto": "Ex[E]atamente o que fazer"
+      },
+      {
+       "texto": "B[C#m]om recomeçar, p[E]oder cont[B4]ar com você"
+      },
+      {
+       "texto": "Pois eu me lembro de t[C#m]udo, irmão"
+      },
+      {
+       "texto": "[A9]Eu estava l[E]á também"
+      },
+      {
+       "texto": "O h[F#m]omem quando está em paz"
+      },
+      {
+       "texto": "Não qu[E/G#]er  gu[A9]erra com ninguém"
+      }
+     ]
+    },
+    {
+     "tipo": "final",
+     "nome": "Final",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[C#m7] [A9] [C#m7] [A9]"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "zoio-de-lula-charlie-brown-jr",
+   "titulo": "Zóio de Lula",
+   "artista": "Charlie Brown Jr.",
+   "tom": "Em",
+   "genero": "rock",
+   "idioma": "pt-BR",
+   "compasso": "4/4",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "Charlie Brown Jr.",
+    "atribuicao": "Letra e música de Charlie Brown Jr.. Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "intro",
+     "nome": "Intro",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[Em] [E2] [Em] [E2]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Em] [E2] [Em] [E2]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Em] [E2] [Em] [E2]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Em] [E2] [Em] [E2]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "Tirou a r[Em]oupa"
+      },
+      {
+       "texto": "Entrou no mar"
+      },
+      {
+       "texto": "Pensei: Meu D[E2]eus"
+      },
+      {
+       "texto": "Que bom que fosse [Em]"
+      },
+      {
+       "texto": "Tu me apresenta essa mulh[E2]er"
+      },
+      {
+       "texto": "Meu irmão, te dava até um d[Em]oce"
+      },
+      {
+       "texto": "Sem roupa ela [E2]é demais"
+      },
+      {
+       "texto": "Também por [Em]isso"
+      },
+      {
+       "texto": "Eu creio em Deus"
+      },
+      {
+       "texto": "Meu bom, meu D[E2]eus"
+      },
+      {
+       "texto": "Meu bom, me traz"
+      },
+      {
+       "texto": "Ainda b[Em]em que eu trouxe"
+      },
+      {
+       "texto": "Até meu gu[E2]arda-sol"
+      },
+      {
+       "texto": "T[Em]enho toda tarde"
+      },
+      {
+       "texto": "T[E2]enho a vida inteira"
+      },
+      {
+       "texto": "Já se f[Em]oi aquele tempo da lad[E2]eira, irmão"
+      },
+      {
+       "texto": "Já que se f[Em]oi aquele tempo da lad[E2]eira, irmão"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "Meu escrit[E2]ório é na praia"
+      },
+      {
+       "texto": "Eu tô sempre na área"
+      },
+      {
+       "texto": "Mas eu não sou"
+      },
+      {
+       "texto": "Da tua láia, não [D2]"
+      },
+      {
+       "texto": "Meu escrit[E2]ório é na praia"
+      },
+      {
+       "texto": "Eu tô sempre na área"
+      },
+      {
+       "texto": "Mas eu não s[Em]ou"
+      },
+      {
+       "texto": "Daquela [E4]   láia, não"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "Então"
+      },
+      {
+       "texto": "D[Em]eixe viver, d[E2]eixe ficar"
+      },
+      {
+       "texto": "D[Em]eixe estar como est[E2]á"
+      },
+      {
+       "texto": "D[Em]eixe viver, d[E2]eixe ficar"
+      },
+      {
+       "texto": "D[Em]eixe estar como est[E2]á"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Terceira Parte",
+     "linhas": [
+      {
+       "texto": "Meu Deus, me dê um motivo"
+      },
+      {
+       "texto": "Pois eu pago tanto mico"
+      },
+      {
+       "texto": "Ela me ignora"
+      },
+      {
+       "texto": "Na esperança eu ainda fico"
+      },
+      {
+       "texto": "Eu tô fritando aqui"
+      },
+      {
+       "texto": "Vou entregar, não aguento mais"
+      },
+      {
+       "texto": "Mas se eu não falar hoje"
+      },
+      {
+       "texto": "Talvez nunca a veja mais"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Quarta Parte",
+     "linhas": [
+      {
+       "texto": "O dia passa"
+      },
+      {
+       "texto": "Horas se estendem"
+      },
+      {
+       "texto": "As pessoas ao redor"
+      },
+      {
+       "texto": "Nunca me entendem"
+      },
+      {
+       "texto": "O dia passa"
+      },
+      {
+       "texto": "Horas se estendem"
+      },
+      {
+       "texto": "As pessoas ao redor"
+      },
+      {
+       "texto": "Nunca me entendem"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "Então"
+      },
+      {
+       "texto": "D[Em]eixe viver, d[E2]eixe ficar"
+      },
+      {
+       "texto": "D[Em]eixe estar como est[E2]á"
+      },
+      {
+       "texto": "D[Em]eixe viver, d[E2]eixe ficar"
+      },
+      {
+       "texto": "D[Em]eixe estar como est[E2]á"
+      },
+      {
+       "texto": "D[Em]eixe viver, d[E2]eixe ficar"
+      },
+      {
+       "texto": "D[Em]eixe estar como est[E2]á"
+      },
+      {
+       "texto": "D[Em]eixe viver, d[E2]eixe ficar"
+      },
+      {
+       "texto": "D[Em]eixe estar como est[E2]á"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Quinta Parte",
+     "linhas": [
+      {
+       "texto": "O dia passa"
+      },
+      {
+       "texto": "Horas se estendem"
+      },
+      {
+       "texto": "As pessoas ao redor"
+      },
+      {
+       "texto": "Nunca me entendem"
+      },
+      {
+       "texto": "O dia passa"
+      },
+      {
+       "texto": "Horas se estendem"
+      },
+      {
+       "texto": "As pessoas ao redor"
+      },
+      {
+       "texto": "Nunca me entendem"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Sexta Parte",
+     "linhas": [
+      {
+       "texto": "Tirou a r[Em]oupa"
+      },
+      {
+       "texto": "Entrou no mar"
+      },
+      {
+       "texto": "Pensei: Meu D[E2]eus"
+      },
+      {
+       "texto": "Que bom que fosse [Em]"
+      },
+      {
+       "texto": "Tu me apresenta essa mulh[E2]er"
+      },
+      {
+       "texto": "Meu irmão, te dava até um d[Em]oce"
+      },
+      {
+       "texto": "Sem roupa ela [E2]é demais"
+      },
+      {
+       "texto": "Também por [Em]isso"
+      },
+      {
+       "texto": "Eu creio em Deus"
+      },
+      {
+       "texto": "Meu bom, meu D[E2]eus"
+      },
+      {
+       "texto": "Meu bom, me traz"
+      },
+      {
+       "texto": "Ainda b[Em]em que eu trouxe"
+      },
+      {
+       "texto": "Até meu gu[E2]arda-sol"
+      },
+      {
+       "texto": "T[Em]enho toda tarde"
+      },
+      {
+       "texto": "T[E2]enho a vida inteira"
+      },
+      {
+       "texto": "Já se f[Em]oi aquele tempo da lad[E2]eira, irmão"
+      },
+      {
+       "texto": "Já que se f[Em]oi aquele tempo da lad[E2]eira, irmão"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Sétima Parte",
+     "linhas": [
+      {
+       "texto": "Meu escrit[E2]ório é na praia"
+      },
+      {
+       "texto": "Eu tô sempre na área"
+      },
+      {
+       "texto": "Mas eu não sou"
+      },
+      {
+       "texto": "Da tua láia, não [D2]"
+      },
+      {
+       "texto": "Meu escrit[E2]ório é na praia"
+      },
+      {
+       "texto": "Eu tô sempre na área"
+      },
+      {
+       "texto": "Mas eu não s[Em]ou"
+      },
+      {
+       "texto": "Daquela [E4]   láia, não"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "Então"
+      },
+      {
+       "texto": "D[Em]eixe viver, d[E2]eixe ficar"
+      },
+      {
+       "texto": "D[Em]eixe estar como est[E2]á"
+      },
+      {
+       "texto": "D[Em]eixe viver, d[E2]eixe ficar"
+      },
+      {
+       "texto": "D[Em]eixe estar como est[E2]á"
+      },
+      {
+       "texto": "D[Em]eixe viver, d[E2]eixe ficar"
+      },
+      {
+       "texto": "D[Em]eixe estar como est[E2]á"
+      },
+      {
+       "texto": "D[Em]eixe viver, d[E2]eixe ficar"
+      },
+      {
+       "texto": "D[Em]eixe estar como est[E2]á"
+      }
+     ]
+    },
+    {
+     "tipo": "final",
+     "nome": "Final",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[Em] [E2] [Em] [E2]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Em] [E2] [Em] [E2]"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "esperando-na-janela-cogumelo-plutao",
+   "titulo": "Esperando na Janela",
+   "artista": "Cogumelo Plutão",
+   "tom": "B",
+   "genero": "rock",
+   "idioma": "pt-BR",
+   "compasso": "4/4",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "Cogumelo Plutão",
+    "atribuicao": "Letra e música de Cogumelo Plutão. Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "intro",
+     "nome": "Intro",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[C#m7] [B/D#] [E] [F#7]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "Quando m[B]e perd[E]i, voc[F#7]ê aparece[B2]u"
+      },
+      {
+       "texto": "Me faz[G#m11]endo ri[E]r, do que[F#7] aconteceu[B2]"
+      },
+      {
+       "texto": "E de m[D#m7]edo olh[G#m11]ei   tu[E]do ao meu redo[B2]r"
+      },
+      {
+       "texto": "Só ass[D#m7]im enxergu[G#m11]ei que ago[E]ra esto[F#7]u melhor[B]"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "Você é a esc[E]ada na minh[F#7]a subi[B]da"
+      },
+      {
+       "texto": "Você é o am[E]or da m[F#7]inha vi[B]da"
+      },
+      {
+       "texto": "É o meu abrir de [D#m7]olhos, o amanhec[G#m11]er"
+      },
+      {
+       "texto": "Verd[G#m11/F#]ade que me lev[E]a a [F#7]viver [B]"
+      },
+      {
+       "texto": "Você é a esp[E]era n[F#7]a jane[B]la"
+      },
+      {
+       "texto": "A ave que vem d[E]e long[F#7]e tão be[B]la"
+      },
+      {
+       "texto": "A esperança qu[D#m7]e arde em cal[G#m11]or"
+      },
+      {
+       "texto": "Voc[G#m11/F#]ê é a tradução[E] do que é [F#7]o amor [B2]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "E a d[B]or sa[E]iu, foi voc[F#7]ê quem me curo[B2]u"
+      },
+      {
+       "texto": "Quando o m[G#m11]al parti[E]u, vi que a[F#7]lgo em mim mudou[B2]"
+      },
+      {
+       "texto": "No mom[D#m7]ento em que qu[G#m11]is fica[E]r junto de ti[B2]"
+      },
+      {
+       "texto": "E ag[D#m7]ora sou fel[G#m11]iz, pois lhe te[E]nho be[F#7]m aqui [B]"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "Você é a esc[E]ada na minh[F#7]a subi[B]da"
+      },
+      {
+       "texto": "Você é o am[E]or da m[F#7]inha vi[B]da"
+      },
+      {
+       "texto": "É o meu abrir de [D#m7]olhos, o amanhec[G#m11]er"
+      },
+      {
+       "texto": "Verd[G#m11/F#]ade que me lev[E]a a [F#7]viver [B]"
+      },
+      {
+       "texto": "Você é a esp[E]era n[F#7]a jane[B]la"
+      },
+      {
+       "texto": "A ave que vem d[E]e long[F#7]e tão be[B]la"
+      },
+      {
+       "texto": "A esperança qu[D#m7]e arde em cal[G#m11]or"
+      },
+      {
+       "texto": "Voc[G#m11/F#]ê é a tradução[E] do que é [F#7]o amor [C#m7]"
+      }
+     ]
+    },
+    {
+     "tipo": "ponte",
+     "nome": "Ponte",
+     "linhas": [
+      {
+       "texto": "[B/D#]     Do que é o am[E]or, [F#7]   do que é o amo[C#m7]r"
+      },
+      {
+       "texto": "[B/D#]     Do que é o am[E]or"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "Você é a esc[E]ada na minh[F#7]a subi[B]da"
+      },
+      {
+       "texto": "Você é o am[E]or da m[F#7]inha vi[B]da"
+      },
+      {
+       "texto": "É o meu abrir de [D#m7]olhos, o amanhec[G#m11]er"
+      },
+      {
+       "texto": "Verd[G#m11/F#]ade que me lev[E]a a [F#7]viver [B]"
+      },
+      {
+       "texto": "Você é a esp[E]era n[F#7]a jane[B]la"
+      },
+      {
+       "texto": "A ave que vem d[E]e long[F#7]e tão be[B]la"
+      },
+      {
+       "texto": "A esperança qu[D#m7]e arde em cal[G#m11]or"
+      },
+      {
+       "texto": "Voc[G#m11/F#]ê é a tradução[E] do que é [F#7]o amor [C#m7]"
+      }
+     ]
+    },
+    {
+     "tipo": "final",
+     "nome": "Final",
+     "linhas": [
+      {
+       "texto": "[B/D#]     Do que é o am[E]or, [F#7]   do que é o amo[C#m7]r"
+      },
+      {
+       "texto": "[B/D#]     Do que é o am[E]or [F#7]     [B]"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hotel-california-eagles",
+   "titulo": "Hotel California",
+   "artista": "Eagles",
+   "tom": "F#m",
+   "genero": "rock",
+   "idioma": "pt-BR",
+   "compasso": "4/4",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "Eagles",
+    "atribuicao": "Letra e música de Eagles. Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "verso",
+     "nome": "Música",
+     "linhas": [
+      {
+       "texto": "[F#m]   On a dark desert highway"
+      },
+      {
+       "texto": "[C#7]    Cool wind in my hair"
+      },
+      {
+       "texto": "[E]  Warm smell of colitas"
+      },
+      {
+       "texto": "[B7]   Rising up through the air"
+      },
+      {
+       "texto": "[D]  Up ahead in the distance"
+      },
+      {
+       "texto": "[A]  I saw a shimmering light"
+      },
+      {
+       "texto": "[Bm]   My head grew heavy and my sight grew dim"
+      },
+      {
+       "texto": "[C#7]    I had to stop for the night"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "[F#m]   There she stood in the doorway"
+      },
+      {
+       "texto": "[C#7]    I heard the mission bell"
+      },
+      {
+       "texto": "[E]  And I was thinking to myself"
+      },
+      {
+       "texto": "[B7]   This could be Heaven or this could be Hell"
+      },
+      {
+       "texto": "[D]  Then she lit up a candle"
+      },
+      {
+       "texto": "[A]  And she showed me the way"
+      },
+      {
+       "texto": "[Bm]   There were voices down the corridor"
+      },
+      {
+       "texto": "[C#7]    I thought I heard them say"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "W[D]elcome to the Hotel Calif[A]ornia"
+      },
+      {
+       "texto": "Such a l[C#7]ovely place"
+      },
+      {
+       "texto": "S[F#m]uch a lovely face"
+      },
+      {
+       "texto": "Pl[D]enty of room at the Hotel Calif[A]ornia"
+      },
+      {
+       "texto": "Any t[Bm]ime of year"
+      },
+      {
+       "texto": "You can f[C#7]ind us here"
+      },
+      {
+       "texto": "Segunda parte - repete dedilhado"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "[F#m]   Her mind is Tiffany-twisted"
+      },
+      {
+       "texto": "[C#7]    She got the Mercedes-Benz"
+      },
+      {
+       "texto": "[E]  She got a lot of pretty, pretty boys"
+      },
+      {
+       "texto": "[B]  That she calls friends"
+      },
+      {
+       "texto": "[D]  How they dance in the courtyard"
+      },
+      {
+       "texto": "Sw[A]eet summer sweat"
+      },
+      {
+       "texto": "[Bm]   Some dance to remember"
+      },
+      {
+       "texto": "[C#7]    Some dance to forget"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "[F#m]   So I called up the Captain"
+      },
+      {
+       "texto": "[C#7]    Please bring me my wine, he said"
+      },
+      {
+       "texto": "[E]  We haven't had that spirit here since"
+      },
+      {
+       "texto": "[B]  Nineteen sixty-nine"
+      },
+      {
+       "texto": "[D]  And still those voices"
+      },
+      {
+       "texto": "are calling from f[A]ar away"
+      },
+      {
+       "texto": "[Bm]   Wake you up in the middle of the night"
+      },
+      {
+       "texto": "[C#7]    Just to hear them say"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "W[D]elcome to the Hotel Calif[A]ornia"
+      },
+      {
+       "texto": "Such a l[C#7]ovely place"
+      },
+      {
+       "texto": "S[F#m]uch a lovely face"
+      },
+      {
+       "texto": "W[D]e're livin' it up at the Hotel Calif[A]ornia"
+      },
+      {
+       "texto": "What a n[Bm]ice surprise"
+      },
+      {
+       "texto": "Bring your [C#7]alibis"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira estrofe - Pausa",
+     "linhas": [
+      {
+       "texto": "[F#m]   Mirrors on the ceiling"
+      },
+      {
+       "texto": "[C#7]    The pink champagne on ice, and she said"
+      },
+      {
+       "texto": "[E]  We are all just prisoners here"
+      },
+      {
+       "texto": "[B]  Of our own device"
+      },
+      {
+       "texto": "[D]  And in the master's chambers"
+      },
+      {
+       "texto": "[A]  They gathered for the feast"
+      },
+      {
+       "texto": "[Bm]   The stab it with their steely knives"
+      },
+      {
+       "texto": "But they j[C#7]ust can't kill the beast"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "[F#m]   Last thing I remember, I was"
+      },
+      {
+       "texto": "[C#7]    Running for the door"
+      },
+      {
+       "texto": "[E]  I had to find the passage back"
+      },
+      {
+       "texto": "To the pl[B]ace I was before"
+      },
+      {
+       "texto": "[D]  Relax, said the night man"
+      },
+      {
+       "texto": "We [A]are programmed to receive"
+      },
+      {
+       "texto": "[Bm]   You can check out any time you like"
+      },
+      {
+       "texto": "But you c[C#7]an never leave"
+      }
+     ]
+    },
+    {
+     "tipo": "solo",
+     "nome": "Solo",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[F#m] [C#7] [E] [B7]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[D] [A] [Bm] [C#7]"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "can-t-help-falling-in-love-elvis-presley",
+   "titulo": "Can't Help Falling in Love",
+   "artista": "Elvis Presley",
+   "tom": "C",
+   "genero": "rock",
+   "idioma": "pt-BR",
+   "compasso": "12/8",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "Elvis Presley",
+    "atribuicao": "Letra e música de Elvis Presley. Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "intro",
+     "nome": "Intro",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[C] [G] [C] [C/G]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "W[C]ise m[Em]en  [Am]say [Am/G]"
+      },
+      {
+       "texto": "Only f[F]ools r[C/E]ush  [G/D] in  [G]"
+      },
+      {
+       "texto": "But [F]I c[G]an't h[Am]elp"
+      },
+      {
+       "texto": "F[F]alling in l[C/G]ove w[G7]ith y[C]ou [C/G]"
+      },
+      {
+       "texto": "Sh[C]all [Em]I  s[Am]tay [Am/G]"
+      },
+      {
+       "texto": "Would it b[F]e  [C/E]a    [G7/D]sin   [G]"
+      },
+      {
+       "texto": "If [F]I c[G]an't h[Am]elp"
+      },
+      {
+       "texto": "F[F]alling in l[C/G]ove w[G7]ith y[C]ou? [C/G]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "L[Em]ike a river f[B7]lows"
+      },
+      {
+       "texto": "S[Em]urely to the [B7]sea"
+      },
+      {
+       "texto": "D[Em]arling, so it [B7]goes"
+      },
+      {
+       "texto": "S[Em]ome things[A7]    are meant to [Dm]be  [G7]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Terceira Parte",
+     "linhas": [
+      {
+       "texto": "T[C]ake m[Em]y   [Am]hand[Am/G]"
+      },
+      {
+       "texto": "Take my wh[F]ole l[C/E]ife  [G7/D]too   [G]"
+      },
+      {
+       "texto": "For [F]I c[G]an't h[Am]elp"
+      },
+      {
+       "texto": "F[F]alling in l[C/G]ove w[G7]ith y[C]ou [C/G]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "L[Em]ike a river f[B7]lows"
+      },
+      {
+       "texto": "S[Em]urely to the [B7]sea"
+      },
+      {
+       "texto": "D[Em]arling, so it [B7]goes"
+      },
+      {
+       "texto": "S[Em]ome things[A7]    are meant to [Dm]be  [G7]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Terceira Parte",
+     "linhas": [
+      {
+       "texto": "T[C]ake m[Em]y   [Am]hand[Am/G]"
+      },
+      {
+       "texto": "Take my wh[F]ole l[C/E]ife  [G7/D]too   [G]"
+      },
+      {
+       "texto": "For [F]I c[G]an't h[Am]elp"
+      },
+      {
+       "texto": "F[F]alling in l[C/G]ove w[G7]ith y[C]ou [C/G]"
+      },
+      {
+       "texto": "For [F]I c[G]an't h[Am]elp"
+      },
+      {
+       "texto": "F[F]alling in l[C/G]ove w[G7]ith y[C]ou [C/G]     [C]"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "jailhouse-rock-elvis-presley",
+   "titulo": "Jailhouse Rock",
+   "artista": "Elvis Presley",
+   "tom": "E",
+   "genero": "rock",
+   "idioma": "pt-BR",
+   "compasso": "4/4",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "Elvis Presley",
+    "atribuicao": "Letra e música de Elvis Presley. Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "intro",
+     "nome": "Introdução",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[A#] [B]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "[A#]   The w[B]arden threw a party"
+      },
+      {
+       "texto": "In the county jail [A#]"
+      },
+      {
+       "texto": "The pr[B]ison band was there"
+      },
+      {
+       "texto": "And they began to wail [A#]"
+      },
+      {
+       "texto": "The b[B]and was jumpin'"
+      },
+      {
+       "texto": "And the joint began to swing [A#]"
+      },
+      {
+       "texto": "You sh[B]ould've heard those knocked"
+      },
+      {
+       "texto": "Out jailbirds sing"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Primeiro Refrão",
+     "linhas": [
+      {
+       "texto": "Let's r[E]ock"
+      },
+      {
+       "texto": "Everybody, let's r[B]ock"
+      },
+      {
+       "texto": "Everyb[F#]ody in the whole cell blo[E]ck"
+      },
+      {
+       "texto": "Was d[B]ancin' to the Jailhouse Rock"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "[A#]   Sp[B]ider Murphy"
+      },
+      {
+       "texto": "Played the tenor saxophone [A#]"
+      },
+      {
+       "texto": "L[B]ittle Joe was blowin'"
+      },
+      {
+       "texto": "On the slide trombone [A#]"
+      },
+      {
+       "texto": "The dr[B]ummer boy from Illinois"
+      },
+      {
+       "texto": "Went crash, boom, bang [A#]"
+      },
+      {
+       "texto": "The wh[B]ole rhythm section"
+      },
+      {
+       "texto": "Was the Purple Gang"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Segundo Refrão",
+     "linhas": [
+      {
+       "texto": "Let's r[E]ock"
+      },
+      {
+       "texto": "Everybody, let's r[B]ock"
+      },
+      {
+       "texto": "Everyb[F#]ody in the whole cell blo[E]ck"
+      },
+      {
+       "texto": "Was d[B]ancin' to the Jailhouse Rock"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Terceira Parte",
+     "linhas": [
+      {
+       "texto": "[A#]   N[B]umber forty-seven"
+      },
+      {
+       "texto": "Said to number three [A#]"
+      },
+      {
+       "texto": "Y[B]ou're the cutest jailbird"
+      },
+      {
+       "texto": "I ever did see [A#]"
+      },
+      {
+       "texto": "I s[B]ure would be delighted"
+      },
+      {
+       "texto": "With your company [A#]"
+      },
+      {
+       "texto": "Come [B]on and do the"
+      },
+      {
+       "texto": "Jailhouse Rock with me"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Terceiro Refrão",
+     "linhas": [
+      {
+       "texto": "Let's r[E]ock"
+      },
+      {
+       "texto": "Everybody, let's r[B]ock"
+      },
+      {
+       "texto": "Everyb[F#]ody in the whole cell blo[E]ck"
+      },
+      {
+       "texto": "Was d[B]ancin' to the Jailhouse Rock"
+      }
+     ]
+    },
+    {
+     "tipo": "solo",
+     "nome": "Solo",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[E] [B] [F#] [E] [B]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Quarta Parte",
+     "linhas": [
+      {
+       "texto": "[A#]   The s[B]ad sack was a sittin'"
+      },
+      {
+       "texto": "On a block of stone [A#]"
+      },
+      {
+       "texto": "Way [B]over in the corner"
+      },
+      {
+       "texto": "Weepin' all alone [A#]"
+      },
+      {
+       "texto": "The w[B]arden said: Hey, buddy"
+      },
+      {
+       "texto": "Don't you be no square [A#]"
+      },
+      {
+       "texto": "If you c[B]an't find a partner"
+      },
+      {
+       "texto": "Use a wooden chair"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Quarto Refrão",
+     "linhas": [
+      {
+       "texto": "Let's r[E]ock"
+      },
+      {
+       "texto": "Everybody, let's r[B]ock"
+      },
+      {
+       "texto": "Everyb[F#]ody in the whole cell blo[E]ck"
+      },
+      {
+       "texto": "Was d[B]ancin' to the Jailhouse Rock"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Quinta Parte",
+     "linhas": [
+      {
+       "texto": "[A#]   Sh[B]ifty Henry said to Bugsy"
+      },
+      {
+       "texto": "For Heaven's sake [A#]"
+      },
+      {
+       "texto": "No [B]one's lookin', now's"
+      },
+      {
+       "texto": "Our chance to make a break [A#]"
+      },
+      {
+       "texto": "B[B]ugsy turned to Shifty"
+      },
+      {
+       "texto": "And he said: Nix, nix [A#]"
+      },
+      {
+       "texto": "I w[B]anna stick around"
+      },
+      {
+       "texto": "Awhile and get my kicks"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Quinto Refrão",
+     "linhas": [
+      {
+       "texto": "Let's r[E]ock"
+      },
+      {
+       "texto": "Everybody, let's r[B]ock"
+      },
+      {
+       "texto": "Everyb[F#]ody in the whole cell blo[E]ck"
+      },
+      {
+       "texto": "Was d[B]ancin' to the Jailhouse Rock"
+      }
+     ]
+    },
+    {
+     "tipo": "final",
+     "nome": "Final",
+     "linhas": [
+      {
+       "texto": "D[B]ancin' to the Jailhouse Rock"
+      },
+      {
+       "texto": "Dancin' to the Jailhouse Rock"
+      },
+      {
+       "texto": "Dancin' to the Jailhouse Rock"
+      },
+      {
+       "texto": "Dancin' to the Jailhouse Rock"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "everlong-foo-fighters",
+   "titulo": "Everlong",
+   "artista": "Foo Fighters",
+   "tom": "B",
+   "genero": "rock",
+   "idioma": "pt-BR",
+   "compasso": "4/4",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "Foo Fighters",
+    "atribuicao": "Letra e música de Foo Fighters. Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "intro",
+     "nome": "Intro",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[B7M] [G#2] [E2] [G#2]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[B7M] [G#2] [E2] [G#2]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[B7M] [G#2] [E2] [G#2]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "H[B7M]ello"
+      },
+      {
+       "texto": "I've w[G#2]aited here for you  [E2]"
+      },
+      {
+       "texto": "Ev[G#2]erlong"
+      },
+      {
+       "texto": "T[B7M]onight"
+      },
+      {
+       "texto": "I've thr[G#2]own myself into  [E2]"
+      },
+      {
+       "texto": "And out of the r[G#2]ed"
+      },
+      {
+       "texto": "Out of her head, she sang"
+      }
+     ]
+    },
+    {
+     "tipo": "interludio",
+     "nome": "Interlúdio 1",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[B7M] [G#2] [E2] [G#2]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "C[B7M]ome down"
+      },
+      {
+       "texto": "And w[G#2]aste away with me  [E2]"
+      },
+      {
+       "texto": "Down w[G#2]ith me"
+      },
+      {
+       "texto": "Sl[B7M]ow how"
+      },
+      {
+       "texto": "You w[G#2]anted it to be  [E2]"
+      },
+      {
+       "texto": "And over my h[G#2]ead"
+      },
+      {
+       "texto": "Out of her head, she sang"
+      }
+     ]
+    },
+    {
+     "tipo": "pre-refrao",
+     "nome": "Pré-Refrão",
+     "linhas": [
+      {
+       "texto": "[B5]    [F#5]   And I[B5] wonder  [F#5]"
+      },
+      {
+       "texto": "When I sing al[B5]ong with you"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Primeiro Refrão",
+     "linhas": [
+      {
+       "texto": "[G#5]   If everything could eve[E5]r"
+      },
+      {
+       "texto": "Feel this real for[B5]ever [G#5]"
+      },
+      {
+       "texto": "If anything could ev[E5]er"
+      },
+      {
+       "texto": "Be this good [B5]again [G#5]"
+      },
+      {
+       "texto": "The only thing"
+      },
+      {
+       "texto": "I'll ev[E5]er ask of you [B5]"
+      },
+      {
+       "texto": "You've gotta promise not t[F#5]o stop"
+      },
+      {
+       "texto": "When I say [E5]   when"
+      },
+      {
+       "texto": "She sang"
+      }
+     ]
+    },
+    {
+     "tipo": "interludio",
+     "nome": "Interlúdio 2",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[B7M] [G#2] [E2] [G#2]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Terceira Parte",
+     "linhas": [
+      {
+       "texto": "Br[B7M]eathe out"
+      },
+      {
+       "texto": "So [G#2]I can breathe you in  [E2]"
+      },
+      {
+       "texto": "Hold y[G#2]ou in"
+      },
+      {
+       "texto": "[B7M]And now"
+      },
+      {
+       "texto": "I kn[G#2]ow you've always been  [E2]"
+      },
+      {
+       "texto": "Out of your h[G#2]ead"
+      },
+      {
+       "texto": "Out of my head, I sang"
+      }
+     ]
+    },
+    {
+     "tipo": "pre-refrao",
+     "nome": "Pré-Refrão",
+     "linhas": [
+      {
+       "texto": "[B5]    [F#5]   And I[B5] wonder  [F#5]"
+      },
+      {
+       "texto": "When I sing al[B5]ong with you"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Segundo Refrão",
+     "linhas": [
+      {
+       "texto": "[G#5]   If everything could eve[E5]r"
+      },
+      {
+       "texto": "Feel this real for[B5]ever [G#5]"
+      },
+      {
+       "texto": "If anything could ev[E5]er"
+      },
+      {
+       "texto": "Be this good [B5]again [G#5]"
+      },
+      {
+       "texto": "The only thing"
+      },
+      {
+       "texto": "I'll ev[E5]er ask of you [B5]"
+      },
+      {
+       "texto": "You've gotta promise not t[F#5]o stop"
+      },
+      {
+       "texto": "When I say [E5]   when"
+      },
+      {
+       "texto": "She sang"
+      }
+     ]
+    },
+    {
+     "tipo": "interludio",
+     "nome": "Interlúdio 3",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[B7M] [G#2] [E2] [G#2]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[B7M] [G#2] [E2] [G#2]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[B5]"
+      },
+      {
+       "texto": "And I wonder"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Terceiro Refrão",
+     "linhas": [
+      {
+       "texto": "[G#5]   If everything could eve[E5]r"
+      },
+      {
+       "texto": "Feel this real for[B5]ever [G#5]"
+      },
+      {
+       "texto": "If anything could ev[E5]er"
+      },
+      {
+       "texto": "Be this good [B5]again [G#5]"
+      },
+      {
+       "texto": "The only thing"
+      },
+      {
+       "texto": "I'll ev[E5]er ask of you [B5]"
+      },
+      {
+       "texto": "You've gotta promise not t[F#5]o stop"
+      },
+      {
+       "texto": "When I say [E5]   when"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "times-like-these-foo-fighters",
+   "titulo": "Times Like These",
+   "artista": "Foo Fighters",
+   "tom": "E",
+   "genero": "rock",
+   "idioma": "pt-BR",
+   "compasso": "7/4",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "Foo Fighters",
+    "atribuicao": "Letra e música de Foo Fighters. Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "intro",
+     "nome": "Intro",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[B7(13)]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[B5] [A5] [E/G#]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[B5] [A5] [E/G#]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[B5] [A5] [E/G#]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[B7(13)]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "[B]I, I'm a one way m[F#m]otorway"
+      },
+      {
+       "texto": "I'm a road that dr[A]ives away"
+      },
+      {
+       "texto": "Then f[C#m]ollows you back ho[B7(13)]me"
+      },
+      {
+       "texto": "[B]I, I'm a street light sh[F#m]ining"
+      },
+      {
+       "texto": "I'm a white light bl[A]inding bright"
+      },
+      {
+       "texto": "B[C#m]urning off and o[B7(13)]n"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão 1",
+     "linhas": [
+      {
+       "texto": "It's t[A]imes like these"
+      },
+      {
+       "texto": "You l[C#m7]earn to live aga[B11]in"
+      },
+      {
+       "texto": "It's t[A]imes like these"
+      },
+      {
+       "texto": "You g[C#m7]ive and give aga[B11]in"
+      },
+      {
+       "texto": "It's t[A]imes like these"
+      },
+      {
+       "texto": "You l[C#m7]earn to love aga[B11]in"
+      },
+      {
+       "texto": "It's t[A]imes like these"
+      },
+      {
+       "texto": "T[C#m7]ime and time aga[B7(13)]in"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "[B]I, I'm a new day r[F#m]ising"
+      },
+      {
+       "texto": "I'm a brand new sk[A]y that"
+      },
+      {
+       "texto": "Hang the st[C#m]ars upon toni[B7(13)]ght"
+      },
+      {
+       "texto": "[B]I, I'm a little div[F#m]ided"
+      },
+      {
+       "texto": "Do I stay or r[A]un away"
+      },
+      {
+       "texto": "And l[C#m]eave it all behi[B7(13)]nd?"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão 2",
+     "linhas": [
+      {
+       "texto": "It's t[A]imes like these"
+      },
+      {
+       "texto": "You l[C#m7]earn to live aga[B11]in"
+      },
+      {
+       "texto": "It's t[A]imes like these"
+      },
+      {
+       "texto": "You g[C#m7]ive and give aga[B11]in"
+      },
+      {
+       "texto": "It's t[A]imes like these"
+      },
+      {
+       "texto": "You l[C#m7]earn to love aga[B11]in"
+      },
+      {
+       "texto": "It's t[A]imes like these"
+      },
+      {
+       "texto": "T[C#m7]ime and time again"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[B5] [A5] [E/G#]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[B5] [A5] [E/G#]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[B5] [A5] [E/G#]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[B5] [A5] [E/G#]"
+      },
+      {
+       "texto": "( B7(13) )"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão 3",
+     "linhas": [
+      {
+       "texto": "It's t[A]imes like these"
+      },
+      {
+       "texto": "You l[C#m7]earn to live aga[B11]in"
+      },
+      {
+       "texto": "It's t[A]imes like these"
+      },
+      {
+       "texto": "You g[C#m7]ive and give aga[B11]in"
+      },
+      {
+       "texto": "It's t[A]imes like these"
+      },
+      {
+       "texto": "You l[C#m7]earn to love aga[B11]in"
+      },
+      {
+       "texto": "It's t[A]imes like these"
+      },
+      {
+       "texto": "T[C#m7]ime and time aga[B11]in"
+      },
+      {
+       "texto": "It's t[A]imes like these"
+      },
+      {
+       "texto": "You l[C#m7]earn to live aga[B11]in"
+      },
+      {
+       "texto": "It's t[A]imes like these"
+      },
+      {
+       "texto": "You g[C#m7]ive and give aga[B11]in"
+      },
+      {
+       "texto": "It's t[A]imes like these"
+      },
+      {
+       "texto": "You l[C#m7]earn to love aga[B11]in"
+      },
+      {
+       "texto": "It's t[A]imes like these"
+      },
+      {
+       "texto": "T[C#m7]ime and time aga[B11]in"
+      },
+      {
+       "texto": "It's t[A]imes like these"
+      },
+      {
+       "texto": "You l[C#m7]earn to live aga[B11]in"
+      },
+      {
+       "texto": "It's t[A]imes like these"
+      },
+      {
+       "texto": "You g[C#m7]ive and give aga[B11]in"
+      },
+      {
+       "texto": "It's t[A]imes like these"
+      },
+      {
+       "texto": "You l[C#m7]earn to love aga[B11]in"
+      },
+      {
+       "texto": "It's t[A]imes like these"
+      },
+      {
+       "texto": "T[C#m7]ime and time aga[B11]in"
+      }
+     ]
+    },
+    {
+     "tipo": "final",
+     "nome": "Final",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[A]"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "iris-goo-goo-dolls",
+   "titulo": "Iris",
+   "artista": "Goo Goo Dolls",
+   "tom": "Am",
+   "genero": "rock",
+   "idioma": "pt-BR",
+   "bpm": 156,
+   "compasso": "4/4",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "Goo Goo Dolls",
+    "atribuicao": "Letra e música de Goo Goo Dolls. Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "intro",
+     "nome": "Intro",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[Am7] [Am7(9)] [Am7]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[F9] [F7M(9)] [F9]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Am7] [Am7(9)] [Am7]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[F9] [F7M(9)] [F9]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "And I'd g[C]ive up for[Dm7(11)]ever to t[F9]ouch you"
+      },
+      {
+       "texto": "'Cause I kn[Am7]ow that you f[G]eel me someh[F9]ow"
+      },
+      {
+       "texto": "You are the cl[C]osest to"
+      },
+      {
+       "texto": "H[Dm7(11)]eaven that [F9]I'll ever be"
+      },
+      {
+       "texto": "And I d[Am7]on't want to g[G]o home right n[F9]ow"
+      },
+      {
+       "texto": "And [C]all I can t[Dm7(11)]aste is this m[F9]oment"
+      },
+      {
+       "texto": "And [Am7]all I can br[G]eathe is your l[F9]ife"
+      },
+      {
+       "texto": "And s[C]ooner or l[Dm7(11)]ater it's [F9]over"
+      },
+      {
+       "texto": "I just d[Am7]on't want to m[G]iss you ton[F9]ight"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "And I d[Am7]on't want the w[G]orld to s[F9]ee me"
+      },
+      {
+       "texto": "'Cause I d[Am7]on't think that"
+      },
+      {
+       "texto": "The[G]y'd underst[F9]and"
+      },
+      {
+       "texto": "When ev[Am7]erything's m[G]ade to be br[F9]oken"
+      },
+      {
+       "texto": "I just w[Am7]ant you to kn[G]ow who I [F9]am"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "And you c[C]an't fight the"
+      },
+      {
+       "texto": "T[Dm7(11)]ears that ain't c[F9]oming"
+      },
+      {
+       "texto": "Or the m[Am7]oment of tr[G]uth in your l[F9]ies"
+      },
+      {
+       "texto": "When [C]everything f[Dm7(11)]eels like the m[F9]ovies"
+      },
+      {
+       "texto": "Yeah you bl[Am7]eed just to kn[G]ow you're al[F9]ive"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "And I d[Am7]on't want the w[G]orld to s[F9]ee me"
+      },
+      {
+       "texto": "'Cause I d[Am7]on't think that"
+      },
+      {
+       "texto": "the[G]y'd underst[F9]and"
+      },
+      {
+       "texto": "When ev[Am7]erything's m[G]ade to be br[F9]oken"
+      },
+      {
+       "texto": "I just w[Am7]ant you to kn[G]ow who I [F9]am"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sweet-child-o-mine-guns-n-roses",
+   "titulo": "Sweet Child O' Mine",
+   "artista": "Guns N' Roses",
+   "tom": "F#m",
+   "genero": "rock",
+   "idioma": "pt-BR",
+   "compasso": "4/4",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "Guns N' Roses",
+    "atribuicao": "Letra e música de Guns N' Roses. Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "intro",
+     "nome": "Intro",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[E] [D] [A] [E]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[E] [D] [A] [E]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Tab - Primeira Parte",
+     "linhas": [
+      {
+       "texto": "Sh[E]e's got a smile"
+      },
+      {
+       "texto": "That it seems to me"
+      },
+      {
+       "texto": "Rem[D]inds me of childhood memories"
+      },
+      {
+       "texto": "Wher[A]e everything was as fresh"
+      },
+      {
+       "texto": "As the bright blue sk[E]y"
+      },
+      {
+       "texto": "N[E]ow and then"
+      },
+      {
+       "texto": "When I see her face"
+      },
+      {
+       "texto": "She t[D]akes me away to that special place"
+      },
+      {
+       "texto": "And if I st[A]are too long"
+      },
+      {
+       "texto": "I'd probably break down and cr[E]y"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Tab - Primeiro Refrão",
+     "linhas": [
+      {
+       "texto": "Parte 1 de 4"
+      },
+      {
+       "texto": "Parte 2 de 4"
+      },
+      {
+       "texto": "Parte 3 de 4"
+      },
+      {
+       "texto": "Parte 4 de 4"
+      },
+      {
+       "texto": "[B5]Oh oh   [B5]    [C#5]     o[D5]h"
+      },
+      {
+       "texto": "Sweet child o' m[E5]ine"
+      },
+      {
+       "texto": "[B5]Oh oh oh   [B5]    [C#5]     o[D5]h"
+      },
+      {
+       "texto": "Sweet love of m[E5]ine"
+      }
+     ]
+    },
+    {
+     "tipo": "interludio",
+     "nome": "Interlúdio 1",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[E] [D] [A] [E]"
+      }
+     ]
+    },
+    {
+     "tipo": "interludio",
+     "nome": "Tab - Interlúdio 1",
+     "linhas": [
+      {
+       "texto": "Parte 1 de 4"
+      },
+      {
+       "texto": "Parte 2 de 4"
+      },
+      {
+       "texto": "Parte 3 de 4"
+      },
+      {
+       "texto": "Parte 4 de 4"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Tab - Segunda Parte",
+     "linhas": [
+      {
+       "texto": "Sh[E]e's got eyes"
+      },
+      {
+       "texto": "Of the bluest skies"
+      },
+      {
+       "texto": "As [D]if they thought of rain"
+      },
+      {
+       "texto": "I h[A]ate to look into those eyes"
+      },
+      {
+       "texto": "And s[E]ee an ounce of pain"
+      },
+      {
+       "texto": "Her h[E]air reminds me of a warm safe place"
+      },
+      {
+       "texto": "Where [D]as a child I'd hide"
+      },
+      {
+       "texto": "And pr[A]ay for the thunder"
+      },
+      {
+       "texto": "And the rain"
+      },
+      {
+       "texto": "To qu[E]ietly pass me by"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Tab - Segundo Refrão",
+     "linhas": [
+      {
+       "texto": "[B5]Oh oh   [B5]    [C#5]     o[D5]h"
+      },
+      {
+       "texto": "Sweet child o' m[E5]ine"
+      },
+      {
+       "texto": "[B5]Oh oh oh   [B5]    [C#5]     o[D5]h"
+      },
+      {
+       "texto": "Sweet love of m[E5]ine"
+      }
+     ]
+    },
+    {
+     "tipo": "interludio",
+     "nome": "Interlúdio 2",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[E] [D] [A] [E]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[E] [D] [A] [E]"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Tab - Terceiro Refrão",
+     "linhas": [
+      {
+       "texto": "[B5]Oh oh   [B5]    [C#5]     o[D5]h"
+      },
+      {
+       "texto": "Sweet child o' m[E5]ine"
+      },
+      {
+       "texto": "[B5]Oh oh oh   [B5]    [C#5]     o[D5]h"
+      },
+      {
+       "texto": "Sweet love of m[E5]ine"
+      },
+      {
+       "texto": "[B5]Oh oh   [B5]    [C#5]     o[D5]h"
+      },
+      {
+       "texto": "Sweet child o' m[E5]ine"
+      },
+      {
+       "texto": "[B5]Uh uh uh   [B5]    [C#5]     u[D5]h"
+      },
+      {
+       "texto": "               E5  ( F5 )"
+      },
+      {
+       "texto": "Sweet love of mine"
+      }
+     ]
+    },
+    {
+     "tipo": "solo",
+     "nome": "Solo 1",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[F#5] [D5] [C#5] [B5] [A] [G#]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[F#5] [D5] [C#5] [B5] [A] [G#]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[F#5] [D5] [C#5] [B5] [A] [G#]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[F#5] [D5] [C#5] [B5]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[F#5] [A5] [B5] [D5] [E5]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[F#5] [A5] [B5] [D5] [E5]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[F#5] [A5] [B5] [D5] [E5]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[F#5] [A5] [B5] [D5] [E5]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Tab - Ponte",
+     "linhas": [
+      {
+       "texto": "(Wh[F#5]ere do we go?)"
+      },
+      {
+       "texto": "(Wh[A5]ere do we go now?)"
+      },
+      {
+       "texto": "(Wh[B5]ere do we go?)[D5]    [E5]"
+      },
+      {
+       "texto": "Wh[F#5]ere do we go?"
+      },
+      {
+       "texto": "(Wh[A5]ere do we go now?)"
+      },
+      {
+       "texto": "Wh[B5]ere do we go now? [D5]    [E5]"
+      },
+      {
+       "texto": "Wh[F#5]ere do we go? [A5] (Sweet child)"
+      },
+      {
+       "texto": "Wh[B5]ere do we go now? [D5]    [E5]"
+      }
+     ]
+    },
+    {
+     "tipo": "solo",
+     "nome": "Solo Final",
+     "linhas": [
+      {
+       "texto": "[F#5]Aye, aye, aye, aye, aye"
+      },
+      {
+       "texto": "(Wh[A5]ere do we go?)"
+      },
+      {
+       "texto": "Wh[B5]ere do we go now? [D5]    [E5]"
+      },
+      {
+       "texto": "Wh[F#5]ere do we go? [A5]"
+      },
+      {
+       "texto": "Wh[B5]ere do we go now? [D5]    [E5]"
+      },
+      {
+       "texto": "Wh[F#5]ere do we go? [A5]"
+      },
+      {
+       "texto": "Wh[B5]ere do we go now? [D5]    [E5]"
+      },
+      {
+       "texto": "Wh[F#5]ere do we go? [A5]"
+      },
+      {
+       "texto": "Wh[B5]ere do we go now, n[F#5]ow, no[E5]w"
+      },
+      {
+       "texto": "N[C#5]ow, no[C5]w, n[B5]ow, n[A5]ow, n[F#5]ow"
+      },
+      {
+       "texto": "Sweet ch[A5]ild"
+      },
+      {
+       "texto": "Sweet ch[B5]ild [D5]    [E5]   o' m[F#5]ine"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "o-sol-jota-quest",
+   "titulo": "O Sol",
+   "artista": "Jota Quest",
+   "tom": "A",
+   "genero": "rock",
+   "idioma": "pt-BR",
+   "compasso": "4/4",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "Jota Quest",
+    "atribuicao": "Letra e música de Jota Quest. Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "solo",
+     "nome": "Solo Intro",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[A5] [E11/G#] [F#m7] [E4]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "D[A5]izer, o que eu posso d[E11/G#]izer"
+      },
+      {
+       "texto": "Se estou cantando ag[F#m7]ora pra você ouvir"
+      },
+      {
+       "texto": "Com outr[E4]a pessoa"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "[A5]   É que as vezes acho"
+      },
+      {
+       "texto": "Que não s[E11/G#]ou o melhor pra você"
+      },
+      {
+       "texto": "[F#m7]     Mas as vezes acho"
+      },
+      {
+       "texto": "Que poder[E4]íamos ser"
+      },
+      {
+       "texto": "O melhor pra nós d[B4(7)]ois"
+      },
+      {
+       "texto": "Só quero que saib[A9/C#]a      [D2]"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "[F#m7]Entre razões e emoç[D2]ões a saída"
+      },
+      {
+       "texto": "[A]É fazer, v[E4]aler a pena"
+      },
+      {
+       "texto": "S[F#m7]e não agora, depois [D2]   não importa"
+      },
+      {
+       "texto": "P[A]or você p[E4]osso esperar"
+      }
+     ]
+    },
+    {
+     "tipo": "solo",
+     "nome": "Solo",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[A5] [E11/G#] [F#m7] [E4]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "S[A5]entir, o que eu posso s[E11/G#]entir"
+      },
+      {
+       "texto": "Se em um segundo t[F#m7]udo acabar"
+      },
+      {
+       "texto": "Não vou ter [E4]   como fugir"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "[A5]   É que as vezes acho"
+      },
+      {
+       "texto": "Que não s[E11/G#]ou o melhor pra você"
+      },
+      {
+       "texto": "[F#m7]     Mas as vezes acho"
+      },
+      {
+       "texto": "Que poder[E4]íamos ser"
+      },
+      {
+       "texto": "O melhor pra nós d[B4(7)]ois"
+      },
+      {
+       "texto": "Só quero que saib[A9/C#]a      [D2]"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "[F#m7]Entre razões e emoç[D7M(9)]ões a saída"
+      },
+      {
+       "texto": "[A5]É fazer, v[E4]aler a pena"
+      },
+      {
+       "texto": "S[F#m7]e não agora, dep[D7M(9)]ois não importa"
+      },
+      {
+       "texto": "P[A5]or você p[E4]osso esper[D2]ar"
+      },
+      {
+       "texto": "Eu posso esperar"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão Final",
+     "linhas": [
+      {
+       "texto": "[F#m7]Entre razões e emoç[D2]ões a saída"
+      },
+      {
+       "texto": "[A]É fazer, v[E4]aler a pena"
+      },
+      {
+       "texto": "S[F#m7]e não agora, dep[D2]ois não importa"
+      },
+      {
+       "texto": "P[A]or você p[E4]osso esperar"
+      },
+      {
+       "texto": "[F#m7]Entre razões e emoç[D2]ões a saída"
+      },
+      {
+       "texto": "[A]É fazer, v[E4]aler a pena"
+      },
+      {
+       "texto": "S[F#m7]e não agora, dep[D2]ois não importa"
+      },
+      {
+       "texto": "P[A]or você p[E4]osso esper[D2]ar"
+      },
+      {
+       "texto": "Posso esper[D2]ar"
+      },
+      {
+       "texto": "Posso esper[D2]ar"
+      },
+      {
+       "texto": "Posso esper[D2]ar"
+      }
+     ]
+    },
+    {
+     "tipo": "final",
+     "nome": "Final",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[D2]"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pais-e-filhos-legiao-urbana",
+   "titulo": "Pais e Filhos",
+   "artista": "Legião Urbana",
+   "tom": "E",
+   "genero": "rock",
+   "idioma": "pt-BR",
+   "compasso": "4/4",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "Legião Urbana",
+    "atribuicao": "Letra e música de Legião Urbana. Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "Estátuas e cofres"
+      },
+      {
+       "texto": "E paredes pintadas"
+      },
+      {
+       "texto": "Ninguém sabe"
+      },
+      {
+       "texto": "O que aconteceu"
+      },
+      {
+       "texto": "Ela se jogou da janela"
+      },
+      {
+       "texto": "Do quinto andar"
+      },
+      {
+       "texto": "Nada é fácil de entender"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "[D9]   Dorme ag[C#m]ora  [A]"
+      },
+      {
+       "texto": "[G#m]Uhmhumm!  [F#m7]"
+      },
+      {
+       "texto": "É só o vento lá f[B]ora"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Terceira Parte",
+     "linhas": [
+      {
+       "texto": "[A]  Quero c[B]olo, v[E]ou fugir de casa"
+      },
+      {
+       "texto": "P[A]osso dorm[B]ir aqui c[E]om vocês"
+      },
+      {
+       "texto": "[A]  Estou c[B]om medo t[E]ive um pesadelo"
+      },
+      {
+       "texto": "[A]  Só vou v[B]oltar dep[E]ois das três"
+      },
+      {
+       "texto": "( A  B )"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Quarta Parte",
+     "linhas": [
+      {
+       "texto": "[D9]   Meu f[C#m]ilho vai te[A]r"
+      },
+      {
+       "texto": "Nome de s[G#m]anto"
+      },
+      {
+       "texto": "[F#m7]Uhhmm"
+      },
+      {
+       "texto": "Quero o nome m[B]ais bonito"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "É prec[E]iso am[A]ar as pessoas"
+      },
+      {
+       "texto": "Como s[C#m]e não houvesse amanhã[A]"
+      },
+      {
+       "texto": "Porque se v[E]ocê par[A]ar pra pens[C#m]ar"
+      },
+      {
+       "texto": "Na verdade não h[A]á  [E]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Quinta Parte",
+     "linhas": [
+      {
+       "texto": "Me d[E]iz, por que que o céu é azul"
+      },
+      {
+       "texto": "Explica a grande fúria do mundo"
+      },
+      {
+       "texto": "São meus filhos que tomam conta de mim"
+      },
+      {
+       "texto": "Eu moro com a minha mãe mas meu pai vem me visitar"
+      },
+      {
+       "texto": "Eu moro na rua não tenho ninguém"
+      },
+      {
+       "texto": "Eu moro em qualquer lugar"
+      },
+      {
+       "texto": "Já morei em tanta casa que nem me lembro mais"
+      },
+      {
+       "texto": "Eu moro com os m[A]eus pais"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão Final",
+     "linhas": [
+      {
+       "texto": "É prec[E]iso am[A]ar as pessoas"
+      },
+      {
+       "texto": "Como s[C#m]e não houvesse amanhã[A]"
+      },
+      {
+       "texto": "Porque se v[E]ocê par[A]ar pra pensar[C#m]"
+      },
+      {
+       "texto": "Na verdade não h[A]á"
+      },
+      {
+       "texto": "S[E]ou uma gota d'água [A]"
+      },
+      {
+       "texto": "S[C#m]ou um grão de areia[A]"
+      },
+      {
+       "texto": "Você me d[E]iz que seus pais"
+      },
+      {
+       "texto": "Não ent[A]endem"
+      },
+      {
+       "texto": "Mas voc[C#m]ê não entende seus pa[A]is"
+      },
+      {
+       "texto": "Você c[E]ulpa seus pais por tudo"
+      },
+      {
+       "texto": "Isso é absurdo"
+      },
+      {
+       "texto": "São crianças como você"
+      },
+      {
+       "texto": "O que você vai ser"
+      },
+      {
+       "texto": "Quando você crescer?"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sera-legiao-urbana",
+   "titulo": "Será",
+   "artista": "Legião Urbana",
+   "tom": "B",
+   "genero": "rock",
+   "idioma": "pt-BR",
+   "compasso": "4/4",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "Legião Urbana",
+    "atribuicao": "Letra e música de Legião Urbana. Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "intro",
+     "nome": "Intro",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[D] [A] [G]"
+      },
+      {
+       "texto": "When [D]dreaming, I'm guided to [G]another world"
+      },
+      {
+       "texto": "Time and time [D]agai[G]n"
+      },
+      {
+       "texto": "[D]At sunrise, I fight to stay [G]asleep"
+      },
+      {
+       "texto": "'Cause I don't wanna leave [D]the comfort of this [G]place"
+      },
+      {
+       "texto": "'Cause there's a [D]hunger, a longing to e[G]scape"
+      },
+      {
+       "texto": "From the life I live when [D]I'm awake[G]"
+      },
+      {
+       "texto": "So let's [F]go there"
+      },
+      {
+       "texto": "Let's [G]make our escape"
+      },
+      {
+       "texto": "Come on, let's [F]go there"
+      },
+      {
+       "texto": "Let's [G]ask: Can we stay?"
+      },
+      {
+       "texto": "[D]Can you [A]take me [G]higher?"
+      },
+      {
+       "texto": "[D]To a p[A]lace where [G]blind men see"
+      },
+      {
+       "texto": "[D]Can you [A]take me [G]higher?"
+      },
+      {
+       "texto": "[D]To a p[A]lace with [G]golden streets"
+      },
+      {
+       "texto": "[D]Although I would like our world to [G]change"
+      },
+      {
+       "texto": "It helps me to [D]appreciate"
+      },
+      {
+       "texto": "Those nights and those [G]dreams"
+      },
+      {
+       "texto": "[D]But, my friend, I'd sacrifice [G]all those nights"
+      },
+      {
+       "texto": "If I could make the [D]Earth and my dreams the [G]same"
+      },
+      {
+       "texto": "[D]The only difference [G]is"
+      },
+      {
+       "texto": "To let love [D]replace all our [G]hate"
+      },
+      {
+       "texto": "So let's [F]go there"
+      },
+      {
+       "texto": "Let's [G]make our escape"
+      },
+      {
+       "texto": "Come on, let's [F]go there"
+      },
+      {
+       "texto": "Let's [G]ask: Can we stay?"
+      },
+      {
+       "texto": "[D]Can you [A]take me [G]higher?"
+      },
+      {
+       "texto": "[D]To a p[A]lace where [G]blind men see"
+      },
+      {
+       "texto": "[D]Can you [A]take me [G]higher?"
+      },
+      {
+       "texto": "[D]To a p[A]lace with [G]golden streets"
+      },
+      {
+       "texto": "So let's [F]go there (let's go there)"
+      },
+      {
+       "texto": "Let's [G]go there (let's go there)"
+      },
+      {
+       "texto": "Come on, let's [F]go there (go, go there)"
+      },
+      {
+       "texto": "Let's [G]ask: Can we stay?"
+      },
+      {
+       "texto": "[D]Up high, I f[A]eel like I'm [G]alive for the [D]very first [G]time"
+      },
+      {
+       "texto": "[D]Said up high, I'm [A]strong enough"
+      },
+      {
+       "texto": "To [G]take these dreams and make them mine"
+      },
+      {
+       "texto": "[D]Said up high, I'm [A]strong enough"
+      },
+      {
+       "texto": "To [G]take these dreams [D]and make them [G]mine"
+      },
+      {
+       "texto": "[D]Can you [A]take me [G]higher?"
+      },
+      {
+       "texto": "[D]To a p[A]lace where [G]blind men see"
+      },
+      {
+       "texto": "[D]Can you [A]take me [G]higher?"
+      },
+      {
+       "texto": "[D]To a p[A]lace with [G]golden streets"
+      },
+      {
+       "texto": "[D]Can you [A]take me [G]higher?"
+      },
+      {
+       "texto": "[D]To a p[A]lace where [G]blind men see"
+      },
+      {
+       "texto": "[D]Can you [A]take me [G]higher?"
+      },
+      {
+       "texto": "[D]To a p[A]lace with [G]golden streets"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "anna-julia-los-hermanos",
+   "titulo": "Anna Júlia",
+   "artista": "Los Hermanos",
+   "tom": "D",
+   "genero": "rock",
+   "idioma": "pt-BR",
+   "compasso": "4/4",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "Los Hermanos",
+    "atribuicao": "Letra e música de Los Hermanos. Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "intro",
+     "nome": "Intro",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[D] [Bm] [D] [Bm]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "Qu[D]em te ver pass[Bm]ar assim por [F#m]mim"
+      },
+      {
+       "texto": "Não s[G]abe o que [A]é sofr[D]er"
+      },
+      {
+       "texto": "Ter que v[Bm]er você as[F#m]sim"
+      },
+      {
+       "texto": "S[G]empre tão l[A]inda"
+      },
+      {
+       "texto": "C[D]ontemplar o s[Bm]ol do teu ol[F#m]har"
+      },
+      {
+       "texto": "Perd[G]er voc[A]ê no [D]ar"
+      },
+      {
+       "texto": "Na cert[Bm]eza de um a[F#m]mor"
+      }
+     ]
+    },
+    {
+     "tipo": "pre-refrao",
+     "nome": "Pré-Refrão",
+     "linhas": [
+      {
+       "texto": "M[G]e ach[A]ar um n[Bm]ada"
+      },
+      {
+       "texto": "Pois sem ter teu car[F#m]inho"
+      },
+      {
+       "texto": "Eu me sinto soz[G]inho"
+      },
+      {
+       "texto": "Eu me afogo em s[A]olidão"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "Ô Anna J[D]uli[G]a  [A]"
+      },
+      {
+       "texto": "Ô Anna J[D]uli[G]a  [A]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "N[D]unca acredit[Bm]ei na ilu[F#m]são"
+      },
+      {
+       "texto": "De t[G]er voc[A]ê pra m[D]im"
+      },
+      {
+       "texto": "Me atorm[Bm]enta a previ[F#m]são do [G]nosso des[A]tino"
+      },
+      {
+       "texto": "[D]Eu passando o d[Bm]ia a te espe[F#m]rar"
+      },
+      {
+       "texto": "Voc[G]ê sem m[A]e not[D]ar"
+      },
+      {
+       "texto": "Quando t[Bm]udo tiver [F#m]fim"
+      }
+     ]
+    },
+    {
+     "tipo": "pre-refrao",
+     "nome": "Pré-Refrão",
+     "linhas": [
+      {
+       "texto": "Voc[G]ê vai est[A]ar"
+      },
+      {
+       "texto": "Com um c[Bm]ara"
+      },
+      {
+       "texto": "Um alguém sem car[F#m]inho"
+      },
+      {
+       "texto": "Será sempre um esp[G]inho"
+      },
+      {
+       "texto": "Dentro do meu c[A]oração"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "Ô Anna J[D]uli[G]a  [A]"
+      },
+      {
+       "texto": "Ô Anna J[D]uli[G]a  [A]"
+      }
+     ]
+    },
+    {
+     "tipo": "solo",
+     "nome": "Solo",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[D] [G] [A] [D] [G] [A]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[D] [G] [A] [D] [G] [A]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Bm] [F#m] [G] [D]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Bm] [F#m] [G] [A]"
+      },
+      {
+       "texto": "S[Bm]ei que vo[F#m]cê já não q[G]uer o meu a[D]mor"
+      },
+      {
+       "texto": "S[Bm]ei que vo[F#m]cê já não [G]gosta de [D]mim"
+      },
+      {
+       "texto": "Eu s[Bm]ei que eu não [F#]sou"
+      },
+      {
+       "texto": "Quem voc[G]ê sempre sonh[D]ou"
+      },
+      {
+       "texto": "Mas v[Bm]ou reconquis[F#]tar"
+      },
+      {
+       "texto": "O seu am[G]or todo pra m[A]im"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "Ô Anna J[D]uli[G]a  [A]"
+      },
+      {
+       "texto": "Ô Anna J[D]uli[G]a  [A]"
+      },
+      {
+       "texto": "Ô Anna J[D]uli[G]a  [A]"
+      },
+      {
+       "texto": "Ô Anna J[D]ulia, J[G]ulia, J[A]ulia... ou ou [D]ou"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "apenas-mais-uma-de-amor-lulu-santos",
+   "titulo": "Apenas Mais Uma de Amor",
+   "artista": "Lulu Santos",
+   "tom": "Em",
+   "genero": "rock",
+   "idioma": "pt-BR",
+   "compasso": "4/4",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "Lulu Santos",
+    "atribuicao": "Letra e música de Lulu Santos. Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "Eu g[G]osto tanto de você"
+      },
+      {
+       "texto": "Que at[C9]é prefiro esconder"
+      },
+      {
+       "texto": "[G/B]    Deixo assim ficar subentend[D4]i__d[D]o"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "Como uma id[Am]eia que [G/B]e___x[C]iste"
+      },
+      {
+       "texto": "N[D]a cab[G]eça e n[D9]ão"
+      },
+      {
+       "texto": "Tem a me[Am]nor obrig[G/B]a___ç[C]ão"
+      },
+      {
+       "texto": "D[D]e ac[G]onte[C9]cer [G]   [C9]    [G]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "Eu [G]acho tão bonito isso"
+      },
+      {
+       "texto": "[C9]   De ser abstrato, baby"
+      },
+      {
+       "texto": "[G/B]    A beleza é mesmo tão f[D4]u__g[D]az"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "Como uma id[Am]eia que [G/B]e___x[C]iste"
+      },
+      {
+       "texto": "N[D]a cab[G]eça e n[D9]ão"
+      },
+      {
+       "texto": "Tem a men[Am]or pret[G/B]en__s[C]ão"
+      },
+      {
+       "texto": "De ac[D]ontec[G]er [C9]    [G]"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "[C9]   Pode até parec[D]er fraqueza"
+      },
+      {
+       "texto": "Pois que s[G]eja fraq[F6(9)]ueza ent[C9]ão  [G/B]"
+      },
+      {
+       "texto": "[Am7]    A alegria qu[G4/B]e me d[C]á"
+      },
+      {
+       "texto": "Isso v[D]ai sem eu diz[G]er [G7M]     [G7]"
+      },
+      {
+       "texto": "[C]  Se amanhã não for n[D]ada disso"
+      },
+      {
+       "texto": "Caber[G]á só a m[F6(9)]im esquec[C9]er  [G/B]"
+      },
+      {
+       "texto": "[Am7]    O que eu ganho, [G4/B]o que eu p[C]erco"
+      },
+      {
+       "texto": "Ningu[D]ém [G]  prec[C9]isa sab[G]er [C9]    [G]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "Eu g[G]osto tanto de você"
+      },
+      {
+       "texto": "Que at[C9]é prefiro esconder"
+      },
+      {
+       "texto": "[G/B]    Deixo assim ficar subentend[D4]i__d[D]o"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "Como uma id[Am]eia que [G/B]e___x[C]iste"
+      },
+      {
+       "texto": "N[D]a cab[G]eça e n[D9]ão"
+      },
+      {
+       "texto": "Tem a men[Am]or pret[G/B]en__s[C]ão"
+      },
+      {
+       "texto": "De ac[D]ontec[G]er [C9]    [G]"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "[C9]   Pode até parec[D]er fraqueza"
+      },
+      {
+       "texto": "Pois que s[G]eja fraq[F6(9)]ueza ent[C9]ão  [G/B]"
+      },
+      {
+       "texto": "[Am7]    A alegria qu[G4/B]e me d[C]á"
+      },
+      {
+       "texto": "Isso v[D]ai sem eu diz[G]er [G7M]     [G7]"
+      },
+      {
+       "texto": "[C]  Se amanhã não for n[D]ada disso"
+      },
+      {
+       "texto": "Caber[G]á só a m[F6(9)]im esquec[C9]er,"
+      },
+      {
+       "texto": "Eu vou sobreviv[G/B]er"
+      },
+      {
+       "texto": "[Am7]    O que eu ganho, [G4/B]o que eu p[C]erco"
+      },
+      {
+       "texto": "Ningu[D]ém [G]  prec[C9]isa sab[G]er [C9]    [G]"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "black-pearl-jam",
+   "titulo": "Black",
+   "artista": "Pearl Jam",
+   "tom": "Dm",
+   "genero": "rock",
+   "idioma": "pt-BR",
+   "compasso": "4/4",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "Pearl Jam",
+    "atribuicao": "Letra e música de Pearl Jam. Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "intro",
+     "nome": "Intro",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[D] [G2]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[D] [G2]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[D] [G2] [D]"
+      },
+      {
+       "texto": "   ↓  ↓   ↑ ↓ ↑ ↓ ↑ ↓   ↑  ↓ ↑ ↓ ↑ ↓ ↑"
+      },
+      {
+       "texto": "   ↓  ↓   ↓  ↑ ↓ ↑  ↓   ↓   ↑  ↓  ↑ ↓ ↑ ↓"
+      },
+      {
+       "texto": "   ↓           ↓ ↑ ↓ ↑  ↓   ↓    ↓  ↑  ↓ ↑"
+      },
+      {
+       "texto": "   ↓  ↓                 ↓ ↑ ↓"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "(Guitarra 2 - Primeira Estrofe)"
+      },
+      {
+       "texto": "Sh[D]eets of empty c[G2]anvas"
+      },
+      {
+       "texto": "Untouch[D]ed sheets of clay [G2]"
+      },
+      {
+       "texto": "Were l[D]aid spread out bef[G2]ore me"
+      },
+      {
+       "texto": "As her [D]  body once did"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Guitarra 2 - Segunda Estrofe",
+     "linhas": [
+      {
+       "texto": "All five hor[G2]izons"
+      },
+      {
+       "texto": "Revolved [D]  around her soul [G2]"
+      },
+      {
+       "texto": "As the Earth to the Sun"
+      },
+      {
+       "texto": "N[D]ow the air I t[G2]asted and breathed"
+      },
+      {
+       "texto": "H[D]as taken a turn"
+      }
+     ]
+    },
+    {
+     "tipo": "pre-refrao",
+     "nome": "Pré-Refrão",
+     "linhas": [
+      {
+       "texto": "(Guitarra 2)"
+      },
+      {
+       "texto": "Oh, [A#]  and all I taught her was everythi[Dm]ng"
+      },
+      {
+       "texto": "Oh, [A#]  I know she gave me all that she[Dm] wore"
+      },
+      {
+       "texto": "(Passagem - Guitarra 1)"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Primeiro Refrão",
+     "linhas": [
+      {
+       "texto": "(Guitarra 2)"
+      },
+      {
+       "texto": "And now my b[C]itter hands"
+      },
+      {
+       "texto": "Chafe ben[A#]eath the clouds"
+      },
+      {
+       "texto": "Of what was everyth[Dm]ing"
+      },
+      {
+       "texto": "(Guitarra 2)"
+      },
+      {
+       "texto": "Oh, the p[C]ictures have"
+      },
+      {
+       "texto": "All been w[A#]ashed in black"
+      },
+      {
+       "texto": "Tattooed everyth[Dm]ing"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "(Guitarra 2)"
+      },
+      {
+       "texto": "[D]  I take a walk [G2]   outside"
+      },
+      {
+       "texto": "I'm surr[D]ounded by some k[G2]ids at play"
+      },
+      {
+       "texto": "[D]I can feel their l[G2]aughter"
+      },
+      {
+       "texto": "So [D]  why do I sear"
+      }
+     ]
+    },
+    {
+     "tipo": "pre-refrao",
+     "nome": "Pré-Refrão",
+     "linhas": [
+      {
+       "texto": "(Guitarra 2)"
+      },
+      {
+       "texto": "Oh, [A#]  and twisted thoughts that spin"
+      },
+      {
+       "texto": "Round m[Dm]y head"
+      },
+      {
+       "texto": "I'm spinning, oh, I'm sp[A#]inning"
+      },
+      {
+       "texto": "How quick the Sun can, drop aw[Dm]ay"
+      },
+      {
+       "texto": "(Guitarra 1 - Passagem)"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Segundo Refrão",
+     "linhas": [
+      {
+       "texto": "(Guitarra 2)"
+      },
+      {
+       "texto": "And now my b[C]itter hands"
+      },
+      {
+       "texto": "Cradle br[A#]oken glass"
+      },
+      {
+       "texto": "Of what was everyth[Dm]ing"
+      },
+      {
+       "texto": "(Guitarra 2)"
+      },
+      {
+       "texto": "All the p[C]ictures have"
+      },
+      {
+       "texto": "All been w[A#]ashed in black"
+      },
+      {
+       "texto": "Tattooed everyth[Dm]ing"
+      },
+      {
+       "texto": "(Guitarra 2)"
+      },
+      {
+       "texto": "All the l[C]ove gone bad"
+      },
+      {
+       "texto": "Turned my w[A#]orld to black"
+      },
+      {
+       "texto": "Tattooed all [C]I see"
+      },
+      {
+       "texto": "All that [A#]I am"
+      },
+      {
+       "texto": "All I'll be, [Dm]   y[C]eah[A#]     [Dm]    [C]   [A#]"
+      }
+     ]
+    },
+    {
+     "tipo": "solo",
+     "nome": "Solo - Distorção",
+     "linhas": [
+      {
+       "texto": "[Dm]I know someday you'll have a beautiful life"
+      },
+      {
+       "texto": "[C]I know you'll be a star"
+      },
+      {
+       "texto": "In s[A#]omebody else's sky, bu[Dm]t why, why, why[C]"
+      },
+      {
+       "texto": "Can't it b[A#]e, can't it be mi[Dm]ne"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[C] [A#] [Dm]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[C] [A#] [Dm]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[C] [A#] [Dm]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[C] [A#] [Dm]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[C] [A#] [Dm]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[C] [A#] [C] [A#] [Dm]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[C] [A#] [Dm]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[C] [A#] [Dm]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[C] [A#] [Dm]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[C] [A#] [Dm]"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "wish-you-were-here-pink-floyd",
+   "titulo": "Wish You Were Here",
+   "artista": "Pink Floyd",
+   "tom": "G",
+   "genero": "rock",
+   "idioma": "pt-BR",
+   "compasso": "4/4",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "Pink Floyd",
+    "atribuicao": "Letra e música de Pink Floyd. Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "intro",
+     "nome": "Intro",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[Em7] [G] [Em7] [G]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Em7] [A7(4)] [Em7] [A7(4)] [G]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "[C]  So, so you think you can t[D/F#]ell"
+      },
+      {
+       "texto": "Heaven from h[Am/E]ell, blue skies from p[G]ain"
+      },
+      {
+       "texto": "Can you tell a green f[D/F#]ield"
+      },
+      {
+       "texto": "From a cold steel r[C]ail"
+      },
+      {
+       "texto": "A smile from a v[Am/E]eil?"
+      },
+      {
+       "texto": "Do you think you can t[G]ell?"
+      },
+      {
+       "texto": "Did they get you to tr[C]ade"
+      },
+      {
+       "texto": "Your heroes for gh[D/F#]osts"
+      },
+      {
+       "texto": "Hot ashes for tr[Am/E]ees"
+      },
+      {
+       "texto": "Hot air for a c[G]ool breeze"
+      },
+      {
+       "texto": "Cold comfort for ch[D/F#]ange?"
+      },
+      {
+       "texto": "Did you exch[C]ange"
+      },
+      {
+       "texto": "A walk on part in the w[Am/E]ar"
+      },
+      {
+       "texto": "For a lead role in a c[G]age?"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "[C]  How I wish"
+      },
+      {
+       "texto": "How I wish you were her[D/F#]e"
+      },
+      {
+       "texto": "We're just tw[Am/E]o lost souls"
+      },
+      {
+       "texto": "Swimming in a fish bowl"
+      },
+      {
+       "texto": "[G]  Year after year"
+      },
+      {
+       "texto": "[D/F#]     Running over the same old ground"
+      },
+      {
+       "texto": "[C]  What have we found?"
+      },
+      {
+       "texto": "The same old fea[Am/E]rs"
+      },
+      {
+       "texto": "Wish you were h[G]ere"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "admiravel-chip-novo-pitty",
+   "titulo": "Admirável Chip Novo",
+   "artista": "Pitty",
+   "tom": "F#m",
+   "genero": "rock",
+   "idioma": "pt-BR",
+   "compasso": "4/4",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "Pitty",
+    "atribuicao": "Letra e música de Pitty. Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "intro",
+     "nome": "Intro",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[F#5] [E5] [F#5]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[F#5] [D5] [C#5]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[F#5] [E5] [F#5]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[F#5] [D5] [E5] [D5] [C#5]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[F#5] [E5] [F#5]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[F#5] [D5] [C#5]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[F#5] [E5] [F#5]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[F#5] [D5] [E5] [D5] [C#5]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "P[F#5]ane no sistema"
+      },
+      {
+       "texto": "Alguém me desconfigurou"
+      },
+      {
+       "texto": "(Riff)"
+      },
+      {
+       "texto": "       Aonde estão meus olhos de robô?"
+      },
+      {
+       "texto": "Eu não sabia"
+      },
+      {
+       "texto": "Eu não tinha percebido"
+      },
+      {
+       "texto": "Eu sempre achei que era vivo"
+      },
+      {
+       "texto": "P[F#5]arafuso e fluido"
+      },
+      {
+       "texto": "Em lugar de articulação"
+      },
+      {
+       "texto": "[A5]   Até achava que aqu[G#5]i batia um co[G5]ração"
+      },
+      {
+       "texto": "N[F#5]ada é orgânico"
+      },
+      {
+       "texto": "É tudo programado"
+      },
+      {
+       "texto": "[A5]   E eu achando que t[G#5]inha me libe[G5]rtado"
+      },
+      {
+       "texto": "[F#5]   Mas lá vem eles novamente"
+      },
+      {
+       "texto": "Eu sei o que vão fazer"
+      },
+      {
+       "texto": "Reinstalar o sistema"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "P[F#5]ense, fale, compre, beba"
+      },
+      {
+       "texto": "L[A5]eia, vote, n[G#5]ão se esque[G5]ça"
+      },
+      {
+       "texto": "[F#5]Use, seja, ouça, diga"
+      },
+      {
+       "texto": "T[A5]enha, more, g[G#5]aste, vi[G5]va"
+      },
+      {
+       "texto": "P[F#5]ense, fale, compre, beba"
+      },
+      {
+       "texto": "L[A5]eia, vote, n[G#5]ão se esque[G5]ça"
+      },
+      {
+       "texto": "[F#5]Use, seja, ouça, diga  [A5]    [G#5]     [G5]"
+      }
+     ]
+    },
+    {
+     "tipo": "interludio",
+     "nome": "Passagem",
+     "linhas": [
+      {
+       "texto": "[B5]   Não, senhor, sim, senhor"
+      },
+      {
+       "texto": "Não, senhor, sim, senhor"
+      }
+     ]
+    },
+    {
+     "tipo": "interludio",
+     "nome": "Interlúdio",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[F#5] [E5] [F#5]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[F#5] [D5] [C#5]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[F#5] [E5] [F#5]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[F#5] [D5] [E5] [D5] [C#5]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[F#5] [E5] [F#5]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[F#5] [D5] [C#5]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[F#5] [E5] [F#5]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[F#5] [D5] [E5] [D5] [C#5]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "P[F#5]ane no sistema"
+      },
+      {
+       "texto": "Alguém me desconfigurou"
+      },
+      {
+       "texto": "(Riff)"
+      },
+      {
+       "texto": "       Aonde estão meus olhos de robô?"
+      },
+      {
+       "texto": "Eu não sabia"
+      },
+      {
+       "texto": "Eu não tinha percebido"
+      },
+      {
+       "texto": "Eu sempre achei que era vivo"
+      },
+      {
+       "texto": "P[F#5]arafuso e fluido"
+      },
+      {
+       "texto": "Em lugar de articulação"
+      },
+      {
+       "texto": "[A5]   Até achava que aqu[G#5]i batia um co[G5]ração"
+      },
+      {
+       "texto": "N[F#5]ada é orgânico"
+      },
+      {
+       "texto": "É tudo programado"
+      },
+      {
+       "texto": "[A5]   E eu achando que t[G#5]inha me libe[G5]rtado"
+      },
+      {
+       "texto": "[F#5]   Mas lá vem eles novamente"
+      },
+      {
+       "texto": "Eu sei o que vão fazer"
+      },
+      {
+       "texto": "Reinstalar o sistema"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "P[F#5]ense, fale, compre, beba"
+      },
+      {
+       "texto": "L[A5]eia, vote, n[G#5]ão se esque[G5]ça"
+      },
+      {
+       "texto": "[F#5]Use, seja, ouça, diga"
+      },
+      {
+       "texto": "T[A5]enha, more, g[G#5]aste, vi[G5]va"
+      },
+      {
+       "texto": "P[F#5]ense, fale, compre, beba"
+      },
+      {
+       "texto": "L[A5]eia, vote, n[G#5]ão se esque[G5]ça"
+      },
+      {
+       "texto": "[F#5]Use, seja, ouça, diga  [A5]    [G#5]     [G5]"
+      }
+     ]
+    },
+    {
+     "tipo": "interludio",
+     "nome": "Passagem",
+     "linhas": [
+      {
+       "texto": "[B5]   Não, senhor, sim, senhor"
+      },
+      {
+       "texto": "Não, senhor, sim, senhor"
+      }
+     ]
+    },
+    {
+     "tipo": "final",
+     "nome": "Final",
+     "linhas": [
+      {
+       "texto": "[F#5]   Mas lá vem eles novamente"
+      },
+      {
+       "texto": "Eu sei o que vão fazer"
+      },
+      {
+       "texto": "Reinstalar o sistema"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "don-t-stop-me-now-queen",
+   "titulo": "Don't Stop Me Now",
+   "artista": "Queen",
+   "tom": "C",
+   "genero": "rock",
+   "idioma": "pt-BR",
+   "compasso": "4/4",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "Queen",
+    "atribuicao": "Letra e música de Queen. Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "Toni[C]ght, I'm gonna have mys[Em]elf"
+      },
+      {
+       "texto": "A real g[Am]ood time"
+      },
+      {
+       "texto": "I feel al[Dm]i___[Em]____[F]___[G]___ve"
+      },
+      {
+       "texto": "And the w[C]orld, I'll t[C7]urn it inside [F]out, yeah"
+      },
+      {
+       "texto": "And fl[Dm7]oating around in [A7]ecstasy"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão 1",
+     "linhas": [
+      {
+       "texto": "So d[Dm]on't st[C]op m[G]e n[Dm7]ow"
+      },
+      {
+       "texto": "D[Dm]on't st[C]op m[G]e"
+      },
+      {
+       "texto": "'Cause I'm h[Dm7]aving a good time"
+      },
+      {
+       "texto": "H[G]aving a good time"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "I'm a sh[C]ooting star leaping"
+      },
+      {
+       "texto": "Through the sk[Em]ies, like a t[Am]iger"
+      },
+      {
+       "texto": "Defying the l[Dm]aws of grav[G]ity"
+      },
+      {
+       "texto": "I'm r[C]acing car, passing [Em]by"
+      },
+      {
+       "texto": "Like lady God[Am]iva, I'm gonna g[Dm]o, g[Em]o, g[F]o"
+      },
+      {
+       "texto": "Th[G]ere's no stopping m[C]e"
+      }
+     ]
+    },
+    {
+     "tipo": "pre-refrao",
+     "nome": "Pré-Refrão",
+     "linhas": [
+      {
+       "texto": "I'm b[C7]urning through the sk[F]y, yeah"
+      },
+      {
+       "texto": "Two h[Dm]undred degrees, that's why"
+      },
+      {
+       "texto": "They c[A7]all me Mister Fahrenh[Dm]eit"
+      },
+      {
+       "texto": "I'm tr[A7]avelling at the speed of l[Dm]ight"
+      },
+      {
+       "texto": "I wanna make a supers[Em]onic m[F]an out of [G]you"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão 2",
+     "linhas": [
+      {
+       "texto": "D[C]on't st[Dm]op m[Em]e  n[Am]ow, I'm having"
+      },
+      {
+       "texto": "Such a g[Dm7]ood time, I'm h[G]aving a ball"
+      },
+      {
+       "texto": "D[C]on't st[Dm]op m[Em]e  n[Am]ow, if you wanna"
+      },
+      {
+       "texto": "Have a g[Dm7]ood time, just g[A7]ive me a call"
+      },
+      {
+       "texto": "(D[Dm]on't st[C]op m[G]e n[Dm7]ow)"
+      },
+      {
+       "texto": "'Cause I'm having a good time"
+      },
+      {
+       "texto": "([Dm]Don't s[C]top [G]me n[Dm7]ow)"
+      },
+      {
+       "texto": "Yes, I'm having a good time"
+      },
+      {
+       "texto": "I d[G7]on't want to stop at [F7(4)]all"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Terceira Parte",
+     "linhas": [
+      {
+       "texto": "I'm a r[C]ocket ship, on my way to M[Em]ars"
+      },
+      {
+       "texto": "On a coll[Am]ision course"
+      },
+      {
+       "texto": "I am a [Dm]satellite, I'm o[G]ut of control"
+      },
+      {
+       "texto": "[C]I'm a sexmachine, r[Em]eady to reload"
+      },
+      {
+       "texto": "Like an at[Am]ombomb"
+      },
+      {
+       "texto": "About to [Dm]oh, [Em]oh, [F]oh,[G] oh"
+      },
+      {
+       "texto": "To explo[C]de"
+      }
+     ]
+    },
+    {
+     "tipo": "pre-refrao",
+     "nome": "Pré-Refrão",
+     "linhas": [
+      {
+       "texto": "I'm b[C7]urning through the sk[F]y, yeah"
+      },
+      {
+       "texto": "Two h[Dm]undred degrees, that's why"
+      },
+      {
+       "texto": "They c[A7]all me Mister Fahrenh[Dm]eit"
+      },
+      {
+       "texto": "I'm tr[A7]avelling at the speed of l[Dm]ight"
+      },
+      {
+       "texto": "I wanna make a supers[Em]onic w[F]oman out of [G]you"
+      }
+     ]
+    },
+    {
+     "tipo": "ponte",
+     "nome": "Ponte",
+     "linhas": [
+      {
+       "texto": "Don't stop me, don't stop me"
+      },
+      {
+       "texto": "Don't stop me, hey hey hey"
+      },
+      {
+       "texto": "Don't stop me, don't stop me, oh oh oh"
+      },
+      {
+       "texto": "Don't stop me, don't stop me"
+      },
+      {
+       "texto": "Have a good time, good time"
+      },
+      {
+       "texto": "Don't stop me, don't stop me, Ah"
+      }
+     ]
+    },
+    {
+     "tipo": "solo",
+     "nome": "Solo",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[C] [Em] [Am]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Dm] [G]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[C] [Em] [Am]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Dm] [Em] [F] [G]"
+      }
+     ]
+    },
+    {
+     "tipo": "pre-refrao",
+     "nome": "Pré-Refrão",
+     "linhas": [
+      {
+       "texto": "[C]  I'm b[C7]urning through the sk[F]y, yeah"
+      },
+      {
+       "texto": "Two h[Dm]undred degrees, that's why"
+      },
+      {
+       "texto": "They c[A7]all me Mister Fahrenh[Dm]eit"
+      },
+      {
+       "texto": "I'm tr[A7]avelling at the speed of l[Dm]ight"
+      },
+      {
+       "texto": "I wanna make a supers[Em]onic [F]man out of [G]you"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão 2",
+     "linhas": [
+      {
+       "texto": "D[C]on't st[Dm]op m[Em]e  n[Am]ow, I'm having"
+      },
+      {
+       "texto": "Such a g[Dm7]ood time, I'm h[G]aving a ball"
+      },
+      {
+       "texto": "D[C]on't st[Dm]op m[Em]e  n[Am]ow, if you wanna"
+      },
+      {
+       "texto": "Have a g[Dm7]ood time, just g[A7]ive me a call"
+      },
+      {
+       "texto": "(D[Dm]on't st[C]op m[G]e n[Dm7]ow)"
+      },
+      {
+       "texto": "'Cause I'm having a good time"
+      },
+      {
+       "texto": "(D[Dm]on't st[C]op m[G]e n[Dm7]ow)"
+      },
+      {
+       "texto": "Yes, I'm having a good time"
+      },
+      {
+       "texto": "I d[G7]on't want to stop at [F7(4)]all"
+      }
+     ]
+    },
+    {
+     "tipo": "final",
+     "nome": "Final",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[C] [Em] [Am]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Dm] [Em] [F]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[G] [C] [C7] [F]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Dm7] [A7] [Dm]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[C] [G] [Dm]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Dm] [C] [G] [C]"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "losing-my-religion-r-e-m",
+   "titulo": "Losing My Religion",
+   "artista": "R.E.M.",
+   "tom": "Am",
+   "genero": "rock",
+   "idioma": "pt-BR",
+   "compasso": "4/4",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "R.E.M.",
+    "atribuicao": "Letra e música de R.E.M.. Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "intro",
+     "nome": "Intro",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[C] [D] [Em] [Em/B]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[C] [D] [Em] [D9]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "Oh, l[Em]ife is bigger"
+      },
+      {
+       "texto": "[Bm]   It's bigger than you"
+      },
+      {
+       "texto": "And you are n[Em]ot me"
+      },
+      {
+       "texto": "The lengths that I will g[Bm]o to"
+      },
+      {
+       "texto": "The distance in your ey[Em]es"
+      },
+      {
+       "texto": "[Bm]   Oh no, I've said too m[Am]uch"
+      },
+      {
+       "texto": "I set it [D9]up"
+      },
+      {
+       "texto": "That's me in the c[Em]orner"
+      },
+      {
+       "texto": "That's me in the sp[Bm]otlight"
+      },
+      {
+       "texto": "Losing my rel[Em]igion"
+      },
+      {
+       "texto": "Trying to k[Bm]eep up with you"
+      },
+      {
+       "texto": "And I d[Em]on't know if I can do it"
+      },
+      {
+       "texto": "[Bm]   Oh no, I've said too m[Am]uch"
+      },
+      {
+       "texto": "I haven't said en[D9]ough"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "I thought that I heard you l[C]aughing"
+      },
+      {
+       "texto": "I thought that I h[D]eard you s[Em]ing  [Em/B]"
+      },
+      {
+       "texto": "I th[C]ink I thought I saw y[D]ou tr[Em]y   [D9]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "Every whisp[Em]er"
+      },
+      {
+       "texto": "Of every waking h[Bm]our"
+      },
+      {
+       "texto": "I'm choosing my conf[Em]essions"
+      },
+      {
+       "texto": "Trying to k[Bm]eep an eye on you"
+      },
+      {
+       "texto": "Like a h[Em]urt, lost and"
+      },
+      {
+       "texto": "Blinded fool, fool"
+      },
+      {
+       "texto": "[Bm]   Oh no, I've said too m[Am]uch"
+      },
+      {
+       "texto": "I set it [D9]up"
+      },
+      {
+       "texto": "Consider th[Em]is, consider this"
+      },
+      {
+       "texto": "The h[Bm]int of the century"
+      },
+      {
+       "texto": "Consider th[Em]is"
+      },
+      {
+       "texto": "The slip that br[Bm]ought me"
+      },
+      {
+       "texto": "To my knees failed"
+      },
+      {
+       "texto": "W[Em]hat if all these fantasies"
+      },
+      {
+       "texto": "Come [Bm]   flailing around"
+      },
+      {
+       "texto": "Now I've s[Am]aid too m[D9]uch"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "I thought that I heard you l[C]aughing"
+      },
+      {
+       "texto": "I thought that I h[D]eard you s[Em]ing [Em/B]"
+      },
+      {
+       "texto": "I th[C]ink I thought I saw y[D]ou tr[Em]y   [D9]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[Em] [D] [C] [D]"
+      },
+      {
+       "texto": "But th[G]at was just a dr[A9]eam"
+      },
+      {
+       "texto": "Th[G]at was just a dr[A9]eam"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "That's me in the c[Em]orner"
+      },
+      {
+       "texto": "That's me in the sp[Bm]otlight"
+      },
+      {
+       "texto": "Losing my rel[Em]igion"
+      },
+      {
+       "texto": "Trying to k[Bm]eep up with you"
+      },
+      {
+       "texto": "And I d[Em]on't know if I can do it"
+      },
+      {
+       "texto": "[Bm]   Oh no, I've said too m[Am]uch"
+      },
+      {
+       "texto": "I haven't said en[D9]ough"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão Final",
+     "linhas": [
+      {
+       "texto": "I thought that I heard you l[C]aughing"
+      },
+      {
+       "texto": "I thought that I h[D]eard you s[Em]ing  [Em/B]"
+      },
+      {
+       "texto": "I th[C]ink I thought I saw y[D]ou tr[Em]y   [Em/B]"
+      },
+      {
+       "texto": "But th[C]at was just a dream [D]"
+      },
+      {
+       "texto": "Tr[Em]y, cry, why, try [Em/B]"
+      },
+      {
+       "texto": "Th[C]at was just a dream"
+      },
+      {
+       "texto": "J[D]ust a dr[Em]eam, just a dr[D9]eam, dream [Em/B]"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mulher-de-fases-raimundos",
+   "titulo": "Mulher de Fases",
+   "artista": "Raimundos",
+   "tom": "G",
+   "genero": "rock",
+   "idioma": "pt-BR",
+   "compasso": "4/4",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "Raimundos",
+    "atribuicao": "Letra e música de Raimundos. Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "[G5]   Que mulher ruim [D5]"
+      },
+      {
+       "texto": "Jogou minhas c[C5]oisas fora [E5]"
+      },
+      {
+       "texto": "Disse que em sua c[A5]ama"
+      },
+      {
+       "texto": "Eu não deit[C5]o mais não [G5]"
+      },
+      {
+       "texto": "A casa é minha [D5]"
+      },
+      {
+       "texto": "Você que v[C5]á embora [E5]"
+      },
+      {
+       "texto": "Já pra saia da sua m[A5]ãe"
+      },
+      {
+       "texto": "E deixa meu colchão [C5]"
+      },
+      {
+       "texto": "Ela é pró na art[A5]e"
+      },
+      {
+       "texto": "De pentelhar e azi[E5]ar"
+      },
+      {
+       "texto": "É campeã do m[G5]undo"
+      },
+      {
+       "texto": "[C5]A raiva era tanta"
+      },
+      {
+       "texto": "Que eu n[G5]em reparei"
+      },
+      {
+       "texto": "Que a L[D5]ua diminuía"
+      },
+      {
+       "texto": "[G5]   A doida [D5]   tá me beij[C5]ando há horas [E5]"
+      },
+      {
+       "texto": "Disse que se for sem [A5]eu"
+      },
+      {
+       "texto": "Não quer viv[C5]er mais não [G5]"
+      },
+      {
+       "texto": "Me diz, Deus"
+      },
+      {
+       "texto": "[D5]   O que é que eu f[C5]aço agora? [E5]"
+      },
+      {
+       "texto": "Se me olhando desse j[A5]eito"
+      },
+      {
+       "texto": "Ela me tem na mão [C5]"
+      },
+      {
+       "texto": "Meu filho agu[G5]enta"
+      },
+      {
+       "texto": "Quem mandou voc[D5]ê gostar"
+      },
+      {
+       "texto": "Dessa mulher de fases"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "[G5]   Complic[C5]ada e perfeit[G5]inha"
+      },
+      {
+       "texto": "Voc[D5]ê me aparec[E5]eu"
+      },
+      {
+       "texto": "Era t[A5]udo que eu quer[C5]ia"
+      },
+      {
+       "texto": "Estrela da sorte"
+      },
+      {
+       "texto": "[G5]   Quando a n[C5]oite ela surg[G5]ia"
+      },
+      {
+       "texto": "Meu b[D5]em você cresc[E5]eu"
+      },
+      {
+       "texto": "Meu nam[A5]oro é na folh[C5]inha"
+      },
+      {
+       "texto": "Mulher de fases"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "P[E5]õe fermento, põe as bombas"
+      },
+      {
+       "texto": "Qualquer coisa que aumente"
+      },
+      {
+       "texto": "E a d[G5]eixe bem maior que o Sol"
+      },
+      {
+       "texto": "P[E5]ouca gente sabe que na noite"
+      },
+      {
+       "texto": "O frio é quente e arde e eu [A5]  acendi"
+      },
+      {
+       "texto": "[C5]   Até sem luz d[A5]á pra te enxergar"
+      },
+      {
+       "texto": "O lenç[E5]ol fazendo congo-bl[G5]ue"
+      },
+      {
+       "texto": "É p[C5]ena, eu sei, a manh[G5]ã já vai miar"
+      },
+      {
+       "texto": "Se agu[D5]ente, que lá vem chumbo quente"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Segundo Refrão",
+     "linhas": [
+      {
+       "texto": "[G5]   Complic[C5]ada e perfeit[G5]inha"
+      },
+      {
+       "texto": "Voc[D5]ê me aparec[E5]eu"
+      },
+      {
+       "texto": "Era t[A5]udo que eu quer[C5]ia"
+      },
+      {
+       "texto": "Estrela da sorte"
+      },
+      {
+       "texto": "[G5]   Quando a n[C5]oite ela surg[G5]ia"
+      },
+      {
+       "texto": "Meu b[D5]em você cresc[E5]eu"
+      },
+      {
+       "texto": "Meu nam[A5]oro é na folh[C5]inha"
+      },
+      {
+       "texto": "Mulher de fases"
+      }
+     ]
+    },
+    {
+     "tipo": "solo",
+     "nome": "Riff 2",
+     "linhas": [
+      {
+       "texto": "Complicada e perfeitinha"
+      },
+      {
+       "texto": "Você me apareceu"
+      },
+      {
+       "texto": "Era tudo que eu queria"
+      },
+      {
+       "texto": "Estrela da sorte"
+      },
+      {
+       "texto": "Quando a noite ela surgia"
+      },
+      {
+       "texto": "Meu bem você cresceu"
+      },
+      {
+       "texto": "Meu namoro é na folhinha"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dois-rios-skank",
+   "titulo": "Dois Rios",
+   "artista": "Skank",
+   "tom": "Am",
+   "genero": "rock",
+   "idioma": "pt-BR",
+   "compasso": "4/4",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "Skank",
+    "atribuicao": "Letra e música de Skank. Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "O c[Am]éu está no ch[Am7M]ão"
+      },
+      {
+       "texto": "O c[Am7]éu não cai do [Am6]alto"
+      },
+      {
+       "texto": "É o claro, é a esc[F]uridão"
+      },
+      {
+       "texto": "O c[Am]éu que toca o ch[Am7M]ão"
+      },
+      {
+       "texto": "O c[Am7]éu que vai no [Am6]alto"
+      },
+      {
+       "texto": "Dois lados d[F]eram as mãos"
+      },
+      {
+       "texto": "Como eu f[Am]iz também"
+      }
+     ]
+    },
+    {
+     "tipo": "pre-refrao",
+     "nome": "Pré-Refrão",
+     "linhas": [
+      {
+       "texto": "[D]  Só pra poder conhecer"
+      },
+      {
+       "texto": "O que [C]  a voz da v[D#]ida vem dizer"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "[G]  Que os braços s[Bm]entem"
+      },
+      {
+       "texto": "E os olhos v[Em]eem"
+      },
+      {
+       "texto": "Que os lábios s[Bm]ejam"
+      },
+      {
+       "texto": "Dois rios int[Am7]eiros [D]"
+      },
+      {
+       "texto": "Sem direç[G]ão [G5+]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "O S[Am]ol é o pé a m[Am7M]ão"
+      },
+      {
+       "texto": "O S[Am7]ol é a mãe e o p[Am6]ai"
+      },
+      {
+       "texto": "Dissolve a esc[F]uridão"
+      },
+      {
+       "texto": "O S[Am]ol se põe, se v[Am7M]ai"
+      },
+      {
+       "texto": "E ap[Am7]ós se pôr, o S[Am6]ol"
+      },
+      {
+       "texto": "Renasce n[F]o Japão"
+      },
+      {
+       "texto": "Eu v[Am]i também"
+      }
+     ]
+    },
+    {
+     "tipo": "pre-refrao",
+     "nome": "Pré-Refrão",
+     "linhas": [
+      {
+       "texto": "[D]  Só pra poder entender"
+      },
+      {
+       "texto": "[C]  Na voz a v[D#]ida ouvi dizer"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "[G]  Que os braços s[Bm]entem"
+      },
+      {
+       "texto": "E os olhos v[Em]eem"
+      },
+      {
+       "texto": "Que os lábios s[Bm]ejam"
+      },
+      {
+       "texto": "Dois rios int[Am7]eiros [D]"
+      },
+      {
+       "texto": "Sem direç[G]ão [G7]"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Pós-Refrão",
+     "linhas": [
+      {
+       "texto": "E o m[C/E]eu lugar é[Cm/D#] esse ao lado"
+      },
+      {
+       "texto": "S[G]eu no corpo int[G/F]eiro"
+      },
+      {
+       "texto": "Dou m[C/E]eu lugar pois o [Cm/D#]seu lugar"
+      },
+      {
+       "texto": "É o m[G]eu amor prim[G/F]eiro"
+      },
+      {
+       "texto": "O d[A7]ia e a noite as qu[D#6]atro estações"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[G] [G5+] [G] [G5+]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "O c[Am]éu está no ch[Am7M]ão"
+      },
+      {
+       "texto": "O c[Am7]éu não cai do [Am6]alto"
+      },
+      {
+       "texto": "É o claro, é a esc[F]uridão"
+      },
+      {
+       "texto": "O c[Am]éu que toca o ch[Am7M]ão"
+      },
+      {
+       "texto": "O c[Am7]éu que vai no [Am6]alto"
+      },
+      {
+       "texto": "Dois lados d[F]eram as mãos"
+      },
+      {
+       "texto": "Como eu f[Am]iz também"
+      }
+     ]
+    },
+    {
+     "tipo": "pre-refrao",
+     "nome": "Pré-Refrão",
+     "linhas": [
+      {
+       "texto": "[D]  Só pra poder conhecer"
+      },
+      {
+       "texto": "O qu[C]e a voz da v[D#]ida vem dizer"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "[G]  Que os braços s[Bm]entem"
+      },
+      {
+       "texto": "E os olhos v[Em]eem"
+      },
+      {
+       "texto": "Que os lábios s[Bm]ejam"
+      },
+      {
+       "texto": "Dois rios int[Am7]eiros [D]"
+      },
+      {
+       "texto": "Sem direç[G]ão [G7]"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Pós-Refrão",
+     "linhas": [
+      {
+       "texto": "E o m[C/E]eu lugar é[Cm/D#] esse ao lado"
+      },
+      {
+       "texto": "S[G]eu no corpo int[G/F]eiro"
+      },
+      {
+       "texto": "Dou m[C/E]eu lugar pois o [Cm/D#]seu lugar"
+      },
+      {
+       "texto": "É o m[G]eu amor prim[G/F]eiro"
+      },
+      {
+       "texto": "O d[A7]ia e a noite as q[D#6]uatro estações"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "[G]  Que os braços s[Bm]entem"
+      },
+      {
+       "texto": "E os olhos v[Em]eem"
+      },
+      {
+       "texto": "Que os lábios s[Bm]ejam"
+      },
+      {
+       "texto": "Dois rios int[Am7]eiros [D]"
+      },
+      {
+       "texto": "Sem direç[C]ão [Cm]    [G]"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "resposta-skank",
+   "titulo": "Resposta",
+   "artista": "Skank",
+   "tom": "G",
+   "genero": "rock",
+   "idioma": "pt-BR",
+   "bpm": 101,
+   "compasso": "4/4",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "Skank",
+    "atribuicao": "Letra e música de Skank. Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "[F#]  Bem mais que o tempo, [F#5+]  que nós perdemos"
+      },
+      {
+       "texto": "[B9]   Ficou pra trás também o qu[D]e nos juntou"
+      },
+      {
+       "texto": "[F#]  Ainda lembro, [F#5+]  que eu estava lendo"
+      },
+      {
+       "texto": "[B9]   Só pra saber o que v[D]ocê achou"
+      },
+      {
+       "texto": "Dos v[D#m]ersos que e[D#m7M]u fiz"
+      },
+      {
+       "texto": "E a[B6]inda espero resp[F#]osta"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[F#] [F#4] [F#] [F#9] [B9]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[F#] [F#4] [F#] [F#9] [B9]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "[F#]  Desfaz o vento, [F#5+]   o que há por dentro"
+      },
+      {
+       "texto": "[B9]   Desse lugar que ninguém [D]   mais pisou"
+      },
+      {
+       "texto": "[F#]  Você está vendo, [F#5+]  o que está acontecendo?"
+      },
+      {
+       "texto": "[B9]   Nesse caderno sei que a[D]inda estão"
+      }
+     ]
+    },
+    {
+     "tipo": "pre-refrao",
+     "nome": "Pré-Refrão",
+     "linhas": [
+      {
+       "texto": "Os v[D#m]ersos se[D#m7M]us, tão meu[B6]s que peço"
+      },
+      {
+       "texto": "Nos v[D#m]ersos me[D#m7M]us, tão seu[B6]s, que esperem"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "Que os ac[F#]eite"
+      },
+      {
+       "texto": "Em paz, eu d[G#m]igo o que eu sou"
+      },
+      {
+       "texto": "O ant[B9]igo do que vai adiant[F#]e"
+      },
+      {
+       "texto": "Sem mais, eu f[G#m]ico onde estou"
+      },
+      {
+       "texto": "Pref[B9]iro continuar distant[F#]e"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[F#] [F#4] [F#] [F#9] [B9]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[F#] [F#4] [F#] [F#9] [B9]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "[F#]  Bem mais que o tempo, [F#5+]  que nós perdemos"
+      },
+      {
+       "texto": "[B9]   Ficou pra trás também o qu[D]e nos juntou"
+      },
+      {
+       "texto": "[F#]  Ainda lembro, [F#5+]  que eu estava lendo"
+      },
+      {
+       "texto": "[B9]   Só pra saber o que v[D]ocê achou"
+      }
+     ]
+    },
+    {
+     "tipo": "pre-refrao",
+     "nome": "Pré-Refrão",
+     "linhas": [
+      {
+       "texto": "Dos v[D#m]ersos se[D#m7M]us, tão meu[B6]s que peço"
+      },
+      {
+       "texto": "Nos v[D#m]ersos me[D#m7M]us, tão seu[B6]s, que esperem"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "Que os ac[F#]eite"
+      },
+      {
+       "texto": "Em paz, eu d[G#m]igo o que eu sou"
+      },
+      {
+       "texto": "O ant[B9]igo do que vai adiant[F#]e"
+      },
+      {
+       "texto": "Sem mais, eu f[G#m]ico onde estou"
+      },
+      {
+       "texto": "Pref[B9]iro continuar distant[F#]e"
+      },
+      {
+       "texto": "Em paz, eu d[G#m]igo o que eu sou"
+      },
+      {
+       "texto": "O ant[B9]igo do que vai adiant[F#]e"
+      },
+      {
+       "texto": "Sem mais, eu f[G#m]ico onde estou"
+      },
+      {
+       "texto": "Pref[B9]iro continuar distant[F#]e"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[F#] [F#4] [F#] [F#9] [B9]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[F#] [F#4] [F#] [F#9] [B9]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "[F#]  Desfaz o vento, [F#5+]   o que há por dentro"
+      },
+      {
+       "texto": "[B9]   Desse lugar que ninguém [D]   mais pisou"
+      },
+      {
+       "texto": "[F#]  Você está vendo, [F#5+]  o que está acontecendo?"
+      },
+      {
+       "texto": "[B9]   Nesse caderno sei que a[D]inda estão"
+      }
+     ]
+    },
+    {
+     "tipo": "pre-refrao",
+     "nome": "Pré-Refrão",
+     "linhas": [
+      {
+       "texto": "Os v[D#m]ersos se[D#m7M]us, tão meu[B6]s que peço"
+      },
+      {
+       "texto": "Nos v[D#m]ersos me[D#m7M]us, tão seu[B6]s, que esperem"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "Que os ac[F#]eite"
+      },
+      {
+       "texto": "Em paz, eu d[G#m]igo o que eu sou"
+      },
+      {
+       "texto": "O ant[B9]igo do que vai adiant[F#]e"
+      },
+      {
+       "texto": "Sem mais, eu f[G#m]ico onde estou"
+      },
+      {
+       "texto": "Pref[B9]iro continuar distant[F#]e"
+      },
+      {
+       "texto": "Em paz, eu d[G#m]igo o que eu sou"
+      },
+      {
+       "texto": "O ant[B9]igo do que vai adiant[F#]e"
+      },
+      {
+       "texto": "Sem mais, eu f[G#m]ico onde estou"
+      },
+      {
+       "texto": "Pref[B9]iro continuar distant[F#]e"
+      },
+      {
+       "texto": "Em paz, eu d[G#m]igo o que eu sou"
+      },
+      {
+       "texto": "O ant[B9]igo do que vai adiant[F#]e"
+      },
+      {
+       "texto": "Sem mais, eu f[G#m]ico onde estou"
+      },
+      {
+       "texto": "Pref[B9]iro continuar distant[F#]e"
+      }
+     ]
+    },
+    {
+     "tipo": "final",
+     "nome": "Final",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[F#] [G#m] [B9]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[F#] [G#m] [B9]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[F#] [G#m] [B9]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[F#] [G#m] [B9] [F#]"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "eye-of-the-tiger-survivor",
+   "titulo": "Eye of the Tiger",
+   "artista": "Survivor",
+   "tom": "G",
+   "genero": "rock",
+   "idioma": "pt-BR",
+   "compasso": "4/4",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "Survivor",
+    "atribuicao": "Letra e música de Survivor. Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "intro",
+     "nome": "Intro",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[Em] [Em] [D] [Em]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Em] [D] [Em] [B] [C]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Em] [D] [Em] [B] [C]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Em] [D] [Em] [B] [C]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Em] [D] [Em]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[B] [C] [Em]"
+      },
+      {
+       "texto": "[Em] Risin' up, [C]back on the street"
+      },
+      {
+       "texto": "[D] Did my time, took my[Em] chances"
+      },
+      {
+       "texto": "[Em] Went the distance, now I'm [C]back on my feet"
+      },
+      {
+       "texto": "Just a ma[D]n and his will to sur[Em]vive"
+      },
+      {
+       "texto": "[Em]So many times, it [C]happens too fast"
+      },
+      {
+       "texto": "[D]You trade your passion[Em] for glory"
+      },
+      {
+       "texto": "[Em]Don't lose your grip on the d[C]reams of the past"
+      },
+      {
+       "texto": "You must [D]fight just to keep th[Em]em alive"
+      },
+      {
+       "texto": "[D]It's [Em7]the, [Am]eye of the tiger, it's the [G]thrill of the"
+      },
+      {
+       "texto": "[D]fight"
+      },
+      {
+       "texto": "[D]Ris[Em7]in'  [Am]up to the challenge of our [Em]riva[D]l"
+      },
+      {
+       "texto": "[D]And [Em7]the l[Am]ast known survivor stalks his p[G]rey in the"
+      },
+      {
+       "texto": "ni[D]ght"
+      },
+      {
+       "texto": "[D]And [Em7]he's [Am]watchin' us [G]all with the [C]eye of the [Em]tiger"
+      },
+      {
+       "texto": "[Em]Face to face, out [C]in the heat"
+      },
+      {
+       "texto": "[D]Hangin' tough, stayin' [Em]hungry"
+      },
+      {
+       "texto": "[Em]They stack the odds still we[C] take to the street"
+      },
+      {
+       "texto": "For the k[D]ill with the skill to sur[Em]vive"
+      },
+      {
+       "texto": "[D]It's [Em7]the, [Am]eye of the tiger, it's the [G]thrill of the"
+      },
+      {
+       "texto": "[D]fight"
+      },
+      {
+       "texto": "[D]Ris[Em7]in'  [Am]up to the challenge of our [Em]riva[D]l"
+      },
+      {
+       "texto": "[D]And [Em7]the l[Am]ast known survivor stalks his p[G]rey in the"
+      },
+      {
+       "texto": "n[D]ight"
+      },
+      {
+       "texto": "[D]And [Em7]he's [Am]watchin' us [G]all with the [C]eye of the [Em]tiger"
+      },
+      {
+       "texto": "[Em]Risin' up, stra[C]ight to the top"
+      },
+      {
+       "texto": "[D]Had the guts, got the glo[Em]ry"
+      },
+      {
+       "texto": "[Em]Went the distance, now I'm not g[C]onna stop"
+      },
+      {
+       "texto": "Just a m[D]an and his will to sur[Em]vive"
+      },
+      {
+       "texto": "I[D]t's [Em7]the, [Am]eye of the tiger, it's the [G]thrill of the"
+      },
+      {
+       "texto": "[D]fight"
+      },
+      {
+       "texto": "R[D]isi[Em7]n'  u[Am]p to the challenge of our r[Em]ival[D]"
+      },
+      {
+       "texto": "A[D]nd [Em7]the l[Am]ast known survivor stalks his p[G]rey in the"
+      },
+      {
+       "texto": "night[D]"
+      },
+      {
+       "texto": "A[D]nd [Em7]he's [Am]watchin' us [G]all with the [C]eye of the [Em]tiger"
+      },
+      {
+       "texto": "The e[C]ye of the t[Em]iger"
+      },
+      {
+       "texto": "The e[C]ye of the t[Em]iger"
+      },
+      {
+       "texto": "The e[C]ye of the t[Em]iger"
+      },
+      {
+       "texto": "The e[C]ye of the t[Em]iger"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "let-it-be-the-beatles",
+   "titulo": "Let It Be",
+   "artista": "The Beatles",
+   "tom": "A",
+   "genero": "rock",
+   "idioma": "pt-BR",
+   "compasso": "4/4",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "The Beatles",
+    "atribuicao": "Letra e música de The Beatles. Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "intro",
+     "nome": "Intro",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[A] [E] [F#m] [D]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[A] [E] [D] [D7M(2/4+)] [D6] [A]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "When I f[A]ind myself in t[E]imes of trouble"
+      },
+      {
+       "texto": "M[F#m]other Mary co[D]mes to me  [D6]"
+      },
+      {
+       "texto": "Sp[A]eaking words of w[E]isdom, let it b[D]e"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[D7M(2/4+)] [D6] [A]"
+      },
+      {
+       "texto": "And [A]in my hour of d[E]arkness"
+      },
+      {
+       "texto": "She is st[F#m]anding right in fro[D]nt of me  [D6]"
+      },
+      {
+       "texto": "Sp[A]eaking words of w[E]isdom, let it b[D]e"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[D7M(2/4+)] [D6] [A]"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "Let it b[F#m]e, let it be[F#m/E], let it be,[D] let it be [A]"
+      },
+      {
+       "texto": "Whisper words of w[E]isdom, let it b[D]e"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[D7M(2/4+)] [D6] [A]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "And wh[A]en the broken-h[E]earted people"
+      },
+      {
+       "texto": "L[F#m]iving in the wo[D]rld agree   [D6]"
+      },
+      {
+       "texto": "Th[A]ere will be an answ[E]er, let it b[D]e"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[D7M(2/4+)] [D6] [A]"
+      },
+      {
+       "texto": "For th[A]ough they may be part[E]ed"
+      },
+      {
+       "texto": "There is st[F#m]ill a chance that the[D]y will see  [D6]"
+      },
+      {
+       "texto": "Th[A]ere will be an [E]answer, let it b[D]e"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[D7M(2/4+)] [D6] [A]"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "Let it b[F#m]e, let it be[F#m/E], let it be,[D] let it be [A]"
+      },
+      {
+       "texto": "There will be an answ[E]er, let it b[D]e"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[D7M(2/4+)] [D6] [A]"
+      },
+      {
+       "texto": "Let it b[F#m]e, let it be[F#m/E], let it be,[D] let it be [A]"
+      },
+      {
+       "texto": "Whisper words of w[E]isdom, let it b[D]e"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[D7M(2/4+)] [D6] [A]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[D] [D7M(2/4+)] [D6] [A]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[G] [F#m] [E] [D] [A/C#]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[D] [D7M(2/4+)] [D6] [A]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[G] [F#m] [E] [D] [A/C#]"
+      }
+     ]
+    },
+    {
+     "tipo": "solo",
+     "nome": "Solo",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[A] [E] [F#m] [D] [A]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[E] [D] [D7M(2/4+)] [D6] [A]"
+      },
+      {
+       "texto": "Parte 1 de 8"
+      },
+      {
+       "texto": "Parte 2 de 8"
+      },
+      {
+       "texto": "Parte 3 de 8"
+      },
+      {
+       "texto": "Parte 4 de 8"
+      },
+      {
+       "texto": "Parte 5 de 8"
+      },
+      {
+       "texto": "Parte 6 de 8"
+      },
+      {
+       "texto": "Parte 7 de 8"
+      },
+      {
+       "texto": "Parte 8 de 8"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "Let it b[F#m]e, let it be[F#m/E], let it be,[D] let it be [A]"
+      },
+      {
+       "texto": "Whisper words of w[E]isdom, let it b[D]e"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[D7M(2/4+)] [D6] [A]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "And wh[A]en the night is clo[E]udy"
+      },
+      {
+       "texto": "There is st[F#m]ill a light that shi[D]nes on me  [D6]"
+      },
+      {
+       "texto": "Sh[A]ine until tom[E]orrow, let it b[D]e"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[D7M(2/4+)] [D6] [A]"
+      },
+      {
+       "texto": "I w[A]ake up to the s[E]ound of music"
+      },
+      {
+       "texto": "M[F#m]other Mary co[D]mes to me   [D6]"
+      },
+      {
+       "texto": "Sp[A]eaking words of w[E]isdom, let it b[D]e"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[D7M(2/4+)] [D6] [A]"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "Let it   b[F#m]e, let it be[F#m/E], let it be,[D] let it be [A]"
+      },
+      {
+       "texto": "There will be an answ[E]er, let it b[D]e"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[D7M(2/4+)] [D6] [A]"
+      },
+      {
+       "texto": "Let it   b[F#m]e, let it be[F#m/E], let it be,[D] let it be [A]"
+      },
+      {
+       "texto": "Whisper words of w[E]isdom, let it b[D]e"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[D7M(2/4+)] [D6] [A]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[D] [D7M(2/4+)] [D6] [A]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[G] [F#m] [E] [D] [A]"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

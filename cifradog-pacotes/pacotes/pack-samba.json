@@ -1,0 +1,551 @@
+{
+ "formato": "cifradog.pacote",
+ "versao": 1,
+ "pacote": {
+  "id": "pack-samba",
+  "nome": "Samba",
+  "descricao": "Seleção de Samba do repertório do Rolfis.",
+  "autor": "Rafael Carneiro (Rolfis)",
+  "revisao": 1,
+  "atualizadoEm": "2026-11-24",
+  "idioma": "pt-BR",
+  "tags": [
+   "samba"
+  ]
+ },
+ "musicas": [
+  {
+   "id": "nao-deixe-o-samba-morrer-alcione",
+   "titulo": "Não Deixe O Samba Morrer",
+   "artista": "Alcione",
+   "tom": "Bm",
+   "genero": "samba",
+   "idioma": "pt-BR",
+   "bpm": 3,
+   "compasso": "4/4",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "Alcione",
+    "atribuicao": "Letra e música de Alcione. Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "verso",
+     "nome": "Música",
+     "linhas": [
+      {
+       "texto": "Não deixe o samba morrer"
+      },
+      {
+       "texto": "Não deixe o samba acabar"
+      },
+      {
+       "texto": "O morro foi feito de samba"
+      },
+      {
+       "texto": "De samba pra gente sambar"
+      }
+     ]
+    },
+    {
+     "tipo": "intro",
+     "nome": "Intro",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[Em] [F#7]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Bm7] [Em] [F#7]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "Qu[Bm7]ando eu não puder pisar"
+      },
+      {
+       "texto": "Mais na aven[Em]ida"
+      },
+      {
+       "texto": "Qu[F#7]ando as minhas pernas"
+      },
+      {
+       "texto": "Não puderem aguent[Bm7]ar"
+      },
+      {
+       "texto": "Levar meu c[Em]orpo [A7]"
+      },
+      {
+       "texto": "Junto com meu s[D]amba"
+      },
+      {
+       "texto": "[G] O meu anel de b[F#7]amba"
+      },
+      {
+       "texto": "Entrego a quem mereça us[Bm7]ar"
+      },
+      {
+       "texto": "Qu[Bm7]ando eu não puder pisar"
+      },
+      {
+       "texto": "Mais na aven[Em]ida"
+      },
+      {
+       "texto": "Qu[F#7]ando as minhas pernas"
+      },
+      {
+       "texto": "Não puderem aguent[Bm7]ar"
+      },
+      {
+       "texto": "Levar meu c[Em]orpo[A7]"
+      },
+      {
+       "texto": "Junto com meu s[D]amba"
+      },
+      {
+       "texto": "[G] O meu anel de b[F#7]amba"
+      },
+      {
+       "texto": "Entrego a quem mereça us[Bm7]ar"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "Eu vou fic[Em]ar no m[A7]eio do povo espi[D]ando"
+      },
+      {
+       "texto": "M[F#m7]inha escola perdendo ou ganh[Em]ando"
+      },
+      {
+       "texto": "M[A7]ais um carnav[D]al [B7]"
+      }
+     ]
+    },
+    {
+     "tipo": "pre-refrao",
+     "nome": "Pré - Refrão",
+     "linhas": [
+      {
+       "texto": "[Em]Antes de me desped[A7]ir"
+      },
+      {
+       "texto": "[D]  Deixo ao sambista mais n[Bm7]ovo"
+      },
+      {
+       "texto": "[G]  O meu ped[F#7]ido fin[Bm]al"
+      },
+      {
+       "texto": "[Em]Antes de me desped[A7]ir"
+      },
+      {
+       "texto": "[D]  Deixo ao sambista mais n[Bm7]ovo"
+      },
+      {
+       "texto": "[G]  O meu ped[F#7]ido fin[Bm7]al"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "[Bm7]   Não deixe o samba morr[Em]er"
+      },
+      {
+       "texto": "N[F#7]ão deixe o samba acab[Bm7]ar"
+      },
+      {
+       "texto": "O morro foi feito de s[Em]amba"
+      },
+      {
+       "texto": "De s[F#7]amba pra gente samb[Bm7]ar"
+      },
+      {
+       "texto": "Não deixe o samba morr[Em]er"
+      },
+      {
+       "texto": "N[F#7]ão deixe o samba acab[Bm7]ar"
+      },
+      {
+       "texto": "O morro foi feito de s[Em]amba"
+      },
+      {
+       "texto": "De s[F#7]amba pra gente samb[Bm7]ar"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "Qu[Bm7]ando eu não puder pisar"
+      },
+      {
+       "texto": "Mais na aven[Em]ida"
+      },
+      {
+       "texto": "Qu[F#7]ando as minhas pernas"
+      },
+      {
+       "texto": "Não puderem aguent[Bm7]ar"
+      },
+      {
+       "texto": "Levar meu c[Em]orpo [A7]"
+      },
+      {
+       "texto": "Junto com meu s[D]amba"
+      },
+      {
+       "texto": "[G] O meu anel de b[F#7]amba"
+      },
+      {
+       "texto": "Entrego a quem mereça us[Bm7]ar"
+      },
+      {
+       "texto": "Qu[Bm7]ando eu não puder pisar"
+      },
+      {
+       "texto": "Mais na aven[Em]ida"
+      },
+      {
+       "texto": "Qu[F#7]ando as minhas pernas"
+      },
+      {
+       "texto": "Não puderem aguent[Bm7]ar"
+      },
+      {
+       "texto": "Levar meu c[Em]orpo[A7]"
+      },
+      {
+       "texto": "Junto com meu s[D]amba"
+      },
+      {
+       "texto": "[G] O meu anel de b[F#7]amba"
+      },
+      {
+       "texto": "Entrego a quem mereça us[Bm7]ar"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "Eu vou fic[Em]ar no m[A7]eio do povo espi[D]ando"
+      },
+      {
+       "texto": "M[F#m7]inha escola perdendo ou ganh[Em]ando"
+      },
+      {
+       "texto": "M[A7]ais um carnav[D]al [B7]"
+      }
+     ]
+    },
+    {
+     "tipo": "pre-refrao",
+     "nome": "Pré-Refrão",
+     "linhas": [
+      {
+       "texto": "[Em]Antes de me desped[A7]ir"
+      },
+      {
+       "texto": "[D]  Deixo ao sambista mais n[Bm7]ovo"
+      },
+      {
+       "texto": "[G]  O meu ped[F#7]ido fin[Bm]al"
+      },
+      {
+       "texto": "[Em]Antes de me desped[A7]ir"
+      },
+      {
+       "texto": "[D]  Deixo ao sambista mais n[Bm7]ovo"
+      },
+      {
+       "texto": "[G]  O meu ped[F#7]ido fin[Bm7]al"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "[Bm7]   Não deixe o samba morr[Em]er"
+      },
+      {
+       "texto": "N[F#7]ão deixe o samba acab[Bm7]ar"
+      },
+      {
+       "texto": "O morro foi feito de s[Em]amba"
+      },
+      {
+       "texto": "De s[F#7]amba pra gente samb[Bm7]ar"
+      },
+      {
+       "texto": "Não deixe o samba morr[Em]er"
+      },
+      {
+       "texto": "N[F#7]ão deixe o samba acab[Bm7]ar"
+      },
+      {
+       "texto": "O morro foi feito de s[Em]amba"
+      },
+      {
+       "texto": "De s[F#7]amba pra gente samb[Bm7]ar"
+      },
+      {
+       "texto": "[Bm7]   Não deixe o samba morr[Em]er"
+      },
+      {
+       "texto": "N[F#7]ão deixe o samba acab[Bm7]ar"
+      },
+      {
+       "texto": "O morro foi feito de s[Em]amba"
+      },
+      {
+       "texto": "De s[F#7]amba pra gente samb[Bm7]ar"
+      },
+      {
+       "texto": "Não deixe o samba morr[Em]er"
+      },
+      {
+       "texto": "N[F#7]ão deixe o samba acab[Bm7]ar"
+      },
+      {
+       "texto": "O morro foi feito de s[Em]amba"
+      },
+      {
+       "texto": "De s[F#7]amba pra gente samb[Bm7]ar"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "preciso-me-encontrar-cartola",
+   "titulo": "Preciso Me Encontrar",
+   "artista": "Cartola",
+   "tom": "Dm",
+   "genero": "samba",
+   "idioma": "pt-BR",
+   "compasso": "4/4",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "Cartola",
+    "atribuicao": "Letra e música de Cartola. Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "intro",
+     "nome": "Intro",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[Dm] [Dm/C] [Gm6/Bb] [A7(13-)] [A7]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Dm] [Dm/C] [Gm6/Bb] [Gm] [G#º] [A7] [A7/G]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Dm] [Dm/C] [Bº] [Gm6/Bb] [A7] [A/C#]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Dm] [Dm/C] [Gm6/Bb] [Gm] [G#º] [A7] [A/C#]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Dm] [Ebº] [D7] [D/C] [Gm/Bb]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Gm/A] [Gm] [Gm/Gb]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Gm/F] [Gm] [Gm/F] [C7/E]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[C7] [F] [Gm6/Bb] [A7]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "[Dm]   Deixe-me [Dm/C]ir"
+      },
+      {
+       "texto": "Preciso [Gm/Bb]andar"
+      },
+      {
+       "texto": "Vou p[Gm]or aí a proc[G#º]urar"
+      },
+      {
+       "texto": "A7                 (Riff 1)"
+      },
+      {
+       "texto": "   Rir pra não chorar"
+      },
+      {
+       "texto": "[Dm/F]     Deixe-me [Dm/C]ir"
+      },
+      {
+       "texto": "Prec[Gm6/Bb]iso andar"
+      },
+      {
+       "texto": "Vou p[Gm]or aí a proc[G#º]urar"
+      },
+      {
+       "texto": "[A7]   Rir pra não chor[Dm6(9)]ar"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "[Ebº]    Quero assist[D7]ir"
+      },
+      {
+       "texto": "Ao s[D7/C]ol nasc[Gm/Bb]er     [Gm/A]      [Gm]"
+      },
+      {
+       "texto": "V[Gm/Gb]er as  [Gm/F]águas dos r[Gm]ios c[Gm/F]or___r[C7/E]er"
+      },
+      {
+       "texto": "Ouvir os p[C/Bb]ássaros cant[F]ar"
+      },
+      {
+       "texto": "Eu quero nasc[Gm]er"
+      },
+      {
+       "texto": "Quer[A7]o viv[Dm]er"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "Deixe-me [Dm/C]ir"
+      },
+      {
+       "texto": "Prec[Gm/Bb]iso andar"
+      },
+      {
+       "texto": "Vou p[Gm]or aí a proc[G#º]urar"
+      },
+      {
+       "texto": "A7                 Riff 1"
+      },
+      {
+       "texto": "   Rir pra não chorar"
+      },
+      {
+       "texto": "[Dm/F]     Se algu[Dm/C]ém por mim perg[Gm6/Bb]untar"
+      },
+      {
+       "texto": "Di[Gm]ga que eu só v[G#º]ou voltar"
+      },
+      {
+       "texto": "[A7]   Depois que me encontr[Dm6(9)]ar"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "[Ebº]    Quero assist[D7]ir"
+      },
+      {
+       "texto": "Ao s[D7/C]ol nasc[Gm/Bb]er     [Gm/A]      [Gm]"
+      },
+      {
+       "texto": "V[Gm/Gb]er as  [Gm/F]águas dos r[Gm]ios c[Gm/F]or___r[C7/E]er"
+      },
+      {
+       "texto": "Ouvir os p[C/Bb]ássaros cant[F]ar"
+      },
+      {
+       "texto": "Eu quero nasc[Gm]er"
+      },
+      {
+       "texto": "Quer[A7]o viv[Dm]er"
+      }
+     ]
+    },
+    {
+     "tipo": "final",
+     "nome": "Final",
+     "linhas": [
+      {
+       "texto": "Deixe-me [Dm/C]ir"
+      },
+      {
+       "texto": "Prec[Gm/Bb]iso andar"
+      },
+      {
+       "texto": "Vou p[Gm]or aí a proc[Gº]urar"
+      },
+      {
+       "texto": "A7                 Riff 2"
+      },
+      {
+       "texto": "   Rir pra não chorar"
+      },
+      {
+       "texto": "[Dm]   Deixe-me [Dm/C]ir"
+      },
+      {
+       "texto": "Prec[Gm/Bb]iso andar"
+      },
+      {
+       "texto": "Vou p[Gm]or aí a proc[Gº]urar"
+      },
+      {
+       "texto": "[A7]   Rir pra não cho[Dm]rar"
+      },
+      {
+       "texto": "[Dm]   Deixe-me [Dm/C]ir"
+      },
+      {
+       "texto": "Prec[Gm/Bb]iso andar"
+      },
+      {
+       "texto": "Vou p[Gm]or aí a proc[Gº]urar"
+      },
+      {
+       "texto": "[A7]   Rir pra não chor[Dm]ar"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

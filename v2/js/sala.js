@@ -30,6 +30,7 @@
     DB.atualizarMusica = async (id, campos) => { const importante=Object.keys(campos).some(k=>!['abertaEm','tocadas'].includes(k)); const r=await atualizar(id,importante?{...campos,atualizadaEm:Date.now()}:campos);if(importante)agendar();return r; };
     async function proteger(motivo) { fila = fila.catch(() => {}).then(() => guardar(motivo)); await fila; }
     DB.importar = async backup => {
+        backup = FiltroJson.backup(backup).dados;   // filtro de segurança (js/filtro-json.js): antes de qualquer outra coisa, inclusive ajustes/pedal/perfis
         if (!backup || !Array.isArray(backup.musicas) || !Array.isArray(backup.repertorios || [])) throw new Error('Backup inválido');
         if(!backup.musicas.every(m=>m&&typeof m.id==='string'&&typeof m.titulo==='string'&&typeof m.cifra==='string') || !(backup.repertorios||[]).every(r=>r&&typeof r.id==='string'&&typeof r.nome==='string'&&(!r.itens||Array.isArray(r.itens)))) throw new Error('Backup com registros inválidos');
         await proteger('Antes de importar');
@@ -108,7 +109,7 @@
             sh.querySelectorAll('[data-restaurar]').forEach(b=>b.onclick=()=>previa(h[Number(b.dataset.restaurar)].backup));
         });
     }
-    function importar() { const input=document.createElement('input');input.type='file';input.accept='.json,application/json';input.onchange=async()=>{try{const file=input.files[0];if(file)previa(JSON.parse(await file.text()));}catch{toast('Não consegui ler esse backup');}};input.click(); }
+    function importar() { const input=document.createElement('input');input.type='file';input.accept='.json,application/json';input.onchange=async()=>{try{const file=input.files[0];if(file){FiltroJson.zerarRelatorio();previa(await FiltroJson.lerArquivo(file));}}catch(e){toast(e.message||'Não consegui ler esse backup');}};input.click(); }
     async function recuperarExcluidas(backup) {
         const copia=JSON.parse(JSON.stringify(backup)),excluidas=await DB.lerMeta('exclusoes-sala')||{},ids=new Map();
         for(const m of copia.musicas)if(excluidas[m.id] && (m.atualizadaEm||0)<=excluidas[m.id]){const antes=m.id;m.id=DB.novoId();m.atualizadaEm=Date.now();ids.set(antes,m.id);}
@@ -118,7 +119,7 @@
     }
     function previa(backup) {
         if(!Array.isArray(backup?.musicas)||!Array.isArray(backup.repertorios||[])){toast('Backup inválido');return;}
-        painel('Conferir recuperação','<p>'+backup.musicas.length+' cifras · '+(backup.repertorios||[]).length+' repertórios</p><p class="dica">A recuperação junta os dados. Letras diferentes são preservadas como versões separadas; a coleção atual recebe uma cópia de segurança antes de importar.</p><label><input type="checkbox" id="s-recuperar-excluidas" checked> Incluir músicas e repertórios excluídos como novas cópias</label>'+botao('s-confirmar','Juntar e recuperar'),sh=>sh.querySelector('#s-confirmar').onclick=async e=>{e.target.disabled=true;try{await DB.importar(sh.querySelector('#s-recuperar-excluidas').checked?await recuperarExcluidas(backup):backup);fecharSheet();toast('Backup recuperado');App.recarregar();}catch{toast('Falha ao recuperar. Seu histórico foi mantido.');e.target.disabled=false;}});
+        painel('Conferir recuperação','<p>'+backup.musicas.length+' cifras · '+(backup.repertorios||[]).length+' repertórios</p><p class="dica">A recuperação junta os dados. Letras diferentes são preservadas como versões separadas; a coleção atual recebe uma cópia de segurança antes de importar.</p><label><input type="checkbox" id="s-recuperar-excluidas" checked> Incluir músicas e repertórios excluídos como novas cópias</label>'+botao('s-confirmar','Juntar e recuperar'),sh=>sh.querySelector('#s-confirmar').onclick=async e=>{e.target.disabled=true;try{await DB.importar(sh.querySelector('#s-recuperar-excluidas').checked?await recuperarExcluidas(backup):backup);fecharSheet();toast('Backup recuperado'+FiltroJson.resumo());App.recarregar();}catch{toast('Falha ao recuperar. Seu histórico foi mantido.');e.target.disabled=false;}});
     }
     async function afinador() {
         let stream,ctx,raf,fechado=false;

@@ -1,22 +1,160 @@
 {
   "formato": "cifradog.catalogo",
   "versao": 1,
-  "atualizadoEm": "2026-11-20T01:36:37.647Z",
+  "atualizadoEm": "2026-11-24T16:08:14.356Z",
   "pacotes": [
     {
-      "id": "cantigas-populares",
-      "nome": "Cantigas populares",
-      "descricao": "Cantigas de roda tradicionais brasileiras, de domínio público, com harmonia simples para violão.",
+      "id": "pack-blues",
+      "nome": "Blues",
+      "descricao": "Seleção de Blues do repertório do Rolfis.",
       "revisao": 1,
-      "arquivo": "pacotes/cantigas-populares.json",
-      "qtdMusicas": 4,
-      "tamanhoBytes": 4460,
-      "sha256": "b22cf16a9dd28bdfec830f70cd2be2e739a0a882c04ec8fcaa4c60f7b7ca93e0",
-      "licenca": "dominio-publico",
+      "arquivo": "pacotes/pack-blues.json",
+      "qtdMusicas": 1,
+      "tamanhoBytes": 4251,
+      "sha256": "4ca8919cbd6cf237eac09647816efe3e93d91583f29a4484266b7cd9de49130b",
+      "licenca": "transcricao",
       "tags": [
-        "infantil",
-        "tradicional",
-        "roda"
+        "blues"
+      ]
+    },
+    {
+      "id": "pack-forro",
+      "nome": "Forró",
+      "descricao": "Seleção de Forró do repertório do Rolfis.",
+      "revisao": 1,
+      "arquivo": "pacotes/pack-forro.json",
+      "qtdMusicas": 2,
+      "tamanhoBytes": 7523,
+      "sha256": "1e21ec49e6c5226085f587e861ec5cc859a5300e7ef96a5739f638c070fcb701",
+      "licenca": "transcricao",
+      "tags": [
+        "forro"
+      ]
+    },
+    {
+      "id": "pack-gospel",
+      "nome": "Gospel",
+      "descricao": "Seleção de Gospel do repertório do Rolfis.",
+      "revisao": 1,
+      "arquivo": "pacotes/pack-gospel.json",
+      "qtdMusicas": 2,
+      "tamanhoBytes": 17854,
+      "sha256": "902302479c007d6a1e1351d8ead6009de53fc8a6e096f26139793a57f8acfadd",
+      "licenca": "transcricao",
+      "tags": [
+        "gospel"
+      ]
+    },
+    {
+      "id": "pack-jazz",
+      "nome": "Jazz",
+      "descricao": "Seleção de Jazz do repertório do Rolfis.",
+      "revisao": 1,
+      "arquivo": "pacotes/pack-jazz.json",
+      "qtdMusicas": 2,
+      "tamanhoBytes": 9341,
+      "sha256": "b90aa699fd24b6323df6c9b4a8a98e376ae1cddc553bcf7f70a9e13a2851cfce",
+      "licenca": "transcricao",
+      "tags": [
+        "jazz"
+      ]
+    },
+    {
+      "id": "pack-metal",
+      "nome": "Metal",
+      "descricao": "Seleção de Metal do repertório do Rolfis.",
+      "revisao": 1,
+      "arquivo": "pacotes/pack-metal.json",
+      "qtdMusicas": 1,
+      "tamanhoBytes": 6387,
+      "sha256": "b67426c52d443844f4868bafa0dfe2df8650bf5396e539f8cf65ae6db1b1ee74",
+      "licenca": "transcricao",
+      "tags": [
+        "metal"
+      ]
+    },
+    {
+      "id": "pack-mpb",
+      "nome": "MPB",
+      "descricao": "MPB para violão e voz. Seleção do repertório do Rolfis.",
+      "revisao": 1,
+      "arquivo": "pacotes/pack-mpb.json",
+      "qtdMusicas": 10,
+      "tamanhoBytes": 55769,
+      "sha256": "3d87c40e47133bb1e15ea29d72bf144c3dc994bcacf5d329716adc09c5608ce3",
+      "licenca": "transcricao",
+      "tags": [
+        "mpb"
+      ]
+    },
+    {
+      "id": "pack-pop",
+      "nome": "Pop",
+      "descricao": "Pop nacional e internacional, de hits recentes a clássicos. Seleção do repertório do Rolfis.",
+      "revisao": 1,
+      "arquivo": "pacotes/pack-pop.json",
+      "qtdMusicas": 12,
+      "tamanhoBytes": 72505,
+      "sha256": "a0f4bbd3b2f914502903ab415556dfd76a349ca5a8682ab372f63cbeb08d67fa",
+      "licenca": "transcricao",
+      "tags": [
+        "pop"
+      ]
+    },
+    {
+      "id": "pack-reggae",
+      "nome": "Reggae",
+      "descricao": "Reggae nacional e clássicos para violão. Seleção do repertório do Rolfis.",
+      "revisao": 1,
+      "arquivo": "pacotes/pack-reggae.json",
+      "qtdMusicas": 6,
+      "tamanhoBytes": 25705,
+      "sha256": "4360170d524c383cec23fc3634427c174f9e532224751d0524bd55ce973f09e9",
+      "licenca": "transcricao",
+      "tags": [
+        "reggae"
+      ]
+    },
+    {
+      "id": "pack-rock",
+      "nome": "Rock",
+      "descricao": "Rock nacional e internacional para tocar em roda ou no palco. Seleção do repertório do Rolfis.",
+      "revisao": 1,
+      "arquivo": "pacotes/pack-rock.json",
+      "qtdMusicas": 30,
+      "tamanhoBytes": 153050,
+      "sha256": "dad218f30c31aa1d81e5100f97a744dd78e62d657a45a06d549a1e5e76e4cd0c",
+      "licenca": "transcricao",
+      "tags": [
+        "rock"
+      ]
+    },
+    {
+      "id": "pack-samba",
+      "nome": "Samba",
+      "descricao": "Seleção de Samba do repertório do Rolfis.",
+      "revisao": 1,
+      "arquivo": "pacotes/pack-samba.json",
+      "qtdMusicas": 2,
+      "tamanhoBytes": 11493,
+      "sha256": "7ec41d5095b5304d1905d315a28b7f04dfee6424847bb2b0dafb7606f8c541f8",
+      "licenca": "transcricao",
+      "tags": [
+        "samba"
+      ]
+    },
+    {
+      "id": "pack-sertanejo",
+      "nome": "Sertanejo",
+      "descricao": "Seleção de Sertanejo do repertório do Rolfis.",
+      "revisao": 1,
+      "arquivo": "pacotes/pack-sertanejo.json",
+      "qtdMusicas": 2,
+      "tamanhoBytes": 7934,
+      "sha256": "95911ba51feb1386016aa01b5bc3872f387250879bb66699f52f8abc5f9773b3",
+      "licenca": "transcricao",
+      "tags": [
+        "sertanejo"
       ]
     }
   ]

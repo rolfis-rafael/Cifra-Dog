@@ -22,7 +22,7 @@ const RAIZ = path.resolve(__dirname, '..');
 const PASTA = path.join(RAIZ, 'pacotes');
 const RE_ID = /^[a-z0-9]+(-[a-z0-9]+)*$/;
 const RE_TOM = /^[A-G][#b]?m?$/;
-const LIVRES = ['dominio-publico', 'cc0', 'cc-by', 'cc-by-sa', 'autorizado'];
+const LIVRES = ['dominio-publico', 'cc0', 'cc-by', 'cc-by-sa', 'autorizado', 'transcricao'];
 
 /** Confere um pacote. Devolve a lista de problemas (vazia = tudo certo). */
 function conferir(p, arq) {
@@ -75,7 +75,7 @@ function main() {
             tamanhoBytes: bruto.length,
             sha256: crypto.createHash('sha256').update(bruto).digest('hex'),
             // Pacote misto mostra a licença mais restritiva.
-            licenca: ['cc-by-sa', 'cc-by', 'autorizado', 'cc0', 'dominio-publico'].find(t => tipos.includes(t)),
+            licenca: ['transcricao', 'cc-by-sa', 'cc-by', 'autorizado', 'cc0', 'dominio-publico'].find(t => tipos.includes(t)),
             tags: p.pacote.tags || [],
         });
     }

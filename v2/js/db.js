@@ -169,6 +169,7 @@
          */
         async importar(dados) {
             if (!dados || !Array.isArray(dados.musicas)) throw new Error('Arquivo de backup inválido.');
+            dados = FiltroJson.backup(dados).dados;   // filtro de segurança (js/filtro-json.js): só passa o que o app conhece
             const norm = (t) => String(t || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]/g, '');
             const chaveDe = (m) => norm(m.titulo) + '|' + norm(m.artista);
             const locais = await DB.listarMusicas();

@@ -1,0 +1,1195 @@
+{
+ "formato": "cifradog.pacote",
+ "versao": 1,
+ "pacote": {
+  "id": "pack-reggae",
+  "nome": "Reggae",
+  "descricao": "Reggae nacional e clássicos para violão. Seleção do repertório do Rolfis.",
+  "autor": "Rafael Carneiro (Rolfis)",
+  "revisao": 1,
+  "atualizadoEm": "2026-11-24",
+  "idioma": "pt-BR",
+  "tags": [
+   "reggae"
+  ]
+ },
+ "musicas": [
+  {
+   "id": "outra-vida-armandinho",
+   "titulo": "Outra Vida",
+   "artista": "Armandinho",
+   "tom": "Bm",
+   "genero": "reggae",
+   "idioma": "pt-BR",
+   "compasso": "4/4",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "Armandinho",
+    "atribuicao": "Letra e música de Armandinho. Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "intro",
+     "nome": "Intro",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[Bm]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "[Bm]   Talvez não seja nessa vida ainda"
+      },
+      {
+       "texto": "Mas você a[F#m7]inda vai ser a minha vida"
+      },
+      {
+       "texto": "[G7M]     Então a gente vai fu[F#m7]gir pro mar"
+      },
+      {
+       "texto": "[G7M]     Eu vou pedir pra [F#m7]namorar"
+      },
+      {
+       "texto": "[G7M]     Você vai me dizer que [F#m7]vai pensar"
+      },
+      {
+       "texto": "Mas no f[Em7]im vai deix[A7]ar"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "Talv[Bm]ez não seja nessa vida ainda"
+      },
+      {
+       "texto": "Mas você a[F#m7]inda vai ser a minha vida"
+      },
+      {
+       "texto": "[G7M]     Sem ter mais mentiras p[F#m7]ra me ver"
+      },
+      {
+       "texto": "[G7M]     Sem amor antigo p[F#m7]ra esquecer"
+      },
+      {
+       "texto": "[G7M]     Sem os teus amigos p[F#m7]ra esconder"
+      },
+      {
+       "texto": "Pode cr[Em7]er, que t[A7]udo vai dar cert[Bm]o"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "Uebarui[F#m7]eio"
+      },
+      {
+       "texto": "Sou pescad[G7M]or, sonha[F#m7]dor"
+      },
+      {
+       "texto": "Vou diz[G7M]er pra Deus nosso Sen[F#m7]hor"
+      },
+      {
+       "texto": "Que tu [G7M]és o amor da minha [F#m7]vida"
+      },
+      {
+       "texto": "Pois não d[Em7]á pra  viver nessa v[A7]ida"
+      },
+      {
+       "texto": "Morrendo de am[Bm]or"
+      },
+      {
+       "texto": "[F#m7]Ôio"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Terceira Parte",
+     "linhas": [
+      {
+       "texto": "Talv[Bm]ez não seja nessa vida ainda"
+      },
+      {
+       "texto": "Mas você a[F#m7]inda vai ser a minha vida"
+      },
+      {
+       "texto": "[G7M]     E uma abelhinha vai fa[F#m7]zer o mel"
+      },
+      {
+       "texto": "[G7M]     Estrela Dalva vai cru[F#m7]zar no céu"
+      },
+      {
+       "texto": "[G7M]     E o vento certo vai sop[F#m7]rar no mar"
+      },
+      {
+       "texto": "P[Em7]ode crer, que t[A7]udo vai dar c[Bm]erto"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "Uebarui[F#m7]eio"
+      },
+      {
+       "texto": "Sou pescad[G7M]or, sonha[F#m7]dor"
+      },
+      {
+       "texto": "Vou diz[G7M]er pra Deus nosso Sen[F#m7]hor"
+      },
+      {
+       "texto": "Que tu [G7M]és o amor da minha [F#m7]vida"
+      },
+      {
+       "texto": "Pois não d[Em7]á pra  viver nessa v[A7]ida"
+      },
+      {
+       "texto": "Morrendo de am[Bm]or"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "is-this-love-bob-marley",
+   "titulo": "Is This Love",
+   "artista": "Bob Marley",
+   "tom": "C#m",
+   "genero": "reggae",
+   "idioma": "pt-BR",
+   "compasso": "4/4",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "Bob Marley",
+    "atribuicao": "Letra e música de Bob Marley. Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "intro",
+     "nome": "Intro",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[C#m7] [C#m] [C#m7] [A] [E] [D#m7(5-)]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[C#m7] [C#m] [C#m7] [E] [B/D#] [C#m]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "I wanna l[C#m7]ove you"
+      },
+      {
+       "texto": "[A]  And treat you r[E]ight [B/D#]"
+      },
+      {
+       "texto": "I wanna l[C#m7]ove you  [C#m]"
+      },
+      {
+       "texto": "E[C#m7]very da[A]y and every ni[E]ght"
+      },
+      {
+       "texto": "We'll b[B/D#]e  tog[C#m7]ether  [C#m]"
+      },
+      {
+       "texto": "W[C#m7]ith a ro[A]of right over our he[E]ads"
+      },
+      {
+       "texto": "We'll sh[B/D#]are the sh[C#m7]elter  [C#m]     [C#m7]"
+      },
+      {
+       "texto": "[A]Of my single b[E]ed"
+      },
+      {
+       "texto": "We'll sh[B/D#]are the s[C#m7]ame room, oooh-o[C#m]h-ohhh   [C#m7]"
+      },
+      {
+       "texto": "But J[A]ah, provides the br[E]ead [B/D#]"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "Is this l[G#m7]ove, is this love"
+      },
+      {
+       "texto": "Is this love"
+      },
+      {
+       "texto": "Love that I'm f[F#m7]eeling?"
+      },
+      {
+       "texto": "Is this l[G#m7]ove, is this love"
+      },
+      {
+       "texto": "Is this love"
+      },
+      {
+       "texto": "Love that I'm f[F#m7]eeling?"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "Parte 7 de 7  (Variação Final)"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[D] [C] [G/B] [Am7]"
+      },
+      {
+       "tipo": "obs",
+       "texto": "h.n."
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[F#m7] [E/G#] [A] [B]"
+      },
+      {
+       "texto": "[F#m7]    I wanna know, wanna know"
+      },
+      {
+       "texto": "Wanna know now"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[F#m7] [E/G#] [A] [B]"
+      },
+      {
+       "texto": "[G#m7]    I got to know, got to know"
+      },
+      {
+       "texto": "Got to know now"
+      },
+      {
+       "texto": "I'm willing and [F#m7]able"
+      },
+      {
+       "texto": "So [C#m]I throw my cards"
+      },
+      {
+       "texto": "On your t[B]able [A]   [E/G#]      [F#m7]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "I wanna l[C#m7]ove you"
+      },
+      {
+       "texto": "[A]  And treat you r[E]ight [B/D#]"
+      },
+      {
+       "texto": "I wanna l[C#m7]ove you  [C#m]"
+      },
+      {
+       "texto": "Ev[C#m7]ery da[A]y and every ni[E]ght"
+      },
+      {
+       "texto": "We'll b[B/D#]e  tog[C#m7]ether  [C#m]"
+      },
+      {
+       "texto": "W[C#m7]ith a ro[A]of right over our he[E]ads"
+      },
+      {
+       "texto": "We'll sh[B/D#]are the sh[C#m7]elter  [C#m]     [C#m7]"
+      },
+      {
+       "texto": "[A]Of my single b[E]ed"
+      },
+      {
+       "texto": "We'll sh[B/D#]are the s[C#m7]ame room, oooh-o[C#m]h-ohhh   [C#m7]"
+      },
+      {
+       "texto": "But J[A]ah, provides the br[E]ead [B/D#]"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "Is this l[G#m7]ove, is this love"
+      },
+      {
+       "texto": "Is this love"
+      },
+      {
+       "texto": "Love that I'm f[F#m7]eeling?"
+      },
+      {
+       "texto": "Is this l[G#m7]ove, is this love"
+      },
+      {
+       "texto": "Is this love"
+      },
+      {
+       "texto": "Love that I'm f[F#m7]eeling?"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[F#m7] [E/G#] [A] [B]"
+      },
+      {
+       "texto": "[F#m7]    Oh yes, I know, yes I know"
+      },
+      {
+       "texto": "Yes I know now"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[F#m7] [E/G#] [A] [B]"
+      },
+      {
+       "texto": "[G#m7]Oh yes, I know, yes I know"
+      },
+      {
+       "texto": "Yes I know now"
+      },
+      {
+       "texto": "I'm willing and [F#m7]able"
+      },
+      {
+       "texto": "So [C#m]I throw my cards"
+      },
+      {
+       "texto": "On your t[B]able [A]   [E/G#]      [F#m7]"
+      }
+     ]
+    },
+    {
+     "tipo": "final",
+     "nome": "Final",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[C#m7] [C#m] [C#m7] [A] [E] [D#m7(5-)]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[C#m7] [C#m] [C#m7] [E] [B/D#] [C#m7(9)]"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "asas-maskavo",
+   "titulo": "Asas",
+   "artista": "Maskavo",
+   "tom": "G",
+   "genero": "reggae",
+   "idioma": "pt-BR",
+   "compasso": "4/4",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "Maskavo",
+    "atribuicao": "Letra e música de Maskavo. Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "intro",
+     "nome": "Intro",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[D] [A] [D] [A]"
+      },
+      {
+       "texto": "[D]  Allalauee [A]"
+      },
+      {
+       "texto": "[D]  Allalaueeee[A]"
+      },
+      {
+       "texto": "[D]  Cê parece um anj[A]o"
+      },
+      {
+       "texto": "[D]  Só que não tem asa, i[A]aiá"
+      },
+      {
+       "texto": "[D]  Oh, meu Deus, quando asas tiv[A]er"
+      },
+      {
+       "texto": "[D]  Passe lá em c[A]asa"
+      },
+      {
+       "texto": "E a[D]o sai[A]r"
+      },
+      {
+       "texto": "Pras [Bm]estrelas eu vou te l[F#m]evar"
+      },
+      {
+       "texto": "Com a[G] ajuda da brisa do ma[A]r"
+      },
+      {
+       "texto": "Te mostrar onde[D] ir [A]"
+      },
+      {
+       "texto": "E ao [D]chegar [A]"
+      },
+      {
+       "texto": "Apre[Bm]sento-lhe a lua e o [F#m]sol"
+      },
+      {
+       "texto": "E no [G]céu vai ter mais um far[A]ol"
+      },
+      {
+       "texto": "Que é a luz do teu olha[D]r  [A]   [D]   [A]"
+      }
+     ]
+    },
+    {
+     "tipo": "solo",
+     "nome": "Solo",
+     "linhas": [
+      {
+       "texto": "  [D]Eu não sou mole[A]que"
+      },
+      {
+       "texto": "  [D]Ainda não tenho casa, iai[A]á"
+      },
+      {
+       "texto": "  [D]Oh, meu Deus, se um dia tiv[A]er"
+      },
+      {
+       "texto": "  [D]Visto minhas as[A]as"
+      },
+      {
+       "texto": "E [D]ao sa[A]ir"
+      },
+      {
+       "texto": "Pras [Bm]estrelas eu vou te l[F#m]evar"
+      },
+      {
+       "texto": "Com a[G] ajuda da brisa do ma[A]r"
+      },
+      {
+       "texto": "Te mostrar onde[D] ir [A]"
+      },
+      {
+       "texto": "E ao [D]chegar [A]"
+      },
+      {
+       "texto": "Apre[Bm]sento-lhe a lua e o [F#m]sol"
+      },
+      {
+       "texto": "E no [G]céu vai ter mais um far[A]ol"
+      },
+      {
+       "texto": "Que é a luz do teu olha[D]r  [A]   [D]   [A]"
+      },
+      {
+       "texto": "  [D]Cê parece um anjo [A]"
+      },
+      {
+       "texto": "  [D]Sö que não tem asa, iai[A]á"
+      },
+      {
+       "texto": "  [D]Oh, meu Deus, quando asas tiver[A]"
+      },
+      {
+       "texto": "  [D]Passe lá em cas[A]a"
+      },
+      {
+       "texto": "E [D]ao sa[A]ir"
+      },
+      {
+       "texto": "Pras [Bm]estrelas eu vou te l[F#m]evar"
+      },
+      {
+       "texto": "Com a[G] ajuda da brisa do ma[A]r"
+      },
+      {
+       "texto": "Te mostrar onde[D] ir [A]"
+      },
+      {
+       "texto": "E ao [D]chegar [A]"
+      },
+      {
+       "texto": "Apre[Bm]sento-lhe a lua e o [F#m]sol"
+      },
+      {
+       "texto": "E no [G]céu vai ter mais um far[A]ol"
+      },
+      {
+       "texto": "Que é a luz do teu olha[D]r  [A]   [D]   [A]"
+      },
+      {
+       "texto": "[D]  Allalauee [A]"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "um-anjo-do-ceu-maskavo",
+   "titulo": "Um Anjo do Céu",
+   "artista": "Maskavo",
+   "tom": "G",
+   "genero": "reggae",
+   "idioma": "pt-BR",
+   "compasso": "4/4",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "Maskavo",
+    "atribuicao": "Letra e música de Maskavo. Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "intro",
+     "nome": "Intro",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[G] [D] [C] [G]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[G] [D] [C] [G]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "Um anjo d[G]o céu"
+      },
+      {
+       "texto": "Que trouxe pra mim"
+      },
+      {
+       "texto": "É a mais bon[Am]ita"
+      },
+      {
+       "texto": "A jóia perf[C]eita [D]"
+      },
+      {
+       "texto": "Que é pra eu c[G]uidar"
+      },
+      {
+       "texto": "Que é pra eu amar"
+      },
+      {
+       "texto": "Gota cristal[Am]ina"
+      },
+      {
+       "texto": "Tem toda inoc[C]ência [D]"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "V[G]em, Óh meu b[D]em"
+      },
+      {
+       "texto": "Não chore n[C]ão"
+      },
+      {
+       "texto": "Eu vou cantar pra v[G]ocê"
+      },
+      {
+       "texto": "V[G]em, Óh meu b[D]em"
+      },
+      {
+       "texto": "Não chore n[C]ão"
+      },
+      {
+       "texto": "Eu vou cantar pra v[G]ocê"
+      }
+     ]
+    },
+    {
+     "tipo": "solo",
+     "nome": "Solo",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[G] [Am] [C]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "Um anjo do c[G]éu"
+      },
+      {
+       "texto": "Que me escolheu"
+      },
+      {
+       "texto": "Serei o seu p[Am]orto"
+      },
+      {
+       "texto": "Guardião da pur[C]eza [D]"
+      },
+      {
+       "texto": "Que é pra eu c[G]uidar"
+      },
+      {
+       "texto": "Que é pra eu amar"
+      },
+      {
+       "texto": "Gota cristali[Am]na"
+      },
+      {
+       "texto": "Tem toda inoc[C]ência[D]"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "V[G]em, Óh meu b[D]em"
+      },
+      {
+       "texto": "Não chore n[C]ão"
+      },
+      {
+       "texto": "Eu vou cantar pra v[G]ocê"
+      },
+      {
+       "texto": "V[G]em, Óh meu b[D]em"
+      },
+      {
+       "texto": "Não chore n[C]ão"
+      },
+      {
+       "texto": "Eu vou cantar pra v[G]ocê"
+      },
+      {
+       "texto": "V[G]em, Óh meu b[D]em"
+      },
+      {
+       "texto": "Não chore n[C]ão"
+      },
+      {
+       "texto": "Eu vou cantar pra v[G]ocê"
+      },
+      {
+       "texto": "V[G]em, Óh meu b[D]em"
+      },
+      {
+       "texto": "Não chore n[C]ão"
+      },
+      {
+       "texto": "Eu vou cantar pra v[G]ocê"
+      }
+     ]
+    },
+    {
+     "tipo": "interludio",
+     "nome": "Interlúdio",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[G] [D] [C] [G]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[G] [D] [C] [G]"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão Final",
+     "linhas": [
+      {
+       "texto": "V[G]em, Óh meu b[D]em"
+      },
+      {
+       "texto": "Não chore n[C]ão"
+      },
+      {
+       "texto": "Eu vou cantar pra v[G]ocê"
+      },
+      {
+       "texto": "V[G]em, Óh meu b[D]em"
+      },
+      {
+       "texto": "Não chore n[C]ão"
+      },
+      {
+       "texto": "Eu vou cantar pra v[G]ocê"
+      },
+      {
+       "texto": "V[G]em, Óh meu b[D]em"
+      },
+      {
+       "texto": "Não chore n[C]ão"
+      },
+      {
+       "texto": "Eu vou cantar pra v[G]ocê"
+      },
+      {
+       "texto": "V[G]em, Óh meu b[D]em"
+      },
+      {
+       "texto": "Não chore n[C]ão"
+      },
+      {
+       "texto": "Eu vou cantar pra v[G]ocê"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "andei-so-natiruts",
+   "titulo": "Andei Só",
+   "artista": "Natiruts",
+   "tom": "Bm",
+   "genero": "reggae",
+   "idioma": "pt-BR",
+   "compasso": "4/4",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "Natiruts",
+    "atribuicao": "Letra e música de Natiruts. Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "intro",
+     "nome": "Intro",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[Bm] [F#m7] [Bm] [F#m7]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Em7] [F#m7] [Em7] [F#m7]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Bm] [F#m7] [Bm] [F#m7]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Em7] [F#m7] [Em7] [A]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "[Bm]    Preciso demonstrar p[F#m7]ra ela"
+      },
+      {
+       "texto": "[Em7]     Que mereço seu [A]tempo pra dizer"
+      },
+      {
+       "texto": "[Bm]    Um pouco das ideias [F#m7]novas"
+      },
+      {
+       "texto": "[Em7]     E os lugares[A] onde viajei"
+      },
+      {
+       "texto": "[Bm]    Se ela botar fé na [F#m7]minha história"
+      },
+      {
+       "texto": "Qu[Em7]e é de rocha e vem do co[A]ração"
+      },
+      {
+       "texto": "[Bm]    Vou estender o pano [F#m7]mais bonito"
+      },
+      {
+       "texto": "[Em7]     Feito na ilha de [A]Madagascar"
+      },
+      {
+       "texto": "[Bm]    Um Bob, um Djavan, um [F#m7]Jimmy na viola"
+      },
+      {
+       "texto": "[Em7]     Com humildade de quem sabe[A] onde quer chegar"
+      },
+      {
+       "texto": "[Bm]    Reparei a flor no [F#m7]seu vestido"
+      },
+      {
+       "texto": "S[Em7]ó guerreiro de aura boa [A]pode merecer"
+      },
+      {
+       "texto": "[Bm]    E ela parou, ol[F#m7]hou, sorriu"
+      },
+      {
+       "texto": "M[Em7]e deu um beijo[A] e foi embo[Bm]ra  [F#m7]"
+      },
+      {
+       "texto": "Não vi m[Em7]ais a gata, mas tenho[A] a minha gaita"
+      },
+      {
+       "texto": "Pra m[Bm]e conso[F#m7]lar   [Em7]     [A]"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "[Bm]An___[F#m7]dei só[Em7]      pela no[A]ite"
+      },
+      {
+       "texto": "[Bm]    Cantei um Reggae p[G7M]ros cachorros na [Em7]rua  [A]"
+      },
+      {
+       "texto": "[Bm]An___[F#m7]dei só[Em7]      pela no[A]ite"
+      },
+      {
+       "texto": "[Bm]    Cantei um ver[G7M]so daquele velho [Em7]samba pra [A]lua"
+      },
+      {
+       "texto": "[Bm]An___[F#m7]dei só[Em7]      pela no[A]ite"
+      }
+     ]
+    },
+    {
+     "tipo": "solo",
+     "nome": "Solo",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[Bm] [F#m7] [Bm] [F#m7]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Em7] [F#m7] [Em7] [A]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "[Bm]    Preciso demonstrar p[F#m7]ra ela"
+      },
+      {
+       "texto": "[Em7]     Que mereço seu [A]tempo pra dizer"
+      },
+      {
+       "texto": "[Bm]    Um pouco das ideias [F#m7]novas"
+      },
+      {
+       "texto": "[Em7]     E os lugares[A] onde viajei"
+      },
+      {
+       "texto": "[Bm]    Se ela botar fé na [F#m7]minha história"
+      },
+      {
+       "texto": "Qu[Em7]e é de rocha e vem do co[A]ração"
+      },
+      {
+       "texto": "[Bm]    Vou estender o pano [F#m7]mais bonito"
+      },
+      {
+       "texto": "[Em7]     Feito na ilha de [A]Madagascar"
+      },
+      {
+       "texto": "[Bm]    Um Bob, um Djavan, um [F#m7]Jimmy na viola"
+      },
+      {
+       "texto": "[Em7]     Com humildade de quem sabe[A] onde quer chegar"
+      },
+      {
+       "texto": "[Bm]    Reparei a flor no [F#m7]seu vestido"
+      },
+      {
+       "texto": "S[Em7]ó guerreiro de aura boa [A]pode merecer"
+      },
+      {
+       "texto": "[Bm]    E ela parou, ol[F#m7]hou, sorriu"
+      },
+      {
+       "texto": "M[Em7]e deu um beijo[A] e foi embo[Bm]ra  [F#m7]"
+      },
+      {
+       "texto": "Não vi m[Em7]ais a gata, mas tenho[A] a minha gaita"
+      },
+      {
+       "texto": "Pra m[Bm]e conso[F#m7]lar   [Em7]     [A]"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "[Bm]An___[F#m7]dei só[Em7]      pela no[A]ite"
+      },
+      {
+       "texto": "[Bm]    Cantei um Reggae p[G7M]ros cachorros na [Em7]rua  [A]"
+      },
+      {
+       "texto": "[Bm]An___[F#m7]dei só[Em7]      pela no[A]ite"
+      },
+      {
+       "texto": "[Bm]    Cantei um ver[G7M]so daquele velho [Em7]samba pra [A]lua"
+      },
+      {
+       "texto": "[Bm]An___[F#m7]dei só[Em7]      pela no[A]ite"
+      },
+      {
+       "texto": "[Bm]    Tudo [G7M]bem a vida conti[Em7]nua  [A]"
+      },
+      {
+       "texto": "[Bm]An___[F#m7]dei só[Em7]      pela no[A]ite"
+      }
+     ]
+    },
+    {
+     "tipo": "final",
+     "nome": "Final",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[Bm] [F#m7] [Bm] [F#m7]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Em7] [F#m7] [Em7] [A]"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pra-voce-onze-20",
+   "titulo": "Pra Você",
+   "artista": "Onze:20",
+   "tom": "D",
+   "genero": "reggae",
+   "idioma": "pt-BR",
+   "compasso": "4/4",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "Onze:20",
+    "atribuicao": "Letra e música de Onze:20. Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "verso",
+     "nome": "Música",
+     "linhas": [
+      {
+       "texto": "Você nem quis ouv[D7M]ir o que eu sen[C#m7]tia   [F#m7]"
+      },
+      {
+       "texto": "E é por [Bm7]isso que não d[D/E]eu pra te espe[A7M]rar"
+      },
+      {
+       "texto": "Você não entend[D7M]eu o que eu que[C#m7]ria   [F#m7]"
+      },
+      {
+       "texto": "Era t[Bm7]e levar daq[D/E]ui pra nunca mais"
+      },
+      {
+       "texto": "[F#m]   Ouvi[F#m7M]r dizer[F#m7] que eu não [F#m6]servia  [Bm7]"
+      },
+      {
+       "texto": "Pra t[E4]e fazer fel[E]iz [A7M]"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "Fiz esse r[D7M]eggae pra você"
+      },
+      {
+       "texto": "Pra nunca m[Dm7]ais se esquecer"
+      },
+      {
+       "texto": "Que eu a[A7M]inda tô aqui"
+      },
+      {
+       "texto": "E que não t[D#m7(5-)]em por que fugir"
+      },
+      {
+       "texto": "E quando ouv[D7M]ir cê vai saber"
+      },
+      {
+       "texto": "Que nada f[G7]oi em vão"
+      },
+      {
+       "texto": "Foi tudo por voc[A7M]ê"
+      },
+      {
+       "texto": "D[A7(4/9)]eixa acontecer"
+      },
+      {
+       "texto": "Fiz esse r[D7M]eggae pra você"
+      },
+      {
+       "texto": "Pra nunca m[Dm7]ais se esquecer"
+      },
+      {
+       "texto": "Que eu a[A7M]inda tô aqui"
+      },
+      {
+       "texto": "E que não t[D#m7(5-)]em por que fugir"
+      },
+      {
+       "texto": "E quando ouv[Bm7]ir cê vai saber"
+      },
+      {
+       "texto": "Que nada f[D/E]oi em vão"
+      },
+      {
+       "texto": "Foi tudo por voc[A7M]ê"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "Você nem quis ouv[D7M]ir o que eu sen[C#m7]tia   [F#m7]"
+      },
+      {
+       "texto": "E é por [Bm7]isso que não d[D/E]eu pra te espe[A7M]rar"
+      },
+      {
+       "texto": "Você não entend[D7M]eu o que eu que[C#m7]ria   [F#m7]"
+      },
+      {
+       "texto": "Era t[Bm7]e levar daqu[D/E]i pra nunca mais"
+      },
+      {
+       "texto": "[F#m]   Ouvi[F#m7M]r dizer[F#m7] que eu não [F#m6]servia  [Bm7]"
+      },
+      {
+       "texto": "Pra t[E4]e fazer fel[E]iz [A7M]"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "Fiz esse r[D7M]eggae pra você"
+      },
+      {
+       "texto": "Pra nunca m[Dm7]ais se esquecer"
+      },
+      {
+       "texto": "Que eu a[A7M]inda tô aqui"
+      },
+      {
+       "texto": "E que não t[D#m7(5-)]em por que fugir"
+      },
+      {
+       "texto": "E quando ouv[D7M]ir cê vai saber"
+      },
+      {
+       "texto": "Que nada f[G7]oi em vão"
+      },
+      {
+       "texto": "Foi tudo por voc[A7M]ê"
+      },
+      {
+       "texto": "D[A7(4/9)]eixa acontecer"
+      },
+      {
+       "texto": "Fiz esse r[D7M]eggae pra você"
+      },
+      {
+       "texto": "Pra nunca m[Dm7]ais se esquecer"
+      },
+      {
+       "texto": "Que eu a[A7M]inda tô aqui"
+      },
+      {
+       "texto": "E que não t[D#m7(5-)]em por que fugir"
+      },
+      {
+       "texto": "E quando ouv[Bm7]ir cê vai saber"
+      },
+      {
+       "texto": "Que nada f[D/E]oi em vão"
+      },
+      {
+       "texto": "Tudo que eu fiz foi p[F]or [G]vo_[A]_cê"
+      },
+      {
+       "texto": "P[F]or [G]vo_[A]_cê"
+      },
+      {
+       "texto": "P[F]or [G]vo_[A]_cê"
+      },
+      {
+       "texto": "P[F]or [G]vo_[A]_cê"
+      },
+      {
+       "texto": "Você nem quis ouv[D7M(9)/A]ir"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

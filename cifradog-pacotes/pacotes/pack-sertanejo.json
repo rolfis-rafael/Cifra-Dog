@@ -1,0 +1,388 @@
+{
+ "formato": "cifradog.pacote",
+ "versao": 1,
+ "pacote": {
+  "id": "pack-sertanejo",
+  "nome": "Sertanejo",
+  "descricao": "Seleção de Sertanejo do repertório do Rolfis.",
+  "autor": "Rafael Carneiro (Rolfis)",
+  "revisao": 1,
+  "atualizadoEm": "2026-11-24",
+  "idioma": "pt-BR",
+  "tags": [
+   "sertanejo"
+  ]
+ },
+ "musicas": [
+  {
+   "id": "boate-azul-bruno-marrone",
+   "titulo": "Boate Azul",
+   "artista": "Bruno & Marrone",
+   "tom": "Cm",
+   "genero": "sertanejo",
+   "idioma": "pt-BR",
+   "compasso": "4/4",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "Bruno & Marrone",
+    "atribuicao": "Letra e música de Bruno & Marrone. Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "intro",
+     "nome": "Intro",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[Fm] [Bb] [Eb] [Cm]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Fm] [G] [Cm] [C7]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Fm] [Bb] [Eb] [Ab]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Fm] [G] [Cm]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "Doente de am[Cm]or procurei remédio"
+      },
+      {
+       "texto": "Na vida not[Bb]urna"
+      },
+      {
+       "texto": "Com a flor da n[Ab]oite"
+      },
+      {
+       "texto": "Em uma boate aqui na zona s[G]ul"
+      },
+      {
+       "texto": "A dor do am[Fm]or é com outro amor"
+      },
+      {
+       "texto": "Que a gente c[Cm]ura"
+      },
+      {
+       "texto": "Vim curar a d[G]or desse mal de amor"
+      },
+      {
+       "texto": "Na boate az[Cm]ul  [C7]"
+      },
+      {
+       "texto": "E quando a n[Fm]oite vai se agonizando"
+      },
+      {
+       "texto": "No clarão da aur[Cm]ora"
+      },
+      {
+       "texto": "Os int[G]egrantes da vida noturna"
+      },
+      {
+       "texto": "Se foram dorm[Cm]ir  [C7]"
+      },
+      {
+       "texto": "E a dama da n[Fm]oite que estava comigo"
+      },
+      {
+       "texto": "Também foi emb[Cm]ora"
+      },
+      {
+       "texto": "Fecharam-se as p[Ab]ortas"
+      },
+      {
+       "texto": "Sozinho de n[G]ovo"
+      },
+      {
+       "texto": "Tive que s[C]air"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "[C]  Sair de que j[G]eito"
+      },
+      {
+       "texto": "Se nem sei o r[F]umo para onde v[C]ou"
+      },
+      {
+       "texto": "Muito vagamente me lembro que est[G]ou"
+      },
+      {
+       "texto": "Em uma bo[F]ate aqui na zona s[C]ul"
+      },
+      {
+       "texto": "Eu bebi dem[G]ais"
+      },
+      {
+       "texto": "E não cons[F]igo me lembrar sequ[C]er"
+      },
+      {
+       "texto": "Qual era o nome daquela mulh[G]er"
+      },
+      {
+       "texto": "A flor da n[F]oite na b[G]oate az[C]ul [C7]"
+      }
+     ]
+    },
+    {
+     "tipo": "solo",
+     "nome": "Solo",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[Fm] [Bb] [Eb] [Cm]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Fm] [G] [Cm] [C7]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "E quando a n[Fm]oite vai se agonizando"
+      },
+      {
+       "texto": "No clarão da aur[Cm]ora"
+      },
+      {
+       "texto": "Os int[G]egrantes da vida noturna"
+      },
+      {
+       "texto": "Se foram dorm[Cm]ir  [C7]"
+      },
+      {
+       "texto": "E a dama da n[Fm]oite que estava comigo"
+      },
+      {
+       "texto": "Também foi emb[Cm]ora"
+      },
+      {
+       "texto": "Fecharam-se as p[Ab]ortas"
+      },
+      {
+       "texto": "Sozinho de n[G]ovo"
+      },
+      {
+       "texto": "Tive que s[C]air"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão Final",
+     "linhas": [
+      {
+       "texto": "[C]  Sair de que j[G]eito"
+      },
+      {
+       "texto": "Se nem sei o r[F]umo para onde v[C]ou"
+      },
+      {
+       "texto": "Muito vagamente me lembro que est[G]ou"
+      },
+      {
+       "texto": "Em uma bo[F]ate aqui na zona s[C]ul"
+      },
+      {
+       "texto": "Eu bebi dem[G]ais"
+      },
+      {
+       "texto": "E não cons[F]igo me lembrar sequ[C]er"
+      },
+      {
+       "texto": "Qual era o nome daquela mulh[G]er"
+      },
+      {
+       "texto": "A flor da n[F]oite na b[G]oate az[C]ul [C7]"
+      },
+      {
+       "texto": "Sair de que j[G]eito"
+      },
+      {
+       "texto": "Se nem sei o r[F]umo para onde v[C]ou"
+      },
+      {
+       "texto": "Muito vagamente me lembro que est[G]ou"
+      },
+      {
+       "texto": "Em uma bo[F]ate aqui na zona s[C]ul"
+      },
+      {
+       "texto": "Eu bebi dem[G]ais"
+      },
+      {
+       "texto": "E não cons[F]igo me lembrar sequ[C]er"
+      },
+      {
+       "texto": "Qual era o nome daquela mulh[G]er"
+      },
+      {
+       "texto": "A flor da n[F]oite na b[G]oate az[C]ul"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pos-felipe-rodrigo",
+   "titulo": "Pós",
+   "artista": "Felipe & Rodrigo",
+   "tom": "E",
+   "genero": "sertanejo",
+   "idioma": "pt-BR",
+   "compasso": "4/4",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "Felipe & Rodrigo",
+    "atribuicao": "Letra e música de Felipe & Rodrigo. Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "intro",
+     "nome": "Intro",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[E] [F#] [G#m7]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "H[E]oje eu volt[F#]ei no pass[G#m7]ado"
+      },
+      {
+       "texto": "P[E]assei n[F#]a sua f[G#m7]oto"
+      },
+      {
+       "texto": "N[E]ão fui eu que molhei"
+      },
+      {
+       "texto": "M[B2]eu celular, foi o c[F#]opo"
+      }
+     ]
+    },
+    {
+     "tipo": "pre-refrao",
+     "nome": "Pré-Refrão",
+     "linhas": [
+      {
+       "texto": "Pens[E]ei em ligar"
+      },
+      {
+       "texto": "Mas eu pensei melhor"
+      },
+      {
+       "texto": "[B2]   Deixei quieto"
+      },
+      {
+       "texto": "Porque nós começa na c[C#m]ama"
+      },
+      {
+       "texto": "E sempre termina na br[E]iga"
+      },
+      {
+       "texto": "Eu e vo[B2]cê não vale mais a tentativa"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão Final",
+     "linhas": [
+      {
+       "texto": "E aí cê me l[E]iga"
+      },
+      {
+       "texto": "Atendo ou não atendo?"
+      },
+      {
+       "texto": "Atendo ou não atendo?"
+      },
+      {
+       "texto": "Boa noite, v[B2]ida"
+      },
+      {
+       "texto": "E a raiva que eu tava sentindo"
+      },
+      {
+       "texto": "Some num instante"
+      },
+      {
+       "texto": "Que eu ouço a v[C#m]oz, e n[E]ós"
+      },
+      {
+       "texto": "Só v[B2]ive o momento"
+      },
+      {
+       "texto": "E que se foda o pós"
+      },
+      {
+       "texto": "E aí cê me l[E]iga"
+      },
+      {
+       "texto": "Atendo ou não atendo?"
+      },
+      {
+       "texto": "Atendo ou não atendo?"
+      },
+      {
+       "texto": "Boa noite, v[B2]ida"
+      },
+      {
+       "texto": "E a raiva que eu tava sentindo"
+      },
+      {
+       "texto": "Some num instante"
+      },
+      {
+       "texto": "Que eu ouço a v[C#m]oz, e n[E]ós"
+      },
+      {
+       "texto": "Só v[B2]ive o momento"
+      },
+      {
+       "texto": "E que se foda o pós"
+      },
+      {
+       "texto": "E n[E]ós, n[C#m]ós"
+      },
+      {
+       "texto": "Só v[B2]ive o momento"
+      },
+      {
+       "texto": "E que se foda o pós"
+      },
+      {
+       "texto": "( C#m  E )"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

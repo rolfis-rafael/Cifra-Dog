@@ -3,10 +3,12 @@
   "short_name": "Cifra-Dog",
   "description": "Suas cifras e repertórios, no celular e no computador.",
   "lang": "pt-BR",
+  "id": "./",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
   "orientation": "any",
+  "categories": ["music", "productivity"],
   "background_color": "#160d09",
   "theme_color": "#1b100b",
   "icons": [

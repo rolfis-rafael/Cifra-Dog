@@ -2,10 +2,11 @@
 (function (global) {
     'use strict';
     const generos = [
-        ['rock', 'Rock'], ['pop', 'Pop'], ['metal', 'Metal'], ['sertanejo', 'Sertanejo'],
-        ['mpb', 'MPB'], ['samba', 'Samba'], ['reggae', 'Reggae'], ['gospel', 'Gospel'],
-        ['blues', 'Blues'], ['jazz', 'Jazz'], ['forro', 'Forró'], ['funk', 'Funk'],
-    ].map(([id, nome], arte) => ({ id, nome, arte }));
+        // [id, nome, variações (frase curta que aparece embaixo do nome na busca)]
+        ['rock', 'Rock', 'rock nacional / clássicos'], ['pop', 'Pop', 'pop / pop rock'], ['metal', 'Metal', 'metal / hard rock'], ['sertanejo', 'Sertanejo', 'sertanejo / modão'],
+        ['mpb', 'MPB', 'MPB / bossa nova'], ['samba', 'Samba', 'samba / pagode'], ['reggae', 'Reggae', 'reggae / ska'], ['gospel', 'Gospel', 'gospel / religioso'],
+        ['blues', 'Blues', 'blues / soul'], ['jazz', 'Jazz', 'jazz / standards'], ['forro', 'Forró', 'forró / baião'], ['funk', 'Funk', 'hip hop / funk'],
+    ].map(([id, nome, variacoes], arte) => ({ id, nome, variacoes, arte }));
     const artistas = {
         rock: ['legiao urbana', 'foo fighters', 'charlie brown jr', 'creed', 'goo goo dolls', 'capital inicial', 'oasis', 'skank', 'cazuza', 'barao vermelho', 'raul seixas', 'rita lee', 'titas', 'paralamas do sucesso', 'engenheiros do hawaii', 'detonautas', 'pitty', 'nirvana', 'pearl jam', 'red hot chili peppers', 'ac dc', 'ac/dc', 'guns n roses', 'guns n\' roses', 'bon jovi', 'queen', 'the beatles', 'pink floyd', 'u2', 'r e m', 'r.e.m.', 'los hermanos', 'jota quest', 'kid abelha', 'lulu santos', 'the calling', 'audioslave', 'linkin park', 'nickelback', 'green day', 'the cranberries', 'eagles', 'dire straits', '4 non blondes', 'chuck berry', 'elvis presley'],
         pop: ['george michael', 'benson boone', 'roupa nova', 'michael jackson', 'bruno mars', 'adele', 'ed sheeran', 'maroon 5', 'coldplay', 'the police', 'sting', 'a ha', 'a-ha', 'tears for fears', 'roxette', 'phil collins', 'elton john', 'toto', 'simply red', 'backstreet boys', 'robbie williams', 'seal', 'john mayer', 'james blunt', 'soul asylum', 'avril lavigne', 'hoobastank', 'christina perri', 'harry styles', 'taylor swift', 'lady gaga', 'dua lipa', 'sabrina carpenter', 'shakira'],

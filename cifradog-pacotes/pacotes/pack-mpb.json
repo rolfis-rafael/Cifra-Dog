@@ -1,0 +1,2593 @@
+{
+ "formato": "cifradog.pacote",
+ "versao": 1,
+ "pacote": {
+  "id": "pack-mpb",
+  "nome": "MPB",
+  "descricao": "MPB para violão e voz. Seleção do repertório do Rolfis.",
+  "autor": "Rafael Carneiro (Rolfis)",
+  "revisao": 1,
+  "atualizadoEm": "2026-11-24",
+  "idioma": "pt-BR",
+  "tags": [
+   "mpb"
+  ]
+ },
+ "musicas": [
+  {
+   "id": "exagerado-cazuza",
+   "titulo": "Exagerado",
+   "artista": "Cazuza",
+   "tom": "G",
+   "genero": "mpb",
+   "idioma": "pt-BR",
+   "bpm": 136,
+   "compasso": "4/4",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "Cazuza",
+    "atribuicao": "Letra e música de Cazuza. Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "intro",
+     "nome": "Intro",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[G] [D] [C]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[G] [D] [C]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[G] [D] [C]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[G] [D] [C]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "[G]  Amor da m[D]inha v[C]ida"
+      },
+      {
+       "texto": "[G]  Daqui até a et[D]ernid[C]ade"
+      },
+      {
+       "texto": "[Em]   Nossos destinos for[D]am traçados"
+      },
+      {
+       "texto": "Na m[C]aternidade"
+      },
+      {
+       "texto": "[G]  Paixão cruel des[D]enfre[C]ada"
+      },
+      {
+       "texto": "[G]  Te trago mil ros[D]as roub[C]adas"
+      },
+      {
+       "texto": "[Em]   Pra desculpar minhas ment[D]iras"
+      },
+      {
+       "texto": "[B7]   Minhas mancadas"
+      },
+      {
+       "texto": "Refrão]"
+      },
+      {
+       "texto": "Exager[C]ado"
+      },
+      {
+       "texto": "Jog[D]ado aos teus pés"
+      },
+      {
+       "texto": "Eu sou m[G]esmo exager[C]ado"
+      },
+      {
+       "texto": "Ad[Em]oro um amor invent[D]ado [C]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "[G]  Eu nunca mais vou r[D]espir[C]ar"
+      },
+      {
+       "texto": "[G]  Se você não m[D]e not[C]ar"
+      },
+      {
+       "texto": "[Em]   Eu posso até morrer de f[D]ome"
+      },
+      {
+       "texto": "Se voc[C]ê não me amar"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Terceira Parte",
+     "linhas": [
+      {
+       "texto": "[Em]   E por você eu largo t[Bm]udo"
+      },
+      {
+       "texto": "[F]  Vou mendigar, roubar, matar"
+      },
+      {
+       "texto": "[Em]   Até nas coisas m[Bm]ais banais"
+      },
+      {
+       "texto": "[F]  Pra mim é tudo ou nunca m[B7]ais"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "Exager[C]ado"
+      },
+      {
+       "texto": "Jog[D]ado aos teus pés"
+      },
+      {
+       "texto": "Eu sou m[G]esmo exager[C]ado"
+      },
+      {
+       "texto": "Ad[Em]oro um amor invent[D]ado [C]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[G] [D] [C]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[G] [D] [C]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[G] [D] [C]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[G] [D] [C]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Quarta Parte",
+     "linhas": [
+      {
+       "texto": "[Em]   E por você eu largo t[Bm]udo"
+      },
+      {
+       "texto": "Carr[F]eira, dinheiro, canudo"
+      },
+      {
+       "texto": "[Em]   Até nas coisas mais ban[Bm]ais"
+      },
+      {
+       "texto": "[F]  Pra mim é tudo ou nunca m[B7]ais"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "Exager[C]ado"
+      },
+      {
+       "texto": "Jog[D]ado aos teus pés"
+      },
+      {
+       "texto": "Eu sou m[G]esmo exager[C]ado"
+      },
+      {
+       "texto": "Ad[Em]oro um amor invent[D]ado [C]"
+      },
+      {
+       "texto": "Jogado aos teus pés"
+      },
+      {
+       "texto": "[D]  Com mil rosas roub[G]adas, exager[C]ado"
+      },
+      {
+       "texto": "Eu ad[Em]oro um amor invent[D]ado [C]"
+      },
+      {
+       "texto": "Jogado aos teus pés [D]"
+      },
+      {
+       "texto": "Eu sou m[G]esmo exager[C]ado"
+      },
+      {
+       "texto": "Ad[Em]oro um amor invent[D]ado [C]   [G]"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "eu-te-devoro-djavan",
+   "titulo": "Eu Te Devoro",
+   "artista": "Djavan",
+   "tom": "D",
+   "genero": "mpb",
+   "idioma": "pt-BR",
+   "compasso": "4/4",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "Djavan",
+    "atribuicao": "Letra e música de Djavan. Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "intro",
+     "nome": "Intro",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[D7M] [Bm7(9)] [G9] [Em] [A7(4/9)]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[D7M] [Bm7(9)] [G9] [Em] [A7(4/9)]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "T[D7M]eus sinais"
+      },
+      {
+       "texto": "Me confundem da cab[Bm7(9)]eça aos pés"
+      },
+      {
+       "texto": "Mas por dentro"
+      },
+      {
+       "texto": "Eu te devor[G9]o   [Em]    [A7(4/9)]"
+      },
+      {
+       "texto": "T[D7M]eu olhar"
+      },
+      {
+       "texto": "Não me diz exato q[Bm7(9)]uem tu és"
+      },
+      {
+       "texto": "Mesmo assim eu te dev[G9]oro"
+      },
+      {
+       "texto": "T[Em]e devorar[A7(4/9)]ia"
+      },
+      {
+       "texto": "A qu[D7M]alquer preço"
+      },
+      {
+       "texto": "Porque te ignoro, t[Bm7(9)]e conheço"
+      },
+      {
+       "texto": "Quando chove"
+      },
+      {
+       "texto": "Ou quando f[G9]az frio [Em]    [A7(4/9)]"
+      },
+      {
+       "texto": "N[D7M]outro plano"
+      },
+      {
+       "texto": "Te devoraria t[Bm7(9)]al Caetano"
+      },
+      {
+       "texto": "A Leonardo DiC[G9]aprio"
+      },
+      {
+       "texto": "[C7(9)]É um milagre"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "T[Bm]udo que Deus cri[B9/A]ou pensando em v[G7M]ocê"
+      },
+      {
+       "texto": "Fez a V[Bm]ia-Láctea, f[B9/A]ez os dinoss[G7M]auros"
+      },
+      {
+       "texto": "Sem pens[Bm]ar em nada, f[B9/A]ez a minha v[G7M]ida"
+      },
+      {
+       "texto": "E t[F#m7]e deu [G7M]"
+      },
+      {
+       "texto": "Sem cont[Bm]ar os dias qu[B9/A]e me faz m[G7M]orrer"
+      },
+      {
+       "texto": "Sem sab[Bm]er de ti, jog[B9/A]ado à sol[G7M]idão"
+      },
+      {
+       "texto": "Mas se q[Bm]uer saber"
+      },
+      {
+       "texto": "Se eu q[B9/A]uero outra v[G7M]ida"
+      },
+      {
+       "texto": "N[F#m7]ão, não [G7M]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[D7M] [Bm7(9)] [G9] [Em] [A7(4/9)]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[D7M] [Bm7(9)] [G9] [Em] [A7(4/9)]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "T[D7M]eus sinais"
+      },
+      {
+       "texto": "Me confundem da cab[Bm7(9)]eça aos pés"
+      },
+      {
+       "texto": "Mas por dentro"
+      },
+      {
+       "texto": "Eu te devor[G9]o   [Em]    [A7(4/9)]"
+      },
+      {
+       "texto": "T[D7M]eu olhar"
+      },
+      {
+       "texto": "Não me diz exato q[Bm7(9)]uem tu és"
+      },
+      {
+       "texto": "Mesmo assim eu te dev[G9]oro"
+      },
+      {
+       "texto": "T[Em]e devorar[A7(4/9)]ia"
+      },
+      {
+       "texto": "A qu[D7M]alquer preço"
+      },
+      {
+       "texto": "Porque te ignoro ou t[Bm7(9)]e conheço"
+      },
+      {
+       "texto": "Quando chove"
+      },
+      {
+       "texto": "Ou quando f[G9]az frio [Em]    [A7(4/9)]"
+      },
+      {
+       "texto": "N[D7M]outro plano"
+      },
+      {
+       "texto": "Te devoraria t[Bm7(9)]al Caetano"
+      },
+      {
+       "texto": "A Leonardo DiC[G9]aprio"
+      },
+      {
+       "texto": "[C7(9)]É um milagre"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "T[Bm]udo que Deus cri[B9/A]ou pensando em v[G7M]ocê"
+      },
+      {
+       "texto": "Fez a V[Bm]ia-Láctea, f[B9/A]ez os dinoss[G7M]auros"
+      },
+      {
+       "texto": "Sem pens[Bm]ar em nada, f[B9/A]ez a minha v[G7M]ida"
+      },
+      {
+       "texto": "E t[F#m7]e deu [G7M]"
+      },
+      {
+       "texto": "Sem cont[Bm]ar os dias qu[B9/A]e me faz m[G7M]orrer"
+      },
+      {
+       "texto": "Sem sab[Bm]er de ti, jog[B9/A]ado à sol[G7M]idão"
+      },
+      {
+       "texto": "Mas se q[Bm]uer saber"
+      },
+      {
+       "texto": "Se eu q[B9/A]uero outra v[G7M]ida"
+      },
+      {
+       "texto": "N[F#m7]ão, não [G7M]"
+      }
+     ]
+    },
+    {
+     "tipo": "final",
+     "nome": "Final",
+     "linhas": [
+      {
+       "texto": "[D7M]    Eu quero mesmo é viver"
+      },
+      {
+       "texto": "Pr[Bm7(9)]a esperar, esperar"
+      },
+      {
+       "texto": "Devor[G9]ar você [Em]    [A7(4/9)]"
+      },
+      {
+       "texto": "[D7M]    Eu quero mesmo é viver"
+      },
+      {
+       "texto": "Pr[Bm7(9)]a esperar, esperar"
+      },
+      {
+       "texto": "Devor[G9]ar você [Em]    [A7(4/9)]"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "se-djavan",
+   "titulo": "Se",
+   "artista": "Djavan",
+   "tom": "A",
+   "genero": "mpb",
+   "idioma": "pt-BR",
+   "compasso": "4/4",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "Djavan",
+    "atribuicao": "Letra e música de Djavan. Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "verso",
+     "nome": "Música",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[A] [D] [F#m7(11)] [E]"
+      },
+      {
+       "tipo": "obs",
+       "texto": "Intro]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[A] [D] [F#m7(11)] [E]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[A] [D] [F#m7(11)] [E]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[A] [D] [F#m7(11)] [E]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "Você d[A]isse que n[D]ão sabe se n[F#m7]ão"
+      },
+      {
+       "texto": "Mas tamb[A]ém não tem cert[D]eza que s[C#m7]im"
+      },
+      {
+       "texto": "[D7M(9)]       Quer sab[G#m7]er? Qu[F#m7]ando é ass[B7]im"
+      },
+      {
+       "texto": "Deixa v[D]ir d[C#m7]o    c[Bm7]oração [E4/7(9)]         [G7M(6/9)]"
+      },
+      {
+       "texto": "Você s[A]abe que eu s[D]ó penso em voc[F#m7]ê"
+      },
+      {
+       "texto": "Você d[A]iz que viv[D]e pensando em m[C#m7]im"
+      },
+      {
+       "texto": "[D7M(9)]       Pode s[G#m7]er"
+      },
+      {
+       "texto": "S[F#m7]e é ass[B7]im"
+      }
+     ]
+    },
+    {
+     "tipo": "pre-refrao",
+     "nome": "Pré-Refrão",
+     "linhas": [
+      {
+       "texto": "Você t[D]em que largar a m[C#m7]ão do não"
+      },
+      {
+       "texto": "S[D]oltar essa louca, ard[C#m7]er de paixão"
+      },
+      {
+       "texto": "Não há c[D]omo doer pra d[C#m7]ecidir"
+      },
+      {
+       "texto": "Só diz[Bm7]er sim ou não"
+      },
+      {
+       "texto": "Mas v[D]ocê [C#m7]a____d[Bm7]o___r[E4/7(9)]a um    s[A]e"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[D] [F#m7(11)] [E]"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "[A]  Eu levo [D]a sério mas voc[F#m7(11)]ê disfarça [E]"
+      },
+      {
+       "texto": "[A]  Você m[D]e diz à beça e eu n[F#m7(11)]essa de horr[E]or"
+      },
+      {
+       "texto": "[A]  E me r[D]emete ao frio que v[F#m7(11)]em lá do s[E]ul"
+      },
+      {
+       "texto": "[A]  Insiste [D]em zero a zero e eu q[F#m7(11)]uero um a [E]um"
+      },
+      {
+       "texto": "[A]  Sei lá o que t[D]e dá, não qu[F#m7(11)]er meu cal[E]or"
+      },
+      {
+       "texto": "[A]  São Jorg[D]e, por favor, me empr[F#m7(11)]esta o drag[E]ão"
+      },
+      {
+       "texto": "[A]  Mais fácil apr[D]ender japon[F#m7(11)]ês em   br[E]aille"
+      },
+      {
+       "texto": "[A]  Do que v[D]ocê decidir s[F#m7(11)]e dá ou  n[E]ão"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[A] [D] [F#m7(11)] [E]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[A] [D] [F#m7(11)] [E]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "Você d[A]isse que n[D]ão sabe se n[F#m7]ão"
+      },
+      {
+       "texto": "Mas tamb[A]ém não tem cert[D]eza que s[C#m7]im"
+      },
+      {
+       "texto": "[D7M(9)]       Quer sab[G#m7]er? Qu[F#m7]ando é ass[B7]im"
+      },
+      {
+       "texto": "Deixa v[D]ir d[C#m7]o    c[Bm7]oração [E4/7(9)]         [G7M(6/9)]"
+      },
+      {
+       "texto": "Você s[A]abe que eu s[D]ó penso em voc[F#m7]ê"
+      },
+      {
+       "texto": "Você d[A]iz que viv[D]e pensando em m[C#m7]im"
+      },
+      {
+       "texto": "[D7M(9)]       Pode s[G#m7]er"
+      },
+      {
+       "texto": "S[F#m7]e é ass[B7]im"
+      }
+     ]
+    },
+    {
+     "tipo": "pre-refrao",
+     "nome": "Pré-Refrão",
+     "linhas": [
+      {
+       "texto": "Você t[D]em que largar a m[C#m7]ão do não"
+      },
+      {
+       "texto": "S[D]oltar essa louca, ard[C#m7]er de paixão"
+      },
+      {
+       "texto": "Não há c[D]omo doer pra d[C#m7]ecidir"
+      },
+      {
+       "texto": "Só diz[Bm7]er sim ou não"
+      },
+      {
+       "texto": "Mas v[D]ocê [C#m7]a____d[Bm7]o___r[E4/7(9)]a um    s[A]e"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[D] [F#m7(11)] [E]"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "[A]  Eu levo [D]a sério mas voc[F#m7(11)]ê disfarça [E]"
+      },
+      {
+       "texto": "[A]  Você m[D]e diz à beça e eu n[F#m7(11)]essa de horr[E]or"
+      },
+      {
+       "texto": "[A]  E me r[D]emete ao frio que v[F#m7(11)]em lá do s[E]ul"
+      },
+      {
+       "texto": "[A]  Insiste [D]em zero a zero e eu q[F#m7(11)]uero um a [E]um"
+      },
+      {
+       "texto": "[A]  Sei lá o que t[D]e dá, não qu[F#m7(11)]er meu cal[E]or"
+      },
+      {
+       "texto": "[A]  São Jorg[D]e, por favor, me empr[F#m7(11)]esta o drag[E]ão"
+      },
+      {
+       "texto": "[A]  Mais fácil apr[D]ender japon[F#m7(11)]ês em   br[E]aille"
+      },
+      {
+       "texto": "[A]  Do que v[D]ocê decidir s[F#m7(11)]e dá ou  n[E]ão"
+      },
+      {
+       "texto": "[A]  Eu levo [D]a sério mas voc[F#m7(11)]ê disfarça [E]"
+      },
+      {
+       "texto": "[A]  Você m[D]e diz à beça e eu n[F#m7(11)]essa de horr[E]or"
+      },
+      {
+       "texto": "[A]  E me r[D]emete ao frio que v[F#m7(11)]em lá do s[E]ul"
+      },
+      {
+       "texto": "[A]  Insiste [D]em zero a zero e eu q[F#m7(11)]uero um a [E]um"
+      },
+      {
+       "texto": "[A]  Sei lá o que t[D]e dá, não qu[F#m7(11)]er meu cal[E]or"
+      },
+      {
+       "texto": "[A]  São Jorg[D]e, por favor, me empr[F#m7(11)]esta o drag[E]ão"
+      },
+      {
+       "texto": "[A]  Mais fácil apr[D]ender japon[F#m7(11)]ês em   br[E]aille"
+      },
+      {
+       "texto": "[A]  Do que v[D]ocê decidir s[F#m7(11)]e dá ou  n[E]ão"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "final-feliz-jorge-vercillo",
+   "titulo": "Final Feliz",
+   "artista": "Jorge Vercillo",
+   "tom": "C",
+   "genero": "mpb",
+   "idioma": "pt-BR",
+   "compasso": "4/4",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "Jorge Vercillo",
+    "atribuicao": "Letra e música de Jorge Vercillo. Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "intro",
+     "nome": "Intro",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[C7M(9)] [Am7(11)] [F7M] [Fm6]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[C7M(9)] [Am7(11)] [F7M] [Fm6]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "[C7M]    Chega de fingir [G/B]"
+      },
+      {
+       "texto": "[Am7]Eu não tenho nada a escond[Am7/G]er"
+      },
+      {
+       "texto": "Ag[F7M]ora é pra valer, h[Fm6]aja o que houver"
+      },
+      {
+       "texto": "Eu n[C7M]ão tô nem aí [G/B]"
+      },
+      {
+       "texto": "Eu n[Am7]ão tô nem aqui pro que d[Am7/G]izem"
+      },
+      {
+       "texto": "Eu qu[F7M]ero é ser feliz [Fm6]e viver pra ti"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "P[C7M]ode me abraçar sem m[G/B]e____[Am7]do   [Am7/G]"
+      },
+      {
+       "texto": "P[F7M]ode encostar tua m[Am/E]ão"
+      },
+      {
+       "texto": "Na m[D#]inha[A7(9-)]        [A7]"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "Meu [Dm7(9)]amor"
+      },
+      {
+       "texto": "Deixa o t[G7(13)]em__po s[F/G]e"
+      },
+      {
+       "texto": "Arrast[Em7(11)]ar sem   [A7(9+)]fim     [A7(9-)]        [A7]"
+      },
+      {
+       "texto": "Meu am[Dm7(9)]or"
+      },
+      {
+       "texto": "Não há m[G7(13)]al  nenh[F/G]um"
+      },
+      {
+       "texto": "Gost[Em7(11)]ar    as[A7(9+)]sim     [A7(9-)]        [A7]"
+      },
+      {
+       "texto": "Oh, meu b[Dm7(9)]em"
+      },
+      {
+       "texto": "Acred[G7(13)]ite    n[F/G]o"
+      },
+      {
+       "texto": "Fin[Em7(11)]al     fe[A7(9+)]liz     [A7(9-)]        [A7]"
+      },
+      {
+       "texto": "Meu am[Dm7(9)]or, meu am[Fm6]or"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "[C7M]    Chega de fingir [G/B]"
+      },
+      {
+       "texto": "[Am7]Eu não tenho nada a escond[Am7/G]er"
+      },
+      {
+       "texto": "Ag[F7M]ora é pra valer, h[Fm6]aja o que houver"
+      },
+      {
+       "texto": "Eu n[C7M]ão tô nem aí [G/B]"
+      },
+      {
+       "texto": "Eu n[Am7]ão tô nem aqui pro que d[Am7/G]izem"
+      },
+      {
+       "texto": "Eu qu[F7M]ero é ser feliz [Fm6]e viver pra ti"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "P[C7M]ode me abraçar sem m[G/B]e____[Am7]do   [Am7/G]"
+      },
+      {
+       "texto": "P[F7M]ode encostar tua m[Am/E]ão"
+      },
+      {
+       "texto": "Na m[D#]inha[A7(9-)]        [A7]"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "Meu [Dm7(9)]amor"
+      },
+      {
+       "texto": "Deixa o t[G7(13)]em__po s[F/G]e"
+      },
+      {
+       "texto": "Arrast[Em7(11)]ar sem   [A7(9+)]fim     [A7(9-)]        [A7]"
+      },
+      {
+       "texto": "Meu am[Dm7(9)]or"
+      },
+      {
+       "texto": "Não há m[G7(13)]al  nenh[F/G]um"
+      },
+      {
+       "texto": "Gost[Em7(11)]ar     as[A7(9+)]sim     [A7(9-)]        [A7]"
+      },
+      {
+       "texto": "Oh, meu b[Dm7(9)]em"
+      },
+      {
+       "texto": "Acred[G7(13)]ite   n[F/G]o"
+      },
+      {
+       "texto": "Fin[Em7(11)]al     fe[A7(9+)]liz     [A7(9-)]        [A7]"
+      },
+      {
+       "texto": "Meu am[Dm7(9)]or, meu am[Fm6]or"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "P[C7M]ode me abraçar sem m[G/B]e____[Am7]do   [Am7/G]"
+      },
+      {
+       "texto": "P[F7M]ode encostar tua m[Am/E]ão"
+      },
+      {
+       "texto": "Na m[D#]inha[A7(9-)]        [A7]"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "Meu [Dm7(9)]amor"
+      },
+      {
+       "texto": "Deixa o t[G7(13)]em__po s[F/G]e"
+      },
+      {
+       "texto": "Arrast[Em7(11)]ar sem   [A7(9+)]fim     [A7(9-)]        [A7]"
+      },
+      {
+       "texto": "Meu am[Dm7(9)]or"
+      },
+      {
+       "texto": "Não há m[G7(13)]al  nenh[F/G]um"
+      },
+      {
+       "texto": "Gost[Em7(11)]ar     as[A7(9+)]sim     [A7(9-)]        [A7]"
+      },
+      {
+       "texto": "Oh, meu b[Dm7(9)]em"
+      },
+      {
+       "texto": "Acred[G7(13)]ite   n[F/G]o"
+      },
+      {
+       "texto": "Fin[Em7(11)]al     fe[A7(9+)]liz     [A7(9-)]        [A7]"
+      },
+      {
+       "texto": "Meu am[Dm7(9)]or, meu am[Fm6]or"
+      }
+     ]
+    },
+    {
+     "tipo": "final",
+     "nome": "Final",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[C7M(9)] [Am7(11)] [F7M] [Fm6]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[C7M(9)] [Am7(11)] [F7M] [Fm6]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[C7M(9)] [Am7(11)] [F7M] [Fm6]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[C7M(9)] [Am7(11)] [F7M] [Fm6]"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "monalisa-jorge-vercillo",
+   "titulo": "Monalisa",
+   "artista": "Jorge Vercillo",
+   "tom": "Dm",
+   "genero": "mpb",
+   "idioma": "pt-BR",
+   "compasso": "4/4",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "Jorge Vercillo",
+    "atribuicao": "Letra e música de Jorge Vercillo. Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "intro",
+     "nome": "Intro",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[Dm7] [Dm7(11)] [Dm7] [G7(4)] [G7]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Em] [Em4] [Em] [E7(4)] [E7]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Dm7] [Dm7(11)] [Dm7] [G7(4)] [G7]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Em] [Em4] [Em] [E7(4)] [E7]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Dm7] [Dm7(11)] [Dm7] [G7(4)] [G7]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Em] [Em4] [Em] [A7(4/9)] [A7]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "É incr[F7M(9)]ível"
+      },
+      {
+       "texto": "N[C/E]ada desvia o des[D#9]tino"
+      },
+      {
+       "texto": "H[A#/D]oje, tud[A#/C#]o faz sentid[F7M(9)]o"
+      },
+      {
+       "texto": "[C/E]E ainda há tanto a apren[D#9]der  [Gm7]     [Gb7]"
+      },
+      {
+       "texto": "E a v[F7M(9)]ida"
+      },
+      {
+       "texto": "T[C/E]ão generosa co[D#9]migo"
+      },
+      {
+       "texto": "V[A#/D]eio, de am[A#/C#]igo a am[F7M]igo"
+      },
+      {
+       "texto": "Me [C/E]apresentar a vo[D#9]cê   [Gbm7(5-)]          [B7]"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "Paral[Dm7]isa  [Dm7(11)]         [Dm7]"
+      },
+      {
+       "texto": "C[G7(4)]om seu [G7]olhar, Monal[Em]isa [Em4]     [Em]"
+      },
+      {
+       "texto": "Seu qu[E7(4)]ase ri[E7]r"
+      },
+      {
+       "texto": "Ilum[Dm7]ina  [Dm7(11)]         [Dm7]"
+      },
+      {
+       "texto": "Tu[G7(4)]do ao r[G7]edor"
+      },
+      {
+       "texto": "Minha v[Em]ida [Em4]     [Em]"
+      },
+      {
+       "texto": "[E7(4)]Ai de [E7]mim"
+      },
+      {
+       "texto": "Me cond[Dm7]uza  [Dm7(11)]         [Dm7]"
+      },
+      {
+       "texto": "Jun[G7(4)]to a voc[G7]ê ou me [Em7]usa [A7(9)]"
+      },
+      {
+       "texto": "Pr[Em7]o seu pra[A7(9)]zer"
+      },
+      {
+       "texto": "Me fasc[Dm7]ina  [Dm7(11)]         [Dm7]"
+      },
+      {
+       "texto": "D[G7(4)]eusa com [G7]ar de men[Em]ina [Em4]     [Em]"
+      },
+      {
+       "texto": "( A7(4/9)  A7 )"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "Não se pr[F7M(9)]enda"
+      },
+      {
+       "texto": "[C/E]A sentimentos an[D#9]tigos"
+      },
+      {
+       "texto": "T[A#/D]udo que s[A#/C#]e foi vivid[F7M(9)]o"
+      },
+      {
+       "texto": "M[C/E]e preparou pra [D#9]você [Gm7]     [Gb7]"
+      },
+      {
+       "texto": "Não se of[F7M(9)]enda"
+      },
+      {
+       "texto": "C[C/E]om meus amores de[D#9] antes"
+      },
+      {
+       "texto": "T[A#/D]odos torn[A#/C#]aram-se [F7M(9)]ponte"
+      },
+      {
+       "texto": "Pr[C/E]a que eu chegasse a vo[D#9]cê"
+      },
+      {
+       "texto": "( Gbm7(5-)  B7 )"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão Final",
+     "linhas": [
+      {
+       "texto": "Paral[Dm7]isa  [Dm7(11)]         [Dm7]"
+      },
+      {
+       "texto": "C[G7(4)]om seu [G7]olhar, Monal[Em]isa [Em4]     [Em]"
+      },
+      {
+       "texto": "Seu qu[E7(4)]ase   [E7]rir"
+      },
+      {
+       "texto": "Ilum[Dm7]ina  [Dm7(11)]         [Dm7]"
+      },
+      {
+       "texto": "Tu[G7(4)]do ao r[G7]edor"
+      },
+      {
+       "texto": "Minha v[Em]ida [Em4]     [Em]"
+      },
+      {
+       "texto": "[E7(4)]Ai de [E7]mim"
+      },
+      {
+       "texto": "Me cond[Dm7]uza  [Dm7(11)]         [Dm7]"
+      },
+      {
+       "texto": "Jun[G7(4)]to a voc[G7]ê ou me [Em7]usa  [A7(9)]"
+      },
+      {
+       "texto": "Pr[Em7]o seu pra[A7(9)]zer"
+      },
+      {
+       "texto": "Me fasc[Dm7]ina  [Dm7(11)]         [Dm7]"
+      },
+      {
+       "texto": "D[G7(4)]eusa com [G7]ar de men[Em]ina [Em4]     [Em]"
+      },
+      {
+       "texto": "( A7(4/9)  A7 )"
+      },
+      {
+       "texto": "Paral[Dm7]isa [Dm7(11)]         [Dm7]"
+      },
+      {
+       "texto": "C[G7(4)]om seu [G7]olhar, Monal[Em]isa [Em4]     [Em]"
+      },
+      {
+       "texto": "E ao qu[E7(4)]ase rir[E7]"
+      },
+      {
+       "texto": "Ilum[Dm7]ina  [Dm7(11)]         [Dm7]"
+      },
+      {
+       "texto": "Tu[G7(4)]do ao r[G7]edor"
+      },
+      {
+       "texto": "Minha v[Em]ida [Em4]     [Em]"
+      },
+      {
+       "texto": "[E7(4)]Ai de [E7]mim"
+      },
+      {
+       "texto": "Me cond[Dm7]uza  [Dm7(11)]         [Dm7]"
+      },
+      {
+       "texto": "Jun[G7(4)]to a voc[G7]ê ou me [Em7]usa  [A7(9)]"
+      },
+      {
+       "texto": "Pr[Em7]o seu pra[A7(9)]zer"
+      },
+      {
+       "texto": "Me fasc[Dm7]ina  [Dm7(11)]         [Dm7]"
+      },
+      {
+       "texto": "D[G7(4)]eusa com [G7]ar de men[Em]ina [Em4]     [Em]"
+      },
+      {
+       "texto": "( A7(4/9)  A7 )"
+      },
+      {
+       "texto": "Me fasc[Dm7]ina  [Dm7(11)]         [Dm7]"
+      },
+      {
+       "texto": "D[G7(4)]eusa com [G7]ar de men[Em]ina [Em4]     [Em]"
+      },
+      {
+       "texto": "( A7(4/9)  A7 )"
+      }
+     ]
+    },
+    {
+     "tipo": "solo",
+     "nome": "Final Solo",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[Dm7] [Dm7(11)] [Dm7] [G7(4)]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Em] [Em4] [Em] [A7(4/9)] [A7]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Dm7] [Dm7(11)] [Dm7] [G7(4)]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Em] [Em4] [Em] [A7(4/9)] [A7]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Dm7] [Dm7(11)] [Dm7] [G7(4)]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Em] [Em4] [Em] [A7(4/9)] [A7]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Dm7] [Dm7(11)] [Dm7] [G7(4)]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Em] [Em4] [Em] [A7(4/9)] [A7]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Dm7]"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "que-nem-mare-jorge-vercillo",
+   "titulo": "Que Nem Maré",
+   "artista": "Jorge Vercillo",
+   "tom": "D",
+   "genero": "mpb",
+   "idioma": "pt-BR",
+   "compasso": "4/4",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "Jorge Vercillo",
+    "atribuicao": "Letra e música de Jorge Vercillo. Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "intro",
+     "nome": "Intro",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[G7M] [G7M(13)] [G7M] [G6]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Gm7M] [Gm7M(13)] [D9] [D]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[B7] [D#7M(11+)/A#]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Tab - Primeira Parte",
+     "linhas": [
+      {
+       "texto": "F[Em7]az um tempão"
+      },
+      {
+       "texto": "Que [A7(9-)]eu não dou trégua"
+      },
+      {
+       "texto": "Ao m[F#m7]eu coração [D7(4)]       [D7]    [B7(4)]       [B7]"
+      },
+      {
+       "texto": "É voc[Em7]ê o meu lugar"
+      },
+      {
+       "texto": "Quando t[A7(9-)]udo"
+      },
+      {
+       "texto": "Por um fio est[F#m7]á     [B7(4)]       [B7]"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Tab - Refrão",
+     "linhas": [
+      {
+       "texto": "Parte 1 de 4"
+      },
+      {
+       "texto": "Parte 2 de 4"
+      },
+      {
+       "texto": "Parte 3 de 4"
+      },
+      {
+       "texto": "Parte 4 de 4"
+      },
+      {
+       "texto": "Nada v[Em7]ai me fazer desistir do amor"
+      },
+      {
+       "texto": "Nada v[A7(4/9)]ai me fazer desist[A7(9)]ir de voltar"
+      },
+      {
+       "texto": "Todo d[F#m7]ia pro seu calor"
+      },
+      {
+       "texto": "Nada vai me lev[B7(4/9)]ar do   a[B7]mor"
+      },
+      {
+       "texto": "Nada v[Em7]ai me fazer desistir do amor"
+      },
+      {
+       "texto": "Nada v[A7(4/9)]ai me fazer desist[A7(9)]ir de voltar"
+      },
+      {
+       "texto": "Todo d[F#m7]ia pro seu calor"
+      },
+      {
+       "texto": "Nada vai me lev[B7(4/9)]ar do   a[B7]mor"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[G7M] [G7M(13)] [G7M] [G6]"
+      },
+      {
+       "texto": "( [Gm7M]D#7M(1[Gm7M(13)]1+)/A# )  [D9]    [D]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Tab - Segunda Parte",
+     "linhas": [
+      {
+       "texto": "F[Em7]az um tempão"
+      },
+      {
+       "texto": "Que [A7(9-)]eu não dou asas"
+      },
+      {
+       "texto": "A m[F#m7]inha emoção [D7(4)]       [D7]    [B7(4)]       [B7]"
+      },
+      {
+       "texto": "Passe[G7M]ar, distrair e me [Gm7M]achar"
+      },
+      {
+       "texto": "Lá [A7(4/9)]        no fundo de t[D7M(9)]i       [D7(9)]"
+      },
+      {
+       "texto": "( B7(4)  B7 )"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "A saud[Em7]ade bateu foi que nem maré"
+      },
+      {
+       "texto": "Quando v[A7(4/9)]em de repente de t[A7(9)]arde"
+      },
+      {
+       "texto": "Invade, transb[F#m7]orda esse bem-me-quer"
+      },
+      {
+       "texto": "A saudade é que n[B7(4/9)]em     ma[B7]ré"
+      },
+      {
+       "texto": "A saud[Em7]ade bateu foi que nem maré"
+      },
+      {
+       "texto": "Quando v[A7(4/9)]em de repente de t[A7(9)]arde"
+      },
+      {
+       "texto": "Invade, transb[F#m7]orda esse bem-me-quer"
+      },
+      {
+       "texto": "A saudade é que n[B7(4/9)]em     ma[B7]ré"
+      }
+     ]
+    },
+    {
+     "tipo": "solo",
+     "nome": "Solo",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[Em7] [A7(4/9)] [A7(9)]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[F#m7] [B7(4/9)] [B7]"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão Final",
+     "linhas": [
+      {
+       "texto": "Nada v[Em7]ai me fazer desistir do amor"
+      },
+      {
+       "texto": "Nada v[A7(4/9)]ai me fazer desistir[A7(9)] de voltar"
+      },
+      {
+       "texto": "Todo d[F#m7]ia pro seu calor"
+      },
+      {
+       "texto": "Nada vai me l[B7(4/9)]evar do a[B7]mor"
+      },
+      {
+       "texto": "A saud[Em7]ade bateu foi que nem maré"
+      },
+      {
+       "texto": "Quando v[A7(4/9)]em de repente de t[A7(9)]arde"
+      },
+      {
+       "texto": "Invade, transb[F#m7]orda esse bem-me-quer"
+      },
+      {
+       "texto": "A saudade é que n[B7(4/9)]em     ma[B7]ré"
+      }
+     ]
+    },
+    {
+     "tipo": "final",
+     "nome": "Final",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[Em7] [A7(4/9)] [A7(9)]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[F#m7] [B7(4/9)] [B7]"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "felicidade-seu-jorge",
+   "titulo": "Felicidade",
+   "artista": "Seu Jorge",
+   "tom": "G",
+   "genero": "mpb",
+   "idioma": "pt-BR",
+   "compasso": "4/4",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "Seu Jorge",
+    "atribuicao": "Letra e música de Seu Jorge. Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "intro",
+     "nome": "Intro",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[G7M] [C7M(9)] [G7M] [C7M(9)]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[G7M] [C7M(9)] [G7M] [C7M(9)]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "Felicid[G7M]ade"
+      },
+      {
+       "texto": "É v[C7M(9)]iver na sua [G7M]companh[C7M(9)]ia"
+      },
+      {
+       "texto": "Felicid[G7M]ade"
+      },
+      {
+       "texto": "É [C7M(9)]estar contigo [G7M]todo d[C7M(9)]ia"
+      },
+      {
+       "texto": "Felicid[G7M]ade"
+      },
+      {
+       "texto": "É s[C7M(9)]entir o cheiro [G7M]dessa fl[C7M(9)]or"
+      },
+      {
+       "texto": "Felicid[G7M]ade"
+      },
+      {
+       "texto": "É s[C7M(9)]aber que eu tenho [G7M]seu am[C7M(9)]or"
+      },
+      {
+       "texto": "Felicid[G7M]ade"
+      },
+      {
+       "texto": "É v[C7M(9)]iver na sua [G7M]companhi[C7M(9)]a"
+      },
+      {
+       "texto": "Felicid[G7M]ade"
+      },
+      {
+       "texto": "É [C7M(9)]estar contigo [G7M]todo di[C7M(9)]a"
+      },
+      {
+       "texto": "Felicid[G7M]ade"
+      },
+      {
+       "texto": "É s[C7M(9)]entir o cheiro [G7M]dessa fl[C7M(9)]or"
+      },
+      {
+       "texto": "Felicid[G7M]ade"
+      },
+      {
+       "texto": "É s[C7M(9)]aber que eu tenho [G7M]seu am[C7M(9)]or"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "Felicid[Em7(11)]ade"
+      },
+      {
+       "texto": "É saber de verd[Bm7]ade"
+      },
+      {
+       "texto": "Que a gente sente saud[Am7]ade"
+      },
+      {
+       "texto": "Quando não consegue se v[F#m7(5-)]er        [B7(#9)]"
+      },
+      {
+       "texto": "Felicid[Em7(11)]ade"
+      },
+      {
+       "texto": "É acordar do seu l[Bm7]ado"
+      },
+      {
+       "texto": "Tomar um café reforç[Am7]ado"
+      },
+      {
+       "texto": "Depois sair pra corr[F#m7(5-)]er com voc[B7(#9)]ê"
+      },
+      {
+       "texto": "Felicid[Em7(11)]ade"
+      },
+      {
+       "texto": "É poder jogar um p[Bm7]ano"
+      },
+      {
+       "texto": "Colar no show do Caet[Am7]ano"
+      },
+      {
+       "texto": "Cantar 'Odara' até o d[F#m7(5-)]ia raiar  [B7(#9)]"
+      },
+      {
+       "texto": "Felicid[Em7(11)]ade"
+      },
+      {
+       "texto": "É num fim de sem[Bm7]ana"
+      },
+      {
+       "texto": "Curtir uma praia bac[C7M]ana"
+      },
+      {
+       "texto": "Um pôr do sol de arras[D7(4/9)]ar"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "Felicid[G7M]ade"
+      },
+      {
+       "texto": "É v[C7M(9)]iver na sua [G7M]companh[C7M(9)]ia"
+      },
+      {
+       "texto": "Felicid[G7M]ade"
+      },
+      {
+       "texto": "É [C7M(9)]estar contigo [G7M]todo d[C7M(9)]ia"
+      },
+      {
+       "texto": "Felicid[G7M]ade"
+      },
+      {
+       "texto": "É s[C7M(9)]entir o cheiro [G7M]dessa fl[C7M(9)]or"
+      },
+      {
+       "texto": "Felicid[G7M]ade"
+      },
+      {
+       "texto": "É s[C7M(9)]aber que eu tenho [G7M]seu a[C7M(9)]mor"
+      },
+      {
+       "texto": "Felicid[G7M]ade"
+      },
+      {
+       "texto": "É v[C7M(9)]iver na sua [G7M]companh[C7M(9)]ia"
+      },
+      {
+       "texto": "Felicid[G7M]ade"
+      },
+      {
+       "texto": "É [C7M(9)]estar contigo [G7M]todo d[C7M(9)]ia"
+      },
+      {
+       "texto": "Felicid[G7M]ade"
+      },
+      {
+       "texto": "É s[C7M(9)]entir o cheiro [G7M]dessa fl[C7M]or"
+      },
+      {
+       "texto": "Felicid[G7M]ade"
+      },
+      {
+       "texto": "É s[C7M(9)]aber que eu tenho [G7M]seu am[C7M(9)]or"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "Felicid[Em7(11)]ade"
+      },
+      {
+       "texto": "É saber de verd[Bm7]ade"
+      },
+      {
+       "texto": "Que a gente sente saud[Am7]ade"
+      },
+      {
+       "texto": "Quando não consegue se v[F#m7(5-)]er        [B7(#9)]"
+      },
+      {
+       "texto": "Felicid[Em7(11)]ade"
+      },
+      {
+       "texto": "É acordar do seu l[Bm7]ado"
+      },
+      {
+       "texto": "Tomar um café reforç[Am7]ado"
+      },
+      {
+       "texto": "Depois sair pra corr[F#m7(5-)]er com voc[B7(#9)]ê"
+      },
+      {
+       "texto": "Felicid[Em7(11)]ade"
+      },
+      {
+       "texto": "É poder jogar um p[Bm7]ano"
+      },
+      {
+       "texto": "Colar no show do Caet[Am7]ano"
+      },
+      {
+       "texto": "Cantar 'Odara' até o d[F#m7(5-)]ia raiar  [B7(#9)]"
+      },
+      {
+       "texto": "Felicid[Em7(11)]ade"
+      },
+      {
+       "texto": "É num fim de sem[Bm7]ana"
+      },
+      {
+       "texto": "Curtir uma praia bac[C7M]ana"
+      },
+      {
+       "texto": "Um pôr do sol de arras[D7(4/9)]ar"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "Felicid[G7M]ade"
+      },
+      {
+       "texto": "É v[C7M(9)]iver na sua [G7M]companh[C7M(9)]ia"
+      },
+      {
+       "texto": "Felicid[G7M]ade"
+      },
+      {
+       "texto": "É [C7M(9)]estar contigo [G7M]todo d[C7M(9)]ia"
+      },
+      {
+       "texto": "Felicid[G7M]ade"
+      },
+      {
+       "texto": "É s[C7M(9)]entir o cheiro [G7M]dessa fl[C7M(9)]or"
+      },
+      {
+       "texto": "Felicid[G7M]ade"
+      },
+      {
+       "texto": "É s[C7M(9)]aber que eu tenho [G7M]seu a[C7M(9)]mor"
+      },
+      {
+       "texto": "Felicidade[G7M]"
+      },
+      {
+       "texto": "É v[C7M(9)]iver na sua [G7M]companh[C7M(9)]ia"
+      },
+      {
+       "texto": "Felicid[G7M]ade"
+      },
+      {
+       "texto": "É [C7M(9)]estar contigo [G7M]todo di[C7M(9)]a"
+      },
+      {
+       "texto": "Felicid[G7M]ade"
+      },
+      {
+       "texto": "É s[C7M(9)]entir o cheiro [G7M]dessa fl[C7M(9)]or"
+      },
+      {
+       "texto": "Felicid[G7M]ade"
+      },
+      {
+       "texto": "É s[C7M(9)]aber que eu tenho [G7M]seu am[C7M(9)]or"
+      }
+     ]
+    },
+    {
+     "tipo": "final",
+     "nome": "Final",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[G7M] [C7M(9)] [G7M] [C7M(9)]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[G7M] [C7M(9)] [G7M] [C7M(9)] [G7M]"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nao-quero-dinheiro-tim-maia",
+   "titulo": "Não Quero Dinheiro",
+   "artista": "Tim Maia",
+   "tom": "F#m",
+   "genero": "mpb",
+   "idioma": "pt-BR",
+   "compasso": "4/4",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "Tim Maia",
+    "atribuicao": "Letra e música de Tim Maia. Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "intro",
+     "nome": "Intro",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[A]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "[A]  Vou pedir pra voc[F#m]ê voltar"
+      },
+      {
+       "texto": "[A]  Vou pedir pra voc[F#m]ê ficar"
+      },
+      {
+       "texto": "Eu te [E4]amo, eu te quero b[A]em [E4]"
+      },
+      {
+       "texto": "[A]  Vou pedir pra voc[F#m]ê gostar"
+      },
+      {
+       "texto": "[A]  Vou pedir pra voc[F#m]ê me amar"
+      },
+      {
+       "texto": "Eu te [Dm]amo, eu te adoro, meu amo[E4]r   [A7(4)]       [A7]"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "A semana int[D]eira, fiquei esper[E/D]ando"
+      },
+      {
+       "texto": "Pra te ver sorr[C#m]indo, pra te ver cant[F#m]ando"
+      },
+      {
+       "texto": "Quando a gente [Bm]ama, não pensa em dinh[E4]eiro"
+      },
+      {
+       "texto": "Só se quer am[A]ar, se quer amar, se quer am[A7(4)]ar"
+      },
+      {
+       "texto": "D[A7]e jeito man[D]eira, não quero dinh[E/D]eiro"
+      },
+      {
+       "texto": "Quero amor sinc[C#m]ero, isto é o que esp[F#m]ero"
+      },
+      {
+       "texto": "Grito ao mundo int[Bm]eiro"
+      },
+      {
+       "texto": "Não quero dinh[E4]eiro eu só quero am[A]ar  [E4]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "[A]  Te espero para v[F#m]er se você vem"
+      },
+      {
+       "texto": "[A]  Não te troco nesta v[F#m]ida"
+      },
+      {
+       "texto": "Por ninguém porque eu te [E4]amo"
+      },
+      {
+       "texto": "Eu te quero b[A]em [E4]"
+      },
+      {
+       "texto": "[A]  Acontece que na v[F#m]ida a gente tem"
+      },
+      {
+       "texto": "[A]  Ser feliz por ser am[F#m]ado por alguem"
+      },
+      {
+       "texto": "Porque eu te [Dm]amo, eu te adoro, meu am[E4]or  [A7(4)]       [A7]"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "A semana int[D]eira, fiquei esper[E/D]ando"
+      },
+      {
+       "texto": "Pra te ver sorr[C#m]indo, pra te ver cant[F#m]ando"
+      },
+      {
+       "texto": "Quando a gente [Bm]ama, não pensa em dinh[E4]eiro"
+      },
+      {
+       "texto": "Só se quer am[A]ar, se quer amar, se quer am[A7(4)]ar"
+      },
+      {
+       "texto": "D[A7]e jeito man[D]eira, não quero dinh[E/D]eiro"
+      },
+      {
+       "texto": "Quero amor sinc[C#m]ero, isto é o que esp[F#m]ero"
+      },
+      {
+       "texto": "Grito ao mundo int[Bm]eiro"
+      },
+      {
+       "texto": "Não quero dinh[E4]eiro eu só quero am[A]ar  [E4]"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "velha-infancia-tribalistas",
+   "titulo": "Velha Infância",
+   "artista": "Tribalistas",
+   "tom": "Am",
+   "genero": "mpb",
+   "idioma": "pt-BR",
+   "compasso": "6/8",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "Tribalistas",
+    "atribuicao": "Letra e música de Tribalistas. Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "intro",
+     "nome": "Intro",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[Am] [Dm] [G] [Am]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Am] [Dm] [G] [Am]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "[Am]    Você é assim"
+      },
+      {
+       "texto": "[Dm]   Um sonho pra mim"
+      },
+      {
+       "texto": "[G]  E quando eu não te v[Am]ejo"
+      },
+      {
+       "texto": "Eu penso em você"
+      },
+      {
+       "texto": "[Dm]   Desde o amanhecer"
+      },
+      {
+       "texto": "[G]  Até quando eu me d[Am]eito"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "Eu gosto d[Dm]e você"
+      },
+      {
+       "texto": "[G]  E gosto d[Am]e ficar com você"
+      },
+      {
+       "texto": "Meu riso é t[Dm]ão feliz contigo"
+      },
+      {
+       "texto": "[G]  O meu melhor am[Am]igo é o meu amor"
+      },
+      {
+       "texto": "E a gente canta"
+      },
+      {
+       "texto": "[Dm]   E a gente dança"
+      },
+      {
+       "texto": "[G]  E a gente não se c[Am]ansa"
+      },
+      {
+       "texto": "De ser criança"
+      },
+      {
+       "texto": "[Dm]   Da gente brincar"
+      },
+      {
+       "texto": "[G]  Da nossa velha inf[Am]ância"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão 2",
+     "linhas": [
+      {
+       "texto": "Seus olhos m[Dm]eu clarão"
+      },
+      {
+       "texto": "[G]  Me guiam d[Am]entro da escuridão"
+      },
+      {
+       "texto": "Seus pés me [Dm]abrem o caminho"
+      },
+      {
+       "texto": "[G]  Eu sigo e n[Am]unca me sinto só"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "Você é assim"
+      },
+      {
+       "texto": "[Dm]   Um sonho pra mim"
+      },
+      {
+       "texto": "[G]  Quero te encher de b[Am]eijos"
+      },
+      {
+       "texto": "Eu penso em você"
+      },
+      {
+       "texto": "[Dm]   Desde o amanhecer"
+      },
+      {
+       "texto": "[G]  Até quando eu me d[Am]eito"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "Eu gosto d[Dm]e você"
+      },
+      {
+       "texto": "[G]  E gosto d[Am]e ficar com você"
+      },
+      {
+       "texto": "Meu riso é t[Dm]ão feliz contigo"
+      },
+      {
+       "texto": "[G]  O meu melhor am[Am]igo é o meu amor"
+      },
+      {
+       "texto": "A gente canta"
+      },
+      {
+       "texto": "[Dm]   A gente dança"
+      },
+      {
+       "texto": "[G]  A gente não se c[Am]ansa"
+      },
+      {
+       "texto": "De ser criança"
+      },
+      {
+       "texto": "[Dm]   Da gente  brincar"
+      },
+      {
+       "texto": "[G]  Da nossa velha inf[Am]ância"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão 2",
+     "linhas": [
+      {
+       "texto": "Seus olhos m[Dm]eu clarão"
+      },
+      {
+       "texto": "[G]  Me guiam d[Am]entro da escuridão"
+      },
+      {
+       "texto": "Seus pés me [Dm]abrem o caminho"
+      },
+      {
+       "texto": "[G]  Eu sigo e n[Am]unca me sinto só"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Terceira Parte",
+     "linhas": [
+      {
+       "texto": "Você é assim"
+      },
+      {
+       "texto": "[Dm]   Um sonho pra mim [G]"
+      },
+      {
+       "texto": "Você é ass[Am]im"
+      },
+      {
+       "texto": "Você é assim"
+      },
+      {
+       "texto": "[Dm]   Um sonho pra mim [G]"
+      },
+      {
+       "texto": "Você é ass[Am]im"
+      },
+      {
+       "texto": "Você é assim"
+      },
+      {
+       "texto": "[Dm]   Um sonho pra mim [G]"
+      },
+      {
+       "texto": "Você é ass[Am]im"
+      }
+     ]
+    },
+    {
+     "tipo": "final",
+     "nome": "Final",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[Dm] [G] [Am] [Dm] [G] [Am]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Dm] [G] [Am] [Dm] [G] [Am]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Dm] [G] [Am] [Dm] [G] [Am]"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "telegrama-zeca-baleiro",
+   "titulo": "Telegrama",
+   "artista": "Zeca Baleiro",
+   "tom": "Dm",
+   "genero": "mpb",
+   "idioma": "pt-BR",
+   "compasso": "4/4",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "Zeca Baleiro",
+    "atribuicao": "Letra e música de Zeca Baleiro. Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "verso",
+     "nome": "Música",
+     "linhas": [
+      {
+       "texto": "Eu tava tr[Em]iste, tristinho"
+      },
+      {
+       "texto": "Mais sem graça"
+      },
+      {
+       "texto": "Que a top-model m[D]agrela na passarela"
+      },
+      {
+       "texto": "Eu tava s[Em]ó, sozinho"
+      },
+      {
+       "texto": "Mais solitário que um paulist[D]ano"
+      },
+      {
+       "texto": "Que um canastrão na hora que cai o pano"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Estrofe 2",
+     "linhas": [
+      {
+       "texto": "Ritmo 1"
+      },
+      {
+       "texto": "[Em]   Tava mais bobo que banda de rock"
+      },
+      {
+       "texto": "Que um palhaço do circo Vost[D]ok"
+      },
+      {
+       "texto": "Mas [Em]ontem eu recebi um telegrama"
+      },
+      {
+       "texto": "Era voc[D]ê de Aracaju ou do Alabama"
+      },
+      {
+       "texto": "Dizendo: N[Em]êgo, sinta-se feliz"
+      },
+      {
+       "texto": "Porque no m[A]undo tem alguém que d[C]iz"
+      },
+      {
+       "texto": "Que muit[B11]o te ama"
+      },
+      {
+       "texto": "Q[C]ue tant[B11]o te ama"
+      },
+      {
+       "texto": "Q[C]ue muit[B11]o, muito te ama"
+      },
+      {
+       "texto": "Q[C]ue tant[B11]o te ama"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "Por isso h[Em11]oje eu acordei"
+      },
+      {
+       "texto": "Com uma vontade danada"
+      },
+      {
+       "texto": "De mandar flores ao delegado"
+      },
+      {
+       "texto": "De bater na porta do viz[D9]inho"
+      },
+      {
+       "texto": "E desejar bom dia"
+      },
+      {
+       "texto": "De beijar o português da padaria"
+      },
+      {
+       "texto": "H[Em11]oje eu acordei"
+      },
+      {
+       "texto": "Com uma vontade danada"
+      },
+      {
+       "texto": "De mandar flores ao delegado"
+      },
+      {
+       "texto": "De bater na porta do viz[D9]inho"
+      },
+      {
+       "texto": "E desejar bom dia"
+      },
+      {
+       "texto": "De beijar o português da padaria"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "M[Em11]ama, oh mama, oh mama"
+      },
+      {
+       "texto": "[D9]   Quero ser seu"
+      },
+      {
+       "texto": "Quero ser seu"
+      },
+      {
+       "texto": "Quero ser seu"
+      },
+      {
+       "texto": "Quero ser seu papa"
+      },
+      {
+       "texto": "M[Em11]ama, oh mama, oh mama"
+      },
+      {
+       "texto": "[D9]   Quero ser seu"
+      },
+      {
+       "texto": "Quero ser seu"
+      },
+      {
+       "texto": "Quero ser seu"
+      },
+      {
+       "texto": "Quero ser seu papa"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte – Estrofe 1",
+     "linhas": [
+      {
+       "texto": "Eu tava tr[Em11]iste, tristinho"
+      },
+      {
+       "texto": "Mais sem graça"
+      },
+      {
+       "texto": "Que a top-model m[D9]agrela na passarela"
+      },
+      {
+       "texto": "Eu tava s[Em11]ó, sozinho"
+      },
+      {
+       "texto": "Mais solitário que um paulist[D9]ano"
+      },
+      {
+       "texto": "Que um vilão de filme mexicano"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Estrofe 2",
+     "linhas": [
+      {
+       "texto": "[Em11]     Tava mais bobo que banda de rock"
+      },
+      {
+       "texto": "Que um palhaço do circo Vost[D9]ok"
+      },
+      {
+       "texto": "Mas [Em11]ontem eu recebi um telegrama"
+      },
+      {
+       "texto": "Era voc[D9]ê de Aracaju ou do Alabama"
+      },
+      {
+       "texto": "Dizendo: N[Em11]êgo, sinta-se feliz"
+      },
+      {
+       "texto": "Porque no m[A]undo tem alguém que d[C]iz"
+      },
+      {
+       "texto": "Que muit[B11]o te ama"
+      },
+      {
+       "texto": "Q[C]ue tant[B11]o te ama"
+      },
+      {
+       "texto": "Q[C]ue muit[B11]o te ama"
+      },
+      {
+       "texto": "Que tant[C]o, tant[B11]o te ama"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "Por isso h[Em11]oje eu acordei"
+      },
+      {
+       "texto": "Com uma vontade danada"
+      },
+      {
+       "texto": "De mandar flores ao delegado"
+      },
+      {
+       "texto": "De bater na porta do viz[D9]inho"
+      },
+      {
+       "texto": "E desejar bom dia"
+      },
+      {
+       "texto": "De beijar o português da padaria"
+      },
+      {
+       "texto": "H[Em11]oje eu acordei"
+      },
+      {
+       "texto": "Com uma vontade danada"
+      },
+      {
+       "texto": "De mandar flores ao delegado"
+      },
+      {
+       "texto": "De bater na porta do viz[D9]inho"
+      },
+      {
+       "texto": "E desejar bom dia"
+      },
+      {
+       "texto": "De beijar o português da padaria"
+      }
+     ]
+    },
+    {
+     "tipo": "interludio",
+     "nome": "Interlúdio",
+     "linhas": [
+      {
+       "texto": "[E5]   Me dê a mão vamos s[D9]air"
+      },
+      {
+       "texto": "Pra ver o sol"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "M[Em11]ama, oh mama, oh mama"
+      },
+      {
+       "texto": "[D9]   Quero ser seu"
+      },
+      {
+       "texto": "Quero ser seu"
+      },
+      {
+       "texto": "Quero ser seu"
+      },
+      {
+       "texto": "Quero ser seu papa"
+      },
+      {
+       "texto": "M[Em11]ama, oh mama, oh mama"
+      },
+      {
+       "texto": "[D9]   Quero ser seu"
+      },
+      {
+       "texto": "Quero ser seu"
+      },
+      {
+       "texto": "Quero ser seu"
+      },
+      {
+       "texto": "Quero ser seu papa"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "Por isso h[Em11]oje eu acordei"
+      },
+      {
+       "texto": "Com uma vontade danada"
+      },
+      {
+       "texto": "De mandar flores ao delegado"
+      },
+      {
+       "texto": "De bater na porta do viz[D9]inho"
+      },
+      {
+       "texto": "E desejar bom dia"
+      },
+      {
+       "texto": "De beijar o português da padaria"
+      },
+      {
+       "texto": "H[Em11]oje eu acordei"
+      },
+      {
+       "texto": "Com uma vontade danada"
+      },
+      {
+       "texto": "De mandar flores ao delegado"
+      },
+      {
+       "texto": "De bater na porta do viz[D9]inho"
+      },
+      {
+       "texto": "E desejar bom dia"
+      },
+      {
+       "texto": "De beijar o português da padaria"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "M[Em11]ama, oh mama, oh mama"
+      },
+      {
+       "texto": "[D9]   Quero ser seu"
+      },
+      {
+       "texto": "Quero ser seu"
+      },
+      {
+       "texto": "Quero ser seu"
+      },
+      {
+       "texto": "Quero ser seu papa"
+      },
+      {
+       "texto": "M[Em11]ama, oh mama, oh mama"
+      },
+      {
+       "texto": "[D9]   Quero ser seu"
+      },
+      {
+       "texto": "Quero ser seu"
+      },
+      {
+       "texto": "Quero ser seu"
+      },
+      {
+       "texto": "Quero ser seu papa"
+      },
+      {
+       "texto": "M[Em11]ama, oh mama, oh mama"
+      },
+      {
+       "texto": "[D9]   Quero ser seu"
+      },
+      {
+       "texto": "Quero ser seu"
+      },
+      {
+       "texto": "Quero ser seu"
+      },
+      {
+       "texto": "Quero ser seu papa"
+      },
+      {
+       "texto": "M[Em11]ama, oh mama, oh mama"
+      },
+      {
+       "texto": "[D9]   Quero ser seu"
+      },
+      {
+       "texto": "Quero ser seu"
+      },
+      {
+       "texto": "Quero ser seu"
+      },
+      {
+       "texto": "Quero ser seu papa"
+      },
+      {
+       "texto": "(fade out pra terminar)"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

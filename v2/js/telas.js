@@ -50,8 +50,9 @@
                 if (a === 'rep') adicionarAoRepertorio(id);
                 if (a === 'editar') { fecharSheet(); ir('#/editar/' + id); }
                 if (a === 'excluir') {
-                    if (await confirmar('Excluir "' + m.titulo + '"?', 'Ela também sai dos repertórios. Não dá para desfazer.', 'Excluir')) {
-                        await DB.excluirMusica(id); toast('Cifra excluída');
+                    if (await confirmar('Excluir "' + m.titulo + '"?', 'Ela também sai dos repertórios. Dá para desfazer logo depois.', 'Excluir')) {
+                        const copiaM = JSON.parse(JSON.stringify(m)), repsAntes = JSON.parse(JSON.stringify(await DB.listarRepertorios()));
+                        await DB.excluirMusica(id); UI.toastAcao('Cifra excluída', 'Desfazer', () => desfazerMusica(copiaM, repsAntes));
                         if (location.hash.includes(id)) history.back(); else App.recarregar();
                     }
                 }
@@ -104,15 +105,31 @@
             });
     }
 
+    /* Desfazer exclusão: devolve a cifra (e a vaga dela nos repertórios) ou o repertório, e tira a marca de "excluído" do histórico de segurança. */
+    async function tirarMarcaExclusao(chave) {
+        const ex = (await DB.lerMeta('exclusoes-sala')) || {};
+        if (ex[chave]) { delete ex[chave]; await DB.gravarMeta('exclusoes-sala', ex); }
+    }
+    async function desfazerMusica(m, repsAntes) {
+        await DB.salvarMusica(m);
+        for (const r of repsAntes) if (r.ordens.some(o => o.itens.some(i => i.musicaId === m.id))) await DB.salvarRepertorio(r);
+        await tirarMarcaExclusao(m.id);
+        toast('Cifra restaurada'); App.recarregar();
+    }
+    async function desfazerRepertorio(r) {
+        await DB.salvarRepertorio(r); await tirarMarcaExclusao('rep:' + r.id);
+        toast('Repertório restaurado'); ir('#/repertorio/' + r.id);
+    }
+
     function baixarRepertorios() {
-        return '<a class="bt" href="baixar.html#repertorios">' + icone('baixar') + 'Baixar repertórios</a>';
+        // Botão de destaque: é por aqui que a pessoa traz repertórios novos (estilo em css/dicas.css, bloco 5).
+        return '<a class="bt prim cheio bt-baixar" href="baixar.html#repertorios">' + icone('baixar') + '<span class="bb-txt"><b>Baixar repertórios</b><small>Pacotes de cifras prontos para importar</small></span></a>';
     }
 
     /* Menu do avatar: backup e instalar. */
     function menuConta() {
         abrirSheet(
             '<div style="text-align:center;padding:4px 0 10px"><img src="img/brand/logo-pub.webp" decoding="async" alt="Cifra-Dog" style="width:240px;max-width:85%"></div>' +
-            (App.podeInstalar() ? '<button class="op" data-a="instalar">' + icone('instalar') + 'Instalar o Cifra-Dog neste aparelho</button>' : '') +
             '<button class="op" data-a="config">' + icone('ajustes') + 'Configurações (pedal e MIDI)</button>' +
             '<button class="op" data-a="sala">' + icone('violao') + 'Estudo, palco e segurança</button>' +
             '<button class="op" data-a="exportar">' + icone('baixar') + 'Exportar backup (.json)</button>' +
@@ -120,7 +137,6 @@
             '<p class="dica" style="margin:10px 4px 0">As cifras ficam salvas neste aparelho. Use o backup para passar do celular para o computador (ou o contrário).</p>',
             sh => sh.querySelectorAll('[data-a]').forEach(b => b.onclick = () => {
                 const a = b.dataset.a;
-                if (a === 'instalar') App.instalar();
                 if (a === 'config') { fecharSheet(); ir('#/config'); }
                 if (a === 'sala') { fecharSheet(); Sala.abrir(); }
                 if (a === 'exportar') App.exportar();
@@ -154,7 +170,7 @@
 
     async function inicio(p, q) {
         const filtro = q.f || 'tudo';
-        const [ms, rs, ultima] = await Promise.all([DB.listarMusicas(), DB.listarRepertorios(), DB.lerMeta('ultima')]);
+        const [ms, rs, ultima, bvVisto] = await Promise.all([DB.listarMusicas(), DB.listarRepertorios(), DB.lerMeta('ultima'), DB.lerMeta('boas-vindas-v1')]);
         const chips = [['tudo', 'Tudo'], ['cifras', 'Cifras'], ['repertorios', 'Repertórios'], ['curtidas', 'Curtidas']];
         let h = '<div class="topo"><button class="avatar" data-conta style="background-image:url(img/brand/dog-pub.webp)" aria-label="Menu"></button>' +
             '<div class="chips">' + chips.map(([k, t]) => '<a class="chip ' + (k === filtro ? 'ativo' : '') + '" href="#/?f=' + k + '">' + t + '</a>').join('') + '</div></div>';
@@ -169,11 +185,15 @@
                 ...ms.map(m => ({ t: m.abertaEm || 0, html: '<a class="atalho" href="#/cifra/' + m.id + '">' + capaMusica(m) + '<span>' + esc(m.titulo) + '</span></a>' })),
             ].sort((a, b) => b.t - a.t).slice(0, 7);
             h += '<div class="grade"><a class="atalho" href="#/curtidas">' + capaCurtidas() + '<span>Músicas Curtidas</span></a>' + recentes.map(x => x.html).join('') + '</div>';
-            h += '<div class="dupla" style="margin-top:16px">' + baixarRepertorios() + '</div>';
-
-            if (App.podeInstalar()) {
-                h += '<button class="bt prim cheio" style="margin-top:16px" data-instalar>' + icone('instalar') + 'Instalar o Cifra-Dog como app</button>';
+            // Primeira vez: 3 passos curtos (some ao tocar em "Entendi"; só aparece para quem ainda não tem cifras próprias).
+            if (!bvVisto && ms.every(m => m.exemplo)) {
+                h += '<section class="boas-vindas"><b>Bem-vindo ao Cifra-Dog!</b><ol>' +
+                    '<li><a href="baixar.html#repertorios">Baixe um repertório</a> pronto e importe aqui;</li>' +
+                    '<li>ou <a href="#/criar">cole uma cifra</a> sua: o app separa acordes e letra sozinho;</li>' +
+                    '<li>na aba <a href="#/show">Show</a>, toque no ▶ para tocar com a cifra descendo na tela.</li></ol>' +
+                    '<button class="bt" data-bv-fechar>Entendi</button></section>';
             }
+            h += '<div class="dupla" style="margin-top:12px">' + baixarRepertorios() + '</div>';
 
             // "Ingresso" do show: o repertório aberto por último
             const repShow = rs.slice().sort((a, b) => (b.abertoEm || 0) - (a.abertoEm || 0))[0];
@@ -219,8 +239,8 @@
             h += c.length ? '<div class="lista">' + c.map(m => linhaMusica(m)).join('') + '</div>' : '<div class="vazio">Toque no ♡ de uma cifra para ela aparecer aqui.</div>';
         }
         tela().innerHTML = h;
-        const bi = tela().querySelector('[data-instalar]'); if (bi) bi.onclick = () => App.instalar();
         const nr = tela().querySelector('[data-novo-rep]'); if (nr) nr.onclick = novoRepertorio;
+        const bv = tela().querySelector('[data-bv-fechar]'); if (bv) bv.onclick = async () => { await DB.gravarMeta('boas-vindas-v1', true); bv.closest('.boas-vindas').remove(); };
     }
 
     function secaoCarrossel(titulo, cartoes, link) {
@@ -330,7 +350,7 @@
             if (!termo && !tomFiltro && !genero) {
                 res.innerHTML = rotuloPapel('Qual é a sua vibe?') + '<div class="grade-generos">' + Catalogo.generos.map(g => {
                     const n = porGenero[g.id];
-                    return '<a class="genero-cartao" href="#/buscar?genero=' + g.id + '"><div class="genero-arte genero-' + g.arte + '" aria-hidden="true"></div><div class="genero-legenda"><b>' + g.nome + '</b><small>' + n + ' música' + (n === 1 ? '' : 's') + ' na coleção</small></div></a>';
+                    return '<a class="genero-cartao" href="#/buscar?genero=' + g.id + '"><div class="genero-arte genero-' + g.arte + '" aria-hidden="true"></div><div class="genero-legenda"><b>' + g.nome + '</b><small class="genero-var">' + g.variacoes + '</small><small>' + n + ' música' + (n === 1 ? '' : 's') + ' na coleção</small></div></a>';
                 }).join('') + '</div>';
                 return;
             }
@@ -433,8 +453,8 @@
             '<textarea class="entrada" id="c-cifra" aria-label="Texto da cifra" spellcheck="false" placeholder="Cole a cifra aqui (acordes em cima da letra).\n\n[Intro]\nG  D  Em  C\n\n[Verso]\nG              D\nEscreva a letra aqui embaixo\nEm             C\ne os acordes na linha de cima">' + esc(m.cifra) + '</textarea>' +
             '<div id="c-previa" hidden style="background:var(--sup-1);border-radius:8px;padding:12px;min-height:46vh"><div id="cifra-conteudo" style="padding-bottom:0"></div></div>' +
             '<div class="dica" id="c-detectado"></div>' +
-            (!editando && global.Pacotes ? '<details class="mais"><summary>Onde achar cifras livres</summary><div class="lista">' + Pacotes.htmlFontes() +
-                '<a class="op" href="baixar.html#repertorios">' + icone('baixar') + '<span class="op-txt">Baixar repertórios<br><small>Pacotes de cifras livres para importar.</small></span></a></div>' +
+            (!editando && global.Pacotes ? '<details class="mais"><summary>Procurar cifra na internet</summary>' + Pacotes.htmlFontes() +
+                '<div class="lista"><a class="op" href="baixar.html#repertorios">' + icone('baixar') + '<span class="op-txt">Baixar repertórios<br><small>Packs de cifras prontos para importar.</small></span></a></div>' +
                 '<p class="dica">Copie a cifra no site, volte aqui e toque em Colar. Arquivos ChordPro (.cho) entram pelo botão Arquivo.</p></details>' : '') +
             '<details class="mais"' + (editando ? ' open' : '') + '><summary>Mais opções (tom, BPM, capo)</summary>' +
             '<div class="tripla"><div><label>Tom</label><input class="entrada" id="c-tom" placeholder="auto" value="' + esc(m.tom) + '" maxlength="8"></div>' +
@@ -1769,7 +1789,9 @@
                 if (a === 'banda-sync') { fecharSheet(); setTimeout(() => Banda.abrirLider(), 60); }
                 if (a === 'excluir') {
                     if (await confirmar('Excluir "' + r.nome + '"?', 'As cifras continuam salvas, só o repertório é apagado.', 'Excluir')) {
-                        await DB.excluirRepertorio(r.id); toast('Repertório excluído'); ir('#/biblioteca');
+                        const copiaR = JSON.parse(JSON.stringify(r));
+                        await DB.excluirRepertorio(r.id); ir('#/biblioteca');
+                        UI.toastAcao('Repertório excluído', 'Desfazer', () => desfazerRepertorio(copiaR));
                     }
                 }
             })

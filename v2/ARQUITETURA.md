@@ -17,6 +17,8 @@ Resumo para consulta rápida (não substitui o código). Atualize ao mudar a est
 | `js/banda.js` | **banda sincronizada** (`window.Banda`, `Telas.banda`): WebRTC DataChannel líder↔integrantes, convite/resposta por QR ou código (sem servidor); mensagens `musica`/`pos`/`fim`; selo `#banda-selo` |
 | `js/cifra-motor.js` | acordes, transposição, `renderizarCifra`, `detectarTom`, `sugerirCapo`, `chordProParaCifra`, diagramas |
 | `js/db.js` | IndexedDB: stores `musicas`, `repertorios`, `meta`; exportar/importar |
+| `js/filtro-json.js` | **filtro de segurança** (`window.FiltroJson`): todo JSON que entra (backup, repertório, pacote) é reconstruído só com os campos conhecidos, com tipo e tamanho limitados; tira `<script>`/HTML perigoso, links que não são http(s), `__proto__`, ajustes fora da lista (ex.: `pacotesUrl`). Roda em `DB.importar` (db.js e sala.js) e `validarPacote` (pacotes.js). Campo novo na música? Inclua em `CAMPOS_MUSICA` e em `musica()`. Teste: `node tools/verify-filtro-json.cjs` |
+| `js/dicas-rolagem.js` + `css/dicas.css` | **"tem mais aqui"**: degradê + setinha acima da barra de baixo quando há conteúdo abaixo (desligado na cifra/palco/computador), largura dos cartões do carrossel ajustada para sempre aparecer ~40% do próximo, borda esmaecida nos chips, degradê no painel inferior |
 | `js/ui.js` | ícones, `abrirSheet`, `toast`, `perguntar` (máx. 80 letras, vazio = cancelar), `confirmar`, `prefs`, `usuarioRolando` |
 | `js/sala.js` | "Nos bastidores": afinador (microfone, autocorrelação), caderno, histórico de segurança; reescreve `App.importar` |
 | `js/controle.js` | pedal MIDI / teclado, rolagem suave do pedal, trava |

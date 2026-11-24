@@ -48,7 +48,7 @@
 
     const LICENCAS = {
         'dominio-publico': 'Domínio público', cc0: 'CC0', 'cc-by': 'CC BY', 'cc-by-sa': 'CC BY-SA',
-        autorizado: 'Autorizado pelo autor', pessoal: 'Pessoal',
+        autorizado: 'Autorizado pelo autor', transcricao: 'Cifra transcrita pelo autor do pacote', pessoal: 'Pessoal',
     };
     const NOMES_SECAO = {
         intro: 'Intro', verso: 'Verso', 'pre-refrao': 'Pré-refrão', refrao: 'Refrão', ponte: 'Ponte',
@@ -106,6 +106,7 @@
 
     /** Confere um pacote inteiro (mesmas regras do esquema, as que importam para o app). */
     function validarPacote(p) {
+        p = FiltroJson.pacote(p);   // filtro de segurança (js/filtro-json.js): devolve uma cópia limpa
         if (!p || p.formato !== 'cifradog.pacote') throw new Error('Isso não é um pacote de músicas do Cifra-Dog.');
         if (p.versao !== 1) throw new Error('Pacote de uma versão mais nova. Atualize o app.');
         const info = p.pacote || {};
@@ -252,14 +253,14 @@
     }
 
     /** Baixa, confere e instala um pacote do catálogo. */
-    async function instalarDoCatalogo(e) {
+    async function instalarDoCatalogo(e, montarRepertorio = false) {
         const url = new URL(e.arquivo, urlCatalogo()).href;
         const { bytes, json } = await baixarJson(url);
         if (e.sha256) {
             const h = await sha256(bytes);
             if (h && h !== e.sha256) throw new Error('O pacote veio diferente do catálogo (download corrompido ou catálogo desatualizado).');
         }
-        return instalar(validarPacote(json));
+        return instalar(validarPacote(json), montarRepertorio);
     }
 
     /* =====================================================================
@@ -276,13 +277,13 @@
                 '<p>Selecione o arquivo JSON que você baixou. O repertório ficará disponível na aba Show.</p>' +
                 '<div class="dupla"><button class="bt prim" id="pc-arquivo">' + icone('subir') + 'Escolher arquivo</button></div>' +
                 '<input type="file" id="pc-input" accept=".json,application/json" hidden>' :
-            '<p class="dica" style="margin:0 0 12px">Cifras livres (domínio público ou com licença aberta). Depois de instalar, funcionam sem internet. As músicas que você já tem nunca são substituídas.</p>' +
+            '<p class="dica" style="margin:0 0 12px">Pacotes de cifras prontos. Depois de instalar, funcionam sem internet. As músicas que você já tem nunca são substituídas.</p>' +
             '<h2 class="secao">Catálogo</h2><div id="pc-lista"><p class="dica">Carregando o catálogo…</p></div>' +
             '<div class="dupla" style="margin-top:10px"><button class="bt" id="pc-arquivo">' + icone('subir') + 'Pacote de arquivo</button>' +
             '<button class="bt" id="pc-recarregar">' + icone('trocar') + 'Atualizar lista</button></div>' +
             '<input type="file" id="pc-input" accept=".json,application/json" hidden>' +
-            '<h2 class="secao">Fontes de cifras livres</h2><div class="lista">' + htmlFontes() + '</div>' +
-            '<p class="dica">Achou uma cifra livre? Copie, toque em <a href="#/criar">Nova cifra</a> e cole: o app separa acordes e letra sozinho.</p>' +
+            '<h2 class="secao">Procurar cifra na internet</h2>' + htmlFontes() +
+            '<p class="dica">Achou a cifra? Copie, toque em <a href="#/criar">Nova cifra</a> e cole: o app separa acordes e letra sozinho.</p>' +
             '<h2 class="secao">Avançado</h2><button class="op" id="pc-url">' + icone('ajustes') + 'Endereço do catálogo<span class="op-dir" style="max-width:55%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">' + esc(urlCatalogo()) + '</span></button>');
 
         const $ = (id) => document.getElementById(id);
@@ -371,15 +372,48 @@
                 () => { if (mudou && location.hash === '#/pacotes') telaPacotes(); }
             );
         };
-        carregar();
+        /* Vindo do site de download (#/pacotes?instalar=<id>): pergunta, instala e já abre o repertório. */
+        async function instalarDireto(id) {
+            const p = catalogo.find(x => x.id === id);
+            if (!p) { toast('Não achei esse pacote no catálogo. Escolha na lista.'); return; }
+            const ok = await confirmar('Instalar "' + p.nome + '"?',
+                (Number(p.qtdMusicas) || 'Várias') + ' músicas · ' + (LICENCAS[p.licenca] || '') + '. Elas funcionam sem internet e viram um repertório na aba Show. Músicas suas com o mesmo nome continuam como estão.', 'Instalar');
+            if (!ok) return;
+            try {
+                toast('Baixando…');
+                const r = await instalarDoCatalogo(p, true);
+                toast('Pacote instalado: ' + resumo(r));
+                location.hash = '#/repertorio/pacote-' + p.id;
+            } catch (e) { toast(e.message); }
+        }
+        carregar().then(() => { if (q.instalar && RE_ID.test(q.instalar)) instalarDireto(q.instalar); });
     }
 
-    /** Lista de fontes livres (também usada no editor). */
+    /* Procurar cifra na internet: abre a pesquisa numa nova aba do navegador (o app não guarda nem envia nada). */
+    const SITES_BUSCA = {
+        google: t => 'https://www.google.com/search?q=' + encodeURIComponent('cifra ' + t),
+        cifraclub: t => 'https://www.cifraclub.com.br/?q=' + encodeURIComponent(t),
+    };
     function htmlFontes() {
-        return FONTES_LIVRES.map(f =>
-            '<a class="op" href="' + esc(f.url) + '" target="_blank" rel="noopener noreferrer">' + icone('busca') +
-            '<span class="op-txt">' + esc(f.nome) + '<br><small>' + esc(f.desc) + '</small></span><span class="op-dir">↗</span></a>').join('');
+        return '<form class="form" data-busca-cifra>' +
+            '<label>Música ou artista</label>' +
+            '<input class="entrada" name="termo" type="search" maxlength="120" autocomplete="off" placeholder="Ex.: Tempo Perdido Legião Urbana">' +
+            '<div class="dupla" style="margin-top:8px"><button class="bt prim" type="submit" data-site="google">' + icone('busca') + 'Procurar no Google</button>' +
+            '<button class="bt" type="button" data-site="cifraclub">Cifra Club</button></div></form>';
     }
+    function procurarCifra(form, site) {
+        const termo = form.elements.termo.value.trim();
+        if (!termo) { form.elements.termo.focus(); return; }
+        window.open(SITES_BUSCA[site](termo), '_blank', 'noopener,noreferrer');
+    }
+    document.addEventListener('submit', (e) => {
+        const f = e.target.closest && e.target.closest('form[data-busca-cifra]');
+        if (f) { e.preventDefault(); procurarCifra(f, 'google'); }
+    });
+    document.addEventListener('click', (e) => {
+        const b = e.target.closest && e.target.closest('form[data-busca-cifra] button[type=button][data-site]');
+        if (b) procurarCifra(b.form, b.dataset.site);
+    });
 
     global.Pacotes = {
         FONTES_LIVRES, LICENCAS, urlCatalogo, htmlFontes, validarPacote, validarCatalogo,

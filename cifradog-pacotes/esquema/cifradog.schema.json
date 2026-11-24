@@ -30,12 +30,12 @@
     },
 
     "licenca": {
-      "description": "Origem e direitos da cifra. 'pessoal' = feita/guardada só pelo usuário e NUNCA entra em pacote público.",
+      "description": "Origem e direitos da cifra. 'transcricao' = cifra transcrita pelo autor do pacote (letra e música são de terceiros). 'pessoal' = feita/guardada só pelo usuário e NUNCA entra em pacote público.",
       "type": "object",
       "required": ["tipo"],
       "properties": {
         "tipo": {
-          "enum": ["dominio-publico", "cc0", "cc-by", "cc-by-sa", "autorizado", "pessoal"]
+          "enum": ["dominio-publico", "cc0", "cc-by", "cc-by-sa", "autorizado", "transcricao", "pessoal"]
         },
         "fonte": { "type": "string", "description": "Nome da fonte (site, livro, repositório)." },
         "url": { "type": "string", "format": "uri" },

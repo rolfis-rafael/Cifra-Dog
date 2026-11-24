@@ -83,8 +83,19 @@
     let tToast;
     function toast(msg) {
         const t = document.getElementById('toast');
-        t.textContent = msg; t.classList.add('on');
+        t.textContent = msg; t.classList.remove('acao'); t.classList.add('on');
         clearTimeout(tToast); tToast = setTimeout(() => t.classList.remove('on'), 2200);
+    }
+    /* Aviso com um botão (ex.: "Cifra excluída  [Desfazer]"). Some sozinho depois de alguns segundos. */
+    // AJUSTAR: por quanto tempo (ms) o botão fica disponível.
+    function toastAcao(msg, rotulo, fn, ms) {
+        const t = document.getElementById('toast');
+        t.textContent = msg + ' ';
+        const b = document.createElement('button');
+        b.type = 'button'; b.className = 'toast-acao'; b.textContent = rotulo;
+        b.onclick = () => { clearTimeout(tToast); t.classList.remove('on', 'acao'); fn(); };
+        t.appendChild(b); t.classList.add('on', 'acao');
+        clearTimeout(tToast); tToast = setTimeout(() => t.classList.remove('on', 'acao'), ms || 7000);
     }
 
     /* ---------- Painel inferior (sheet) ---------- */
@@ -202,7 +213,7 @@
 
     global.UI = {
         icone, esc, normal, estiloCapa, paleta, capaMusica, capaRep, capaCurtidas, tomAtual,
-        toast, abrirSheet, fecharSheet, perguntar, confirmar, prefs, salvarPrefs, tempoAtras,
+        toast, toastAcao, abrirSheet, fecharSheet, perguntar, confirmar, prefs, salvarPrefs, tempoAtras,
         usuarioRolando,
     };
 })(window);

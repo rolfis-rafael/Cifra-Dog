@@ -2,70 +2,240 @@
 <html lang="pt-BR">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Cifra-Dog, um app gratuito de cifras, ensaios e repertórios para músicos.">
-    <meta name="theme-color" content="#1b100b">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Baixar o Cifra-Dog</title>
+    <meta name="description" content="Cifra-Dog: app gratuito de cifras e repertórios para músicos. Funciona offline, no celular e no computador.">
+    <meta name="theme-color" content="#160b07">
+    <meta property="og:title" content="Baixe o Cifra-Dog">
+    <meta property="og:description" content="Suas cifras, prontas pro palco. Gratuito, offline, no celular e no computador.">
+    <meta property="og:image" content="img/brand/dog-pub.webp">
     <link rel="icon" href="img/brand/icon-192.png">
-    <title>Baixar Cifra-Dog</title>
+    <link rel="preload" as="image" href="img/brand/dog-pub.webp">
     <style>
-        :root { color-scheme: dark; --texto: #fff1d5; --suave: #ddc4aa; --dourado: #ffc56e; }
-        * { box-sizing: border-box; }
-        body { margin: 0; font: 1rem/1.55 system-ui, sans-serif; color: var(--texto); background: #170e0b; }
-        .conteudo { width: min(960px, 100% - 36px); margin: auto; }
-        .capa { background: linear-gradient(90deg, #160d09 18%, #160d09b8), url('img/taverna/pub-background.webp') center / cover; }
-        .intro { display: grid; grid-template-columns: 1.35fr 1fr; gap: clamp(24px, 6vw, 64px); align-items: center; padding: clamp(32px, 7vw, 82px) 0; }
-        .logo { width: min(200px, 100%); height: auto; }
-        .mascote { width: 100%; max-width: 320px; height: auto; border: 2px solid #b9864f; border-radius: 8px; justify-self: center; }
-        h1, h2, h3 { font-family: Georgia, serif; line-height: 1.08; margin: 0; }
-        h1 { font-size: clamp(2.5rem, 6.5vw, 4.5rem); margin-top: 20px; }
-        h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); }
-        p { color: var(--suave); }
-        .acoes { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
-        .botao { display: inline-flex; align-items: center; min-height: 44px; padding: 9px 16px; text-decoration: none; font-weight: 700; color: var(--texto); border: 1px solid #987148; border-radius: 6px; }
-        .principal { background: var(--dourado); border-color: var(--dourado); color: #25160d; }
-        .botao:hover { box-shadow: 0 0 0 2px var(--dourado); }
-        a:focus-visible { outline: 3px solid #fff; outline-offset: 4px; }
-        section { padding: 34px 0; border-top: 1px solid #7c593b; }
-        .pacote { padding: 20px; margin-top: 16px; border: 1px solid #7c593b; border-radius: 8px; background: #2b1a13; }
-        .pacote p { margin: 8px 0 16px; }
-        @media (max-width: 620px) {
-            .intro { grid-template-columns: 1fr; }
-            .mascote { width: min(62%, 240px); justify-self: start; }
+        :root {
+            color-scheme: dark;
+            --fundo: #160b07; --texto: #fff1d5; --suave: #e0c7a6; --dourado: #ffc56e; --dourado-2: #f2a93b;
+            --vermelho: #b3261e; --tinta: #3a2414; --borda: #c5a46e;
+            --serif: Georgia, "Times New Roman", serif;
         }
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { margin: 0; font: 1rem/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--texto); background: var(--fundo); }
+        a { color: inherit; }
+        a:focus-visible, button:focus-visible { outline: 3px solid #fff; outline-offset: 4px; }
+        .conteudo { width: min(1080px, 100% - 40px); margin-inline: auto; }
+
+        /* ---------- 1. Primeira tela: título, cachorro grande e o botão de baixar ---------- */
+        .capa {
+            position: relative; isolation: isolate; min-height: 100svh; display: flex; flex-direction: column;
+            background: linear-gradient(180deg, #160b07d9 0%, #160b0799 45%, #160b07f2 100%), url('img/taverna/pub-mobile.webp') center top / cover no-repeat;
+        }
+        .topo { padding: 18px 0 0; }
+        .topo img { display: block; width: clamp(130px, 22vw, 190px); height: auto; filter: drop-shadow(0 4px 10px #000a); }
+        .heroi { flex: 1; display: grid; align-content: center; justify-items: center; gap: 22px; padding: 14px 0 26px; text-align: center; }
+        .heroi h1 {
+            margin: 0; font: italic 800 clamp(2.5rem, 11vw, 5.2rem)/1.02 var(--serif); letter-spacing: -.5px;
+            text-shadow: 0 3px 0 #000a, 0 10px 34px #000c;
+        }
+        .heroi h1 em { display: block; color: var(--dourado); font-style: italic; }
+        .cachorro { position: relative; width: min(78vw, 400px); }
+        .cachorro::before { content: ""; position: absolute; inset: -14%; z-index: -1; background: radial-gradient(closest-side, #ffb74d66, transparent 72%); }
+        .cachorro img {
+            display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; border: 5px solid #ddc08b; border-radius: 6px;
+            transform: rotate(-3deg); box-shadow: 9px 11px 0 #0b0707, 0 22px 50px #000c;
+        }
+        .acao { display: grid; gap: 12px; justify-items: center; width: 100%; }
+        .baixar {
+            display: inline-flex; align-items: center; justify-content: center; gap: 14px; width: min(100%, 440px); min-height: 68px; padding: 12px 26px;
+            font: 800 clamp(1.15rem, 4.6vw, 1.45rem)/1.1 system-ui, sans-serif; color: #25160d; text-decoration: none; border-radius: 14px;
+            background: linear-gradient(180deg, #ffdc9b, var(--dourado-2)); border: 1px solid #ffe6b6;
+            box-shadow: 0 0 0 4px #ffc56e2e, 0 12px 30px #f2a93b59; transition: transform .15s, box-shadow .15s;
+        }
+        .baixar:hover { transform: translateY(-2px); box-shadow: 0 0 0 6px #ffc56e40, 0 16px 36px #f2a93b80; }
+        .baixar:active { transform: translateY(1px); }
+        .baixar svg { width: 30px; height: 30px; flex-shrink: 0; fill: currentColor; }
+        .sub { margin: 0; font-size: .95rem; color: var(--suave); text-shadow: 0 1px 6px #000; }
+        .sub a { font-weight: 700; color: var(--dourado); }
+        .fatos { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: 2px 0 0; padding: 0; list-style: none; }
+        .fatos li { padding: 5px 13px; font-size: .86rem; font-weight: 600; border: 1px solid var(--borda); border-radius: 999px; background: #231b14d9; }
+
+        /* Dica de que tem mais embaixo */
+        .desca { display: grid; justify-items: center; gap: 4px; padding: 0 0 18px; color: var(--dourado); text-decoration: none; font: italic 700 1.05rem var(--serif); }
+        .desca svg { width: 26px; height: 26px; animation: pulo 1.7s ease-in-out infinite; }
+        @keyframes pulo { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(6px); } }
+
+        /* ---------- 2. Repertórios para baixar ---------- */
+        .repertorios { padding: 54px 0 70px; background: linear-gradient(180deg, #160b07, #1d100a 60%, #160b07); border-top: 2px solid #6b4530; }
+        .rotulo {
+            display: inline-block; margin: 0; padding: 10px 30px 12px 20px; color: var(--tinta); font: italic 800 clamp(1.6rem, 5vw, 2.3rem)/1.1 var(--serif);
+            background: url('img/taverna/materials-atlas.webp') 0 0 / 200% 200%; border-left: 12px solid var(--vermelho); box-shadow: 0 8px 22px #0009;
+            clip-path: polygon(0 0, 100% 3%, 98% 52%, 100% 100%, 0 97%);
+        }
+        .intro { max-width: 60ch; margin: 18px 0 28px; color: var(--suave); }
+        .intro b { color: var(--texto); }
+        .grade { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 330px), 1fr)); gap: 18px; }
+        .pacote {
+            display: grid; grid-template-columns: 112px 1fr; gap: 16px; padding: 16px; color: var(--tinta); border: 1px solid #8b643f; border-radius: 6px;
+            background: url('img/taverna/materials-atlas.webp') 0 0 / 200% 200%; box-shadow: 0 10px 26px #000a; grid-template-rows: 1fr auto;
+        }
+        .pacote .arte { width: 112px; aspect-ratio: 1; border: 2px solid #b28b58; border-radius: 4px; box-shadow: 0 5px 14px #0006;
+            background: url('img/taverna/covers-atlas.webp') no-repeat; background-size: 300% 200%; }
+        .pacote .a0 { background-position: 0 0; } .pacote .a1 { background-position: 50% 0; } .pacote .a2 { background-position: 100% 0; }
+        .pacote .a3 { background-position: 0 100%; } .pacote .a4 { background-position: 50% 100%; } .pacote .a5 { background-position: 100% 100%; }
+        .pacote h3 { margin: 0 0 4px; font: italic 800 1.35rem/1.15 var(--serif); }
+        .pacote p { margin: 0 0 10px; font-size: .92rem; line-height: 1.4; color: #55392a; }
+        .selos { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+        .selos span { padding: 2px 9px; font-size: .76rem; font-weight: 800; color: #fff1d5; background: #5a2a1c; border-radius: 999px; }
+        .botoes { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 8px; }
+        .btn {
+            flex: 1 1 140px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 46px; padding: 8px 14px; cursor: pointer;
+            font: 800 .95rem system-ui, sans-serif; text-decoration: none; border-radius: 8px; border: 1px solid #5a2a1c; color: #3a2414; background: #ffffff55;
+        }
+        .btn:hover { background: #ffffff88; }
+        .btn.principal { color: #fff6e3; background: linear-gradient(180deg, #c8372c, #8f1d16); border-color: #6e130e; box-shadow: 0 4px 12px #6e130e66; }
+        .btn.principal:hover { filter: brightness(1.1); background: linear-gradient(180deg, #c8372c, #8f1d16); }
+        .btn svg { width: 20px; height: 20px; fill: currentColor; }
+        .estado { padding: 20px; border: 1px dashed var(--borda); border-radius: 8px; color: var(--suave); }
+
+        .como { margin: 34px 0 0; padding: 18px 22px; border-left: 4px solid var(--dourado); background: #ffffff0d; border-radius: 0 8px 8px 0; }
+        .como b { color: var(--dourado); }
+        .como ol { margin: 8px 0 0; padding-left: 22px; color: var(--suave); }
+
+        footer { padding: 26px 0 40px; text-align: center; font-size: .9rem; color: #b9a07c; border-top: 1px solid #3b2518; }
+        footer a { color: var(--dourado); }
+
+        /* ---------- Telas grandes: título e cachorro lado a lado ---------- */
+        @media (min-width: 900px) {
+            .capa { background: linear-gradient(90deg, #160b07eb 0%, #160b0799 55%, #160b07cc 100%), url('img/taverna/pub-background.webp') center / cover no-repeat; }
+            .heroi { grid-template-columns: 1.05fr 1fr; grid-template-areas: "titulo cachorro" "acao cachorro"; align-content: center; justify-items: start; text-align: left; column-gap: 64px; row-gap: 28px; }
+            .heroi h1 { grid-area: titulo; align-self: end; font-size: clamp(3.6rem, 6.4vw, 6rem); }
+            .cachorro { grid-area: cachorro; width: min(100%, 520px); justify-self: center; }
+            .acao { grid-area: acao; justify-items: start; align-self: start; }
+            .fatos { justify-content: flex-start; }
+            .baixar { width: 440px; }
+        }
+        @media (min-width: 900px) and (max-height: 760px) { .cachorro { width: min(100%, 400px); } }
+        @media (max-width: 420px) { .pacote { grid-template-columns: 88px 1fr; } .pacote .arte { width: 88px; } }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .desca svg { animation: none; } .baixar { transition: none; } }
     </style>
 </head>
 <body>
     <header class="capa">
-        <div class="intro conteudo">
-            <div>
-                <img class="logo" src="img/brand/logo-pub.webp" alt="Cifra-Dog">
-                <h1>Suas cifras, prontas pro palco.</h1>
-                <p>Organize repertórios, transponha cifras e ensaie no celular ou no computador. Gratuito e com modo offline.</p>
-                <div class="acoes">
-                    <a class="botao principal" href="index.html">Abrir Cifra-Dog</a>
-                    <a class="botao" href="#instalar">Como instalar</a>
+        <div class="conteudo topo"><img src="img/brand/logo-pub.webp" width="720" height="240" alt="Cifra-Dog"></div>
+        <div class="conteudo heroi">
+            <h1>Baixe o <em>Cifra-Dog</em></h1>
+            <div class="cachorro"><img src="img/brand/dog-pub.webp" width="512" height="512" fetchpriority="high" alt="Cifra-Dog, o cachorro mascote de bandana vermelha tocando guitarra"></div>
+            <div class="acao">
+                <!-- O Cifra-Dog é um PWA: este botão abre o app já com o painel "Instalar". AJUSTAR: quando houver executável, troque o link. -->
+                <a class="baixar" id="baixar-app" href="index.html?instalar=1">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 3h2v10.2l3.6-3.6L18 11l-6 6-6-6 1.4-1.4 3.6 3.6zM4 19h16v2H4z"/></svg>
+                    Baixar o Cifra-Dog
+                </a>
+                <p class="sub">Celular e computador, sem loja · <a href="index.html">ou use direto no navegador</a></p>
+                <ul class="fatos">
+                    <li>Grátis</li><li>Sem cadastro</li><li>Funciona offline</li><li>Suas cifras ficam no seu aparelho</li>
+                </ul>
+            </div>
+        </div>
+        <a class="conteudo desca" href="#repertorios">Repertórios para baixar
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 9.5 12 16l6.5-6.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+    </header>
+
+    <main>
+        <section class="repertorios" id="repertorios">
+            <div class="conteudo">
+                <h2 class="rotulo">Repertórios para baixar</h2>
+                <p class="intro">Um pack por gênero, com cifras prontas para tocar. Toque em <b>Baixar e abrir</b>: o Cifra-Dog abre, instala o pack e já monta o repertório na aba Show. As cifras que você já tem nunca são apagadas.</p>
+                <div class="grade" id="lista"><p class="estado">Carregando repertórios…</p></div>
+                <div class="como"><b>Como funciona</b>
+                    <ol><li>Toque em <b>Baixar e abrir</b> no pack que quiser.</li><li>O Cifra-Dog abre e pergunta se pode instalar. Confirme.</li><li>Pronto: as músicas ficam no seu aparelho (funcionam offline) e o repertório aparece na aba <b>Show</b>.</li></ol>
+                    <p style="margin:10px 0 0;color:var(--suave);font-size:.92rem">Prefere o arquivo? Use <b>Só o arquivo</b> e importe em <b>Pacotes de músicas → Pacote de arquivo</b>.</p>
                 </div>
             </div>
-            <img class="mascote" src="img/brand/dog-pub.webp" alt="Mascote do Cifra-Dog com guitarra">
-        </div>
-    </header>
-    <main class="conteudo">
-        <section id="instalar">
-            <h2>Instale no seu aparelho</h2>
-            <p>Abra o Cifra-Dog no Chrome ou Edge e procure a opção de instalar na barra de endereço ou no menu. No iPhone, abra no Safari e use <strong>Compartilhar → Adicionar à Tela de Início</strong>.</p>
-        </section>
-        <section id="repertorios">
-            <h2>Baixar repertórios</h2>
-            <p>Baixe um pacote e abra o arquivo JSON no Cifra-Dog. Depois de importar, o repertório aparece em <strong>Show</strong>.</p>
-            <article class="pacote">
-                <h3>Cantigas populares</h3>
-                <p>Quatro cantigas tradicionais brasileiras de domínio público, com harmonias simples para violão.</p>
-                <div class="acoes">
-                    <a class="botao principal" href="repertorios/cantigas-populares.json" download>Baixar pacote</a>
-                    <a class="botao" href="index.html#/pacotes?arquivo=1">Importar no Cifra-Dog</a>
-                </div>
-            </article>
         </section>
     </main>
+
+    <footer>
+        <div class="conteudo">Cifra-Dog é gratuito e sem fins lucrativos, feito para ajudar músicos. ·
+            <a href="https://github.com/rolfis-rafael/Cifra-Dog" rel="noopener">Código no GitHub</a></div>
+    </footer>
+
+    <script>
+    (function () {
+        'use strict';
+        /* Catálogo de repertórios: o mesmo que o app usa. No XAMPP (localhost) lê a pasta vizinha; publicado, lê o GitHub Pages. */
+        // AJUSTAR: endereço do catálogo publicado.
+        const CATALOGO_GITHUB = 'https://rolfis-rafael.github.io/cifradog-pacotes/catalogo.json';
+        const CATALOGO_LOCAL = '../cifradog-pacotes/catalogo.json';
+        const local = /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
+        const urlCatalogo = new URL(local ? CATALOGO_LOCAL : CATALOGO_GITHUB, location.href).href;
+        const LICENCAS = { 'dominio-publico': 'Domínio público', cc0: 'CC0', 'cc-by': 'CC BY', 'cc-by-sa': 'CC BY-SA', autorizado: 'Autorizado pelo autor', transcricao: 'Cifras do Rolfis' };
+        // Capa de cada gênero (posição na imagem covers-atlas.webp: 0 coração, 1 vinil, 2 violão, 3 microfone, 4 borboleta, 5 bandeira).
+        const CAPA = { rock: 2, pop: 3, mpb: 4, reggae: 1, samba: 0, sertanejo: 2, gospel: 0, blues: 3, jazz: 3, forro: 4, funk: 5, metal: 5 };
+        const RE_ID = /^[a-z0-9]+(-[a-z0-9]+)*$/;
+
+        const lista = document.getElementById('lista');
+        const el = (tag, cls, txt) => { const e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; };
+        // Só links http(s) (o catálogo é um arquivo de fora: nada de "javascript:").
+        const seguro = (u) => { try { const x = new URL(u, location.href); return /^https?:$/.test(x.protocol) ? x.href : ''; } catch (e) { return ''; } };
+        const ICONE = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 3h2v10.2l3.6-3.6L18 11l-6 6-6-6 1.4-1.4 3.6 3.6zM4 19h16v2H4z"/></svg>';
+
+        /* Baixa de verdade (o atributo download não funciona entre sites diferentes); se falhar, abre o arquivo. */
+        async function baixar(url, nome, botao) {
+            const texto = botao.textContent;
+            try {
+                botao.textContent = 'Baixando…';
+                const r = await fetch(url, { cache: 'no-cache' });
+                if (!r.ok) throw new Error(r.status);
+                const a = document.createElement('a');
+                a.href = URL.createObjectURL(await r.blob()); a.download = nome; document.body.appendChild(a); a.click(); a.remove();
+                setTimeout(() => URL.revokeObjectURL(a.href), 5000);
+            } catch (e) { window.open(url, '_blank', 'noopener'); }
+            botao.textContent = texto;
+        }
+
+        function cartao(p, i) {
+            const c = el('article', 'pacote');
+            const capa = (p.tags || []).map(t => CAPA[t]).find(n => n != null);
+            c.appendChild(el('div', 'arte a' + (capa != null ? capa : i % 6)));
+            const corpo = el('div');
+            corpo.appendChild(el('h3', '', p.nome));
+            if (p.descricao) corpo.appendChild(el('p', '', p.descricao));
+            const selos = el('div', 'selos');
+            if (Number(p.qtdMusicas)) selos.appendChild(el('span', '', p.qtdMusicas + ' músicas'));
+            if (LICENCAS[p.licenca]) selos.appendChild(el('span', '', LICENCAS[p.licenca]));
+            corpo.appendChild(selos); c.appendChild(corpo);
+            const botoes = el('div', 'botoes');
+            // Principal: abre o Cifra-Dog já pedindo para instalar este pack (o app está no mesmo site).
+            const b = el('a', 'btn principal'); b.href = 'index.html#/pacotes?instalar=' + encodeURIComponent(p.id);
+            b.insertAdjacentHTML('beforeend', ICONE); b.appendChild(document.createTextNode(' Baixar e abrir'));
+            const o = el('a', 'btn', 'Só o arquivo'); o.href = p.url; o.setAttribute('role', 'button');
+            o.addEventListener('click', (e) => { e.preventDefault(); baixar(p.url, p.id + '.json', o); });
+            botoes.append(b, o); c.appendChild(botoes);
+            return c;
+        }
+
+        function mostrar(pacotes) {
+            lista.replaceChildren(...pacotes.map(cartao));
+            if (!pacotes.length) lista.appendChild(el('p', 'estado', 'Ainda não há repertórios por aqui. Volte em breve!'));
+        }
+
+        (async function () {
+            try {
+                const r = await fetch(urlCatalogo, { cache: 'no-cache' });
+                if (!r.ok) throw new Error(r.status);
+                const c = await r.json();
+                if (!c || c.formato !== 'cifradog.catalogo' || !Array.isArray(c.pacotes)) throw new Error('catálogo inválido');
+                const pacotes = c.pacotes.filter(p => p && RE_ID.test(p.id || '') && typeof p.arquivo === 'string' && seguro(new URL(p.arquivo, urlCatalogo).href))
+                    .map(p => ({ id: p.id, nome: String(p.nome || p.id).slice(0, 80), descricao: String(p.descricao || '').slice(0, 220), qtdMusicas: p.qtdMusicas, licenca: p.licenca, tags: Array.isArray(p.tags) ? p.tags.map(String) : [], url: new URL(p.arquivo, urlCatalogo).href }));
+                mostrar(pacotes);
+            } catch (e) {
+                lista.replaceChildren(el('p', 'estado', 'Não deu para abrir a lista de repertórios agora. Confira a internet e '));
+                const t = el('a', '', 'tente de novo'); t.href = ''; t.style.color = 'var(--dourado)'; lista.firstChild.append(t, '.');
+            }
+        })();
+    })();
+    </script>
 </body>
 </html>

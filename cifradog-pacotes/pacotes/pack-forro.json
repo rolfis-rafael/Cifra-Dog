@@ -1,0 +1,356 @@
+{
+ "formato": "cifradog.pacote",
+ "versao": 1,
+ "pacote": {
+  "id": "pack-forro",
+  "nome": "Forró",
+  "descricao": "Seleção de Forró do repertório do Rolfis.",
+  "autor": "Rafael Carneiro (Rolfis)",
+  "revisao": 1,
+  "atualizadoEm": "2026-11-24",
+  "idioma": "pt-BR",
+  "tags": [
+   "forro"
+  ]
+ },
+ "musicas": [
+  {
+   "id": "ultima-noite-leo-foguete",
+   "titulo": "Última noite",
+   "artista": "Léo Foguete",
+   "tom": "G",
+   "genero": "forro",
+   "idioma": "pt-BR",
+   "compasso": "4/4",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "Léo Foguete",
+    "atribuicao": "Letra e música de Léo Foguete. Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "intro",
+     "nome": "Intro",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[C] [Am] [Bm7] [Em7] [D]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "[C]  Se cê quer reca[Am]ída, parabéns"
+      },
+      {
+       "texto": "Você vai t[Bm7]er"
+      },
+      {
+       "texto": "Mas eu não te prometo n[Em7]ada"
+      },
+      {
+       "texto": "Além duma n[D]oite de praz[C]er"
+      },
+      {
+       "texto": "Não vou confrontar meus inst[Am]intos"
+      },
+      {
+       "texto": "Já que eles são tão carn[Bm7]ais"
+      },
+      {
+       "texto": "Mas eu espero que essas situaç[Em]ões"
+      },
+      {
+       "texto": "Não vire norm[D]ais"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "[C]  E eu te busco à meia-noit[Am]e"
+      },
+      {
+       "texto": "E depois disso a gente f[Bm7]oge"
+      },
+      {
+       "texto": "Pra algum lugar que"
+      },
+      {
+       "texto": "Ninguém vai nos [Em]encontr[D]ar"
+      },
+      {
+       "texto": "[C]  E depois disso a gente f[Am]ode"
+      },
+      {
+       "texto": "Vamos fazer dessa a última n[Bm7]oite"
+      },
+      {
+       "texto": "Viver como se o amanhã n[Em]ão fosse cheg[D]ar"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Pós-Refrão",
+     "linhas": [
+      {
+       "texto": "Então v[C]ai"
+      },
+      {
+       "texto": "Tira a minha p[Am]az, tu senta dem[Bm7]ais"
+      },
+      {
+       "texto": "Vai, faz de um j[Em]eito que só v[D]ocê f[C]az"
+      },
+      {
+       "texto": "Tira a minha p[Am]az, tu senta dem[Bm7]ais"
+      },
+      {
+       "texto": "Vai, faz de um j[Em]eito que só v[D]ocê f[C]az"
+      }
+     ]
+    },
+    {
+     "tipo": "ponte",
+     "nome": "Ponte",
+     "linhas": [
+      {
+       "texto": "  [C]Oh [G/B]oh    [Am]oh"
+      },
+      {
+       "texto": "Iêh êh [Bm7]êh   [Em]    [D]"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "[C]  E eu te busco à meia-n[C]oi_[G/B]_____t[Am]e"
+      },
+      {
+       "texto": "E depois disso a gente f[Bm7]oge"
+      },
+      {
+       "texto": "Pra algum lugar que"
+      },
+      {
+       "texto": "Ninguém vai nos [Em]encontr[D]ar"
+      },
+      {
+       "texto": "[C]  E depois disso a gente f[Am]ode"
+      },
+      {
+       "texto": "Vamos fazer dessa a última n[Bm7]oite"
+      },
+      {
+       "texto": "Viver como se o amanhã n[Em]ão fosse cheg[D]ar"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Pós-Refrão",
+     "linhas": [
+      {
+       "texto": "Então v[C]ai"
+      },
+      {
+       "texto": "Tira a minha p[Am]az, tu senta dem[Bm7]ais"
+      },
+      {
+       "texto": "Vai, faz de um j[Em]eito que só v[D]ocê f[C]az"
+      },
+      {
+       "texto": "Tira a minha p[Am]az, tu senta dem[Bm7]ais"
+      },
+      {
+       "texto": "Vai, faz de um j[Em]eito que só v[D]ocê f[C]az"
+      }
+     ]
+    },
+    {
+     "tipo": "ponte",
+     "nome": "Ponte Final",
+     "linhas": [
+      {
+       "texto": "  [C]Oh [G/B]oh    [Am]oh"
+      },
+      {
+       "texto": "Léo Fogu[Bm7]ete"
+      }
+     ]
+    },
+    {
+     "tipo": "final",
+     "nome": "Final",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[A5] [B5] [F#5] [G5] [Em]"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "asa-branca-luiz-gonzaga",
+   "titulo": "Asa Branca",
+   "artista": "Luiz Gonzaga",
+   "tom": "G",
+   "genero": "forro",
+   "idioma": "pt-BR",
+   "compasso": "4/4",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "Luiz Gonzaga",
+    "atribuicao": "Letra e música de Luiz Gonzaga. Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "verso",
+     "nome": "Música",
+     "linhas": [
+      {
+       "texto": "[G]  Quando oiei a terra ard[C]endo"
+      },
+      {
+       "texto": "Qual fogu[G]eira d[D7/F#]e São Jo[G]ão"
+      },
+      {
+       "texto": "Eu pergunt[G7]ei a Deus do c[C]éu, ai"
+      },
+      {
+       "texto": "Por quê tam[D7]anha judiaç[G]ão"
+      },
+      {
+       "texto": "Eu pergunt[G7]ei a Deus do c[C]éu, ai"
+      },
+      {
+       "texto": "Por quê tam[D7]anha judiaç[G]ão"
+      },
+      {
+       "texto": "( G )"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "Que bras[G]eiro, que forn[C]aia"
+      },
+      {
+       "texto": "Nem um p[G]é de pr[D7/F#]ant___ç[G]ão"
+      },
+      {
+       "texto": "Por farta d'[G7]água perdi meu g[C]ado"
+      },
+      {
+       "texto": "Morreu de s[D7]ede, meu alaz[G]ão"
+      },
+      {
+       "texto": "Por farta d'[G7]água perdi meu g[C]ado"
+      },
+      {
+       "texto": "Morreu de s[D7]ede, meu alaz[G]ão"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Terceira Parte",
+     "linhas": [
+      {
+       "texto": "[G]  Inté mesmo a asa br[C]anca"
+      },
+      {
+       "texto": "Bateu as[G]as do s[D7/F#]ert____[G]ão"
+      },
+      {
+       "texto": "Então eu d[G7]isse, adeus Ros[C]inha"
+      },
+      {
+       "texto": "Guarda cont[D7]igo meu coraç[G]ão"
+      },
+      {
+       "texto": "Então eu d[G7]isse, adeus Ros[C]inha"
+      },
+      {
+       "texto": "Guarda cont[D7]igo meu coraç[G]ão"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Quarta Parte",
+     "linhas": [
+      {
+       "texto": "[G]  Hoje longe, muitas l[C]égua"
+      },
+      {
+       "texto": "Numa tr[G]iste s[D7/F#]oli___d[G]ão"
+      },
+      {
+       "texto": "Espero a ch[G7]uva cair de n[C]ovo"
+      },
+      {
+       "texto": "Pra mim volt[D7]ar pro meu sert[G]ão"
+      },
+      {
+       "texto": "Espero a ch[G7]uva cair de n[C]ovo"
+      },
+      {
+       "texto": "Pra mim volt[D7]ar pro meu sert[G]ão"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Quinta Parte",
+     "linhas": [
+      {
+       "texto": "Quando o verde dos teus [C]óio"
+      },
+      {
+       "texto": "Se espa[G]iar na pr[D7/F#]anta__ç[G]ão"
+      },
+      {
+       "texto": "Eu te asseg[G7]uro não chore n[C]ão, viu?"
+      },
+      {
+       "texto": "Que eu volt[D7]arei, viu, meu coraç[G]ão"
+      },
+      {
+       "texto": "Eu te asseg[G7]uro não chore n[C]ão, viu?"
+      },
+      {
+       "texto": "Que eu volt[D7]arei, viu, meu coraç[G]ão"
+      }
+     ]
+    },
+    {
+     "tipo": "final",
+     "nome": "Final",
+     "linhas": [
+      {
+       "texto": "( F/A  G )"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

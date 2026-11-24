@@ -1,0 +1,295 @@
+{
+ "formato": "cifradog.pacote",
+ "versao": 1,
+ "pacote": {
+  "id": "pack-metal",
+  "nome": "Metal",
+  "descricao": "Seleção de Metal do repertório do Rolfis.",
+  "autor": "Rafael Carneiro (Rolfis)",
+  "revisao": 1,
+  "atualizadoEm": "2026-11-24",
+  "idioma": "pt-BR",
+  "tags": [
+   "metal"
+  ]
+ },
+ "musicas": [
+  {
+   "id": "down-in-a-hole-alice-in-chains",
+   "titulo": "Down In A Hole",
+   "artista": "Alice In Chains",
+   "tom": "G",
+   "genero": "metal",
+   "idioma": "pt-BR",
+   "bpm": 97,
+   "compasso": "4/4",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "Alice In Chains",
+    "atribuicao": "Letra e música de Alice In Chains. Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "intro",
+     "nome": "Intro",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[Em] [D] [A]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Em] [D] [A]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Em] [D] [A]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Em] [D] [A]"
+      },
+      {
+       "texto": "B[Em]ury me s[D]oftly [A]in this w[Em]omb [D]   [A]"
+      },
+      {
+       "texto": "[Em]I give this p[D]art of m[A]e for you"
+      },
+      {
+       "texto": "S[Em]and rains down and h[D]ere I s[A]it"
+      },
+      {
+       "texto": "H[Em]olding rare fl[D]owers"
+      },
+      {
+       "texto": "[A]In her t[Em]omb [D]   [A]"
+      },
+      {
+       "texto": "In bl[Em]oom [D]   [A]"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "D[Em]own in a hole and I don't kn[D]ow if [A]I can be s[Em]aved [D]   [A]"
+      },
+      {
+       "texto": "S[Em]ee my heart, I d[D]ecorate it l[A]ike a gr[Em]ave [D]   [A]"
+      },
+      {
+       "texto": "You d[Em]on't understand who they"
+      },
+      {
+       "texto": "Th[D]ought I was s[A]upposed to b[Em]e   [D]  [A]"
+      },
+      {
+       "texto": "L[Em]ook at me now"
+      },
+      {
+       "texto": "I'm a m[D]an who won't l[A]et himself be [Em]    [D]   [A]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "D[Am]own in a hole [G5(9)]       [D]"
+      },
+      {
+       "texto": "F[Am]eeling so smal[G5(9)]l      [D]"
+      },
+      {
+       "texto": "D[Am]own in a hole [G5(9)]       [D]"
+      },
+      {
+       "texto": "L[Am]osin' my soul    [G5(9)]       [D]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Terceira Parte",
+     "linhas": [
+      {
+       "texto": "[A5]I'd l[B5]ike t[C5]o fl[G5]y   [D5]"
+      },
+      {
+       "texto": "B[D5]ut m[Eb5]y   w[D5]ings have b[C5]een so deni[E5]ed"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Em] [D] [A]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Em] [D] [A]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Terceira Parte",
+     "linhas": [
+      {
+       "texto": "D[Em]own in a hole and they've p[D]ut all"
+      },
+      {
+       "texto": "The st[A]ones in their pl[Em]ace [D]   [A]"
+      },
+      {
+       "texto": "I've [Em]eaten the sun so my t[D]ongue"
+      },
+      {
+       "texto": "Has been b[A]urned of the t[Em]aste [D]   [A]"
+      },
+      {
+       "texto": "[Em]I have been guilty"
+      },
+      {
+       "texto": "Of k[D]icking mys[A]elf in the t[Em]eeth [D]   [A]"
+      },
+      {
+       "texto": "[Em]I will speak no m[D]ore"
+      },
+      {
+       "texto": "of my f[A]eelings bene[Em]ath [D]   [A]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "D[Am]own in a hole [G5(9)]       [D]"
+      },
+      {
+       "texto": "F[Am]eeling so smal[G5(9)]l      [D]"
+      },
+      {
+       "texto": "D[Am]own in a hole [G5(9)]       [D]"
+      },
+      {
+       "texto": "L[Am]osin' my soul    [G5(9)]       [D]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Terceira Parte",
+     "linhas": [
+      {
+       "texto": "[A5]I'd l[B5]ike t[C5]o fl[G5]y   [D5]"
+      },
+      {
+       "texto": "B[D5]ut m[Eb5]y   w[D5]ings have b[C5]een so deni[E5]ed"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Em] [D] [A]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Em] [D] [A]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Quarta Parte",
+     "linhas": [
+      {
+       "texto": "B[Em]ury me s[D]oftly [A]in this w[Em]omb  [D]   [A] (Oh I wanna be inside"
+      },
+      {
+       "texto": "of you)"
+      },
+      {
+       "texto": "[Em]I give th[D]is p[A]art of me for y[Em]ou   [D]   [A]  (Oh I wanna be"
+      },
+      {
+       "texto": "inside of you)"
+      },
+      {
+       "texto": "S[Em]and rains down and h[D]ere I s[A]it (Oh I wanna be inside of"
+      },
+      {
+       "texto": " you)"
+      },
+      {
+       "texto": "H[Em]olding rare fl[D]owers [A]"
+      },
+      {
+       "texto": "I[Em]n a tomb... In blo[D]om...Oh I w[A]ant to be inside"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "D[Am]own in a hole [G5(9)]       [D]"
+      },
+      {
+       "texto": "F[Am]eeling so smal[G5(9)]l      [D]"
+      },
+      {
+       "texto": "D[Am]own in a hole [G5(9)]       [D]"
+      },
+      {
+       "texto": "L[Am]osin' my soul    [G5(9)]       [D]"
+      },
+      {
+       "texto": "D[Am]own in a hole [G5(9)]       [D]"
+      },
+      {
+       "texto": "F[Am]eeling so smal[G5(9)]l      [D]"
+      },
+      {
+       "texto": "D[Am]own in a hole [G5(9)]       [D]"
+      },
+      {
+       "texto": "O[Am]utta  control    [G5(9)]       [D]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Terceira Parte",
+     "linhas": [
+      {
+       "texto": "[A5]I'd l[B5]ike t[C5]o fl[G5]y   [D5]"
+      },
+      {
+       "texto": "B[D5]ut m[Eb5]y   w[D5]ings have b[C5]een so deni[E5]ed"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Em] [D] [A]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Em] [D] [A]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Em] [D] [A]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[Em] [D] [A]"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

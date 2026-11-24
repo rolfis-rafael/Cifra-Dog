@@ -1,0 +1,104 @@
+/*
+ * dicas.css — Visual das dicas de "tem mais aqui" (a lógica está em js/dicas-rolagem.js).
+ * Carregado por último para só ACRESCENTAR sinais; não troca nenhuma cor, fonte ou imagem do app.
+ * AJUSTAR: --dica-fundo deve ser a cor do fundo do painel inferior (#sheet) e da barra de baixo.
+ */
+:root { --dica-fundo: 22, 11, 7; }          /* r, g, b do marrom escuro do app */
+
+/* Quando a tela é rolada por um atalho (ex.: pular para um item), o item não fica escondido atrás da barra de baixo. */
+html { scroll-padding-bottom: calc(var(--nav-h, 64px) + var(--seguro-baixo, 0px) + 16px); }
+
+/* ---------- 1. PÁGINA: degradê + setinha acima da barra de baixo (só celular) ---------- */
+#dica-mais { display: none; }
+@media (max-width: 899px) {
+    #dica-mais {
+        display: block; position: fixed; left: 0; right: 0; z-index: 20; pointer-events: none;
+        bottom: calc(var(--nav-h, 64px) + var(--seguro-baixo, 0px)); height: 58px;
+        background: linear-gradient(to top, rgba(var(--dica-fundo), .78), rgba(var(--dica-fundo), 0));
+        opacity: 0; visibility: hidden; transition: opacity .25s ease, visibility .25s;
+    }
+    body.tem-mais #dica-mais { opacity: 1; visibility: visible; }
+
+    #dica-mais button {
+        position: absolute; left: 50%; bottom: 8px; margin-left: -18px; width: 36px; height: 36px; padding: 0;
+        display: grid; place-items: center; border-radius: 50%; color: #f0cc93;
+        background: rgba(35, 27, 20, .92); border: 1px solid #c5a46e; box-shadow: 0 3px 10px rgba(0, 0, 0, .5);
+        pointer-events: auto; cursor: pointer; -webkit-tap-highlight-color: transparent;
+        opacity: 0; visibility: hidden; transition: opacity .25s ease, visibility .25s;
+        animation: dica-pulo 1.7s ease-in-out infinite;
+    }
+    #dica-mais button svg { width: 20px; height: 20px; }
+    body.dica-topo #dica-mais button { opacity: 1; visibility: visible; }
+}
+@keyframes dica-pulo { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(4px); } }
+
+/* ---------- 2. CARROSSÉIS: largura ajustada para sempre aparecer um pedaço do próximo cartão ---------- */
+@media (max-width: 899px) {
+    .carrossel[data-peek] .cartao { width: var(--cartao-w); }
+}
+
+/* ---------- 3. CHIPS: borda esmaecida onde a fileira continua ---------- */
+[data-mais] { --dica-borda: 30px; }
+[data-mais="dir"] {
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - var(--dica-borda)), transparent);
+            mask-image: linear-gradient(to right, #000 calc(100% - var(--dica-borda)), transparent);
+}
+[data-mais="esq"] {
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 var(--dica-borda));
+            mask-image: linear-gradient(to right, transparent, #000 var(--dica-borda));
+}
+[data-mais="esq dir"] {
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 var(--dica-borda), #000 calc(100% - var(--dica-borda)), transparent);
+            mask-image: linear-gradient(to right, transparent, #000 var(--dica-borda), #000 calc(100% - var(--dica-borda)), transparent);
+}
+
+/* ---------- 4. PAINEL INFERIOR: degradê no fundo enquanto houver mais itens ---------- */
+#sheet { overscroll-behavior: contain; }     /* rolar o painel não rola a tela de trás */
+#sheet[data-mais-baixo]::after {
+    content: ""; display: block; position: sticky; bottom: 0; height: 46px; margin-top: -46px; pointer-events: none;
+    background: linear-gradient(to top, rgb(36, 23, 15) 12%, rgba(36, 23, 15, 0));
+}
+
+/* ---------- 5. INÍCIO: cabeçalho compacto, imagem mais acima e "Baixar repertórios" em destaque ---------- */
+.home-welcome { margin: 0 0 12px; min-height: 0; padding-right: 118px; }
+.home-dog { top: -14px; right: 0; width: 98px; height: 112px; }
+@media (min-width: 900px) {
+    .home-welcome { margin: 0 0 18px; min-height: 0; padding-right: 150px; }
+    .home-dog { top: -22px; right: 12px; width: 120px; height: 134px; }
+}
+.dupla > .bt-baixar { grid-column: 1 / -1; }
+.bt.prim.cheio.bt-baixar {
+    display: flex; align-items: center; justify-content: center; gap: 14px; min-height: 60px; padding: 10px 18px;
+    text-align: left; text-decoration: none; color: #25160d; border-radius: 12px; clip-path: none;
+    background: linear-gradient(180deg, #ffd993, #f2a93b); border: 1px solid #ffe3ae;
+    box-shadow: 0 0 0 3px rgba(255, 197, 110, .18), 0 8px 22px rgba(240, 160, 50, .35);
+    animation: baixar-brilho 3.2s ease-in-out infinite;
+}
+.bt.prim.cheio.bt-baixar svg { width: 28px; height: 28px; flex-shrink: 0; fill: currentColor; color: #25160d; }
+.bt-baixar .bb-txt b { display: block; font-size: 17px; font-weight: 800; line-height: 1.15; }
+.bt-baixar .bb-txt small { display: block; margin-top: 2px; font-size: 12px; font-weight: 600; opacity: .8; }
+.bt.prim.cheio.bt-baixar:active { transform: translateY(1px); }
+@keyframes baixar-brilho {
+    0%, 100% { box-shadow: 0 0 0 3px rgba(255, 197, 110, .18), 0 8px 22px rgba(240, 160, 50, .35); }
+    50% { box-shadow: 0 0 0 6px rgba(255, 197, 110, .10), 0 8px 26px rgba(240, 160, 50, .55); }
+}
+
+/* ---------- 5b. Boas-vindas (primeira abertura) e aviso com botão "Desfazer" ---------- */
+.boas-vindas { margin: 12px 0 0; padding: 14px 16px; border: 1px solid #c5a46e; border-radius: 10px; background: rgba(35, 27, 20, .9); }
+.boas-vindas b { display: block; font-size: 16px; margin-bottom: 6px; color: #f0cc93; }
+.boas-vindas ol { margin: 0 0 12px; padding-left: 20px; font-size: 14px; line-height: 1.5; color: var(--texto-2); }
+.boas-vindas a { color: #ffd488; font-weight: 700; text-decoration: underline; text-underline-offset: 2px; }
+#toast.acao { pointer-events: auto; }
+.toast-acao { margin-left: 8px; min-height: 36px; padding: 0 4px; background: none; border: 0; border-bottom: 2px solid currentColor; color: #7a1b12; font: inherit; font-weight: 800; cursor: pointer; }
+
+/* ---------- 6. CORREÇÕES de layout (a página balançava para o lado no celular) ---------- */
+.abas { flex-wrap: wrap; }                                   /* tela Criar: o botão "Arquivo" passava da borda */
+@media (max-width: 899px) { body:not(.tela-cifra) #tela { overflow-x: clip; } }   /* carrossel/banners passavam 2px da borda */
+
+@media (prefers-reduced-motion: reduce) {
+    #dica-mais button, .bt.prim.cheio.bt-baixar { animation: none; }
+    #dica-mais, #dica-mais button { transition: none; }
+}
+
+/* 7. Variações do gênero sob o nome (tela Pesquisar) */
+.genero-legenda .genero-var { margin-top: 2px; color: #ffc56e; font: italic 600 12.5px/1.25 Georgia, 'Times New Roman', serif; }

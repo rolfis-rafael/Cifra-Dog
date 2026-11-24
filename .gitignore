@@ -1,0 +1,20 @@
+# ---- Dados pessoais (nunca publicar) ----
+# Backups exportados do app e repertórios pessoais
+cifradog-backup-*.json
+cifradog-show-na-feira.json
+*.backup.json
+
+# ---- Arquivos gerados ----
+*.zip
+output/
+Claude outputs/
+node_modules/
+
+# ---- Segredos locais ----
+.env
+.env.*
+includes/config.local.php
+
+# ---- Sistema ----
+Thumbs.db
+.DS_Store

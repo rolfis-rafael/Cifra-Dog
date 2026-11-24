@@ -1,0 +1,856 @@
+{
+ "formato": "cifradog.pacote",
+ "versao": 1,
+ "pacote": {
+  "id": "pack-gospel",
+  "nome": "Gospel",
+  "descricao": "Seleção de Gospel do repertório do Rolfis.",
+  "autor": "Rafael Carneiro (Rolfis)",
+  "revisao": 1,
+  "atualizadoEm": "2026-11-24",
+  "idioma": "pt-BR",
+  "tags": [
+   "gospel"
+  ]
+ },
+ "musicas": [
+  {
+   "id": "gratidao-florianopolis-house-of-prayer-fhop-music",
+   "titulo": "Gratidão",
+   "artista": "Florianópolis House Of Prayer (fhop music)",
+   "tom": "D",
+   "genero": "gospel",
+   "idioma": "pt-BR",
+   "compasso": "4/4",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "Florianópolis House Of Prayer (fhop music)",
+    "atribuicao": "Letra e música de Florianópolis House Of Prayer (fhop music). Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "intro",
+     "nome": "Intro",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[D] [Bm7] [A2] [G]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "Nada n[D]ovo achei pra diz[Bm7]er então"
+      },
+      {
+       "texto": "Como [A2]expressar minh[G]a gratidão"
+      },
+      {
+       "texto": "Posso at[D]é cantar algum[Bm7]a canção"
+      },
+      {
+       "texto": "Que vai [A2]acabar, mas a T[G]ua não"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "Então v[D]ou levantar"
+      },
+      {
+       "texto": "As minhas mãos e louv[A2]ar"
+      },
+      {
+       "texto": "Pois tudo o que tenho"
+      },
+      {
+       "texto": "É um [G]aleluia, [Bm7]ale_l[A2]uia"
+      },
+      {
+       "texto": "Sei que é s[D]imples pra um rei"
+      },
+      {
+       "texto": "Mas não tenho nada al[A2]ém"
+      },
+      {
+       "texto": "De um coração cantando"
+      },
+      {
+       "texto": "[G]Aleluia, [Bm7]ale_l[A2]u___i[D]a"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "Em resp[D]osta a ti há um[Bm7]a ação"
+      },
+      {
+       "texto": "Me rend[A2]er aqui em [G]adoração"
+      },
+      {
+       "texto": "Em resp[D]osta a ti há um[Bm7]a ação"
+      },
+      {
+       "texto": "Me rend[A2]er aqui em [G]adoração"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "Então v[D]ou levantar"
+      },
+      {
+       "texto": "As minhas mãos e louv[A2]ar"
+      },
+      {
+       "texto": "Pois tudo o que tenho"
+      },
+      {
+       "texto": "É um [G]aleluia, [Bm7]ale_l[A2]uia"
+      },
+      {
+       "texto": "Sei que é s[D]imples pra um rei"
+      },
+      {
+       "texto": "Mas não tenho nada al[A2]ém"
+      },
+      {
+       "texto": "De um coração cantando"
+      },
+      {
+       "texto": "[G]Aleluia, [Bm7]ale_l[A2]uia [D]"
+      }
+     ]
+    },
+    {
+     "tipo": "ponte",
+     "nome": "Ponte",
+     "linhas": [
+      {
+       "texto": "Ei, m[D]eu coração"
+      },
+      {
+       "texto": "Não se envergonhe, cante essa canção"
+      },
+      {
+       "texto": "Pois sei que há fôlego nesses pulmões"
+      },
+      {
+       "texto": "Vamos, louve ao Senhor"
+      },
+      {
+       "texto": "Ei, m[D]eu coração"
+      },
+      {
+       "texto": "Não se envergonhe, cante [A2]essa canção"
+      },
+      {
+       "texto": "Pois sei que há fôlego n[G]esses pulmões"
+      },
+      {
+       "texto": "Vamos, louve ao Senh[D]or [A2]"
+      },
+      {
+       "texto": "Ei, m[D]eu coração"
+      },
+      {
+       "texto": "Não se envergonhe, cante [A2]essa canção"
+      },
+      {
+       "texto": "Pois sei que há fôlego n[G]esses pulmões"
+      },
+      {
+       "texto": "Vamos, louve ao Senh[Bm7]or   [A2]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[G] [Bm7] [A2]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[G] [Bm7] [A2]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[G] [Bm7] [A2] [G]"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "Então v[D]ou levantar"
+      },
+      {
+       "texto": "As minhas mãos e louv[Am]ar"
+      },
+      {
+       "texto": "Pois tudo o que tenho"
+      },
+      {
+       "texto": "É um [G]aleluia, [Gm]aleluia"
+      },
+      {
+       "texto": "Sei que é s[D]imples pra um rei"
+      },
+      {
+       "texto": "Mas não tenho nada al[Am]ém"
+      },
+      {
+       "texto": "De um coração cantando"
+      },
+      {
+       "texto": "[G]Aleluia, [Gm]aleluia"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[D] [Am] [G] [Gm]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[D] [Am] [G] [Gm]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[D] [Am] [G] [Gm]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[D] [Am] [G] [Gm]"
+      }
+     ]
+    },
+    {
+     "tipo": "ponte",
+     "nome": "Ponte",
+     "linhas": [
+      {
+       "texto": "Ei, m[D]eu coração"
+      },
+      {
+       "texto": "Não se envergonhe, cante [Am]essa canção"
+      },
+      {
+       "texto": "Pois sei que há fôlego n[G]esses pulmões"
+      },
+      {
+       "texto": "Vamos, louve ao Senh[Gm]or"
+      },
+      {
+       "texto": "Ei, m[D]eu coração"
+      },
+      {
+       "texto": "Não se envergonhe, cante [Am]essa canção"
+      },
+      {
+       "texto": "Pois sei que há fôlego n[G]esses pulmões"
+      },
+      {
+       "texto": "Vamos, louve ao Senh[Gm]or"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[D] [Am] [G] [Gm]"
+      },
+      {
+       "tipo": "acordes",
+       "texto": "[D] [Am] [G] [Gm]"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão Final",
+     "linhas": [
+      {
+       "texto": "Então v[D]ou levantar"
+      },
+      {
+       "texto": "As minhas mãos e louv[Am]ar"
+      },
+      {
+       "texto": "Pois tudo o que tenho"
+      },
+      {
+       "texto": "É um [G]aleluia, [Gm]aleluia"
+      },
+      {
+       "texto": "Sei que é s[D]imples pra um rei"
+      },
+      {
+       "texto": "Mas não tenho nada al[Am]ém"
+      },
+      {
+       "texto": "De um coração cantando"
+      },
+      {
+       "texto": "[G]Aleluia, [Gm]alelui[D]a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ah-jesus-coracao-igual-ao-teu-julliany-souza",
+   "titulo": "Ah, Jesus / Coração Igual Ao Teu",
+   "artista": "Julliany Souza",
+   "tom": "G",
+   "genero": "gospel",
+   "idioma": "pt-BR",
+   "compasso": "4/4",
+   "licenca": {
+    "tipo": "transcricao",
+    "fonte": "Cifra transcrita por Rafael Carneiro (Rolfis)",
+    "autor": "Julliany Souza",
+    "atribuicao": "Letra e música de Julliany Souza. Cifra transcrita por Rafael Carneiro (Rolfis).",
+    "verificadoEm": "2026-11-24"
+   },
+   "secoes": [
+    {
+     "tipo": "intro",
+     "nome": "Intro",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[C7M] [G/B] [Am7] [A7(2)] [Am7]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Primeira Parte",
+     "linhas": [
+      {
+       "texto": "Qu[G]em foi muito perdoado"
+      },
+      {
+       "texto": "D[G9]everia saber o valor de ser am[Em7]ado"
+      },
+      {
+       "texto": "Mas por outro lado"
+      },
+      {
+       "texto": "O bem que eu quero fazer"
+      },
+      {
+       "texto": "De fato eu não f[Am7]aço"
+      },
+      {
+       "texto": "E, dependendo do pec[G/B]ado"
+      },
+      {
+       "texto": "Eu nem me sinto incomod[C]ado"
+      },
+      {
+       "texto": "Então esbarro na Tua pal[Cm/Eb]avra"
+      },
+      {
+       "texto": "E sou confrontado"
+      }
+     ]
+    },
+    {
+     "tipo": "pre-refrao",
+     "nome": "Pré-Refrão",
+     "linhas": [
+      {
+       "texto": "[C9]   Não adianta fing[D]ir"
+      },
+      {
+       "texto": "Que está tudo b[Em7]em"
+      },
+      {
+       "texto": "Se de Ti eu recebi perd[Bm7]ão"
+      },
+      {
+       "texto": "Mas não consigo perdoar ninguém"
+      },
+      {
+       "texto": "[C9]   A outra face eu não d[D]ei"
+      },
+      {
+       "texto": "Só o meu ego escut[Em7]ei"
+      },
+      {
+       "texto": "Até amei os meus am[Bm7]igos"
+      },
+      {
+       "texto": "Mas meus inimigos odiei"
+      },
+      {
+       "texto": "Na m[C]inha hipocrisia"
+      },
+      {
+       "texto": "Me ach[D]ei melhor que o outro"
+      },
+      {
+       "texto": "Sem p[Bm7]erceber a trave"
+      },
+      {
+       "texto": "Que est[Em7]ava no meu olho"
+      },
+      {
+       "texto": "Em p[C]ele de ovelha"
+      },
+      {
+       "texto": "Ag[D]indo como um lobo"
+      },
+      {
+       "texto": "Me [Bm7]esqueci do reino"
+      },
+      {
+       "texto": "Junt[Em7]ando os meus tesouros"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "[C7M]Ah, Jesus"
+      },
+      {
+       "texto": "Quebra o meu orgulho"
+      },
+      {
+       "texto": "E faz-me olh[Bm7]ar pra cruz"
+      },
+      {
+       "texto": "Tira a dureza do meu c[Am7]oração"
+      },
+      {
+       "texto": "De joelhos, eu imploro o T[C7M]eu perdão"
+      },
+      {
+       "texto": "Pois Tua graça"
+      },
+      {
+       "texto": "Joga a minha c[Bm7]arne ao chão"
+      },
+      {
+       "texto": "E me ensina o valor da c[Am7]omunhão"
+      },
+      {
+       "texto": "Do beber do vinho e p[G/B]artilh[C7M]ar do pão"
+      }
+     ]
+    },
+    {
+     "tipo": "solo",
+     "nome": "Base do Solo",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[Bm7] [Am7]"
+      }
+     ]
+    },
+    {
+     "tipo": "pre-refrao",
+     "nome": "Pré-Refrão",
+     "linhas": [
+      {
+       "texto": "[C9]   Não adianta fing[D]ir"
+      },
+      {
+       "texto": "Que está tudo b[Em7]em"
+      },
+      {
+       "texto": "Se de Ti eu recebi perd[Bm7]ão"
+      },
+      {
+       "texto": "Mas não consigo perdoar ninguém"
+      },
+      {
+       "texto": "[C9]   A outra face eu não d[D]ei"
+      },
+      {
+       "texto": "Só o meu ego escut[Em7]ei"
+      },
+      {
+       "texto": "Até amei os meus am[Bm7]igos"
+      },
+      {
+       "texto": "Mas meus inimigos odiei"
+      },
+      {
+       "texto": "Na m[C]inha hipocrisia"
+      },
+      {
+       "texto": "Me ach[D]ei melhor que o outro"
+      },
+      {
+       "texto": "Sem p[Bm7]erceber a trave"
+      },
+      {
+       "texto": "Que est[Em7]ava no meu olho"
+      },
+      {
+       "texto": "Em p[C]ele de ovelha"
+      },
+      {
+       "texto": "Ag[D]indo como um lobo"
+      },
+      {
+       "texto": "Me [Bm7]esqueci do reino"
+      },
+      {
+       "texto": "Junt[Em7]ando os meus tesouros"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "[C7M]Ah, Jesus"
+      },
+      {
+       "texto": "Quebra o meu orgulho"
+      },
+      {
+       "texto": "E faz-me olh[Bm7]ar pra cruz"
+      },
+      {
+       "texto": "Tira a dureza do meu c[Am7]oração"
+      },
+      {
+       "texto": "De joelhos, eu imploro o T[C7M]eu perdão"
+      },
+      {
+       "texto": "Pois Tua graça"
+      },
+      {
+       "texto": "Joga a minha c[Bm7]arne ao chão"
+      },
+      {
+       "texto": "E me ensina o valor da c[Am7]omunhão"
+      },
+      {
+       "texto": "Do beber do vinho e partilh[C7M]ar do pão"
+      }
+     ]
+    },
+    {
+     "tipo": "solo",
+     "nome": "Base do Solo",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[Bm7] [Am7]"
+      }
+     ]
+    },
+    {
+     "tipo": "verso",
+     "nome": "Segunda Parte",
+     "linhas": [
+      {
+       "texto": "[C7M]Eu sou o vaso, Tu [G/B]és o oleiro"
+      },
+      {
+       "texto": "Qu[Am7]ebra minha vida,"
+      },
+      {
+       "texto": "Me ref[G/B]az por inteiro"
+      },
+      {
+       "texto": "T[C7M]omo a minha cruz e n[G/B]ego a mim mesmo"
+      },
+      {
+       "texto": "P[Am7]ois do pecado"
+      },
+      {
+       "texto": "Não sou m[G/B]ais prisioneiro"
+      },
+      {
+       "texto": "[C7M]Eu sou o vaso, Tu [G/B]és o oleiro"
+      },
+      {
+       "texto": "Qu[Am7]ebra minha vida,"
+      },
+      {
+       "texto": "Me ref[G/B]az por inteiro"
+      },
+      {
+       "texto": "T[C7M]omo a minha cruz e n[G/B]ego a mim mesmo"
+      },
+      {
+       "texto": "P[Am7]ois do pecado"
+      },
+      {
+       "texto": "Não sou m[G/B]ais prisioneiro"
+      },
+      {
+       "texto": "M[C7M]esmo com falhas, esse [G/B]é o meu desejo"
+      },
+      {
+       "texto": "D[Am7]á-me um c[G/B]ora_ç[C]ão igu[D]al ao T[G]eu"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "D[G]á-me um coração igu[G/B]al ao T[C]eu"
+      },
+      {
+       "texto": "Meu M[D]estre"
+      },
+      {
+       "texto": "D[G]á-me um coração igu[G/B]al ao T[C]eu"
+      },
+      {
+       "texto": "Coraç[D]ão disposto a ob[Bm7]ede_c[Em7]er"
+      },
+      {
+       "texto": "Cumpr[Bm7]ir todo o Teu quer[Em7]er"
+      },
+      {
+       "texto": "D[Am7]á-me um c[G/B]ora_ç[C]ão igu[D]al ao T[G]eu"
+      },
+      {
+       "texto": "D[G]á-me um coração igu[G/B]al ao T[C]eu"
+      },
+      {
+       "texto": "Meu M[D]estre"
+      },
+      {
+       "texto": "D[G]á-me um coração igu[G/B]al ao T[C]eu"
+      },
+      {
+       "texto": "Coraç[D]ão disposto a ob[Bm7]ede_c[Em7]er"
+      },
+      {
+       "texto": "Cumpr[Bm7]ir todo o Teu quer[Em7]er"
+      },
+      {
+       "texto": "D[Am7]á-me um c[G/B]ora_ç[C]ão igu[D]al ao T[C7M]eu"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "Jesus"
+      },
+      {
+       "texto": "Quebra o meu orgulho"
+      },
+      {
+       "texto": "E faz-me olh[Bm7]ar pra cruz"
+      },
+      {
+       "texto": "Tira a dureza do meu c[Am7]oração"
+      },
+      {
+       "texto": "De joelhos, eu imploro o T[C7M]eu perdão"
+      },
+      {
+       "texto": "Pois Tua graça"
+      },
+      {
+       "texto": "Joga a minha c[Bm7]arne ao chão"
+      },
+      {
+       "texto": "E me ensina o valor da c[Am7]omunhão"
+      },
+      {
+       "texto": "Do beber do vinho e partilh[C7M]ar do pão"
+      }
+     ]
+    },
+    {
+     "tipo": "solo",
+     "nome": "Base do Solo",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[Bm7] [Am7]"
+      }
+     ]
+    },
+    {
+     "tipo": "interludio",
+     "nome": "Interlúdio",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[C7M] [Bm7] [Am7]"
+      }
+     ]
+    },
+    {
+     "tipo": "ponte",
+     "nome": "Ponte",
+     "linhas": [
+      {
+       "texto": "Judas v[C7M]eio ao Teu encontro"
+      },
+      {
+       "texto": "Com a tr[G/B]aição pesando"
+      },
+      {
+       "texto": "Mas Te v[Am7]ejo se inclinando"
+      },
+      {
+       "texto": "E os pés do tr[G/B]aidor lavando"
+      },
+      {
+       "texto": "Vejo P[C7M]edro Te negando"
+      },
+      {
+       "texto": "E o g[G/B]alo então cantando"
+      },
+      {
+       "texto": "Mesmo ass[Am7]im, Tu dizes:"
+      },
+      {
+       "texto": "Pedro, apasc[G/B]enta o meu rebanho"
+      },
+      {
+       "texto": "Judas v[C7M]eio ao Teu encontro"
+      },
+      {
+       "texto": "Com a tr[G/B]aição pesando"
+      },
+      {
+       "texto": "Mas Te v[Am7]ejo se inclinando"
+      },
+      {
+       "texto": "E os pés do tr[G/B]aidor lavando"
+      },
+      {
+       "texto": "Vejo P[C7M]edro Te negando"
+      },
+      {
+       "texto": "E o g[G/B]alo então cantando"
+      },
+      {
+       "texto": "Mesmo ass[Am7]im, Tu dizes:"
+      },
+      {
+       "texto": "Pedro, apasc[G/B]enta o meu rebanho"
+      },
+      {
+       "texto": "Quebrant[C7M]ado, estou chorando"
+      },
+      {
+       "texto": "Minha [G/B]alma está clamando"
+      },
+      {
+       "texto": "D[Am7]á-me um c[G/B]ora_ç[C]ão igu[D]al ao T[G]eu"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão",
+     "linhas": [
+      {
+       "texto": "D[G]á-me um coração igu[G/B]al ao T[C]eu"
+      },
+      {
+       "texto": "Meu M[D]estre"
+      },
+      {
+       "texto": "D[G]á-me um coração igu[G/B]al ao T[C]eu"
+      },
+      {
+       "texto": "Coraç[D]ão disposto a ob[Bm7]ede_c[Em7]er"
+      },
+      {
+       "texto": "Cumpr[Bm7]ir todo o Teu quer[Em7]er"
+      },
+      {
+       "texto": "D[Am7]á-me um c[G/B]ora_ç[C]ão igu[D]al ao T[G]eu"
+      },
+      {
+       "texto": "D[G]á-me um coração igu[G/B]al ao T[C]eu"
+      },
+      {
+       "texto": "Meu M[D]estre"
+      },
+      {
+       "texto": "D[G]á-me um coração igu[G/B]al ao T[C]eu"
+      },
+      {
+       "texto": "Coraç[D]ão disposto a ob[Bm7]ede_c[Em7]er"
+      },
+      {
+       "texto": "Cumpr[Bm7]ir todo o Teu quer[Em7]er"
+      },
+      {
+       "texto": "D[Am7]á-me um c[G/B]ora_ç[C]ão igu[D]al ao T[C7M]eu"
+      }
+     ]
+    },
+    {
+     "tipo": "refrao",
+     "nome": "Refrão Final",
+     "linhas": [
+      {
+       "texto": "Jesus"
+      },
+      {
+       "texto": "Quebra o meu orgulho"
+      },
+      {
+       "texto": "E faz-me olh[Bm7]ar pra cruz"
+      },
+      {
+       "texto": "Tira a dureza do meu c[Am7]oração"
+      },
+      {
+       "texto": "De joelhos, eu imploro o T[C7M]eu perdão"
+      },
+      {
+       "texto": "Pois Tua graça"
+      },
+      {
+       "texto": "Joga a minha c[Bm7]arne ao chão"
+      },
+      {
+       "texto": "E me ensina o valor da c[Am7]omunhão"
+      },
+      {
+       "texto": "Do beber do vinho e partilh[C7M]ar do pão"
+      }
+     ]
+    },
+    {
+     "tipo": "final",
+     "nome": "Final",
+     "linhas": [
+      {
+       "tipo": "acordes",
+       "texto": "[Bm7] [Am7] [C7M]"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

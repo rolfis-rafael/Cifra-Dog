@@ -1,8 +1,0 @@
-{
-  "provider": "YouTube",
-  "simulated": false,
-  "api": true,
-  "iframe": true,
-  "ready": true,
-  "message": "Dê o play no vídeo para começar."
-}
