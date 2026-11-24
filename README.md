@@ -4,6 +4,8 @@ App de cifras e repertórios para quem toca ao vivo. Roda no navegador, funciona
 
 Começou como um site em PHP e MySQL. A versão atual, na pasta `v2/`, foi reescrita sem backend, pensando primeiro no celular, porque é nele que a cifra fica aberta no palco.
 
+https://rolfis-rafael.github.io/Cifra-Dog
+
 ## O que dá para fazer
 
 **Cifras**
