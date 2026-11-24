@@ -94,6 +94,20 @@
         ir('#/repertorio/' + r.id);
     }
 
+    function menuCriar() {
+        abrirSheet('<h3 style="margin:0 0 8px">Criar</h3>' +
+            '<a class="op" href="#/criar">' + icone('mais') + 'Nova cifra</a>' +
+            '<button class="op" data-sh-rep>' + icone('lista') + 'Novo repertório</button>',
+            sh => {
+                sh.querySelector('a').onclick = fecharSheet;
+                sh.querySelector('[data-sh-rep]').onclick = () => { fecharSheet(); novoRepertorio(); };
+            });
+    }
+
+    function baixarRepertorios() {
+        return '<a class="bt" href="baixar.html#repertorios">' + icone('baixar') + 'Baixar repertórios</a>';
+    }
+
     /* Menu do avatar: backup e instalar. */
     function menuConta() {
         abrirSheet(
@@ -131,7 +145,6 @@
     const MESES = ['jan.', 'fev.', 'mar.', 'abr.', 'mai.', 'jun.', 'jul.', 'ago.', 'set.', 'out.', 'nov.', 'dez.'];
     const DIAS = ['dom.', 'seg.', 'ter.', 'qua.', 'qui.', 'sex.', 'sáb.'];
     const BANNERS = [
-        { tag: 'Novo', icone: 'baixar', titulo: 'Pacotes de músicas', texto: 'Baixe cifras livres prontas e use sem internet.', link: '#/pacotes' },
         { tag: 'Novo', icone: 'ajustes', titulo: 'Pedal e MIDI do seu jeito', texto: 'Parar, travar (segure o botão) e descer lisinho com o Chocolate Plus.', link: '#/config' },
         { tag: 'Novo', icone: 'pinca', titulo: 'Pinça para ajustar a letra', texto: 'Dois dedos mudam o tamanho; a rolagem acompanha e a letra sempre cabe na tela.', link: '#/show' },
         { tag: 'Dica', icone: 'bloco', titulo: 'Blocos e várias ordens', texto: 'Divida o show em blocos e guarde mais de uma ordem para o mesmo repertório.', link: '#/biblioteca?aba=repertorios' },
@@ -156,6 +169,7 @@
                 ...ms.map(m => ({ t: m.abertaEm || 0, html: '<a class="atalho" href="#/cifra/' + m.id + '">' + capaMusica(m) + '<span>' + esc(m.titulo) + '</span></a>' })),
             ].sort((a, b) => b.t - a.t).slice(0, 7);
             h += '<div class="grade"><a class="atalho" href="#/curtidas">' + capaCurtidas() + '<span>Músicas Curtidas</span></a>' + recentes.map(x => x.html).join('') + '</div>';
+            h += '<div class="dupla" style="margin-top:16px">' + baixarRepertorios() + '</div>';
 
             if (App.podeInstalar()) {
                 h += '<button class="bt prim cheio" style="margin-top:16px" data-instalar>' + icone('instalar') + 'Instalar o Cifra-Dog como app</button>';
@@ -188,7 +202,9 @@
 
             const mais = ms.filter(m => m.tocadas > 0).sort((a, b) => b.tocadas - a.tocadas).slice(0, 12);
             if (mais.length > 2) h += secaoCarrossel('Mais tocadas', mais.map(cartaoMusica));
-            const novas = ms.slice().sort((a, b) => b.criadaEm - a.criadaEm).slice(0, 12);
+            const exemplos = ms.filter(m => m.exemplo).sort((a, b) => b.criadaEm - a.criadaEm);
+            if (exemplos.length) h += secaoCarrossel('Músicas de exemplo', exemplos.map(cartaoMusica));
+            const novas = ms.filter(m => !m.exemplo).sort((a, b) => b.criadaEm - a.criadaEm).slice(0, 12);
             if (novas.length) h += secaoCarrossel('Adicionadas por você', novas.map(cartaoMusica), '#/biblioteca?aba=cifras');
             if (!ms.length) h += vazio('Nenhuma cifra ainda', 'Adicione a primeira cifra');
             h += rotuloPapel('Nos bastidores') + '<div class="banners">' + BANNERS.map(b =>
@@ -241,7 +257,7 @@
                 '<span class="ing-bt">' + icone('play') + 'Continuar</span></a>' : '') +
             '<label class="campo-busca">' + icone('busca') + '<input id="sh-busca" type="search" placeholder="Pesquisar música nos repertórios" autocomplete="off"></label>' +
             '<div id="sh-res"></div>' +
-            '<div id="sh-reps">' + rotuloPapel('Seus shows') +
+            '<div id="sh-reps">' + rotuloPapel('Seus shows') + '<div class="dupla" style="margin-bottom:12px">' + baixarRepertorios() + '</div>' +
             (reps.length ? reps.map(r => {
                 const n = musDe(r).length, nb = r.itens.filter(i => i.tipo === 'bloco').length;
                 return '<div class="show-cartao">' + capaRep(r) + '<div class="sc-txt"><b>' + esc(r.nome) + '</b><small>' + n + ' música' + (n === 1 ? '' : 's') + (nb ? ' · ' + nb + ' blocos' : '') + '</small></div>' +
@@ -375,6 +391,7 @@
 
         if (aba === 'repertorios') {
             h += '<div class="lista">' + await linhaCurtidas() + ordenar(rs, 'abertoEm', 'nome').map(linhaRep).join('') + '</div>';
+            h += '<div class="dupla" style="margin-top:12px">' + baixarRepertorios() + '</div>';
             if (!rs.length) h += '<div class="vazio"><p>Crie um repertório para montar seu show ou ensaio.</p><button class="bt prim" data-novo-rep>' + icone('mais') + 'Novo repertório</button></div>';
         } else {
             const lista = aba === 'curtidas' ? ms.filter(m => m.curtida) : aba === 'pendentes' ? ms.filter(m => !(m.cifra || '').trim()) : ms;
@@ -390,13 +407,6 @@
             '<p class="dica">' + ms.length + ' cifras e ' + rs.length + ' repertórios salvos neste aparelho.</p>';
         tela().innerHTML = h;
         tela().querySelectorAll('[data-novo-rep]').forEach(b => b.onclick = novoRepertorio);
-        // Botão + (como o "Criar" da biblioteca do Spotify): nova cifra ou novo repertório.
-        const cm = tela().querySelector('[data-criar-menu]');
-        if (cm) cm.onclick = () => abrirSheet('<h3 style="margin:0 0 8px">Criar</h3>' +
-            '<a class="op" href="#/criar">' + icone('mais') + 'Nova cifra<span class="op-dir">cole ou escreva</span></a>' +
-            '<button class="op" data-sh-rep>' + icone('lista') + 'Novo repertório<span class="op-dir">monte um show ou ensaio</span></button>' +
-            '<a class="op" href="#/pacotes">' + icone('baixar') + 'Pacotes de músicas<span class="op-dir">cifras livres prontas</span></a>',
-            sh => { sh.querySelector('[data-sh-rep]').onclick = () => { fecharSheet(); novoRepertorio(); }; sh.querySelectorAll('a').forEach(a => a.onclick = () => fecharSheet()); });
         tela().querySelector('[data-exportar]').onclick = () => App.exportar();
         tela().querySelector('[data-importar]').onclick = () => App.importar();
     }
@@ -424,7 +434,7 @@
             '<div id="c-previa" hidden style="background:var(--sup-1);border-radius:8px;padding:12px;min-height:46vh"><div id="cifra-conteudo" style="padding-bottom:0"></div></div>' +
             '<div class="dica" id="c-detectado"></div>' +
             (!editando && global.Pacotes ? '<details class="mais"><summary>Onde achar cifras livres</summary><div class="lista">' + Pacotes.htmlFontes() +
-                '<a class="op" href="#/pacotes">' + icone('baixar') + '<span class="op-txt">Pacotes de músicas<br><small>Cifras livres prontas para instalar de uma vez.</small></span></a></div>' +
+                '<a class="op" href="baixar.html#repertorios">' + icone('baixar') + '<span class="op-txt">Baixar repertórios<br><small>Pacotes de cifras livres para importar.</small></span></a></div>' +
                 '<p class="dica">Copie a cifra no site, volte aqui e toque em Colar. Arquivos ChordPro (.cho) entram pelo botão Arquivo.</p></details>' : '') +
             '<details class="mais"' + (editando ? ' open' : '') + '><summary>Mais opções (tom, BPM, capo)</summary>' +
             '<div class="tripla"><div><label>Tom</label><input class="entrada" id="c-tom" placeholder="auto" value="' + esc(m.tom) + '" maxlength="8"></div>' +
@@ -1870,5 +1880,5 @@
         const d = document.createElement('div'); d.className = 'l l-letra'; d.textContent = letra ? letra.textContent.trim() : ''; return d;
     }
 
-    global.Telas = { fraseComAcordes, inicio, show, curtidas, buscar, biblioteca, criar, cifra, repertorio, config, menuMusica, menuConta };
+    global.Telas = { fraseComAcordes, inicio, show, curtidas, buscar, biblioteca, criar, cifra, repertorio, config, menuMusica, menuConta, menuCriar };
 })(window);

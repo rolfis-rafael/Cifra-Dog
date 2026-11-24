@@ -13,7 +13,7 @@
         [/^\/buscar$/, 'buscar', 'buscar'],
         [/^\/show$/, 'show', 'show'],
         [/^\/biblioteca$/, 'biblioteca', 'biblioteca'],
-        [/^\/criar$/, 'criar', 'biblioteca'],
+        [/^\/criar$/, 'criar', 'criar'],
         [/^\/editar\/([\w-]+)$/, 'criar', 'biblioteca'],
         [/^\/config$/, 'config', ''],
         [/^\/cifra\/([\w-]+)$/, 'cifra', ''],
@@ -80,6 +80,7 @@
         if (menu) { e.preventDefault(); e.stopPropagation(); Telas.menuMusica(menu.dataset.menuMusica); return; }
         if (t.closest('[data-voltar]')) { e.preventDefault(); if (history.length > 1) history.back(); else location.hash = '#/'; return; }
         if (t.closest('[data-conta]')) { Telas.menuConta(); return; }
+        if (t.closest('[data-criar-menu]')) { e.preventDefault(); Telas.menuCriar(); return; }
         const linha = t.closest('[data-href]');
         if (linha && !t.closest('button, a')) { location.hash = linha.dataset.href; }
     });
@@ -137,7 +138,7 @@
 
     /* ---------- Início ---------- */
     async function iniciar() {
-        try { await Exemplos.semearSePreciso(); await ListaVideo.importarSePreciso(); }
+        try { await Exemplos.semearSePreciso(); }
         catch (e) { console.error(e); toast('Seu navegador bloqueou o armazenamento local'); }
         try { Controle.iniciar(); } catch (e) { console.warn('Controle:', e); }
         window.addEventListener('hashchange', () => { if (location.hash !== rotaAtual) navegar(false); });

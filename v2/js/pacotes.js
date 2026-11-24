@@ -195,7 +195,7 @@
      *   - você já tinha uma música com o mesmo título e artista -> mantém a sua.
      * Devolve { novas, atualizadas, iguais, mantidas }.
      */
-    async function instalar(p) {
+    async function instalar(p, montarRepertorio = false) {
         const info = p.pacote;
         const locais = await DB.listarMusicas();
         const chave = (t, a) => normal(t) + '|' + normal(a);
@@ -205,10 +205,18 @@
             porNome.set(chave(m.titulo, m.artista), m);
         });
         const r = { novas: 0, atualizadas: 0, iguais: 0, mantidas: 0 };
+        const musicasDoRepertorio = new Set();
         for (const mu of p.musicas) {
             const nova = paraMusicaApp(mu, info);
             const ja = porPacote.get(info.id + '/' + mu.id) || porNome.get(chave(nova.titulo, nova.artista));
-            if (!ja) { await DB.salvarMusica(nova); r.novas++; continue; }
+            if (!ja) {
+                const salva = await DB.salvarMusica(nova);
+                porNome.set(chave(nova.titulo, nova.artista), salva);
+                musicasDoRepertorio.add(salva.id);
+                r.novas++;
+                continue;
+            }
+            musicasDoRepertorio.add(ja.id);
             const doPacote = ja.pacote && ja.pacote.id === info.id;
             if (!doPacote) { r.mantidas++; continue; }
             const editada = ja.pacote.assinatura && assinatura(ja.cifra || '') !== ja.pacote.assinatura;
@@ -219,6 +227,13 @@
             if (ja.tom !== nova.tom) { mud.tom = nova.tom; mud.semitons = 0; }
             await DB.salvarMusica(mud);
             r.atualizadas++;
+        }
+        if (montarRepertorio) {
+            const id = 'pacote-' + info.id;
+            if (!(await DB.pegarRepertorio(id))) {
+                const itens = [...musicasDoRepertorio].map(musicaId => ({ id: DB.novoId(), tipo: 'musica', musicaId, semitons: 0 }));
+                await DB.salvarRepertorio({ id, nome: info.nome, itens });
+            }
         }
         const ins = await instalados();
         ins[info.id] = { nome: info.nome, revisao: info.revisao, em: Date.now() };
@@ -251,11 +266,16 @@
        5. TELA #/pacotes
        ===================================================================== */
 
-    async function telaPacotes() {
+    async function telaPacotes(_params, q = {}) {
         const tela = document.getElementById('tela');
+        const somenteArquivo = q.arquivo === '1';
         tela.innerHTML =
             '<div class="topo"><button class="bt-icone" data-voltar aria-label="Voltar">' + icone('voltar') + '</button>' +
-            '<h1 class="titulo" style="margin:0;flex:1;font-size:22px">Pacotes de músicas</h1></div>' +
+            '<h1 class="titulo" style="margin:0;flex:1;font-size:22px">' + (somenteArquivo ? 'Importar repertório' : 'Pacotes de músicas') + '</h1></div>' +
+            (somenteArquivo ?
+                '<p>Selecione o arquivo JSON que você baixou. O repertório ficará disponível na aba Show.</p>' +
+                '<div class="dupla"><button class="bt prim" id="pc-arquivo">' + icone('subir') + 'Escolher arquivo</button></div>' +
+                '<input type="file" id="pc-input" accept=".json,application/json" hidden>' :
             '<p class="dica" style="margin:0 0 12px">Cifras livres (domínio público ou com licença aberta). Depois de instalar, funcionam sem internet. As músicas que você já tem nunca são substituídas.</p>' +
             '<h2 class="secao">Catálogo</h2><div id="pc-lista"><p class="dica">Carregando o catálogo…</p></div>' +
             '<div class="dupla" style="margin-top:10px"><button class="bt" id="pc-arquivo">' + icone('subir') + 'Pacote de arquivo</button>' +
@@ -263,7 +283,7 @@
             '<input type="file" id="pc-input" accept=".json,application/json" hidden>' +
             '<h2 class="secao">Fontes de cifras livres</h2><div class="lista">' + htmlFontes() + '</div>' +
             '<p class="dica">Achou uma cifra livre? Copie, toque em <a href="#/criar">Nova cifra</a> e cole: o app separa acordes e letra sozinho.</p>' +
-            '<h2 class="secao">Avançado</h2><button class="op" id="pc-url">' + icone('ajustes') + 'Endereço do catálogo<span class="op-dir" style="max-width:55%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">' + esc(urlCatalogo()) + '</span></button>';
+            '<h2 class="secao">Avançado</h2><button class="op" id="pc-url">' + icone('ajustes') + 'Endereço do catálogo<span class="op-dir" style="max-width:55%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">' + esc(urlCatalogo()) + '</span></button>');
 
         const $ = (id) => document.getElementById(id);
         let catalogo = [];
@@ -314,7 +334,6 @@
             await desenharLista('');
         }
 
-        $('pc-recarregar').onclick = carregar;
         $('pc-arquivo').onclick = () => $('pc-input').click();
         $('pc-input').onchange = async (ev) => {
             const f = ev.target.files[0]; ev.target.value = '';
@@ -323,10 +342,14 @@
                 if (f.size > MAX_BYTES) throw new Error('Arquivo grande demais.');
                 const p = validarPacote(lerJson(await f.text()));
                 if (!(await confirmar('Instalar "' + p.pacote.nome + '"?', p.musicas.length + ' músicas, do arquivo ' + f.name + '.', 'Instalar'))) return;
-                toast('Pacote instalado: ' + resumo(await instalar(p)));
-                await desenharLista('');
+                const resultado = await instalar(p, somenteArquivo);
+                toast('Pacote instalado: ' + resumo(resultado));
+                if (somenteArquivo) location.hash = '#/repertorio/pacote-' + p.pacote.id;
+                else await desenharLista('');
             } catch (e) { toast(e.message); }
         };
+        if (somenteArquivo) return;
+        $('pc-recarregar').onclick = carregar;
         // Endereço do catálogo: painel próprio (o "perguntar" do app corta em 80 letras e não aceita vazio).
         $('pc-url').onclick = () => {
             let mudou = false;

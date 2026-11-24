@@ -1,61 +1,17 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cifra-Dog</title>
-    <meta name="description" content="Suas cifras e repertórios, no celular e no computador.">
-    <meta name="theme-color" content="#1b100b">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="manifest" href="manifest.json">
-    <link rel="icon" type="image/png" href="img/brand/icon-192.png">
-    <link rel="apple-touch-icon" href="img/brand/icon-180.png">
-    <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="css/taverna.css">
-    <link rel="stylesheet" href="css/estudio.css">
-    <link rel="stylesheet" href="css/show.css">
+    <script>
+        const app = new URL('v2/', location.href);
+        app.search = location.search;
+        app.hash = location.hash;
+        location.replace(app.href);
+    </script>
 </head>
 <body>
-    <div id="cenario" aria-hidden="true"></div>
-    <div id="app">
-        <!-- Navegação: barra inferior no celular, barra lateral no computador -->
-        <nav id="nav" aria-label="Navegação principal">
-            <a class="nav-logo" href="#/"><img src="img/brand/logo-pub.webp" width="180" height="60" decoding="async" alt="Cifra-Dog"></a>
-            <!-- Mesma ordem dos apps de música (Spotify, YouTube Music): Início, Pesquisar, Discografia (biblioteca), Show.
-                 Cada item tem dois ícones: contorno (ic-off) quando inativo e preenchido (ic-on) na aba aberta.
-                 "Crie" saiu da barra (é uma ação, não um lugar): fica no botão + da Discografia. -->
-            <a href="#/" data-rota="inicio"><svg class="ic-off" viewBox="0 0 24 24" style="fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round"><path d="M4 10.5 12 4l8 6.5V20h-5v-5.5H9V20H4z"/></svg><svg class="ic-on" viewBox="0 0 24 24"><path d="M12 3 3 10.5V21h6v-6h6v6h6V10.5z"/></svg><span>Início</span></a>
-            <a href="#/buscar" data-rota="buscar"><svg class="ic-off" viewBox="0 0 24 24" style="fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg><svg class="ic-on" viewBox="0 0 24 24" style="fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round"><circle cx="10.5" cy="10.5" r="6.3"/><path d="m15.5 15.5 5 5"/></svg><span>Pesquisar</span></a>
-            <a href="#/biblioteca" data-rota="biblioteca"><svg class="ic-off" viewBox="0 0 24 24" style="fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.5"/><path d="M12 6.2a5.8 5.8 0 0 1 5.8 5.8"/></svg><svg class="ic-on" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 7.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM12 4a8 8 0 0 1 8 8h-1.5A6.5 6.5 0 0 0 12 5.5z"/></svg><span>Discografia</span></a>
-            <a href="#/show" data-rota="show"><svg class="ic-off" viewBox="0 0 24 24" style="fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round"><rect x="9" y="2.8" width="6" height="11" rx="3"/><path d="M5.8 11a6.2 6.2 0 0 0 12.4 0M12 17.2V21"/></svg><svg class="ic-on" viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V5a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11z"/></svg><span>Show</span></a>
-            <div class="nav-reps" id="nav-reps"></div>
-        </nav>
-
-        <main id="tela" tabindex="-1"></main>
-
-    </div>
-
-    <!-- Painel que sobe de baixo (menus, diagramas, perguntas) -->
-    <div id="sheet-fundo" hidden><div id="sheet" role="dialog" aria-modal="true"></div></div>
-    <div id="toast" role="status" aria-live="polite"></div>
-
-    <script src="js/cifra-motor.js"></script>
-    <script src="js/db.js"></script>
-    <script src="js/ui.js"></script>
-    <script src="js/catalogo.js"></script>
-    <script src="js/aprender.js"></script>
-    <script src="js/exemplos.js"></script>
-    <script src="js/lista-video.js"></script>
-    <script src="js/rolagem-bpm.js"></script>
-    <script src="js/metronomo.js"></script>
-    <script src="js/programada.js"></script>
-    <script src="js/controle.js"></script>
-    <script src="js/telas.js"></script>
-    <script src="js/show-programado.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/sala.js"></script>
-    <script src="js/drive-backup.js"></script>
+    <p><a href="v2/">Abrir Cifra-Dog</a></p>
 </body>
 </html>

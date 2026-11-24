@@ -53,13 +53,13 @@ Abra `http://localhost:8000`. Com o XAMPP, copie o projeto para `htdocs` e abra 
 
 Para instalar, clique no ícone de instalar na barra de endereço do Chrome ou do Edge. No celular, publique a pasta `v2/` em qualquer hospedagem estática (eu uso o Netlify) e use "Instalar app" no menu do navegador. O MIDI exige `localhost` ou HTTPS.
 
-Para gerar o pacote de publicação, com os 29 arquivos de execução e sem backups nem testes:
+Para gerar o pacote da versão atual, incluindo a página de download e os repertórios públicos:
 
 ```bash
 node tools/package-app.cjs
 ```
 
-O resultado fica em `output/`.
+O resultado fica em `output/release-v<VERSÃO>/`. No XAMPP, o endereço `http://localhost/Cifra-Dog/` abre a versão atual em `v2/`.
 
 ## Estrutura
 

@@ -23,13 +23,12 @@
         <!-- Navegação: barra inferior no celular, barra lateral no computador -->
         <nav id="nav" aria-label="Navegação principal">
             <a class="nav-logo" href="#/"><img src="img/brand/logo-pub.webp" width="180" height="60" decoding="async" alt="Cifra-Dog"></a>
-            <!-- Mesma ordem dos apps de música (Spotify, YouTube Music): Início, Pesquisar, Discografia (biblioteca), Show.
-                 Cada item tem dois ícones: contorno (ic-off) quando inativo e preenchido (ic-on) na aba aberta.
-                 "Crie" saiu da barra (é uma ação, não um lugar): fica no botão + da Discografia. -->
+            <!-- Ícones de contorno na navegação e preenchidos na aba aberta. -->
             <a href="#/" data-rota="inicio"><svg class="ic-off" viewBox="0 0 24 24" style="fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round"><path d="M4 10.5 12 4l8 6.5V20h-5v-5.5H9V20H4z"/></svg><svg class="ic-on" viewBox="0 0 24 24"><path d="M12 3 3 10.5V21h6v-6h6v6h6V10.5z"/></svg><span>Início</span></a>
             <a href="#/buscar" data-rota="buscar"><svg class="ic-off" viewBox="0 0 24 24" style="fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg><svg class="ic-on" viewBox="0 0 24 24" style="fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round"><circle cx="10.5" cy="10.5" r="6.3"/><path d="m15.5 15.5 5 5"/></svg><span>Pesquisar</span></a>
             <a href="#/biblioteca" data-rota="biblioteca"><svg class="ic-off" viewBox="0 0 24 24" style="fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.5"/><path d="M12 6.2a5.8 5.8 0 0 1 5.8 5.8"/></svg><svg class="ic-on" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 7.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM12 4a8 8 0 0 1 8 8h-1.5A6.5 6.5 0 0 0 12 5.5z"/></svg><span>Discografia</span></a>
             <a href="#/show" data-rota="show"><svg class="ic-off" viewBox="0 0 24 24" style="fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round"><rect x="9" y="2.8" width="6" height="11" rx="3"/><path d="M5.8 11a6.2 6.2 0 0 0 12.4 0M12 17.2V21"/></svg><svg class="ic-on" viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V5a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11z"/></svg><span>Show</span></a>
+            <a href="#/criar" data-rota="criar" data-criar-menu aria-haspopup="dialog"><svg class="ic-off" viewBox="0 0 24 24" style="fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round"><circle cx="12" cy="12" r="9"/><path d="M8 12h8m-4-4v8"/></svg><svg class="ic-on" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 5h-2v4H7v2h4v4h2v-4h4v-2h-4z"/></svg><span>Criar</span></a>
             <div class="nav-reps" id="nav-reps"></div>
         </nav>
 
@@ -47,7 +46,6 @@
     <script src="js/catalogo.js"></script>
     <script src="js/aprender.js"></script>
     <script src="js/exemplos.js"></script>
-    <script src="js/lista-video.js"></script>
     <script src="js/rolagem-bpm.js"></script>
     <script src="js/metronomo.js"></script>
     <script src="js/programada.js"></script>

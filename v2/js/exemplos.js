@@ -1,7 +1,5 @@
 /*
- * exemplos.js — Assinaturas das antigas demonstrações, usadas só para migração.
- * Desde 2.8, nenhuma cifra de exemplo é adicionada. As versões originais antigas
- * são removidas com cópia de recuperação; qualquer letra editada é preservada.
+ * Exemplos da biblioteca inicial e assinaturas para a migração das versões antigas.
  */
 (function (global) {
     'use strict';
@@ -103,7 +101,7 @@ Was blind, but now I see`,
     ];
 
     /* Retira apenas as demonstrações originais. Cifras editadas ficam preservadas. */
-    async function semearSePreciso() {
+    async function limparExemplosAntigos() {
         if (await DB.lerMeta('limpeza-exemplos-v28')) return;
         const normalizar = s => String(s || '').replace(/\r\n/g, '\n').trim();
         const musicas = await DB.listarMusicas();
@@ -117,6 +115,22 @@ Was blind, but now I see`,
         }
         await DB.gravarMeta('semeado', true);
         await DB.gravarMeta('limpeza-exemplos-v28', true);
+    }
+
+    async function semearSePreciso() {
+        await limparExemplosAntigos();
+        const exemplos = [
+            EXEMPLOS[0], EXEMPLOS[2], EXEMPLOS[4],
+            { titulo: 'O Sol', artista: 'Vitor Kley', tom: 'Em', fonte: 'https://www.cifraclub.com.br/vitor-kley/o-sol/' },
+            { titulo: 'Wish You Were Here', artista: 'Pink Floyd', tom: 'G', fonte: 'https://www.cifraclub.com.br/pink-floyd/wish-you-were-here/' },
+        ];
+        for (let i = exemplos.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [exemplos[i], exemplos[j]] = [exemplos[j], exemplos[i]];
+        }
+        // A biblioteca ordena por data de criação, inclusive quando são salvas no mesmo milissegundo.
+        const agora = Date.now();
+        await DB.adicionarExemplosSeVazio(exemplos.map((m, i) => ({ ...m, exemplo: true, criadaEm: agora - i })));
     }
 
     global.Exemplos = { semearSePreciso };

@@ -52,6 +52,15 @@
         return Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
     }
 
+    function completarMusica(m) {
+        const agora = Date.now();
+        return Object.assign({
+            id: novoId(), titulo: 'Sem título', artista: '', tom: '', capo: 0,
+            bpm: 0, compasso: '4/4', cifra: '', curtida: false, semitons: 0,
+            tocadas: 0, criadaEm: agora, abertaEm: 0, compassosPorFrase: {},
+        }, m, { atualizadaEm: agora });
+    }
+
     /*
      * Um repertório pode ter VÁRIAS ORDENS (Ordem 1, Ordem 2...). Cada ordem tem a sua lista de itens.
      * r.itens é sempre um "espelho" da ordem ativa, então o resto do app continua usando r.itens.
@@ -76,14 +85,30 @@
         listarMusicas: () => operar('musicas', 'readonly', s => s.getAll()),
         pegarMusica: (id) => operar('musicas', 'readonly', s => s.get(id)),
         async salvarMusica(m) {
-            const agora = Date.now();
-            const completa = Object.assign({
-                id: novoId(), titulo: 'Sem título', artista: '', tom: '', capo: 0,
-                bpm: 0, compasso: '4/4', cifra: '', curtida: false, semitons: 0,
-                tocadas: 0, criadaEm: agora, abertaEm: 0, compassosPorFrase: {},
-            }, m, { atualizadaEm: agora });
+            const completa = completarMusica(m);
             await operar('musicas', 'readwrite', s => s.put(completa));
             return completa;
+        },
+        async adicionarExemplosSeVazio(exemplos) {
+            const db = await abrir();
+            return new Promise((ok, erro) => {
+                const tx = db.transaction(['musicas', 'meta'], 'readwrite');
+                const musicas = tx.objectStore('musicas'), meta = tx.objectStore('meta');
+                const chave = 'exemplos-iniciais-v1';
+                const marca = meta.get(chave);
+                marca.onsuccess = () => {
+                    if (marca.result) return;
+                    const total = musicas.count();
+                    total.onsuccess = () => {
+                        if (total.result === 0) {
+                            for (const exemplo of exemplos) musicas.add(completarMusica(exemplo));
+                        }
+                        meta.put({ chave, valor: true });
+                    };
+                };
+                tx.oncomplete = () => ok();
+                tx.onabort = () => erro(tx.error);
+            });
         },
         async excluirMusica(id) {
             await operar('musicas', 'readwrite', s => s.delete(id));

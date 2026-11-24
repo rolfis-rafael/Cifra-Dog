@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Cifra-Dog, um app gratuito de cifras, ensaios e repertórios para músicos.">
+    <meta name="theme-color" content="#1b100b">
+    <link rel="icon" href="img/brand/icon-192.png">
+    <title>Baixar Cifra-Dog</title>
+    <style>
+        :root { color-scheme: dark; --texto: #fff1d5; --suave: #ddc4aa; --dourado: #ffc56e; }
+        * { box-sizing: border-box; }
+        body { margin: 0; font: 1rem/1.55 system-ui, sans-serif; color: var(--texto); background: #170e0b; }
+        .conteudo { width: min(960px, 100% - 36px); margin: auto; }
+        .capa { background: linear-gradient(90deg, #160d09 18%, #160d09b8), url('img/taverna/pub-background.webp') center / cover; }
+        .intro { display: grid; grid-template-columns: 1.35fr 1fr; gap: clamp(24px, 6vw, 64px); align-items: center; padding: clamp(32px, 7vw, 82px) 0; }
+        .logo { width: min(200px, 100%); height: auto; }
+        .mascote { width: 100%; max-width: 320px; height: auto; border: 2px solid #b9864f; border-radius: 8px; justify-self: center; }
+        h1, h2, h3 { font-family: Georgia, serif; line-height: 1.08; margin: 0; }
+        h1 { font-size: clamp(2.5rem, 6.5vw, 4.5rem); margin-top: 20px; }
+        h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); }
+        p { color: var(--suave); }
+        .acoes { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+        .botao { display: inline-flex; align-items: center; min-height: 44px; padding: 9px 16px; text-decoration: none; font-weight: 700; color: var(--texto); border: 1px solid #987148; border-radius: 6px; }
+        .principal { background: var(--dourado); border-color: var(--dourado); color: #25160d; }
+        .botao:hover { box-shadow: 0 0 0 2px var(--dourado); }
+        a:focus-visible { outline: 3px solid #fff; outline-offset: 4px; }
+        section { padding: 34px 0; border-top: 1px solid #7c593b; }
+        .pacote { padding: 20px; margin-top: 16px; border: 1px solid #7c593b; border-radius: 8px; background: #2b1a13; }
+        .pacote p { margin: 8px 0 16px; }
+        @media (max-width: 620px) {
+            .intro { grid-template-columns: 1fr; }
+            .mascote { width: min(62%, 240px); justify-self: start; }
+        }
+    </style>
+</head>
+<body>
+    <header class="capa">
+        <div class="intro conteudo">
+            <div>
+                <img class="logo" src="img/brand/logo-pub.webp" alt="Cifra-Dog">
+                <h1>Suas cifras, prontas pro palco.</h1>
+                <p>Organize repertórios, transponha cifras e ensaie no celular ou no computador. Gratuito e com modo offline.</p>
+                <div class="acoes">
+                    <a class="botao principal" href="index.html">Abrir Cifra-Dog</a>
+                    <a class="botao" href="#instalar">Como instalar</a>
+                </div>
+            </div>
+            <img class="mascote" src="img/brand/dog-pub.webp" alt="Mascote do Cifra-Dog com guitarra">
+        </div>
+    </header>
+    <main class="conteudo">
+        <section id="instalar">
+            <h2>Instale no seu aparelho</h2>
+            <p>Abra o Cifra-Dog no Chrome ou Edge e procure a opção de instalar na barra de endereço ou no menu. No iPhone, abra no Safari e use <strong>Compartilhar → Adicionar à Tela de Início</strong>.</p>
+        </section>
+        <section id="repertorios">
+            <h2>Baixar repertórios</h2>
+            <p>Baixe um pacote e abra o arquivo JSON no Cifra-Dog. Depois de importar, o repertório aparece em <strong>Show</strong>.</p>
+            <article class="pacote">
+                <h3>Cantigas populares</h3>
+                <p>Quatro cantigas tradicionais brasileiras de domínio público, com harmonias simples para violão.</p>
+                <div class="acoes">
+                    <a class="botao principal" href="repertorios/cantigas-populares.json" download>Baixar pacote</a>
+                    <a class="botao" href="index.html#/pacotes?arquivo=1">Importar no Cifra-Dog</a>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
