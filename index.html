@@ -3,15 +3,16 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cifra-Dog</title>
+    <title>Baixar o Cifra-Dog</title>
     <script>
-        const app = new URL('v2/', location.href);
-        app.search = location.search;
-        app.hash = location.hash;
-        location.replace(app.href);
+        // A página inicial do site é a de download. O app continua em v2/.
+        const destino = new URL('v2/baixar.html', location.href);
+        destino.search = location.search;
+        destino.hash = location.hash;
+        location.replace(destino.href);
     </script>
 </head>
 <body>
-    <p><a href="v2/">Abrir Cifra-Dog</a></p>
+    <p><a href="v2/baixar.html">Baixar o Cifra-Dog</a></p>
 </body>
 </html>
