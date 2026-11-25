@@ -3,7 +3,7 @@
  * AJUSTAR: sempre que mudar algum arquivo, aumente a VERSAO para o celular baixar a nova.
  */
 const PREFIXO = 'cifradog:' + self.registration.scope + ':';
-const VERSAO = PREFIXO + '3.9.2';
+const VERSAO = PREFIXO + '3.9.3';
 const ARQUIVOS = [
     './', './index.html', './baixar.html', './manifest.json', './css/app.css', './css/taverna.css', './css/estudio.css', './css/show.css', './css/dicas.css',
     './js/cifra-motor.js', './js/filtro-json.js', './js/db.js', './js/exemplos.js', './js/rolagem-bpm.js', './js/metronomo.js', './js/programada.js', './js/controle.js',

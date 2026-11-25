@@ -442,6 +442,9 @@
         tela().innerHTML =
             '<div class="topo"><button class="bt-icone" data-voltar aria-label="Voltar">' + icone('voltar') + '</button><h1 class="titulo" style="margin:0;flex:1;font-size:22px">' + (editando ? 'Editar cifra' : 'Nova cifra') + '</h1></div>' +
             abertura(2, editando ? 'Cada detalhe no seu lugar' : 'Uma nova música começa aqui', editando ? 'Deixe do seu jeito.' : 'Do papel para o palco.', 'Cole ou escreva a cifra, confira a prévia e salve na sua coleção.') +
+            (!editando && global.Pacotes ? '<details class="mais"><summary>Procurar cifra na internet</summary>' + Pacotes.htmlFontes() +
+                '<div class="lista"><a class="op" href="baixar.html#repertorios">' + icone('baixar') + '<span class="op-txt">Baixar repertórios<br><small>Packs de cifras prontos para importar.</small></span></a></div>' +
+                '<p class="dica">Copie a cifra no site, volte aqui e toque em Colar. Arquivos ChordPro (.cho) entram pelo botão Arquivo.</p></details>' : '') +
             '<form class="form" id="f-cifra" autocomplete="off">' +
             '<div class="dupla"><div><label for="c-titulo">Nome da música</label><input class="entrada" id="c-titulo" placeholder="Como se chama a música?" value="' + esc(m.titulo) + '" maxlength="100"></div>' +
             '<div><label for="c-artista">Artista</label><input class="entrada" id="c-artista" placeholder="Quem canta?" value="' + esc(m.artista) + '" maxlength="100"></div></div>' +
@@ -453,9 +456,6 @@
             '<textarea class="entrada" id="c-cifra" aria-label="Texto da cifra" spellcheck="false" placeholder="Cole a cifra aqui (acordes em cima da letra).\n\n[Intro]\nG  D  Em  C\n\n[Verso]\nG              D\nEscreva a letra aqui embaixo\nEm             C\ne os acordes na linha de cima">' + esc(m.cifra) + '</textarea>' +
             '<div id="c-previa" hidden style="background:var(--sup-1);border-radius:8px;padding:12px;min-height:46vh"><div id="cifra-conteudo" style="padding-bottom:0"></div></div>' +
             '<div class="dica" id="c-detectado"></div>' +
-            (!editando && global.Pacotes ? '<details class="mais"><summary>Procurar cifra na internet</summary>' + Pacotes.htmlFontes() +
-                '<div class="lista"><a class="op" href="baixar.html#repertorios">' + icone('baixar') + '<span class="op-txt">Baixar repertórios<br><small>Packs de cifras prontos para importar.</small></span></a></div>' +
-                '<p class="dica">Copie a cifra no site, volte aqui e toque em Colar. Arquivos ChordPro (.cho) entram pelo botão Arquivo.</p></details>' : '') +
             '<details class="mais"' + (editando ? ' open' : '') + '><summary>Mais opções (tom, BPM, capo)</summary>' +
             '<div class="tripla"><div><label>Tom</label><input class="entrada" id="c-tom" placeholder="auto" value="' + esc(m.tom) + '" maxlength="8"></div>' +
             '<div><label>BPM</label><input class="entrada" id="c-bpm" type="number" inputmode="numeric" min="0" max="300" placeholder="—" value="' + esc(m.bpm || '') + '"></div>' +
